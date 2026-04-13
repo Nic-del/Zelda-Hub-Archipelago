@@ -1,0 +1,201 @@
+[
+  {
+    "name": "Forsaken Fortress",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "visibility_rules": [
+      "dungeons_on, required_bosses_disabled",
+      "dungeons_on, required_bosses_ff_required"
+    ],
+    "map_locations": [
+      {
+        "map": "seachart",
+        "x": 55,
+        "y": 55,
+        "size": 18
+      }
+    ],
+    "sections": [
+      {
+        "name": "Phantom Ganon",
+        "chest_unopened_img": "images/items/chest_spiky.png",
+        "chest_opened_img": "images/items/chest_spiky_gray.png",
+        "access_rules": [
+          "@Macros/can_reach_and_defeat_phantom_ganon"
+        ]
+      },
+      {
+        "name": "Chest Guarded by Bokoblin",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          "@Macros/can_get_inside_forsaken_fortress"
+        ]
+      },
+      {
+        "name": "Chest on Bed",
+        "access_rules": [
+          "@Macros/can_get_inside_forsaken_fortress"
+        ]
+      },
+      {
+        "name": "Chest Outside Upper Jail Cell",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          [
+            "@Macros/can_get_inside_forsaken_fortress",
+            "@Macros/_can_fly_with_deku_leaf_indoors_or_hookshot"
+          ],
+          [
+            "@Macros/can_get_inside_forsaken_fortress",
+            "@General Logic/Normal Logic Obscurity"
+          ]
+        ]
+      },
+      {
+        "name": "Chest Inside Lower Jail Cell",
+        "chest_unopened_img": "images/items/chest_spiky.png",
+        "chest_opened_img": "images/items/chest_spiky_gray.png",
+        "access_rules": [
+          "@Macros/can_get_inside_forsaken_fortress"
+        ]
+      },
+      {
+        "name": "Helmaroc King Heart Container",
+        "chest_unopened_img": "images/items/heart2.png",
+        "chest_opened_img": "images/items/heart2_gray.png",
+        "access_rules": [
+          "@Exit Logic/Helmaroc King Boss Arena, @Macros/can_defeat_helmaroc_king"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Forsaken Fortress Dungeon",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "visibility_rules": [
+      "dungeons_on"
+    ],
+    // The extra parenting is because the referenced section will display its own name. While this can be overridden, it
+    // cannot be set to empty. We want an empty named parent so that only the section name is present.
+    // Locations must have unique names in the future, so we can't have a bunch of empty named children.
+    "children": [
+      {
+        "name": "Phantom Ganon",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forsaken Fortress/Phantom Ganon"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "ff",
+                "x": 322,
+                "y": 284
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest Guarded by Bokoblin",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forsaken Fortress/Chest Guarded by Bokoblin"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "ff",
+                "x": 516,
+                "y": 357
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest on Bed",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forsaken Fortress/Chest on Bed"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "ff",
+                "x": 89,
+                "y": 430
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest Outside Upper Jail Cell",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forsaken Fortress/Chest Outside Upper Jail Cell"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "ff",
+                "x": 326,
+                "y": 493
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest Inside Lower Jail Cell",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forsaken Fortress/Chest Inside Lower Jail Cell"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "ff",
+                "x": 271,
+                "y": 502
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Helmaroc King Heart Container",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forsaken Fortress/Helmaroc King Heart Container"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "ff",
+                "x": 264,
+                "y": 53
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

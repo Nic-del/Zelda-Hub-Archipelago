@@ -1,0 +1,80 @@
+{
+  "tabbed_maps": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Overworld",
+        "content": {
+          "type": "array",
+          "item_h_alignment": "center",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "map",
+              "maps": ["hyrule"]
+            },
+            {
+              "type": "map",
+              "maps": ["lorule"]
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hyrule Dungeons",
+        "content": {
+          "type": "layout",
+          "key": "hyrule_dungeons"
+        }
+      },
+      {
+        "title": "Lorule Dungeons",
+        "content": {
+          "type": "layout",
+          "key": "lorule_dungeons"
+        }
+      }
+    ]
+  },
+  "tabbed_maps_compact": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Hyrule",
+        "content": {
+          "type": "map",
+          "maps": ["hyrule"]
+        }
+      },
+      {
+        "title": "Lorule",
+        "content": {
+          "type": "map",
+          "maps": ["lorule"]
+        }
+      },
+      {
+        "title": "Dungeons",
+        "content": {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Hyrule Dungeons",
+              "content": {
+                "type": "layout",
+                "key": "hyrule_dungeons"
+              }
+            },
+            {
+              "title": "Lorule Dungeons",
+              "content": {
+                "type": "layout",
+                "key": "lorule_dungeons"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

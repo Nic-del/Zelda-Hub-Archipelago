@@ -1,0 +1,239 @@
+{
+  "entrances_and_exits": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Entrances",
+        "content": {
+          "type": "map",
+          "maps": [
+            "entrances"
+          ]
+        }
+      },
+      {
+        "title": "Exits",
+        "content": {
+          "type": "map",
+          "maps": [
+            "exits"
+          ]
+        }
+      }
+    ]
+  },
+  "entrances_and_exits_and_sea_tab": {
+    "type": "array",
+    "orientation": "horizontal",
+    "content": [
+      {
+        "type": "layout",
+        "key": "entrances_and_exits"
+      },
+      {
+        "type": "map",
+        "maps": [
+          "seachart"
+        ]
+      }
+    ]
+  },
+  "entrance_labels": {
+    "type": "tabbed",
+    "h_alignment": "center",
+    "item_h_alignment": "center",
+    "tabs": [
+      {
+        "title": "Dungeons",
+        "content": {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "layout",
+              "key": "dungeon_entrances_table_placeholder_grid"
+            },
+            {
+              "type": "layout",
+              "key": "dungeon_entrances_table_spacer_grid"
+            },
+            {
+              "type": "layout",
+              "key": "dungeon_entrances_table_label_grid"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Secret Caves",
+        "content": {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "layout",
+              "key": "cave_entrances_table_placeholder_grid"
+            },
+            {
+              "type": "layout",
+              "key": "cave_entrances_table_spacer_grid"
+            },
+            {
+              "type": "layout",
+              "key": "cave_entrances_table_label_grid"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Inner Entrances and Fairy Fountains",
+        "content": {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "layout",
+              "key": "inner_entrances_and_fairy_entrances_table_placeholder_grid"
+            },
+            {
+              "type": "layout",
+              "key": "inner_entrances_and_fairy_entrances_table_spacer_grid"
+            },
+            {
+              "type": "layout",
+              "key": "inner_entrances_and_fairy_entrances_table_label_grid"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "exit_labels": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Dungeons",
+        "content": {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "layout",
+              "key": "dungeon_exits_table_label_grid"
+            },
+            {
+              "type": "layout",
+              "key": "dungeon_exits_table_spacer_grid"
+            },
+            {
+              "type": "layout",
+              "key": "dungeon_exits_table_placeholder_grid"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Secret Caves",
+        "content": {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "layout",
+              "key": "cave_exits_table_label_grid"
+            },
+            {
+              "type": "layout",
+              "key": "cave_exits_table_spacer_grid"
+            },
+            {
+              "type": "layout",
+              "key": "cave_exits_table_placeholder_grid"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Inner Exits and Fairy Fountains",
+        "content": {
+          "type": "array",
+          "orientation": "horizontal",
+          "content": [
+            {
+              "type": "layout",
+              "key": "inner_exits_and_fairy_exits_table_label_grid"
+            },
+            {
+              "type": "layout",
+              "key": "inner_exits_and_fairy_exits_table_spacer_grid"
+            },
+            {
+              "type": "layout",
+              "key": "inner_exits_and_fairy_exits_table_placeholder_grid"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "entrance_and_exit_labels": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Entrance Table",
+        "content": {
+          "type": "layout",
+          "key": "entrance_labels"
+        }
+      },
+      {
+        "title": "Exit Table",
+        "content": {
+          "type": "layout",
+          "key": "exit_labels"
+        }
+      }
+    ]
+  },
+  "entrance_table_and_map": {
+    "type": "array",
+    "orientation": "horizontal",
+    "content": [
+      {
+        "type": "layout",
+        "key": "entrance_and_exit_labels"
+      },
+      {
+        "type": "layout",
+        "key": "entrances_and_exits"
+      }
+    ]
+  },
+  "entrances_layout": {
+    "type": "tabbed",
+    "tabs": [
+      //TODO: Options tab that shows the options read from AP
+      {
+        "title": "Entrances + Exits",
+        "content": {
+          "type": "layout",
+          "key": "entrances_and_exits"
+        }
+      },
+      {
+        "title": "+ The Great Sea",
+        "content": {
+          "type": "layout",
+          "key": "entrances_and_exits_and_sea_tab"
+        }
+      },
+      {
+        "title": "+ Tables",
+        "content": {
+          "type": "layout",
+          "key": "entrance_table_and_map"
+        }
+      }
+    ]
+  }
+}

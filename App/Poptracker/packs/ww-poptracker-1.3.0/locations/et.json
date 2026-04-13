@@ -1,0 +1,546 @@
+[
+  {
+    "name": "Earth Temple",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "visibility_rules": [
+      "dungeons_on, required_bosses_disabled",
+      "dungeons_on, required_bosses_et_required"
+    ],
+    "map_locations": [
+      {
+        "map": "seachart",
+        "x": 695,
+        "y": 327,
+        "size": 18
+      }
+    ],
+    "sections": [
+      {
+        "name": "Transparent Chest In Warp Pot Room",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          "@Exit Logic/Earth Temple, @Macros/can_play_command_melody"
+        ]
+      },
+      {
+        "name": "Behind Curtain In Warp Pot Room",
+        "access_rules": [
+          [
+            "@Exit Logic/Earth Temple",
+            "@Macros/can_play_command_melody",
+            "@Macros/has_fire_arrows",
+            "@Macros/_boomerang_or_hookshot"
+          ]
+        ],
+        "visibility_rules": [
+          "secretpot_on"
+        ]
+      },
+      {
+        "name": "Chest Behind Destructible Walls",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_right_path, shield_2"
+        ]
+      },
+      {
+        "name": "Transparent Chest in First Crypt",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_right_path",
+            "power",
+            "@Macros/_can_play_command_melody_or_has_mirror_shield"
+          ]
+        ]
+      },
+      {
+        "name": "Chest In Three Blocks Room",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_left_path",
+            "@Macros/has_fire_arrows",
+            "power",
+            "@Macros/can_defeat_floormasters",
+            "@Macros/_can_play_command_melody_or_can_aim_mirror_shield"
+          ]
+        ]
+      },
+      {
+        "name": "Chest Behind Statues",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_moblins_and_poes_room",
+            "@Macros/_can_play_command_melody_or_can_aim_mirror_shield"
+          ]
+        ]
+      },
+      {
+        "name": "Casket in Second Crypt",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_moblins_and_poes_room"
+        ]
+      },
+      {
+        "name": "Stalfos Miniboss Room",
+        "chest_unopened_img": "images/items/chest_spiky.png",
+        "chest_opened_img": "images/items/chest_spiky_gray.png",
+        "access_rules": [
+          "@Exit Logic/Earth Temple Miniboss Arena, @Macros/can_defeat_stalfos",
+          "@Exit Logic/Earth Temple Miniboss Arena, hookshot"
+        ]
+      },
+      {
+        "name": "Tingle Statue Chest",
+        "chest_unopened_img": "images/items/chest_spiky.png",
+        "chest_opened_img": "images/items/chest_spiky_gray.png",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_basement, @Macros/has_tingle_bombs"
+        ],
+        "visibility_rules": [
+          "tinglechests_on"
+        ]
+      },
+      {
+        "name": "End of Foggy Room With Floormasters",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_redead_hub_room",
+            "@Macros/_can_play_command_melody_or_can_aim_mirror_shield"
+          ]
+        ]
+      },
+      {
+        "name": "Kill All Floormasters in Foggy Room",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_redead_hub_room",
+            "@Macros/_can_play_command_melody_or_can_aim_mirror_shield",
+            "@Macros/can_defeat_floormasters"
+          ]
+        ]
+      },
+      {
+        "name": "Behind Curtain Next to Hammer Button",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_redead_hub_room",
+            "@Macros/_can_play_command_melody_or_can_aim_mirror_shield",
+            "@Macros/has_fire_arrows",
+            "@Macros/_boomerang_or_hookshot"
+          ]
+        ],
+        "visibility_rules": [
+          "secretpot_on"
+        ]
+      },
+      {
+        "name": "Chest in Third Crypt",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_third_crypt"
+        ]
+      },
+      {
+        "name": "Many Mirrors Room Left Chest",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_many_mirrors_room",
+            "power",
+            "@Macros/can_play_command_melody",
+            "@Macros/can_aim_mirror_shield"
+          ]
+        ]
+      },
+      {
+        "name": "Many Mirrors Room Right Chest",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_many_mirrors_room, @Macros/can_play_command_melody"
+        ]
+      },
+      {
+        "name": "Stalfos Crypt Room",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_many_mirrors_room, @Macros/can_defeat_stalfos"
+        ]
+      },
+      {
+        "name": "Big Key Chest",
+        "chest_unopened_img": "images/items/chest_bigkey.png",
+        "chest_opened_img": "images/items/chest_bigkey_gray.png",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_many_mirrors_room",
+            "power",
+            "@Macros/can_play_command_melody",
+            "@Macros/can_aim_mirror_shield",
+            "@Macros/_can_defeat_et_big_key_chest_blue_bubbles",
+            "@Macros/can_defeat_darknuts"
+          ]
+        ]
+      },
+      {
+        "name": "Jalhalla Heart Container",
+        "chest_unopened_img": "images/items/heart2.png",
+        "chest_opened_img": "images/items/heart2_gray.png",
+        "access_rules": [
+          "@Exit Logic/Jalhalla Boss Arena, @Macros/can_defeat_jalhalla"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Earth Temple Dungeon",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "children": [
+      {
+        "name": "Transparent Chest In Warp Pot Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Transparent Chest In Warp Pot Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 225,
+                "y": 223
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Behind Curtain In Warp Pot Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Behind Curtain In Warp Pot Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 225,
+                "y": 202
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest Behind Destructible Walls",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Chest Behind Destructible Walls"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 337,
+                "y": 314
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Transparent Chest in First Crypt",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Transparent Chest in First Crypt"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 415,
+                "y": 285
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest In Three Blocks Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Chest In Three Blocks Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 336,
+                "y": 23
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest Behind Statues",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Chest Behind Statues"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 432,
+                "y": 45
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Casket in Second Crypt",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Casket in Second Crypt"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 524,
+                "y": 62
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stalfos Miniboss Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Stalfos Miniboss Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 528,
+                "y": 138
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tingle Statue Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Tingle Statue Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 570,
+                "y": 208
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "End of Foggy Room With Floormasters",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/End of Foggy Room With Floormasters"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 455,
+                "y": 286
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kill All Floormasters in Foggy Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Kill All Floormasters in Foggy Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 520,
+                "y": 330
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Behind Curtain Next to Hammer Button",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Behind Curtain Next to Hammer Button"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 704,
+                "y": 317
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest in Third Crypt",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Chest in Third Crypt"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 559,
+                "y": 382
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Many Mirrors Room Left Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Many Mirrors Room Left Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 338,
+                "y": 437
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Many Mirrors Room Right Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Many Mirrors Room Right Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 402,
+                "y": 401
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stalfos Crypt Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Stalfos Crypt Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 294,
+                "y": 478
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Big Key Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Big Key Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 244,
+                "y": 332
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jalhalla Heart Container",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Earth Temple/Jalhalla Heart Container"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "et",
+                "x": 393,
+                "y": 550
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

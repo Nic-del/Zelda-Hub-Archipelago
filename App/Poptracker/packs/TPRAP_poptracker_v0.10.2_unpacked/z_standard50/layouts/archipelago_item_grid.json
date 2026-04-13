@@ -1,0 +1,142 @@
+{
+	"item_grid50": {
+		"type": "container",
+        "background": "#525260",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_size": 38,
+				"item_margin": "1,1",
+				"margin": "1,1,1,1",
+				"item_h_alignment": "center",
+				"item_v_alignment": "center",
+				"rows": [
+					[
+						"fishingrod",
+						"slingshot",
+						"lamp",
+						"boomerang",
+						"boots",
+						"bow",
+						"hawkeye"
+					],
+					[
+						"bombbag",
+						"giantbombs",
+						"waterbombs",
+						"clawshot",
+						"spinner",
+						"ballandchain",
+						"dominionrod"
+					],
+					[
+						"bottle",
+						"asheisketch",
+						"aurumemo",
+						"hiddenskill",
+						"renadosletter",
+						"horsecall",
+						"skybook"
+					],
+					[
+						"shadowcrystal",
+						"wallet",
+						"woodensword",
+						"ordonshield",
+						"hylianshield",
+						"zoraarmor",
+						"magicarmor"
+					],
+					[
+						"bugsamount",
+						"poescent",
+						"reekfishscent",
+						"medicinescent",
+						"gatekeys",
+						"bckey",
+						"trapsamount"
+					],
+					[
+						"poesoul",
+						"heartpiece",
+						"heartcontainer",
+						"fusedshadow",
+						"mirrorshard",
+						"autotab",
+						"splitmap"
+					]
+				]
+			}
+		]
+	},
+	"item_grid_broadcast": {
+		"type": "container",
+        "background": "#525260",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_size": 56,
+				"item_margin": "1,1",
+				"margin": "1,1,1,1",
+				"item_h_alignment": "center",
+				"item_v_alignment": "center",
+				"rows": [
+					[
+						"fishingrod",
+						"slingshot",
+						"lamp",
+						"boomerang",
+						"boots",
+						"bow",
+						"hawkeye"
+					],
+					[
+						"bombbag",
+						"giantbombs",
+						"waterbombs",
+						"clawshot",
+						"spinner",
+						"ballandchain",
+						"dominionrod"
+					],
+					[
+						"bottle",
+						"asheisketch",
+						"aurumemo",
+						"hiddenskill",
+						"renadosletter",
+						"horsecall",
+						"skybook"
+					],
+					[
+						"shadowcrystal",
+						"wallet",
+						"woodensword",
+						"ordonshield",
+						"hylianshield",
+						"zoraarmor",
+						"magicarmor"
+					],
+					[
+						"bugsamount",
+						"poescent",
+						"reekfishscent",
+						"medicinescent",
+						"gatekeys",
+						"bckey",
+						"trapsamount"
+					],
+					[
+						"poesoul",
+						"heartpiece",
+						"heartcontainer",
+						"fusedshadow",
+						"mirrorshard"
+					]
+				]
+			}
+		]
+	}
+}

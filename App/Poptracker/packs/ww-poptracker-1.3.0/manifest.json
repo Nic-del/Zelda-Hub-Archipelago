@@ -1,0 +1,21 @@
+﻿{
+    "name": "Wind Waker AP Tracker",
+    "game_name": "The Legend of Zelda: The Wind Waker",
+    "package_version": "1.3.0",
+    "package_uid": "ap_windwaker",
+    "author": "Mysteryem",
+    "original_author": "Ouro",
+    "variants": {
+        "standard": {
+            "display_name": "Map Tracker",
+            "flags": ["ap"]
+        },
+        "variant_entrance_rando": {
+            "display_name": "Map Tracker (Entrance Rando)",
+            "flags": ["ap"]
+        }
+    },
+    "min_poptracker_version": "0.32.0",
+    "target_poptracker_version": "0.32.0",
+    "versions_url": "https://raw.githubusercontent.com/Mysteryem/ww-poptracker/main/versions.json"
+}

@@ -1,0 +1,25 @@
+{
+  "settings_popup": {
+    "type": "container",
+    "background": "#000",
+    "content": [
+      {
+        "type": "itemgrid",
+        "item_margin": 4,
+        "item_size": 48,
+        "margin": "0, 7",
+        "rows": [
+          ["logic_mode", "lorule_castle_requirement", "pedestal_requirement"],
+          [
+            "no_progression_enemies",
+            "dark_rooms_lampless",
+            "lamp_and_net_as_weapons",
+            "csmc"
+          ],
+          ["beeBoost_hide", "minigames", "weather_vanes", "maiamai_mayhem"],
+          ["crack_shuffle", "keysy", "nice_items"]
+        ]
+      }
+    ]
+  }
+}

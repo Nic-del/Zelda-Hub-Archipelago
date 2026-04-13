@@ -1,0 +1,11 @@
+.ackContainer {
+    text-align: center;
+}
+
+.contributorsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}

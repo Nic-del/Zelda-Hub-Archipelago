@@ -1,0 +1,563 @@
+[
+	{
+		"name": "Temple of Time",
+		"children": [
+			{
+				"name": "1F",
+				"children": [
+					{
+						"name": "Lobby Lantern Chest",
+						"map_locations": [
+							{
+								"map": "tt1f",
+								"x": 808,
+								"y": 1130
+							},
+							{
+								"map": "ttfull",
+								"x": 351,
+								"y": 491
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeEntrance, lantern"
+								]
+							}
+						]
+					},
+					{
+						"name": "Armogohma Boss",
+						"access_rules": [
+							"@TempleofTimeBossRoom"
+						],
+						"map_locations": [
+							{
+								"map": "tt1f",
+								"x": 637,
+								"y": 189
+							},
+							{
+								"map": "ttfull",
+								"x": 277,
+								"y": 82
+							}
+						],
+						"sections": [
+							{
+								"name": "Armogohma Heart Container",
+								"access_rules": [
+									"$canDefeatArmogohma"
+								]
+							},
+							{
+								"name": "Dungeon Reward",
+								"access_rules": [
+									"$canDefeatArmogohma"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "2F",
+				"children": [
+					{
+						"name": "First Staircase Gohma Gate Chest",
+						"map_locations": [
+							{
+								"map": "tt2f",
+								"x": 643,
+								"y": 1532
+							},
+							{
+								"map": "ttfull",
+								"x": 791,
+								"y": 665
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeConnectingCorridors, $canDefeatYoungGohma",
+									"[glitcheson], @TempleofTimeConnectingCorridors, $canDefeatYoungGohmaGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "3F",
+				"children": [
+					{
+						"name": "First Staircase Window Chest",
+						"map_locations": [
+							{
+								"map": "tt3f",
+								"x": 1035,
+								"y": 1329
+							},
+							{
+								"map": "ttfull",
+								"x": 1473,
+								"y": 577
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeConnectingCorridors, $hasRangedItem"
+								]
+							}
+						]
+					},
+					{
+						"name": "First Staircase Armos Chest",
+						"map_locations": [
+							{
+								"map": "tt3f",
+								"x": 1117,
+								"y": 1291
+							},
+							{
+								"map": "ttfull",
+								"x": 1509,
+								"y": 561
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeConnectingCorridors, $hasRangedItem, $canDefeatArmos",
+									"[glitcheson], @TempleofTimeConnectingCorridors, $hasRangedItem, $canDefeatArmosGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes3F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
+				"children": [
+					{
+						"name": "Poe Behind Gate",
+						"map_locations": [
+							{
+								"map": "tt3f",
+								"x": 420,
+								"y": 1115,
+								"shape": "diamond"
+							},
+							{
+								"map": "ttfull",
+								"x": 1206,
+								"y": 484,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeCentralMechanicalPlatform, shadowcrystal, dominionrod",
+									"[glitcheson], @TempleofTimeCentralMechanicalPlatform, shadowcrystal, ballchain",
+									"[glitcheson], @TempleofTimeCentralMechanicalPlatform, shadowcrystal, $canDoHSMoonBoots"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "5F",
+				"children": [
+					{
+						"name": "Armos Antechamber East Chest",
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 522,
+								"y": 1411
+							},
+							{
+								"map": "ttfull",
+								"x": 227,
+								"y": 1306
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeArmosAntechamber, $canDefeatArmos",
+									"[glitcheson], @TempleofTimeArmosAntechamber, $canDefeatArmosGlitched"
+								]
+							}
+						]
+					},
+					{
+						"name": "Armos Antechamber North Chest",
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 642,
+								"y": 1567
+							},
+							{
+								"map": "ttfull",
+								"x": 279,
+								"y": 1374
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeArmosAntechamber"
+								]
+							}
+						]
+					},
+					{
+						"name": "Armos Antechamber Statue Chest",
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 769,
+								"y": 1411
+							},
+							{
+								"map": "ttfull",
+								"x": 334,
+								"y": 1306
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeArmosAntechamber, dominionrod",
+									"[glitcheson], @TempleofTimeArmosAntechamber"
+								]
+							}
+						]
+					},
+					{
+						"name": "Moving Wall Beamos Room Chest",
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 406,
+								"y": 835
+							},
+							{
+								"map": "ttfull",
+								"x": 176,
+								"y": 1056
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeMovingWallHallways, bow"
+								]
+							}
+						]
+					},
+					{
+						"name": "Moving Wall Dinalfos Room Chest",
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 44,
+								"y": 879
+							},
+							{
+								"map": "ttfull",
+								"x": 19,
+								"y": 1075
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeMovingWallHallways, $canDefeatDinalfos, dominionrod, bow",
+									"[glitcheson], @TempleofTimeMovingWallHallways, $canDefeatDinalfos, spinner, $hasBombs, bow"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "6F",
+				"children": [
+					{
+						"name": "Scales Gohma Chest",
+						"map_locations": [
+							{
+								"map": "tt6f",
+								"x": 640,
+								"y": 1036
+							},
+							{
+								"map": "ttfull",
+								"x": 790,
+								"y": 1143
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeScalesofTime, $canDefeatYoungGohma, $canDefeatBabyGohma",
+									"[glitcheson], @TempleofTimeScalesofTime, $canDefeatYoungGohmaGlitched, $canDefeatBabyGohmaGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "7F",
+				"children": [
+					{
+						"name": "Scales Upper Chest",
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 730,
+								"y": 1230
+							},
+							{
+								"map": "ttfull",
+								"x": 1341,
+								"y": 1228
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeScalesofTime, spinner, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Floor Switch Puzzle Room Upper Chest",
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 1071,
+								"y": 1114
+							},
+							{
+								"map": "ttfull",
+								"x": 1489,
+								"y": 1177
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeFloorSwitchPuzzleRoom, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Big Key Chest",
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 1008,
+								"y": 1114
+							},
+							{
+								"map": "ttfull",
+								"x": 1462,
+								"y": 1177
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeFloorSwitchPuzzleRoom, $canDefeatHelmasaur, clawshot",
+									"[glitcheson], @TempleofTimeFloorSwitchPuzzleRoom, $canDefeatHelmasaurGlitched, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Gilloutine Chest",
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 1011,
+								"y": 1547
+							},
+							{
+								"map": "ttfull",
+								"x": 1463,
+								"y": 1365
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeUpperSpikeTrapCorridor"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes7F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
+				"children": [
+					{
+						"name": "Poe Above Scales",
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 782,
+								"y": 1080,
+								"shape": "diamond"
+							},
+							{
+								"map": "ttfull",
+								"x": 1364,
+								"y": 1162,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeScalesofTime, shadowcrystal, spinner, clawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "8F",
+				"children": [
+					{
+						"name": "Chest Before Darknut",
+						"map_locations": [
+							{
+								"map": "tt8f",
+								"x": 1010,
+								"y": 1070
+							},
+							{
+								"map": "ttfull",
+								"x": 1975,
+								"y": 1158
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmos, $canDefeatBabyGohma, $canDefeatYoungGohma",
+									"[glitcheson], @TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmosGlitched, $canDefeatBabyGohmaGlitched, $canDefeatYoungGohmaGlitched"
+								]
+							}
+						]
+					},
+					{
+						"name": "Darknut Chest",
+						"map_locations": [
+							{
+								"map": "tt8f",
+								"x": 331,
+								"y": 1149
+							},
+							{
+								"map": "ttfull",
+								"x": 1680,
+								"y": 1192
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@TempleofTimeDarknutArena, $canDefeatDarknut"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Entrance Hint Sign",
+						"map_locations": [
+							{
+								"map": "tt1f",
+								"x": 621,
+								"y": 1273,
+								"shape": "diamond"
+							},
+							{
+								"map": "ttfull",
+								"x": 267,
+								"y": 551,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@TempleofTimeEntrance}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					},
+					{
+						"name": "Walls Hint Sign",
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 444,
+								"y": 804,
+								"shape": "diamond"
+							},
+							{
+								"map": "ttfull",
+								"x": 192,
+								"y": 1043,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@TempleofTimeMovingWallHallways}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

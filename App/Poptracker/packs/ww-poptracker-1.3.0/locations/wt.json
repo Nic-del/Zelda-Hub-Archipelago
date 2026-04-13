@@ -1,0 +1,503 @@
+[
+  {
+    "name": "Wind Temple",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "visibility_rules": [
+      "dungeons_on, required_bosses_disabled",
+      "dungeons_on, required_bosses_wt_required"
+    ],
+    "map_locations": [
+      {
+        "map": "seachart",
+        "x": 695,
+        "y": 412,
+        "size": 18
+      }
+    ],
+    "sections": [
+      {
+        "name": "Chest Between Two Dirt Patches",
+        "access_rules": [
+          "@Exit Logic/Wind Temple, @Macros/can_play_command_melody"
+        ]
+      },
+      {
+        "name": "Behind Stone Head in Hidden Upper Room",
+        "access_rules": [
+          [
+            "@Exit Logic/Wind Temple",
+            "@Macros/can_play_command_melody",
+            "boots",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "hookshot"
+          ]
+        ],
+        "visibility_rules": [
+          "secretpot_on"
+        ]
+      },
+      {
+        "name": "Tingle Statue Chest",
+        "chest_unopened_img": "images/items/chest_spiky.png",
+        "chest_opened_img": "images/items/chest_spiky_gray.png",
+        "access_rules": [
+          "@Macros/can_reach_wind_temple_kidnapping_room, @Macros/has_tingle_bombs"
+        ],
+        "visibility_rules": [
+          "tinglechests_on"
+        ]
+      },
+      {
+        "name": "Chest Behind Stone Head",
+        "access_rules": [
+          [
+            "@Macros/can_reach_wind_temple_kidnapping_room",
+            "boots",
+            "hookshot"
+          ]
+        ]
+      },
+      {
+        "name": "Chest in Left Alcove",
+        "access_rules": [
+          [
+            "@Macros/can_reach_wind_temple_kidnapping_room",
+            "boots",
+            "@Macros/can_fan_with_deku_leaf"
+          ]
+        ]
+      },
+      {
+        "name": "Big Key Chest",
+        "chest_unopened_img": "images/items/chest_bigkey.png",
+        "chest_opened_img": "images/items/chest_bigkey_gray.png",
+        "access_rules": [
+          [
+            "@Macros/can_reach_wind_temple_kidnapping_room",
+            "boots",
+            "@Macros/can_fan_with_deku_leaf",
+            "@Macros/can_play_wind_gods_aria",
+            "@Macros/can_defeat_darknuts"
+          ]
+        ]
+      },
+      {
+        "name": "Chest In Many Cyclones Room",
+        "access_rules": [
+          [
+            "@Macros/can_reach_wind_temple_kidnapping_room",
+            "boots",
+            "@Macros/can_fan_with_deku_leaf",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/_can_cut_grass_or_has_magic_meter_upgrade"
+          ],
+          [
+            "@Macros/can_reach_wind_temple_kidnapping_room",
+            "hookshot",
+            "@Macros/can_defeat_blue_bubbles",
+            "@Macros/can_fly_with_deku_leaf_indoors"
+          ],
+          [
+            "@Macros/can_reach_wind_temple_kidnapping_room",
+            "hookshot",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@General Logic/Normal Logic Obscurity",
+            "@General Logic/Hard Logic Precision"
+          ]
+        ]
+      },
+      {
+        "name": "Behind Stone Head in Many Cyclones Room",
+        "access_rules": [
+          "@Macros/can_reach_end_of_wind_temple_many_cyclones_room, hookshot"
+        ],
+        "visibility_rules": [
+          "secretpot_on"
+        ]
+      },
+      {
+        "name": "Chest In Middle of Hub Room",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          "@Macros/can_open_wind_temple_upper_giant_grate"
+        ]
+      },
+      {
+        "name": "Spike Wall Room - First Chest",
+        "access_rules": [
+          "@Macros/can_open_wind_temple_upper_giant_grate, boots"
+        ]
+      },
+      {
+        "name": "Spike Wall Room - Destroy All Cracked Floors",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          "@Macros/can_open_wind_temple_upper_giant_grate, boots"
+        ]
+      },
+      {
+        "name": "Wizzrobe Miniboss Room",
+        "chest_unopened_img": "images/items/chest_spiky.png",
+        "chest_opened_img": "images/items/chest_spiky_gray.png",
+        "access_rules": [
+          [
+            "@Exit Logic/Wind Temple Miniboss Arena",
+            "@Macros/can_defeat_darknuts",
+            "@Macros/can_remove_peahat_armor"
+          ]
+        ]
+      },
+      {
+        "name": "Chest at Top of Hub Room",
+        "access_rules": [
+          "@Macros/can_activate_wind_temple_giant_fan"
+        ]
+      },
+      {
+        "name": "Chest Behind Seven Armos",
+        "access_rules": [
+          "@Macros/can_activate_wind_temple_giant_fan, @Macros/can_defeat_armos"
+        ]
+      },
+      {
+        "name": "Kill All Enemies in Tall Basement Room",
+        "access_rules": [
+          [
+            "@Macros/can_reach_wind_temple_tall_basement_room",
+            "@Macros/can_defeat_stalfos",
+            "@Macros/can_defeat_wizzrobes",
+            "@Macros/can_defeat_morths"
+          ]
+        ]
+      },
+      {
+        "name": "Molgera Heart Container",
+        "chest_unopened_img": "images/items/heart2.png",
+        "chest_opened_img": "images/items/heart2_gray.png",
+        "access_rules": [
+          "@Exit Logic/Molgera Boss Arena, @Macros/can_defeat_molgera"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wind Temple Dungeon",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "access_rules": [
+      "@Exit Logic/Wind Temple"
+    ],
+    "visibility_rules": [
+      "dungeons_on"
+    ],
+    "children": [
+      {
+        "name": "Chest Between Two Dirt Patches",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Chest Between Two Dirt Patches"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 127,
+                "y": 202
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Behind Stone Head in Hidden Upper Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Behind Stone Head in Hidden Upper Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 180,
+                "y": 145
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tingle Statue Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Tingle Statue Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 256,
+                "y": 115
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest Behind Stone Head",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Chest Behind Stone Head"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 357,
+                "y": 165
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest in Left Alcove",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Chest in Left Alcove"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 227,
+                "y": 309
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Big Key Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Big Key Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 291,
+                "y": 374
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest In Many Cyclones Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Chest In Many Cyclones Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 112,
+                "y": 427
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Behind Stone Head in Many Cyclones Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Behind Stone Head in Many Cyclones Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 68,
+                "y": 270
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest In Middle of Hub Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Chest In Middle of Hub Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 313,
+                "y": 221
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Spike Wall Room - First Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Spike Wall Room - First Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 300,
+                "y": 302
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Spike Wall Room - Destroy All Cracked Floors",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Spike Wall Room - Destroy All Cracked Floors"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 279,
+                "y": 290
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wizzrobe Miniboss Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Wizzrobe Miniboss Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 413,
+                "y": 203
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest at Top of Hub Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Chest at Top of Hub Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 369,
+                "y": 186
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest Behind Seven Armos",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Chest Behind Seven Armos"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 237,
+                "y": 207
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kill All Enemies in Tall Basement Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Kill All Enemies in Tall Basement Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 387,
+                "y": 291
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Molgera Heart Container",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Wind Temple/Molgera Heart Container"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "wt",
+                "x": 156,
+                "y": 507
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

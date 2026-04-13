@@ -1,0 +1,60 @@
+{
+	"tracker_broadcast": {
+		"background": "#00000000",
+		"type": "dock",
+		"content": [
+			{
+				"type": "dock",
+				"background": "#00000000",
+				"dock": "left",
+				"content": [
+					{
+						"type": "tabbed",
+						"dock": "top",
+						"tabs": [
+							{
+								"title": "Items",
+								"content": {
+									"type": "layout",
+									"key": "item_grid_broadcast"
+								}
+							},
+							{
+								"title": "Bugs",
+								"content": {
+									"type": "layout",
+									"key": "bugs_broadcast"
+								}
+							},
+							{
+								"title": "Portals",
+								"content": {
+									"type": "layout",
+									"key": "portals_broadcast"
+								}
+							}
+						]
+					},
+					{
+						"type": "container",
+						"dock": "top",
+						"background": "#00000000",
+						"content": {
+							"type": "layout",
+							"key": "keys_bosses_broadcast"
+						}
+					}
+				]
+			},
+			{
+				"type": "container",
+				"content": [
+					{
+						"type": "layout",
+						"key": "layout_maps"
+					}
+				]
+			}
+		]
+	}
+}

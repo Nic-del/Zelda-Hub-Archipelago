@@ -1,0 +1,764 @@
+[
+	{
+		"name": "Golden Bugs",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "Golden Bugs Enabled",
+				"codes": "bugs, gbugs, goldenbugs, bugson, gbugson, goldenbugson",
+				"img": "images/Settings/GoldenBugEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Golden Bugs Disabled",
+				"codes": "bugs, gbugs, goldenbugs, bugsoff, gbugsoff, goldenbugsoff",
+				"img": "images/Settings/GoldenBugDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Poes",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "Poes Enabled",
+				"codes": "poes, poeson",
+				"img": "images/Settings/PoeSoulEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Poes Disabled",
+				"codes": "poes, poesoff",
+				"img": "images/Settings/PoeSoulDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Glitched",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Glitches Enabled",
+				"codes": "glitched, glitcheson",
+				"img": "images/Settings/GlitchesEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Glitches Disabled",
+				"codes": "glitched, glitchesoff",
+				"img": "images/Settings/GlitchesDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Castle Requirements",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "HC Vanilla",
+				"codes": "castlerequirements, hcvanilla",
+				"img": "images/Settings/HCVanilla.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "HC Fused Shadows",
+				"codes": "castlerequirements, hcfusedshadows",
+				"img": "images/Settings/HCFusedShadows.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "HC Mirror Shards",
+				"codes": "castlerequirements, hcmirrorshards",
+				"img": "images/Settings/HCMirrorShards.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "HC All Dungeons",
+				"codes": "castlerequirements, hcalldungeons",
+				"img": "images/Settings/HCAllDungeons.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "HC Open",
+				"codes": "castlerequirements, hcopen",
+				"img": "images/Settings/HCOpen.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Palace Requirements",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "PT Vanilla",
+				"codes": "palacerequirements, ptvanilla",
+				"img": "images/Settings/PTVanilla.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "PT Fused Shadows",
+				"codes": "palacerequirements, ptfusedshadows",
+				"img": "images/Settings/PTFusedShadows.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "PT Mirror Shards",
+				"codes": "palacerequirements, ptmirrorshards",
+				"img": "images/Settings/PTMirrorShards.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "PT Open",
+				"codes": "palacerequirements, ptopen",
+				"img": "images/Settings/PTOpen.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Faron Woods",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Faron Woods Open",
+				"codes": "faronwoods, faronwoodsopen",
+				"img": "images/Settings/FaronWoodsOpen.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Faron Woods Closed",
+				"codes": "faronwoods, faronwoodsclosed",
+				"img": "images/Settings/FaronWoodsClosed.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Small Keys",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "SK Vanilla",
+				"codes": "smallkeys, skvanilla",
+				"img": "images/Settings/SKVanilla.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Own Dungeon",
+				"codes": "smallkeys, skowndungeon",
+				"img": "images/Settings/SKOwnDungeon.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Any Dungeon",
+				"codes": "smallkeys, skanydungeon",
+				"img": "images/Settings/SKAnyDungeon.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Anywhere",
+				"codes": "smallkeys, skkeysanity",
+				"img": "images/Settings/SKAnywhere.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Start with",
+				"codes": "smallkeys, skkeysy",
+				"img": "images/Settings/SKKeysy.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Big Keys",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "BK Vanilla",
+				"codes": "bigkeys, bkvanilla",
+				"img": "images/Settings/BKVanilla.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Own Dungeon",
+				"codes": "bigkeys, bkowndungeon",
+				"img": "images/Settings/BKOwnDungeon.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Any Dungeon",
+				"codes": "bigkeys, bkanydungeon",
+				"img": "images/Settings/BKAnyDungeon.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Anywhere",
+				"codes": "bigkeys, bkkeysanity",
+				"img": "images/Settings/BKAnywhere.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Start with",
+				"codes": "bigkeys, bkkeysy",
+				"img": "images/Settings/BKKeysy.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Prologue",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Skip Prologue Enabled",
+				"codes": "skipprologue, skipprologueon",
+				"img": "images/Settings/SkipPrologueEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Prologue Disabled",
+				"codes": "skipprologue, skipprologueoff",
+				"img": "images/Settings/SkipPrologueDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Faron Twilight Cleared",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Faron Twilight Cleared Enabled",
+				"codes": "farontwilightcleared, farontwilightclearedon",
+				"img": "images/Settings/TwilightFaronEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Faron Twilight Cleared Disabled",
+				"codes": "farontwilightcleared, farontwilightclearedoff",
+				"img": "images/Settings/TwilightFaronDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Eldin Twilight Cleared",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Eldin Twilight Cleared Enabled",
+				"codes": "eldintwilightcleared, eldintwilightclearedon",
+				"img": "images/Settings/TwilightEldinEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Eldin Twilight Cleared Disabled",
+				"codes": "eldintwilightcleared, eldintwilightclearedoff",
+				"img": "images/Settings/TwilightEldinDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Lanayru Twilight Cleared",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Lanayru Twilight Cleared Enabled",
+				"codes": "lanayrutwilightcleared, lanayrutwilightclearedon",
+				"img": "images/Settings/TwilightLanayruEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Lanayru Twilight Cleared Disabled",
+				"codes": "lanayrutwilightcleared, lanayrutwilightclearedoff",
+				"img": "images/Settings/TwilightLanayruDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Midna's Desperate Hour",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Skip Midna's Desperate Hour Enabled",
+				"codes": "skipmdh, skipmdhon",
+				"img": "images/Settings/SkipMDHEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Midna's Desperate Hour Disabled",
+				"codes": "skipmdh, skipmdhoff",
+				"img": "images/Settings/SkipMDHDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Open Map",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Open Map Enabled",
+				"codes": "openmap, openmapon",
+				"img": "images/Settings/OpenMapEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Open Map Disabled",
+				"codes": "openmap, openmapoff",
+				"img": "images/Settings/OpenMapDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Increase Wallet",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Increase Wallet Enabled",
+				"codes": "increasewallet, increasewalleton",
+				"img": "images/Settings/IncreaseWalletEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Increase Wallet Disabled",
+				"codes": "increasewallet, increasewalletoff",
+				"img": "images/Settings/IncreaseWalletDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Transform Anywhere",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Transform Anywhere Enabled",
+				"codes": "transformanywhere, transformanywhereon",
+				"img": "images/Settings/TransformEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Transform Anywhere Disabled",
+				"codes": "transformanywhere, transformanywhereoff",
+				"img": "images/Settings/TransformDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Bonks Do Damage",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Bonks Do Damage Enabled",
+				"codes": "bonksdodamage, bonksdodamageon",
+				"img": "images/Settings/BonksDoDamageEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Bonks Do Damage Disabled",
+				"codes": "bonksdodamage, bonksdodamageoff",
+				"img": "images/Settings/BonksDoDamageDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Damage Magnification",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "Damage Vanilla",
+				"codes": "damagemagnification, damagevanilla",
+				"img": "images/Settings/DamageVanilla.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Damage Double",
+				"codes": "damagemagnification, damagedouble",
+				"img": "images/Settings/DamageDouble.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Damage Triple",
+				"codes": "damagemagnification, damagetriple",
+				"img": "images/Settings/DamageTriple.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Damage Quadruple",
+				"codes": "damagemagnification, damagequadruple",
+				"img": "images/Settings/DamageQuadruple.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "One Hit KO",
+				"codes": "damagemagnification, ohko",
+				"img": "images/Settings/DamageOHKO.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Lakebed Entrance",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Skip Lakebed Entrance Enabled",
+				"codes": "skiplakebedentrance, skiplakebedentranceon",
+				"img": "images/Settings/SkipLTEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Lakebed Entrance Disabled",
+				"codes": "skiplakebedentrance, skiplakebedentranceoff",
+				"img": "images/Settings/SkipLTDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Arbiter's Entrance",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Skip Arbiter's Entrance Enabled",
+				"codes": "skiparbitersentrance, skiparbitersentranceon",
+				"img": "images/Settings/SkipAGEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Arbiter's Entrance Disabled",
+				"codes": "skiparbitersentrance, skiparbitersentranceoff",
+				"img": "images/Settings/SkipAGDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Snowpeak Entrance",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Skip Snowpeak Entrance Enabled",
+				"codes": "skipsnowpeakentrance, skipsnowpeakentranceon",
+				"img": "images/Settings/SkipSREnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Snowpeak Entrance Disabled",
+				"codes": "skipsnowpeakentrance, skipsnowpeakentranceoff",
+				"img": "images/Settings/SkipSRDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip City in the Sky Entrance",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Skip City in the Sky Entrance Enabled",
+				"codes": "skipcityintheskyentrance, skipcityintheskyentranceon",
+				"img": "images/Settings/SkipCSEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip City in the Sky Entrance Disabled",
+				"codes": "skipcityintheskyentrance, skipcityintheskyentranceoff",
+				"img": "images/Settings/SkipCSDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Goron Mines Entrance",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 2,
+		"stages": [
+			{
+				"name": "GM Open",
+				"codes": "goronminesentrance, gmopen",
+				"img": "images/Settings/GMOpen.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "GM No Wrestling",
+				"codes": "goronminesentrance, gmnowrestling",
+				"img": "images/Settings/GMNoWrestling.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "GM Closed",
+				"codes": "goronminesentrance, gmclosed",
+				"img": "images/Settings/GMClosed.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Temple of Time Entrance",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 2,
+		"stages": [
+			{
+				"name": "TT Open",
+				"codes": "templeoftimeentrance, ttopen",
+				"img": "images/Settings/TTOpen.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "TT Open Grove",
+				"codes": "templeoftimeentrance, ttopengrove",
+				"img": "images/Settings/TTOpenGrove.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "TT Closed",
+				"codes": "templeoftimeentrance, ttclosed",
+				"img": "images/Settings/TTClosed.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Door of Time",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"name": "Door of Time Open",
+				"codes": "dooroftime, dotopen",
+				"img": "images/Settings/DoTOpen.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Door of Time Closed",
+				"codes": "dooroftime, dotclosed",
+				"img": "images/Settings/DoTClosed.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Autotab",
+		"type": "progressive",
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"loop": true,
+		"stages": [
+			{
+				"name": "Autotab Half",
+				"codes": "autotab, autotabhalf",
+				"img": "images/Settings/AutoTabHalf.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Autotab Full",
+				"codes": "autotab, autotabfull",
+				"img": "images/Settings/AutoTabFull.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Autotab Off",
+				"codes": "autotab, autotaboff",
+				"img": "images/Settings/AutoTabOff.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Split Map",
+		"type": "progressive",
+		"allow_disabled": false,
+		"loop": true,
+		"stages": [
+			{
+				"name": "Split Map Off",
+				"codes": "splitmap, splitmapoff",
+				"img": "images/Settings/SplitMapOff.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Split Map On",
+				"codes": "splitmap, splitmapon",
+				"img": "images/Settings/SplitMapOn.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Broadcast",
+		"type": "progressive",
+		"allow_disabled": false,
+		"loop": true,
+		"stages": [
+			{
+				"name": "Broadcast Items",
+				"codes": "broadcast, broadcastitems",
+				"img": "images/Settings/BroadcastItems.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Broadcast Map",
+				"codes": "broadcast, broadcastmap",
+				"img": "images/Settings/BroadcastMap.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Broadcast Both",
+				"codes": "broadcast, broadcastboth",
+				"img": "images/Settings/BroadcastBoth.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Hide from Main Map",
+		"type": "progressive",
+		"allow_disabled": false,
+		"loop": true,
+		"stages": [
+			{
+				"name": "Hide Nothing",
+				"codes": "hidelayout, hidenothing",
+				"img": "images/Settings/HideNothing.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Hide Map",
+				"codes": "hidelayout, hidemap",
+				"img": "images/Settings/HideMap.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Hide Items",
+				"codes": "hidelayout, hideitems",
+				"img": "images/Settings/HideItems.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Hint Signs",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "Hint Signs Enabled",
+				"codes": "hintsign, hintsigns, hints, hintson",
+				"img": "images/Settings/HintsEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Hint Signs Disabled",
+				"codes": "hintsign, hintsigns, hints, hintsoff",
+				"img": "images/Settings/HintsDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "AP Layout",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "Normal Layout",
+				"codes": "aplayout, aplayoutdisabled",
+				"img": "images/Settings/APLayoutDisabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "AP Layout",
+				"codes": "aplayout, aplayoutenabled",
+				"img": "images/Settings/APLayoutEnabled.png",
+				"inherit_codes": false
+			}
+		]
+	}
+]

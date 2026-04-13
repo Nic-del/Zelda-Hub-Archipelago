@@ -1,0 +1,402 @@
+[
+	{
+		"name": "Castle Town",
+		"children": [
+			{
+				"name": "Charlo Donation Blessing",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 257,
+						"y": 300
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@CastleTownWest"
+						]
+					}
+				]
+			},
+			{
+				"name": "STAR",
+				"access_rules": [
+					"@CastleTownSTARGame"
+				],
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 235,
+						"y": 382
+					}
+				],
+				"sections": [
+					{
+						"name": "Prize 1",
+						"access_rules": [
+							"clawshot"
+						]
+					},
+					{
+						"name": "Prize 2",
+						"access_rules": [
+							"doubleclawshot"
+						]
+					}
+				]
+			},
+			{
+				"name": "Malo Mart Magic Armor",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 427,
+						"y": 404
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@CastleTownMaloMart, @LowerKakarikoVillage, @KakarikoMaloMart, increasewalleton",
+							"@CastleTownMaloMart, @LowerKakarikoVillage, @KakarikoMaloMart, mediumwallet"
+						]
+					}
+				]
+			},
+			{
+				"name": "Jovani",
+				"access_rules": [
+					"@CastleTownJovanisHouse"
+				],
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 489,
+						"y": 409
+					}
+				],
+				"sections": [
+					{
+						"name": "20 Poe Souls",
+						"access_rules": [
+							"poesoul:20"
+						]
+					},
+					{
+						"name": "60 Poe Souls",
+						"access_rules": [
+							"poesoul:60"
+						]
+					}
+				]
+			},
+			{
+				"name": "Telma Invoice",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 460,
+						"y": 485
+					}
+				],
+				"sections": [
+					{
+						"hosted_item": "invoice",
+						"access_rules": [
+							"@CastleTownTelmasBar, renadosletter"
+						]
+					}
+				]
+			},
+			{
+				"name": "Doctor's Office Balcony Chest",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 575,
+						"y": 289
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@CastleTownDoctorsOfficeBalcony, shadowcrystal, invoice"
+						]
+					}
+				]
+			},
+			{
+				"name": "Agitha's Castle",
+				"access_rules": [
+					"@CastleTownAgithasHouse"
+				],
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 251,
+						"y": 492
+					}
+				],
+				"sections": [
+					{
+						"name": "Male Ant",
+						"access_rules": [
+							"bug0"
+						]
+					},
+					{
+						"name": "Female Ant",
+						"access_rules": [
+							"bug1"
+						]
+					},
+					{
+						"name": "Male Dayfly",
+						"access_rules": [
+							"bug2"
+						]
+					},
+					{
+						"name": "Female Dayfly",
+						"access_rules": [
+							"bug3"
+						]
+					},
+					{
+						"name": "Male Beetle",
+						"access_rules": [
+							"bug4"
+						]
+					},
+					{
+						"name": "Female Beetle",
+						"access_rules": [
+							"bug5"
+						]
+					},
+					{
+						"name": "Male Mantis",
+						"access_rules": [
+							"bug6"
+						]
+					},
+					{
+						"name": "Female Mantis",
+						"access_rules": [
+							"bug7"
+						]
+					},
+					{
+						"name": "Male Stag Beetle",
+						"access_rules": [
+							"bug8"
+						]
+					},
+					{
+						"name": "Female Stag Beetle",
+						"access_rules": [
+							"bug9"
+						]
+					},
+					{
+						"name": "Male Pillbug",
+						"access_rules": [
+							"bug10"
+						]
+					},
+					{
+						"name": "Female Pillbug",
+						"access_rules": [
+							"bug11"
+						]
+					},
+					{
+						"name": "Male Butterfly",
+						"access_rules": [
+							"bug12"
+						]
+					},
+					{
+						"name": "Female Butterfly",
+						"access_rules": [
+							"bug13"
+						]
+					},
+					{
+						"name": "Male Ladybug",
+						"access_rules": [
+							"bug14"
+						]
+					},
+					{
+						"name": "Female Ladybug",
+						"access_rules": [
+							"bug15"
+						]
+					},
+					{
+						"name": "Male Snail",
+						"access_rules": [
+							"bug16"
+						]
+					},
+					{
+						"name": "Female Snail",
+						"access_rules": [
+							"bug17"
+						]
+					},
+					{
+						"name": "Male Phasmid",
+						"access_rules": [
+							"bug18"
+						]
+					},
+					{
+						"name": "Female Phasmid",
+						"access_rules": [
+							"bug19"
+						]
+					},
+					{
+						"name": "Male Grasshopper",
+						"access_rules": [
+							"bug20"
+						]
+					},
+					{
+						"name": "Female Grasshopper",
+						"access_rules": [
+							"bug21"
+						]
+					},
+					{
+						"name": "Male Dragonfly",
+						"access_rules": [
+							"bug22"
+						]
+					},
+					{
+						"name": "Female Dragonfly",
+						"access_rules": [
+							"bug23"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Castle Town Poes",
+		"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+		"chest_opened_img": "images/Items/PoeSoul.png",
+		"visibility_rules": [
+			"poeson"
+		],
+		"children": [
+			{
+				"name": "Jovani House Poe",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 519,
+						"y": 409,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@CastleTownJovanisHouse, shadowcrystal"
+						]
+					}
+				]
+			},
+			{
+				"name": "East Castle Town Bridge Poe",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 715,
+						"y": 313,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@OutsideCastleTownEast, shadowcrystal"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Castle Town Golden Wolves",
+		"children": [
+			{
+				"name": "Golden Wolf",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 376,
+						"y": 73
+					}
+				],
+				"sections": [
+					{
+						"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
+						"chest_opened_img": "images/Items/GoldenWolf.png",
+						"access_rules": [
+							"@CastleTownNorthBehindFirstDoor, @HiddenVillage, shadowcrystal, $canCompleteMDH, hvhowlingstone"
+						]
+					}
+				]
+			},
+			{
+				"name": "Hidden Village Stone",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 356,
+						"y": 79,
+						"size": 12
+					}
+				],
+				"sections": [
+					{
+						"ref": "Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Castle Town Hint Signs",
+		"children": [
+			{
+				"name": "Hint Sign",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 373,
+						"y": 340,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"{@CastleTownCenter}"
+						],
+						"visibility_rules": [
+							"hintson"
+						]
+					}
+				]
+			}
+		]
+	}
+]

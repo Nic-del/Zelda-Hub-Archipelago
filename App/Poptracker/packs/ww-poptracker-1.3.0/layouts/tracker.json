@@ -1,0 +1,108 @@
+﻿{
+    "tracker_default": {
+        "type": "container",
+        "background": "#000000",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "dock",
+                    "dock": "bottom",
+                    "h_alignment": "stretch",
+                    "v_alignment": "stretch",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Items",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "item_grid"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Dungeons",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "dungeon_grid"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "header": "Charts",
+                            "dock": "left",
+                            "content": {
+                                "type": "layout",
+                                "key": "chart_grid"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "tabbed",
+                    "tabs": [
+                        {
+                            "title": "The Great Sea",
+                            "content": {
+                                "type": "map",
+                                "maps": ["seachart"]
+                            }
+                        },
+                        {
+                            "title": "Salvaging",
+                            "content": {
+                                "type": "map",
+                                "maps": ["salvage"]
+                            }
+                        },
+                        {
+                            "title": "Dragon Roost Cavern",
+                            "content": {
+                                "type": "map",
+                                "maps": ["drc"]
+                            }
+                        },
+                        {
+                            "title": "Forbidden Woods",
+                            "content": {
+                                "type": "map",
+                                "maps": ["fw"]
+                            }
+                        },
+                        {
+                            "title": "Tower of the Gods",
+                            "content": {
+                                "type": "map",
+                                "maps": ["totg"]
+                            }
+                        },
+                        {
+                            "title": "Forsaken Fortress",
+                            "content": {
+                                "type": "map",
+                                "maps": ["ff"]
+                            }
+                        },
+                        {
+                            "title": "Earth Temple",
+                            "content": {
+                                "type": "map",
+                                "maps": ["et"]
+                            }
+                        },
+                        {
+                            "title": "Wind Temple",
+                            "content": {
+                                "type": "map",
+                                "maps": ["wt"]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

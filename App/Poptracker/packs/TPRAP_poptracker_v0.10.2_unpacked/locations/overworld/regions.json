@@ -1,0 +1,1210 @@
+[
+	{
+		"name": "Regions",
+		"children": [
+			{
+				"name": "Faron Region",
+				"children": [
+					{
+						"name": "Near Coro",
+						"map_locations": [
+							{
+								"map": "fr",
+								"x": 686,
+								"y": 1552
+							}
+						],
+                        "sections": [
+                            {
+								"ref": "Faron Region/Faron Woods/Coro Bottle/",
+								"name": "Coro Bottle"
+							},
+							{
+								"ref": "Faron Region/Faron Woods/South Cave Chest/",
+								"name": "South Cave Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Woods/Owl Statue Chest/",
+								"name": "Owl Statue Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Woods/Owl Statue Sky Character/",
+								"name": "Owl Statue Sky Character"
+							},
+							{
+								"ref": "Faron Region/Faron Woods Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+                        ]
+                    },
+					{
+						"name": "Mist Area",
+						"map_locations": [
+							{
+								"map": "fr",
+								"x": 394,
+								"y": 1395
+							}
+						],
+                        "sections": [
+							{
+								"ref": "Faron Region/Faron Woods/Mist - South Chest/",
+								"name": "Mist - South Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Woods/Mist - Stump Chest/",
+								"name": "Mist - Stump Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Woods/Mist - North Chest/",
+								"name": "Mist - North Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Woods/Mist - Cave/Open Chest",
+								"name": "Mist - Cave Open Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Woods/Mist - Cave/Lantern Chest",
+								"name": "Mist - Cave Lantern Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Woods Poes/Mist Poe/",
+								"name": "Mist Poe"
+							}
+                        ]
+                    },
+                    {
+                        "name": "North Faron Woods",
+                        "map_locations": [
+							{
+								"map": "fr",
+								"x": 146,
+								"y": 1391
+							}
+						],
+						"sections": [
+							{
+								"ref": "Faron Region/Faron Woods/Golden Wolf/",
+								"name": "Golden Wolf"
+							},
+							{
+								"ref": "Faron Region/Faron Woods/Deku Baba Chest/",
+								"name": "Deku Baba Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Woods Golden Wolves/South Castle Town Stone/",
+								"name": "South Castle Town Stone"
+							}
+						]
+					},
+					{
+						"name": "Faron Field Grotto",
+						"map_locations": [
+							{
+								"map": "fr",
+								"x": 916,
+								"y": 975
+							}
+						],
+						"sections": [
+							{
+								"ref": "Faron Region/Faron Field/Corner Grotto/Left Chest",
+								"name": "Corner Grotto Left Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Field/Corner Grotto/Right Chest",
+								"name": "Corner Grotto Right Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Field/Corner Grotto/Rear Chest",
+								"name": "Corner Grotto Rear Chest"
+							}
+						]
+					},
+					{
+						"name": "Faron Field ",
+						"map_locations": [
+							{
+								"map": "fr",
+								"x": 688,
+								"y": 576
+							}
+						],
+						"sections": [
+							{
+								"ref": "Faron Region/Faron Field/Tree Heart Piece/",
+								"name": "Tree Heart Piece"
+							},
+							{
+								"ref": "Faron Region/Faron Field/Bridge Chest/",
+								"name": "Bridge Chest"
+							},
+							{
+								"ref": "Faron Region/Faron Field Poes/Faron Field Poe/",
+								"name": "Faron Field Poe"
+							},
+							{
+								"ref": "Faron Region/Faron Field Bugs/Male Beetle/",
+								"name": "Male Beetle"
+							},
+							{
+								"ref": "Faron Region/Faron Field Bugs/Female Beetle/",
+								"name": "Female Beetle"
+							},
+							{
+								"ref": "Faron Region/Faron Field Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Eldin Region",
+				"children": [
+					{
+						"name": "Death Mountain",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 1276,
+								"y": 1242
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Death Mountain/Alcove Chest/",
+								"name": "Alcove Chest"
+							},
+							{
+								"ref": "Eldin Region/Death Mountain Poes/Death Mountain Trail Poe/",
+								"name": "Death Mountain Trail Poe"
+							},
+							{
+								"ref": "Eldin Region/Death Mountain Golden Wolves/Ordon Spring Stone/",
+								"name": "Ordon Spring Stone"
+							},
+							{
+								"ref": "Eldin Region/Death Mountain Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Eldin Field",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 592,
+								"y": 1021
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Eldin Field/Bomb Rock Chest/",
+								"name": "Bomb Rock Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Goron Springwater Rush/",
+								"name": "Goron Springwater Rush"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Bomskit Grotto/Left Chest",
+								"name": "Bomskit Grotto Left Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Bomskit Grotto/Lantern Chest",
+								"name": "Bomskit Grotto Lantern Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Water Bomb Fish Grotto/",
+								"name": "Water Bomb Fish Grotto"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field Bugs/Male Grasshopper/",
+								"name": "Male Grasshopper"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field Bugs/Female Grasshopper/",
+								"name": "Female Grasshopper"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Bridge",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 913,
+								"y": 590
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Eldin Field/Owl Statue Chest/",
+								"name": "Owl Statue Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Owl Statue Sky Character/",
+								"name": "Owl Statue Sky Character"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field Bugs/Male Phasmid/",
+								"name": "Male Phasmid"
+							}
+						]
+					},
+					{
+						"name": "North Eldin Field",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 870,
+								"y": 342
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Eldin Field/Stockcave/Upper Chest",
+								"name": "Stockcave Upper Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stockcave/Lantern Chest",
+								"name": "Stockcave Lantern Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stockcave/Lowest Chest",
+								"name": "Stockcave Lowest Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stalfos Grotto/Left Small Chest",
+								"name": "Stalfos Grotto Left Small Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stalfos Grotto/Right Small Chest",
+								"name": "Stalfos Grotto Right Small Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stalfos Grotto/Stalfos Chest",
+								"name": "Stalfos Grotto Stalfos Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field Bugs/Female Phasmid/",
+								"name": "Female Phasmid"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Hidden Village",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 534,
+								"y": 259
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Hidden Village/Cats Hide and Seek Minigame/",
+								"name": "Cats Hide and Seek Minigame"
+							},
+							{
+								"ref": "Eldin Region/Hidden Village/Ilia's Charm/",
+								"name": "Ilia's Charm"
+							},
+							{
+								"ref": "Eldin Region/Hidden Village/Skybook From Impaz/",
+								"name": "Skybook From Impaz"
+							},
+							{
+								"ref": "Eldin Region/Hidden Village Poes/Hidden Village Poe/",
+								"name": "Hidden Village Poe"
+							},
+							{
+								"ref": "Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/",
+								"name": "North Castle Town Stone"
+							},
+							{
+								"ref": "Eldin Region/Hidden Village Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Kakariko",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 1007,
+								"y": 1795
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Kakariko/Kakariko Inn Chest/",
+								"name": "Kakariko Inn Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Eldin Spring Underwater Chest/",
+								"name": "Eldin Spring Underwater Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Bomb Rock Spire Heart Piece/",
+								"name": "Bomb Rock Spire Heart Piece"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Watchtower/Chest",
+								"name": "Watchtower Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Watchtower/Talo Sharpshooting",
+								"name": "Watchtower Talo Sharpshooting"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Watchtower Alcove Chest/",
+								"name": "Watchtower Alcove Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Barnes Bomb Bag/",
+								"name": "Barnes Bomb Bag"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Malo Mart/Hylian Shield",
+								"name": "Malo Mart Hylian Shield"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Malo Mart/Red Potion",
+								"name": "Malo Mart Red Potion"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Malo Mart/Wooden Shield",
+								"name": "Malo Mart Wooden Shield"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Malo Mart/Hawkeye",
+								"name": "Malo Mart Hawkeye"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Renado's Sanctuary/Renado's Letter",
+								"name": "Renado's Sanctuary Renado's Letter"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Renado's Sanctuary/Ilia Memory Reward",
+								"name": "Renado's Sanctuary Ilia Memory Reward"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Poes/Bomb Shop Poe/",
+								"name": "Bomb Shop Poe"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Poes/Watchtower Poe/",
+								"name": "Watchtower Poe"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Bugs/Female Ant/",
+								"name": "Female Ant"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Hint Signs/Hot Spring Hint Sign/",
+								"name": "Hot Spring Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Kakariko Graveyard",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 1226,
+								"y": 1836
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Kakariko/Lantern Chest/",
+								"name": "Lantern Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Graveyard Spring/Rutela's Blessing",
+								"name": "Graveyard Spring Rutela's Blessing"
+							},
+							{
+								"ref": "Eldin Region/Kakariko/Graveyard Spring/Gift From Ralis",
+								"name": "Graveyard Spring Gift From Ralis"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Poes/Open Poe/",
+								"name": "Open Poe"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Poes/Grave Poe/",
+								"name": "Grave Poe"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Bugs/Male Ant/",
+								"name": "Male Ant"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Golden Wolves/Golden Wolf/",
+								"name": "Golden Wolf"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Hint Signs/Graveyard Spring Hint Sign/",
+								"name": "Graveyard Spring Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Kakariko Gorge",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 298,
+								"y": 1726
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Kakariko Gorge/Stone Pillars/Spire Heart Piece",
+								"name": "Stone Pillars Spire Heart Piece"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge/Stone Pillars/Double Clawshot Chest",
+								"name": "Stone Pillars Double Clawshot Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge/Owl Statue/Sky Character",
+								"name": "Owl Statue Sky Character"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge/Owl Statue/Chest",
+								"name": "Owl Statue Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge Poes/Kakariko Gorge Poe/",
+								"name": "Kakariko Gorge Poe"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge Bugs/Male Pill Bug/",
+								"name": "Male Pill Bug"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge Bugs/Female Pill Bug/",
+								"name": "Female Pill Bug"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Kakariko Gorge Lantern Cave",
+						"map_locations": [
+							{
+								"map": "er",
+								"x": 277,
+								"y": 1942
+							}
+						],
+						"sections": [
+							{
+								"ref": "Eldin Region/Kakariko Gorge/Lantern Cave/First Chest",
+								"name": "Lantern Cave First Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge/Lantern Cave/Second Chest",
+								"name": "Lantern Cave Second Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge/Lantern Cave/Lantern Chest",
+								"name": "Lantern Cave Lantern Chest"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge Poes/Lantern Cave Poe/",
+								"name": "Lantern Cave Poe"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Lanayru Region",
+				"children": [
+					{
+                        "name": "Castle Town",
+                        "map_locations": [
+                            {
+                                "map": "lr",
+                                "x": 865,
+                                "y": 1412
+                            }
+                        ],
+                        "sections": [
+                            {
+                                "ref": "Castle Town/Charlo Donation Blessing/",
+                                "name": "Charlo Donation Blessing"
+                            },
+                            {
+                                "ref": "Castle Town/STAR/Prize 1",
+                                "name": "STAR Prize 1"
+                            },
+                            {
+                                "ref": "Castle Town/STAR/Prize 2",
+                                "name": "STAR Prize 2"
+                            },
+                            {
+                                "ref": "Castle Town/Malo Mart Magic Armor/",
+                                "name": "Malo Mart Magic Armor"
+                            },
+                            {
+                                "ref": "Castle Town/Jovani/20 Poe Souls",
+                                "name": "Jovani 20 Poe Souls"
+                            },
+                            {
+                                "ref": "Castle Town/Jovani/60 Poe Souls",
+                                "name": "Jovani 60 Poe Souls"
+                            },
+                            {
+                                "ref": "Castle Town/Telma Invoice/",
+                                "name": "Telma Invoice"
+                            },
+                            {
+                                "ref": "Castle Town/Doctor's Office Balcony Chest/",
+                                "name": "Doctor's Office Balcony Chest"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Ant",
+                                "name": "Agitha's Castle Male Ant"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Ant",
+                                "name": "Agitha's Castle Female Ant"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Dayfly",
+                                "name": "Agitha's Castle Male Dayfly"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Dayfly",
+                                "name": "Agitha's Castle Female Dayfly"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Beetle",
+                                "name": "Agitha's Castle Male Beetle"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Beetle",
+                                "name": "Agitha's Castle Female Beetle"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Mantis",
+                                "name": "Agitha's Castle Male Mantis"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Mantis",
+                                "name": "Agitha's Castle Female Mantis"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Stag Beetle",
+                                "name": "Agitha's Castle Male Stag Beetle"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Stag Beetle",
+                                "name": "Agitha's Castle Female Stag Beetle"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Pillbug",
+                                "name": "Agitha's Castle Male Pillbug"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Pillbug",
+                                "name": "Agitha's Castle Female Pillbug"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Butterfly",
+                                "name": "Agitha's Castle Male Butterfly"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Butterfly",
+                                "name": "Agitha's Castle Female Butterfly"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Ladybug",
+                                "name": "Agitha's Castle Male Ladybug"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Ladybug",
+                                "name": "Agitha's Castle Female Ladybug"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Snail",
+                                "name": "Agitha's Castle Male Snail"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Snail",
+                                "name": "Agitha's Castle Female Snail"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Phasmid",
+                                "name": "Agitha's Castle Male Phasmid"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Phasmid",
+                                "name": "Agitha's Castle Female Phasmid"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Grasshopper",
+                                "name": "Agitha's Castle Male Grasshopper"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Grasshopper",
+                                "name": "Agitha's Castle Female Grasshopper"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Male Dragonfly",
+                                "name": "Agitha's Castle Male Dragonfly"
+                            },
+                            {
+                                "ref": "Castle Town/Agitha's Castle/Female Dragonfly",
+                                "name": "Agitha's Castle Female Dragonfly"
+                            },
+                            {
+                                "ref": "Castle Town Poes/Jovani House Poe/",
+                                "name": "Jovani House Poe"
+                            },
+                            {
+                                "ref": "Castle Town Poes/East Castle Town Bridge Poe/",
+                                "name": "East Castle Town Bridge Poe"
+                            },
+                            {
+                                "ref": "Castle Town Golden Wolves/Golden Wolf/",
+                                "name": "Golden Wolf"
+                            },
+                            {
+                                "ref": "Castle Town Hint Signs/Hint Sign/",
+                                "name": "Hint Sign"
+                            }
+                        ]
+                    },
+                    {
+						"name": "Beside Castle Town",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 603,
+								"y": 1361
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/Beside Castle Town/Helmasaur Grotto Chest/",
+								"name": "Helmasaur Grotto Chest"
+							},
+							{
+								"ref": "Lanayru Region/Beside Castle Town/Owl Statue/Sky Character",
+								"name": "Owl Statue Sky Character"
+							},
+							{
+								"ref": "Lanayru Region/Beside Castle Town/Owl Statue/Chest",
+								"name": "Owl Statue Chest"
+							},
+							{
+								"ref": "Lanayru Region/Beside Castle Town Poes/Amphitheater Poe/",
+								"name": "Amphitheater Poe"
+							},
+							{
+								"ref": "Lanayru Region/Beside Castle Town Bugs/Female Butterfly/",
+								"name": "Female Butterfly"
+							},
+							{
+								"ref": "Lanayru Region/Beside Castle Town Bugs/Male Butterfly/",
+								"name": "Male Butterfly"
+							},
+							{
+								"ref": "Lanayru Region/Beside Castle Town Golden Wolves/Golden Wolf/",
+								"name": "Golden Wolf"
+							},
+							{
+								"ref": "Lanayru Region/Beside Castle Town Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Above Lake Hylia",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 376,
+								"y": 1554
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/Lake Hylia/Owl Statue/Sky Character",
+								"name": "Owl Statue Sky Character"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Owl Statue/Chest",
+								"name": "Owl Statue Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Vines Chest/",
+								"name": "Vines Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Bubble Grotto/Cliff Chest",
+								"name": "Bubble Grotto Cliff Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Bubble Grotto/Bubble Grotto Chest",
+								"name": "Bubble Grotto Bubble Grotto Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Lake Hylia Bridge Cliff Poe/",
+								"name": "Lake Hylia Bridge Cliff Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Bugs/Male Mantis/",
+								"name": "Male Mantis"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Bugs/Female Mantis/",
+								"name": "Female Mantis"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Hint Signs/Bridge Hint Sign/",
+								"name": "Bridge Hint Sign"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Hint Signs/Lake Hint Sign/",
+								"name": "Lake Hint Sign"
+							}
+                        ]
+                    },
+					{
+						"name": "Lake Hylia",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 312,
+								"y": 1738
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/Lake Hylia/Plumm Fruit Balloon Minigame/",
+								"name": "Plumm Fruit Balloon Minigame"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Shell Blade Grotto Chest/",
+								"name": "Shell Blade Grotto Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Flight By Fowl Minigame/Spinning Platform",
+								"name": "Flight By Fowl Minigame Spinning Platform"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Flight By Fowl Minigame/Highest Platform",
+								"name": "Flight By Fowl Minigame Highest Platform"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Flight By Fowl Minigame/2nd Highest Platform",
+								"name": "Flight By Fowl Minigame 2nd Highest Platform"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Flight By Fowl Minigame/2nd Lowest Platform",
+								"name": "Flight By Fowl Minigame 2nd Lowest Platform"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Flight By Fowl Minigame/Lowest Platform",
+								"name": "Flight By Fowl Minigame Lowest Platform"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Auru Gift To Fyer/",
+								"name": "Auru Gift To Fyer"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Water Toadpoli Grotto Chest/",
+								"name": "Water Toadpoli Grotto Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Underwater Chest/",
+								"name": "Underwater Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Left Statue Chest/",
+								"name": "Left Statue Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Right Statue Chest/",
+								"name": "Right Statue Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lanayru Spring/Underwater Left Chest",
+								"name": "Lanayru Spring Underwater Left Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lanayru Spring/Underwater Right Chest",
+								"name": "Lanayru Spring Underwater Right Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lanayru Spring/Back Room Left Chest",
+								"name": "Lanayru Spring Back Room Left Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lanayru Spring/Back Room Right Chest",
+								"name": "Lanayru Spring Back Room Right Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lanayru Spring/Back Room Lantern Chest",
+								"name": "Lanayru Spring Back Room Lantern Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lanayru Spring/West Double Clawshot Chest",
+								"name": "Lanayru Spring West Double Clawshot Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lanayru Spring/East Double Clawshot Chest",
+								"name": "Lanayru Spring East Double Clawshot Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Dock Poe/",
+								"name": "Dock Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Grotto Ledge Poe/",
+								"name": "Grotto Ledge Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Isle of Riches Poe/",
+								"name": "Isle of Riches Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Tower Poe/",
+								"name": "Tower Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Alcove Poe/",
+								"name": "Alcove Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Golden Wolves/Gerudo Desert Stone/",
+								"name": "Gerudo Desert Stone"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Hint Signs/Spring Hint Sign/",
+								"name": "Spring Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Lake Hylia Lantern Cave",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 302,
+								"y": 1986
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/1st Chest",
+								"name": "Lake Lantern Cave 1st Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/2nd Chest",
+								"name": "Lake Lantern Cave 2nd Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/3rd Chest",
+								"name": "Lake Lantern Cave 3rd Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/4th Chest",
+								"name": "Lake Lantern Cave 4th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/5th Chest",
+								"name": "Lake Lantern Cave 5th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/6th Chest - Lantern",
+								"name": "Lake Lantern Cave 6th Chest - Lantern"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/7th Chest",
+								"name": "Lake Lantern Cave 7th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/8th Chest",
+								"name": "Lake Lantern Cave 8th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/9th Chest",
+								"name": "Lake Lantern Cave 9th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/10th Chest",
+								"name": "Lake Lantern Cave 10th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/11th Chest",
+								"name": "Lake Lantern Cave 11th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/12th Chest",
+								"name": "Lake Lantern Cave 12th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/13th Chest",
+								"name": "Lake Lantern Cave 13th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/14th Chest",
+								"name": "Lake Lantern Cave 14th Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia/Lake Lantern Cave/End Lantern Chest",
+								"name": "Lake Lantern Cave End Lantern Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Lake Lantern Cave/1st Poe",
+								"name": "Lake Lantern Cave 1st Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Lake Lantern Cave/2nd Poe",
+								"name": "Lake Lantern Cave 2nd Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Poes/Lake Lantern Cave/Final Poe",
+								"name": "Lake Lantern Cave Final Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Hint Signs/Lake Lantern Cave Hint Sign/",
+								"name": "Lake Lantern Cave Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Lanayru Field",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 923,
+								"y": 872
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/Lanayru Field/Spinner Track Chest/",
+								"name": "Spinner Track Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field/Behind Gate Underwater Chest/",
+								"name": "Behind Gate Underwater Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field/Skulltula Grotto Chest/",
+								"name": "Skulltula Grotto Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field/Ice Block Puzzle Cave Chest/",
+								"name": "Ice Block Puzzle Cave Chest"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field Poes/Bridge Poe/",
+								"name": "Bridge Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field Poes/Grotto/Left Poe",
+								"name": "Grotto Left Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field Poes/Grotto/Right Poe",
+								"name": "Grotto Right Poe"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field Bugs/Female Stag Beetle/",
+								"name": "Female Stag Beetle"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field Bugs/Male Stag Beetle/",
+								"name": "Male Stag Beetle"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "South Castle Town",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 915,
+								"y": 1621
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/South Castle Town/Tektite Grotto Chest/",
+								"name": "Tektite Grotto Chest"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town/Tightrope Chest/",
+								"name": "Tightrope Chest"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town/Fountain Chest/",
+								"name": "Fountain Chest"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town/Double Clawshot Chasm Chest/",
+								"name": "Double Clawshot Chasm Chest"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town/Wooden Statue/",
+								"name": "Wooden Statue"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town Poes/Outside South Castle Town Poe/",
+								"name": "Outside South Castle Town Poe"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town Bugs/Female Ladybug/",
+								"name": "Female Ladybug"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town Bugs/Male Ladybug/",
+								"name": "Male Ladybug"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town Golden Wolves/Golden Wolf/",
+								"name": "Golden Wolf"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Upper Zora's River",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 1301,
+								"y":298
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/Upper Zora's River/Iza/Helping Hand",
+								"name": "Iza Helping Hand"
+							},
+							{
+								"ref": "Lanayru Region/Upper Zora's River/Iza/Raging Rapids Minigame",
+								"name": "Iza Raging Rapids Minigame"
+							},
+							{
+								"ref": "Lanayru Region/Upper Zora's River Poes/Upper Zora's River Poe/",
+								"name": "Upper Zora's River Poe"
+							},
+							{
+								"ref": "Lanayru Region/Upper Zora's River Bugs/Female Dragonfly/",
+								"name": "Female Dragonfly"
+							},
+							{
+								"ref": "Lanayru Region/Upper Zora's River Golden Wolves/West Castle Town Stone/",
+								"name": "West Castle Town Stone"
+							}
+						]
+					},
+					{
+						"name": "Fishing Hole",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 1287,
+								"y": 133
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/Upper Zora's River/Fishing Hole Bottle/",
+								"name": "Fishing Hole Bottle"
+							},
+							{
+								"ref": "Lanayru Region/Upper Zora's River/Fishing Hole Heart Piece/",
+								"name": "Fishing Hole Heart Piece"
+							},
+							{
+								"ref": "Lanayru Region/Upper Zora's River Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Zora's Domain",
+						"map_locations": [
+							{
+								"map": "lr",
+								"x": 914,
+								"y": 181
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lanayru Region/Zora's Domain/Chest Behind Waterfall/",
+								"name": "Chest Behind Waterfall"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain/Chest By Mother and Child Isles/",
+								"name": "Chest By Mother and Child Isles"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain/Underwater Goron/",
+								"name": "Underwater Goron"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain/Light All Torches Chest/",
+								"name": "Light All Torches Chest"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain/Extinguish All Torches Chest/",
+								"name": "Extinguish All Torches Chest"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain Poes/Mother and Child Isle Poe/",
+								"name": "Mother and Child Isle Poe"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain Poes/Waterfall Poe/",
+								"name": "Waterfall Poe"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain Bugs/Male Dragonfly/",
+								"name": "Male Dragonfly"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

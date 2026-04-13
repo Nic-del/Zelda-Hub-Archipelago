@@ -1,0 +1,2 @@
+SLOTS_DATA_MAPPING = {
+}

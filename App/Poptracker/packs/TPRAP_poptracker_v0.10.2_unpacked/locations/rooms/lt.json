@@ -1,0 +1,58 @@
+[
+	{
+		"name": "LakebedTempleBossRoom",
+		"access_rules": [
+			"@LakebedTempleCentralRoom, ltsmallkey:3, $canLaunchBombs, clawshot, ltbigkey",
+			"@LakebedTempleCentralRoom, ltsmallkey:3, $canLaunchBombs, clawshot, bkkeysy",
+			"@LakebedTempleCentralRoom, skkeysy, $canLaunchBombs, clawshot, ltbigkey",
+			"@LakebedTempleCentralRoom, skkeysy, $canLaunchBombs, clawshot, bkkeysy",
+			"[glitcheson], @LakebedTempleCentralRoom, clawshot, sword",
+			"[glitcheson], @LakebedTempleCentralRoom, clawshot, ltbigkey",
+			"[glitcheson], @LakebedTempleCentralRoom, clawshot, bkkeysy",
+			"[glitcheson], @LakebedTempleCentralRoom, $canDoLJA"
+		]
+	},
+	{
+		"name": "LakebedTempleCentralRoom",
+		"access_rules": [
+			"@LakebedTempleEastWingFirstFloor",
+			"@LakebedTempleEastWingSecondFloor",
+			"@LakebedTempleEntrance, $canLaunchBombs",
+			"[glitcheson], @LakebedTempleEntrance, $canDoLJA",
+			"[glitcheson], @LakebedTempleEntrance, $canDoJSMoonBoots",
+			"@LakebedTempleWestWing"
+		]
+	},
+	{
+		"name": "LakebedTempleEastWingFirstFloor",
+		"access_rules": [
+			"@LakebedTempleCentralRoom",
+			"@LakebedTempleEastWingSecondFloor, $canLaunchBombs",
+			"@LakebedTempleEastWingSecondFloor, clawshot"
+		]
+	},
+	{
+		"name": "LakebedTempleEastWingSecondFloor",
+		"access_rules": [
+			"@LakebedTempleCentralRoom, ltsmallkey:1",
+			"@LakebedTempleCentralRoom, skkeysy"
+		]
+	},
+	{
+		"name": "LakebedTempleEntrance",
+		"access_rules": [
+			"@LakeHylia, zoraarmor, skiplakebedentranceon",
+			"@LakeHylia, zoraarmor, boots, $hasWaterBombs",
+			"[glitcheson], @LakeHylia, zoraarmor",
+			"[glitcheson], @LakeHylia, $canDoAirRefill",
+			"@LakebedTempleCentralRoom"
+		]
+	},
+	{
+		"name": "LakebedTempleWestWing",
+		"access_rules": [
+			"@LakebedTempleCentralRoom, ltsmallkey:3, $canSmash, clawshot",
+			"@LakebedTempleCentralRoom, skkeysy, $canSmash, clawshot"
+		]
+	}
+]

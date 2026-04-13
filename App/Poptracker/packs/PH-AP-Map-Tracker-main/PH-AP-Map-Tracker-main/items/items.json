@@ -1,0 +1,1154 @@
+[
+    // Dungeons
+	{
+		"name": "Temple of Fire",
+		"type": "static",
+		"img": "images/items/fir.png",
+		"codes": "fir_label"
+	},
+	{
+        "name": "Temple of Fire Reward",
+        "type": "progressive_toggle",
+		"loop": true,
+        "allow_disabled": true,
+		"initial_stage_idx": 0,
+        "stages": [
+			{
+                "name": "Temple of Fire Reward: None",
+				"img": "images/items/additional_metal.png",
+                "img_mods": "overlay|/images/items/X.png",
+				"inherit_codes": false,
+				"codes": "fir_none"
+            },
+			{
+                "name": "Temple of Fire Reward: Pure Metal",
+				"img": "images/items/additional_metal.png",
+				"inherit_codes": false,
+				"codes": "fir_additional_metal"
+            },
+			{
+                "name": "Temple of Fire Reward: Crimsonine",
+				"img": "images/items/crimsonine.png",
+				"inherit_codes": false,
+				"codes": "fir_crimsonine"
+            },
+			{
+                "name": "Temple of Fire Reward: Azurine",
+				"img": "images/items/azurine.png",
+				"inherit_codes": false,
+				"codes": "fir_azurine"
+            },
+			{
+                "name": "Temple of Fire Reward: Aquanine",
+				"img": "images/items/aquanine.png",
+				"inherit_codes": false,
+				"codes": "fir_aquanine"
+            }
+        ],
+        "codes": "fir_reward"
+    },
+    {
+		"name": "Temple of Fire Boss Key",
+		"type": "toggle",
+		"img": "images/items/Boss_Key.png",
+		"codes": "FIRBK"
+	},
+	{
+        "name": "Temple of Fire Small Keys",
+        "type": "consumable",
+        "img": "images/items/small_key_fir.png",
+        "codes": "FIRSmall",
+        "max_quantity": 3
+    },
+    {
+		"name": "Temple of Wind",
+		"type": "static",
+		"img": "images/items/wnd.png",
+		"codes": "wnd_label"
+	},
+	{
+        "name": "Temple of Wind Reward",
+        "type": "progressive_toggle",
+		"loop": true,
+        "allow_disabled": true,
+		"initial_stage_idx": 0,
+        "stages": [
+			{
+                "name": "Temple of Wind Reward: None",
+				"img": "images/items/additional_metal.png",
+                "img_mods": "overlay|/images/items/X.png",
+				"inherit_codes": false,
+				"codes": "wnd_none"
+            },
+			{
+                "name": "Temple of Wind Reward: Pure Metal",
+				"img": "images/items/additional_metal.png",
+				"inherit_codes": false,
+				"codes": "wnd_additional_metal"
+            },
+			{
+                "name": "Temple of Wind Reward: Crimsonine",
+				"img": "images/items/crimsonine.png",
+				"inherit_codes": false,
+				"codes": "wnd_crimsonine"
+            },
+			{
+                "name": "Temple of Wind Reward: Azurine",
+				"img": "images/items/azurine.png",
+				"inherit_codes": false,
+				"codes": "wnd_azurine"
+            },
+			{
+                "name": "Temple of Wind Reward: Aquanine",
+				"img": "images/items/aquanine.png",
+				"inherit_codes": false,
+				"codes": "wnd_aquanine"
+            }
+        ],
+        "codes": "wnd_reward"
+    },
+    {
+		"name": "Temple of Wind Boss Key",
+		"type": "toggle",
+		"img": "images/items/Boss_Key.png",
+		"codes": "WNDBK"
+	},
+	{
+        "name": "Temple of Wind Small Keys",
+        "type": "consumable",
+        "img": "images/items/small_key_wnd.png",
+        "codes": "WNDSmall",
+        "max_quantity": 1
+    },
+    {
+		"name": "Temple of Courage",
+		"type": "static",
+		"img": "images/items/crg.png",
+		"codes": "crg_label"
+	},
+	{
+        "name": "Temple of Courage Reward",
+        "type": "progressive_toggle",
+		"loop": true,
+        "allow_disabled": true,
+		"initial_stage_idx": 0,
+        "stages": [
+			{
+                "name": "Temple of Courage Reward: None",
+				"img": "images/items/additional_metal.png",
+                "img_mods": "overlay|/images/items/X.png",
+				"inherit_codes": false,
+				"codes": "crg_none"
+            },
+			{
+                "name": "Temple of Courage Reward: Pure Metal",
+				"img": "images/items/additional_metal.png",
+				"inherit_codes": false,
+				"codes": "crg_additional_metal"
+            },
+			{
+                "name": "Temple of Courage Reward: Crimsonine",
+				"img": "images/items/crimsonine.png",
+				"inherit_codes": false,
+				"codes": "crg_crimsonine"
+            },
+			{
+                "name": "Temple of Courage Reward: Azurine",
+				"img": "images/items/azurine.png",
+				"inherit_codes": false,
+				"codes": "crg_azurine"
+            },
+			{
+                "name": "Temple of Courage Reward: Aquanine",
+				"img": "images/items/aquanine.png",
+				"inherit_codes": false,
+				"codes": "crg_aquanine"
+            }
+        ],
+        "codes": "crg_reward"
+    },
+    {
+		"name": "Temple of Courage Boss Key",
+		"type": "toggle",
+		"img": "images/items/Boss_Key.png",
+		"codes": "CRGBK"
+	},
+	{
+        "name": "Temple of Courage Small Keys",
+        "type": "consumable",
+        "img": "images/items/small_key_crg.png",
+        "codes": "CRGSmall",
+        "max_quantity": 3
+    },
+    {
+		"name": "Temple of Courage Square Crystal",
+		"type": "toggle",
+		"img": "images/items/Square Crystal.png",
+		"codes": "CRGSC"
+	},
+	{
+		"name": "Ghost Ship",
+		"type": "static",
+		"img": "images/items/ghs.png",
+		"codes": "ghs_label"
+	},
+	{
+        "name": "Ghost Ship Reward",
+        "type": "progressive_toggle",
+		"loop": true,
+        "allow_disabled": true,
+		"initial_stage_idx": 0,
+        "stages": [
+			{
+                "name": "Ghost Ship Reward: None",
+				"img": "images/items/additional_metal.png",
+                "img_mods": "overlay|/images/items/X.png",
+				"inherit_codes": false,
+				"codes": "ghs_none"
+            },
+			{
+                "name": "Ghost Ship Reward: Pure Metal",
+				"img": "images/items/additional_metal.png",
+				"inherit_codes": false,
+				"codes": "ghs_additional_metal"
+            },
+			{
+                "name": "Ghost Ship Reward: Crimsonine",
+				"img": "images/items/crimsonine.png",
+				"inherit_codes": false,
+				"codes": "ghs_crimsonine"
+            },
+			{
+                "name": "Ghost Ship Reward: Azurine",
+				"img": "images/items/azurine.png",
+				"inherit_codes": false,
+				"codes": "ghs_azurine"
+            },
+			{
+                "name": "Ghost Ship Reward: Aquanine",
+				"img": "images/items/aquanine.png",
+				"inherit_codes": false,
+				"codes": "ghs_aquanine"
+            }
+        ],
+        "codes": "ghs_reward"
+    },
+    {
+		"name": "Ghost Ship Round Crystal",
+		"type": "toggle",
+		"img": "images/items/Round_Crystal.png",
+		"codes": "GHSRC"
+	},
+	{
+		"name": "Ghost Ship Triangle Crystal",
+		"type": "toggle",
+		"img": "images/items/Triangle_Crystal.png",
+		"codes": "GHSTC"
+	},
+	{
+		"name": "Goron Temple",
+		"type": "static",
+		"img": "images/items/gor.png",
+		"codes": "gor_label"
+	},
+	{
+        "name": "Goron Temple Reward",
+        "type": "progressive_toggle",
+		"loop": true,
+        "allow_disabled": true,
+		"initial_stage_idx": 0,
+        "stages": [
+			{
+                "name": "Goron Temple Reward: None",
+				"img": "images/items/additional_metal.png",
+                "img_mods": "overlay|/images/items/X.png",
+				"inherit_codes": false,
+				"codes": "gor_none"
+            },
+			{
+                "name": "Goron Temple Reward: Pure Metal",
+				"img": "images/items/additional_metal.png",
+				"inherit_codes": false,
+				"codes": "gor_additional_metal"
+            },
+			{
+                "name": "Goron Temple Reward: Crimsonine",
+				"img": "images/items/crimsonine.png",
+				"inherit_codes": false,
+				"codes": "gor_crimsonine"
+            },
+			{
+                "name": "Goron Temple Reward: Azurine",
+				"img": "images/items/azurine.png",
+				"inherit_codes": false,
+				"codes": "gor_azurine"
+            },
+			{
+                "name": "Goron Temple Reward: Aquanine",
+				"img": "images/items/aquanine.png",
+				"inherit_codes": false,
+				"codes": "gor_aquanine"
+            }
+        ],
+        "codes": "gor_reward"
+    },
+    {
+		"name": "Goron Temple Boss Key",
+		"type": "toggle",
+		"img": "images/items/Boss_Key.png",
+		"codes": "GORBK"
+	},
+	{
+		"name": "Temple of Ice",
+		"type": "static",
+		"img": "images/items/ice.png",
+		"codes": "ice_label"
+	},
+	{
+        "name": "Temple of Ice Reward",
+        "type": "progressive_toggle",
+		"loop": true,
+        "allow_disabled": true,
+		"initial_stage_idx": 0,
+        "stages": [
+			{
+                "name": "Temple of Ice Reward: None",
+				"img": "images/items/additional_metal.png",
+                "img_mods": "overlay|/images/items/X.png",
+				"inherit_codes": false,
+				"codes": "ice_none"
+            },
+			{
+                "name": "Temple of Ice Reward: Pure Metal",
+				"img": "images/items/additional_metal.png",
+				"inherit_codes": false,
+				"codes": "ice_additional_metal"
+            },
+			{
+                "name": "Temple of Ice Reward: Crimsonine",
+				"img": "images/items/crimsonine.png",
+				"inherit_codes": false,
+				"codes": "ice_crimsonine"
+            },
+			{
+                "name": "Temple of Ice Reward: Azurine",
+				"img": "images/items/azurine.png",
+				"inherit_codes": false,
+				"codes": "ice_azurine"
+            },
+			{
+                "name": "Temple of Ice Reward: Aquanine",
+				"img": "images/items/aquanine.png",
+				"inherit_codes": false,
+				"codes": "ice_aquanine"
+            }
+        ],
+        "codes": "ice_reward"
+    },
+    {
+		"name": "Temple of Ice Boss Key",
+		"type": "toggle",
+		"img": "images/items/Boss_Key.png",
+		"codes": "ICEBK"
+	},
+	{
+        "name": "Temple of Ice Small Keys",
+        "type": "consumable",
+        "img": "images/items/small_key_ice.png",
+        "codes": "ICESmall",
+        "max_quantity": 3
+    },
+    {
+		"name": "Mutoh's Temple",
+		"type": "static",
+		"img": "images/items/mut.png",
+		"codes": "mut_label"
+	},
+	{
+        "name": "Mutoh's Temple Reward",
+        "type": "progressive_toggle",
+		"loop": true,
+        "allow_disabled": true,
+		"initial_stage_idx": 0,
+        "stages": [
+			{
+                "name": "Mutoh's Temple Reward: None",
+				"img": "images/items/additional_metal.png",
+                "img_mods": "overlay|/images/items/X.png",
+				"inherit_codes": false,
+				"codes": "mut_none"
+            },
+			{
+                "name": "Mutoh's Temple Reward: Pure Metal",
+				"img": "images/items/additional_metal.png",
+				"inherit_codes": false,
+				"codes": "mut_additional_metal"
+            },
+			{
+                "name": "Mutoh's Temple Reward: Crimsonine",
+				"img": "images/items/crimsonine.png",
+				"inherit_codes": false,
+				"codes": "mut_crimsonine"
+            },
+			{
+                "name": "Mutoh's Temple Reward: Azurine",
+				"img": "images/items/azurine.png",
+				"inherit_codes": false,
+				"codes": "mut_azurine"
+            },
+			{
+                "name": "Mutoh's Temple Reward: Aquanine",
+				"img": "images/items/aquanine.png",
+				"inherit_codes": false,
+				"codes": "mut_aquanine"
+            }
+        ],
+        "codes": "mut_reward"
+    },
+    {
+		"name": "Mutoh's Temple Boss Key",
+		"type": "toggle",
+		"img": "images/items/Boss_Key.png",
+		"codes": "MUTBK"
+	},
+	{
+        "name": "Mutoh's Temple Small Keys",
+        "type": "consumable",
+        "img": "images/items/small_key_mut.png",
+        "codes": "MUTSmall",
+        "max_quantity": 2
+    },
+	{
+		"name": "Temple of the Ocean King",
+		"type": "static",
+		"img": "images/items/tok.png",
+		"codes": "tok_label"
+	},
+	{
+        "name": "Temple of the Ocean King Reward",
+        "type": "progressive_toggle",
+		"loop": true,
+        "allow_disabled": true,
+		"initial_stage_idx": 0,
+        "stages": [
+			{
+                "name": "Temple of the Ocean King Reward: None",
+				"img": "images/items/additional_metal.png",
+                "img_mods": "overlay|/images/items/X.png",
+				"inherit_codes": false,
+				"codes": "tok_none"
+            },
+			{
+                "name": "Temple of the Ocean King Reward: Pure Metal",
+				"img": "images/items/additional_metal.png",
+				"inherit_codes": false,
+				"codes": "tok_additional_metal"
+            },
+			{
+                "name": "Temple of the Ocean King Reward: Crimsonine",
+				"img": "images/items/crimsonine.png",
+				"inherit_codes": false,
+				"codes": "tok_crimsonine"
+            },
+			{
+                "name": "Temple of the Ocean King Reward: Azurine",
+				"img": "images/items/azurine.png",
+				"inherit_codes": false,
+				"codes": "tok_azurine"
+            },
+			{
+                "name": "Temple of the Ocean King Reward: Aquanine",
+				"img": "images/items/aquanine.png",
+				"inherit_codes": false,
+				"codes": "tok_aquanine"
+            }
+        ],
+        "codes": "tok_reward"
+    },
+	{
+        "name": "TotOK Small Keys",
+        "type": "consumable",
+        "img": "images/items/small_key_tok.png",
+        "codes": "ToKSmall",
+        "max_quantity": 6
+    },
+    {
+		"name": "TotOK B3 Force Gems",
+		"type": "consumable",
+		"img": "images/items/top_force_gem.png",
+		"codes": "TOKB3Gem",
+		"max_quantity": 3
+	},
+	{
+		"name": "TotOK Round Crystal",
+		"type": "toggle",
+		"img": "images/items/Round_Crystal.png",
+		"codes": "TOKRC"
+	},
+	{
+		"name": "TotOK Triangle Crystal",
+		"type": "toggle",
+		"img": "images/items/Triangle_Crystal.png",
+		"codes": "TOKTC"
+	},
+	{
+		"name": "TotOK Square Crystal",
+		"type": "toggle",
+		"img": "images/items/Square_Crystal.png",
+		"codes": "TOKSC"
+	},
+	{
+		"name": "TotOK B12 Force Gems",
+		"type": "consumable",
+		"img": "images/items/top_force_gem.png",
+		"codes": "TOKB12Gem",
+		"max_quantity": 3
+	},
+	{
+        "name": "Mountain Passage Small Keys",
+        "type": "consumable",
+        "img": "images/items/small_key_mp.png",
+        "codes": "MPSmall",
+        "max_quantity": 3
+    },
+    // Inventory Items
+	{
+        "name": "Sword",
+        "type": "progressive",
+        "stages": [
+			{
+                "name": "Sword",
+                "img": "images/items/sword_oshu.png"
+            },
+            {
+                "name": "Phantom Sword",
+                "img": "images/items/sword_phantom.png"
+            }
+        ],
+		"codes": "sword"
+    },
+	{
+		"name": "Wooden Shield",
+		"type": "toggle",
+		"img": "images/items/PH_Wooden_Shield_Icon.png",
+		"codes": "shield"
+	},
+	{
+        "name": "Boomerang",
+        "type": "toggle",
+        "img": "images/items/boomerang.png",
+        "codes": "boomerang"
+    },
+    {
+        "name": "Bombs",
+        "type": "progressive",
+        "stages": [
+            {
+                "name": "Bombs",
+                "img": "images/items/bomb_10.png",
+                "disabled_img": "images/items/bomb.png"
+            },
+            {
+                "name": "Bombs",
+                "img": "images/items/bomb_20.png"
+            },
+            {
+                "name": "Bombs",
+                "img": "images/items/bomb_30.png"
+            }
+        ],
+		"codes": "bombs"
+    },
+    {
+        "name": "Bow",
+        "type": "progressive",
+        "stages": [
+            {
+                "name": "Bow",
+                "img": "images/items/bow_20.png",
+                "disabled_img": "images/items/bow.png"
+            },
+            {
+                "name": "Bow",
+                "img": "images/items/bow_30.png"
+            },
+            {
+                "name": "Bow",
+                "img": "images/items/bow_50.png"
+            }
+        ],
+		"codes": "bow"
+    },
+    {
+        "name": "Bombchus",
+        "type": "progressive",
+        "stages": [
+            {
+                "name": "Bombchus",
+                "img": "images/items/bombchu_10.png",
+				"disabled_img": "images/items/bombchu.png"
+            },
+            {
+                "name": "Bombchus",
+                "img": "images/items/bombchu_20.png"
+            },
+            {
+                "name": "Bombchus",
+                "img": "images/items/bombchu_30.png"
+            }
+        ],
+		"codes": "bombchus"
+    },
+	{
+        "name": "Grappling Hook",
+        "type": "toggle",
+        "img": "images/items/grappling_hook.png",
+        "codes": "grapplinghook"
+    },
+    {
+        "name": "Hammer",
+        "type": "toggle",
+        "img": "images/items/hammer.png",
+        "codes": "hammer"
+    },
+    {
+        "name": "Shovel",
+        "type": "toggle",
+        "img": "images/items/shovel.png",
+        "codes": "shovel"
+    },
+    // Quest Key Items
+	{
+        "name": "Sun Key",
+        "type": "toggle",
+        "img": "images/items/sun_key.png",
+        "codes": "sunkey"
+    },
+    {
+        "name": "Ghost Key",
+        "type": "toggle",
+        "img": "images/items/ghost_key.png",
+        "codes": "ghostkey"
+    },
+    {
+        "name": "Triforce Crest",
+        "type": "toggle",
+        "img": "images/items/triforce_crest.png",
+        "codes": "triforcecrest"
+    },
+    {
+        "name": "Regal Necklace",
+        "type": "toggle",
+        "img": "images/items/regal_necklace.png",
+        "codes": "regalnecklace"
+    },
+    {
+        "name": "King's Key",
+        "type": "toggle",
+        "img": "images/items/kings_key.png",
+        "codes": "kingskey"
+    },
+    // Spirits
+	{
+        "name": "Spirit of Power",
+        "type": "progressive",
+        "stages": [
+			{
+                "name": "Spirit of Power",
+                "img": "images/items/spirit_of_power_base.png"
+            },
+            {
+                "name": "Spirit of Power Level 1",
+                "img": "images/items/spirit_of_power_lvl1.png"
+            },
+            {
+                "name": "Spirit of Power Level 2",
+                "img": "images/items/spirit_of_power_lvl2.png"
+            }
+        ],
+		"codes": "spiritofpower"
+    },
+    {
+        "name": "Spirit of Wisdom",
+        "type": "progressive",
+        "stages": [
+			{
+                "name": "Spirit of Wisdom",
+                "img": "images/items/spirit_of_wisdom_base.png"
+            },
+            {
+                "name": "Spirit of Wisdom Level 1",
+                "img": "images/items/spirit_of_wisdom_lvl1.png"
+            },
+            {
+                "name": "Spirit of Wisdom Level 2",
+                "img": "images/items/spirit_of_wisdom_lvl2.png"
+            }
+        ],
+		"codes": "spiritofwisdom"
+    },
+    {
+        "name": "Spirit of Courage",
+        "type": "progressive",
+        "stages": [
+			{
+                "name": "Spirit of Courage",
+                "img": "images/items/spirit_of_courage_base.png"
+            },
+            {
+                "name": "Spirit of Courage Level 1",
+                "img": "images/items/spirit_of_courage_lvl1.png"
+            },
+            {
+                "name": "Spirit of Courage Level 2",
+                "img": "images/items/spirit_of_courage_lvl2.png"
+            }
+        ],
+		"codes": "spiritofcourage"
+    },
+    {
+        "name": "Power Gem",
+        "type": "consumable",
+        "img": "images/items/power_gem.png",
+        "codes": "powergem",
+        "max_quantity": 20
+    },
+    {
+        "name": "Wisdom Gem",
+        "type": "consumable",
+        "img": "images/items/wisdom_gem.png",
+        "codes": "wisdomgem",
+        "max_quantity": 20
+    },
+    {
+        "name": "Courage Gem",
+        "type": "consumable",
+        "img": "images/items/courage_gem.png",
+        "codes": "couragegem",
+        "max_quantity": 20
+    },
+    // Trade Items
+	{
+        "name": "Jolene's Letter",
+        "type": "toggle",
+        "img": "images/items/Letter.png",
+        "codes": "Letter"
+    },
+    {
+        "name": "Phantom Hourglass",
+        "type": "toggle",
+        "img": "images/items/Phantom_Hourglass.png",
+        "codes": "Hourglass"
+    },
+    {
+        "name": "Phantom Blade",
+        "type": "toggle",
+        "img": "images/items/phantom_blade.png",
+        "codes": "blade"
+    },
+    {
+        "name": "Hero's New Clothes",
+        "type": "toggle",
+        "img": "images/items/clothes.png",
+        "codes": "clothes"
+    },
+    {
+        "name": "Kaleidoscope",
+        "type": "toggle",
+        "img": "images/items/kaleidoscope.png",
+        "codes": "kaleidoscope"
+    },
+    {
+        "name": "Guard Notebook",
+        "type": "toggle",
+        "img": "images/items/notebook.png",
+        "codes": "notebook"
+    },
+    {
+        "name": "Wood Heart",
+        "type": "toggle",
+        "img": "images/items/wood_heart.png",
+        "codes": "woodheart"
+    },
+    {
+        "name": "Swordsman's Scroll",
+        "type": "toggle",
+        "img": "images/items/scroll.png",
+        "codes": "scroll"
+    },
+    // Boat
+	{
+        "name": "SW Sea Chart",
+        "type": "toggle",
+        "img": "images/items/sea_chart_sw.png",
+        "codes": "swseachart"
+    },
+    {
+        "name": "NW Sea Chart",
+        "type": "toggle",
+        "img": "images/items/sea_chart_nw.png",
+        "codes": "nwseachart"
+    },
+    {
+        "name": "SE Sea Chart",
+        "type": "toggle",
+        "img": "images/items/sea_chart_se.png",
+        "codes": "seseachart"
+    },
+    {
+        "name": "NE Sea Chart",
+        "type": "toggle",
+        "img": "images/items/sea_chart_ne.png",
+        "codes": "neseachart"
+    },
+    {
+        "name": "Cannon",
+        "type": "toggle",
+        "img": "images/items/cannon.png",
+        "codes": "cannon"
+    },
+    {
+        "name": "Cyclone Slate",
+        "type": "toggle",
+        "img": "images/items/cyclone_slate2.png",
+        "codes": "cycloneslate"
+    },
+    {
+        "name": "Warp X",
+        "type": "toggle",
+        "img": "images/items/warpx.png",
+        "codes": "warpx"
+    },
+    {
+        "name": "Warp Phi",
+        "type": "toggle",
+        "img": "images/items/warpphi.png",
+        "codes": "warpphi"
+    },
+    {
+        "name": "Warp N",
+        "type": "toggle",
+        "img": "images/items/warpn.png",
+        "codes": "warpn"
+    },
+    {
+        "name": "Warp Omega",
+        "type": "toggle",
+        "img": "images/items/warpomega.png",
+        "codes": "warpomega"
+    },
+    {
+        "name": "Warp W",
+        "type": "toggle",
+        "img": "images/items/warpw.png",
+        "codes": "warpw"
+    },
+    {
+        "name": "Warp Square",
+        "type": "toggle",
+        "img": "images/items/warpsquare.png",
+        "codes": "warpsquare"
+    },
+    {
+        "name": "Bright Ship",
+        "type": "toggle",
+        "img": "images/items/BrightShip.png",
+        "codes": "Bright Ship"
+    },
+    {
+        "name": "Iron Ship",
+        "type": "toggle",
+        "img": "images/items/IronShip.png",
+        "codes": "Iron Ship"
+    },
+    {
+        "name": "Stone Ship",
+        "type": "toggle",
+        "img": "images/items/StoneShip.png",
+        "codes": "Stone Ship"
+    },
+    {
+        "name": "Vintage Ship",
+        "type": "toggle",
+        "img": "images/items/VintageShip.png",
+        "codes": "Vintage Ship"
+    },
+    {
+        "name": "Demon Ship",
+        "type": "toggle",
+        "img": "images/items/DemonShip.png",
+        "codes": "Demon Ship"
+    },
+    {
+        "name": "Tropical Ship",
+        "type": "toggle",
+        "img": "images/items/TropicalShip.png",
+        "codes": "Tropical Ship"
+    },
+    {
+        "name": "Dignified Ship",
+        "type": "toggle",
+        "img": "images/items/DignifiedShip.png",
+        "codes": "Dignified Ship"
+    },
+    {
+        "name": "Golden Ship",
+        "type": "toggle",
+        "img": "images/items/GoldShip.png",
+        "codes": "Golden Ship"
+    },
+    // Salvageable Treasures
+	{
+        "name": "Salvage Arm",
+        "type": "toggle",
+        "img": "images/items/salvage_arm.png",
+        "codes": "salvagearm"
+    },
+    {
+        "name": "Courage Crest",
+        "type": "toggle",
+        "img": "images/items/courage_crest.png",
+        "codes": "couragecrest"
+    },
+    {
+        "name": "Treasure Map #1",
+        "type": "toggle",
+        "img": "images/items/treasure1.png",
+        "codes": "treasure1"
+    },
+    {
+        "name": "Treasure Map #2",
+        "type": "toggle",
+        "img": "images/items/treasure2.png",
+        "codes": "treasure2"
+    },
+    {
+        "name": "Treasure Map #3",
+        "type": "toggle",
+        "img": "images/items/treasure3.png",
+        "codes": "treasure3"
+    },
+    {
+        "name": "Treasure Map #4",
+        "type": "toggle",
+        "img": "images/items/treasure4.png",
+        "codes": "treasure4"
+    },
+    {
+        "name": "Treasure Map #5",
+        "type": "toggle",
+        "img": "images/items/treasure5.png",
+        "codes": "treasure5"
+    },
+    {
+        "name": "Treasure Map #6",
+        "type": "toggle",
+        "img": "images/items/treasure6.png",
+        "codes": "treasure6"
+    },
+    {
+        "name": "Treasure Map #7",
+        "type": "toggle",
+        "img": "images/items/treasure7.png",
+        "codes": "treasure7"
+    },
+    {
+        "name": "Treasure Map #8",
+        "type": "toggle",
+        "img": "images/items/treasure8.png",
+        "codes": "treasure8"
+    },
+    {
+        "name": "Treasure Map #9",
+        "type": "toggle",
+        "img": "images/items/treasure9.png",
+        "codes": "treasure9"
+    },
+    {
+        "name": "Treasure Map #10",
+        "type": "toggle",
+        "img": "images/items/treasure10.png",
+        "codes": "treasure10"
+    },
+    {
+        "name": "Treasure Map #11",
+        "type": "toggle",
+        "img": "images/items/treasure11.png",
+        "codes": "treasure11"
+    },
+    {
+        "name": "Treasure Map #12",
+        "type": "toggle",
+        "img": "images/items/treasure12.png",
+        "codes": "treasure12"
+    },
+    {
+        "name": "Treasure Map #13",
+        "type": "toggle",
+        "img": "images/items/treasure13.png",
+        "codes": "treasure13"
+    },
+    {
+        "name": "Treasure Map #14",
+        "type": "toggle",
+        "img": "images/items/treasure14.png",
+        "codes": "treasure14"
+    },
+    {
+        "name": "Treasure Map #15",
+        "type": "toggle",
+        "img": "images/items/treasure15.png",
+        "codes": "treasure15"
+    },
+    {
+        "name": "Treasure Map #16",
+        "type": "toggle",
+        "img": "images/items/treasure16.png",
+        "codes": "treasure16"
+    },
+    {
+        "name": "Treasure Map #17",
+        "type": "toggle",
+        "img": "images/items/treasure17.png",
+        "codes": "treasure17"
+    },
+    {
+        "name": "Treasure Map #18",
+        "type": "toggle",
+        "img": "images/items/treasure18.png",
+        "codes": "treasure18"
+    },
+    {
+        "name": "Treasure Map #19",
+        "type": "toggle",
+        "img": "images/items/treasure19.png",
+        "codes": "treasure19"
+    },
+    {
+        "name": "Treasure Map #20",
+        "type": "toggle",
+        "img": "images/items/treasure20.png",
+        "codes": "treasure20"
+    },
+    {
+        "name": "Treasure Map #21",
+        "type": "toggle",
+        "img": "images/items/treasure21.png",
+        "codes": "treasure21"
+    },
+    {
+        "name": "Treasure Map #22",
+        "type": "toggle",
+        "img": "images/items/treasure22.png",
+        "codes": "treasure22"
+    },
+    {
+        "name": "Treasure Map #23",
+        "type": "toggle",
+        "img": "images/items/treasure23.png",
+        "codes": "treasure23"
+    },
+    {
+        "name": "Treasure Map #24",
+        "type": "toggle",
+        "img": "images/items/treasure24.png",
+        "codes": "treasure24"
+    },
+    {
+        "name": "Treasure Map #25",
+        "type": "toggle",
+        "img": "images/items/treasure25.png",
+        "codes": "treasure25"
+    },
+    {
+        "name": "Treasure Map #26",
+        "type": "toggle",
+        "img": "images/items/treasure26.png",
+        "codes": "treasure26"
+    },
+    {
+        "name": "Treasure Map #27",
+        "type": "toggle",
+        "img": "images/items/treasure27.png",
+        "codes": "treasure27"
+    },
+    {
+        "name": "Treasure Map #28",
+        "type": "toggle",
+        "img": "images/items/treasure28.png",
+        "codes": "treasure28"
+    },
+    {
+        "name": "Treasure Map #29",
+        "type": "toggle",
+        "img": "images/items/treasure29.png",
+        "codes": "treasure29"
+    },
+    {
+        "name": "Treasure Map #30",
+        "type": "toggle",
+        "img": "images/items/treasure30.png",
+        "codes": "treasure30"
+    },
+    {
+        "name": "Treasure Map #31",
+        "type": "toggle",
+        "img": "images/items/treasure31.png",
+        "codes": "treasure31"
+    },
+    // Fishing
+	{
+        "name": "Fishing Rod",
+        "type": "toggle",
+        "img": "images/items/fishing_rod.png",
+        "codes": "fishingrod"
+    },
+    {
+        "name": "Swordfish Shadows",
+        "type": "toggle",
+        "img": "images/items/Shadows.png",
+        "codes": "Shadows"
+    },
+    {
+        "name": "Big Catch Lure",
+        "type": "toggle",
+        "img": "images/items/Lure.png",
+        "codes": "Lure"
+    },
+    {
+        "name": "Skippyjack",
+        "type": "toggle",
+        "img": "images/items/Skippyjack.png",
+        "codes": "Skippyjack"
+    },
+    {
+        "name": "Toona",
+        "type": "toggle",
+        "img": "images/items/Toona.png",
+        "codes": "Toona"
+    },
+    {
+        "name": "Loovar",
+        "type": "toggle",
+        "img": "images/items/Loovar.png",
+        "codes": "Loovar"
+    },
+    {
+        "name": "Rusty Swordfish",
+        "type": "toggle",
+        "img": "images/items/Swordfish.png",
+        "codes": "Swordfish"
+    },
+    {
+        "name": "Legendary Neptoona",
+        "type": "toggle",
+        "img": "images/items/Neptoona.png",
+        "codes": "Neptoona"
+    },
+    {
+        "name": "Stowfish",
+        "type": "toggle",
+        "img": "images/items/Stowfish.png",
+        "codes": "Stowfish"
+    }
+]

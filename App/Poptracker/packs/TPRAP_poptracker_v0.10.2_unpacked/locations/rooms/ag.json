@@ -1,0 +1,46 @@
+[
+	{
+		"name": "ArbitersGroundsAfterPoeGate",
+		"access_rules": [
+			"@ArbitersGroundsLobby, shadowcrystal, clawshot, $canDefeatStalfos, agsmallkey:4",
+			"@ArbitersGroundsLobby, shadowcrystal, clawshot, $canDefeatStalfos, skkeysy"
+		]
+	},
+	{
+		"name": "ArbitersGroundsBossRoom",
+		"access_rules": [
+			"@MirrorChamberLower",
+			"@ArbitersGroundsAfterPoeGate, spinner, agbigkey",
+			"@ArbitersGroundsAfterPoeGate, spinner, bkkeysy"
+		]
+	},
+	{
+		"name": "ArbitersGroundsEastWing",
+		"access_rules": [
+			"@ArbitersGroundsLobby"
+		]
+	},
+	{
+		"name": "ArbitersGroundsEntrance",
+		"access_rules": [
+			"@OutsideArbitersGrounds",
+			"@ArbitersGroundsLobby"
+		]
+	},
+	{
+		"name": "ArbitersGroundsLobby",
+		"access_rules": [
+			"@ArbitersGroundsAfterPoeGate",
+			"@ArbitersGroundsEastWing",
+			"@ArbitersGroundsEntrance, agsmallkey:1, lantern",
+			"@ArbitersGroundsEntrance, skkeysy, lantern",
+			"@ArbitersGroundsWestWing"
+		]
+	},
+	{
+		"name": "ArbitersGroundsWestWing",
+		"access_rules": [
+			"@ArbitersGroundsLobby"
+		]
+	}
+]

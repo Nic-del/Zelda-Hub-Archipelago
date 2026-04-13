@@ -1,0 +1,922 @@
+[
+  {
+    "name": "Triforce Salvaging",
+    "chest_unopened_img": "images/items/chest_salvage.png",
+    "chest_opened_img": "images/items/chest_salvage_gray.png",
+    "visibility_rules": [
+      "triforcesalvage_on"
+    ],
+    "access_rules": [
+      "wallet,grapple"
+    ],
+    "children": [
+      {
+        "name": "Greatfish Isle - Sunken Triforce 1",
+        "access_rules": [
+          "triforce1"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 171,
+            "y": 392
+          }
+        ]
+      },
+      {
+        "name": "Gale Isle - Sunken Triforce 2",
+        "access_rules": [
+          "triforce2"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 408,
+            "y": 41
+          }
+        ]
+      },
+      {
+        "name": "Stone Watcher Island - Sunken Triforce 3",
+        "access_rules": [
+          "triforce3"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 260,
+            "y": 501
+          }
+        ]
+      },
+      {
+        "name": "Outset island - Sunken Triforce 4",
+        "access_rules": [
+          "triforce4"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 171,
+            "y": 738
+          }
+        ]
+      },
+      {
+        "name": "Cliff Plateau Isles - Sunken Triforce 5",
+        "access_rules": [
+          "triforce5"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 699,
+            "y": 588
+          }
+        ]
+      },
+      {
+        "name": "Southern Triangle Island - Sunken Triforce 6",
+        "access_rules": [
+          "triforce6, @Macros/can_defeat_seahats",
+          "triforce6, @General Logic/Normal Logic Precision"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 389,
+            "y": 499
+          }
+        ]
+      },
+      {
+        "name": "Seven-Star Isles - Sunken Triforce 7",
+        "access_rules": [
+          "triforce7, bombs",
+          "triforce7, @General Logic/Normal Logic Precision"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 626,
+            "y": 41
+          }
+        ]
+      },
+      {
+        "name": "Two-Eye Reef - Sunken Triforce 8",
+        "access_rules": [
+          "triforce8, bombs",
+          "triforce8, @General Logic/Normal Logic Precision",
+          "triforce8, @Macros/can_use_magic_armor, @General Logic/Normal Logic Obscurity"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 388,
+            "y": 699
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Treasure Salvaging",
+    "chest_unopened_img": "images/items/chest_salvage.png",
+    "chest_opened_img": "images/items/chest_salvage_gray.png",
+    "access_rules": [
+      "grapple"
+    ],
+    "visibility_rules": [
+      "treasuresalvage_on"
+    ],
+    "children": [
+      {
+        "name": "Private Oasis - Sunken Treasure 1",
+        "access_rules": [
+          "treasure1"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 519,
+            "y": 520
+          }
+        ]
+      },
+      {
+        "name": "Rock Spire Isle - Sunken Treasure 2",
+        "access_rules": [
+          "treasure2"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 149,
+            "y": 260
+          }
+        ]
+      },
+      {
+        "name": "Eastern Fairy Island - Sunken Treasure 3",
+        "access_rules": [
+          "treasure3"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 519,
+            "y": 302
+          }
+        ]
+      },
+      {
+        "name": "Southern Fairy Island - Sunken Treasure 4",
+        "access_rules": [
+          "treasure4"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 369,
+            "y": 590
+          }
+        ]
+      },
+      {
+        "name": "Thorned Fairy Island - Sunken Treasure 5",
+        "access_rules": [
+          "treasure5"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 736,
+            "y": 407
+          }
+        ]
+      },
+      {
+        "name": "Six-Eye Reef - Sunken Treasure 6",
+        "access_rules": [
+          "treasure6, bombs",
+          "treasure6, @General Logic/Normal Logic Precision",
+          "treasure6, @Macros/can_use_magic_armor, @General Logic/Normal Logic Obscurity"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 410,
+            "y": 371
+          }
+        ]
+      },
+      {
+        "name": "Star Island - Sunken Treasure 7",
+        "access_rules": [
+          "treasure7"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 170,
+            "y": 42
+          }
+        ]
+      },
+      {
+        "name": "Western Fairy Island - Sunken Treasure 8",
+        "access_rules": [
+          "treasure8"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 40,
+            "y": 281
+          }
+        ]
+      },
+      {
+        "name": "Horseshoe Island - Sunken Treasure 9",
+        "access_rules": [
+          "treasure9"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 40,
+            "y": 720
+          }
+        ]
+      },
+      {
+        "name": "Tingle Island - Sunken Treasure 10",
+        "access_rules": [
+          "treasure10"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 281,
+            "y": 302
+          }
+        ]
+      },
+      {
+        "name": "Crescent Moon Island - Sunken Treasure 11",
+        "access_rules": [
+          "treasure11"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 499,
+            "y": 62
+          }
+        ]
+      },
+      {
+        "name": "Five-Eye Reef - Sunken Treasure 12",
+        "access_rules": [
+          "treasure12,[@Macros/can_destroy_cannons]"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 150,
+            "y": 590
+          }
+        ]
+      },
+      {
+        "name": "Overlook Island - Sunken Treasure 13",
+        "access_rules": [
+          "treasure13"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 716,
+            "y": 63
+          }
+        ]
+      },
+      {
+        "name": "Tower of The Gods Sector - Sunken Treasure 14",
+        "access_rules": [
+          "treasure14"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 499,
+            "y": 391
+          }
+        ]
+      },
+      {
+        "name": "Angular Isles - Sunken Treasure 15",
+        "access_rules": [
+          "treasure15"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 501,
+            "y": 741
+          }
+        ]
+      },
+      {
+        "name": "Shark Island - Sunken Treasure 16",
+        "access_rules": [
+          "treasure16"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 279,
+            "y": 633
+          }
+        ]
+      },
+      {
+        "name": "Ice Ring Isle - Sunken Treasure 17",
+        "access_rules": [
+          "treasure17"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 479,
+            "y": 630
+          }
+        ]
+      },
+      {
+        "name": "Windfall Island - Sunken Treasure 18",
+        "access_rules": [
+          "treasure18"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 390,
+            "y": 170
+          }
+        ]
+      },
+      {
+        "name": "Flight Control Platform - Sunken Treasure 19",
+        "access_rules": [
+          "treasure19"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 716,
+            "y": 169
+          }
+        ]
+      },
+      {
+        "name": "Bomb Island - Sunken Treasure 20",
+        "access_rules": [
+          "treasure20"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 628,
+            "y": 479
+          }
+        ]
+      },
+      {
+        "name": "Cyclops Reef - Sunken Treasure 21",
+        "access_rules": [
+          "treasure21, bombs",
+          "treasure21, @General Logic/Normal Logic Precision",
+          "treasure21, @Macros/can_use_magic_armor, @General Logic/Normal Logic Obscurity"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 301,
+            "y": 411
+          }
+        ]
+      },
+      {
+        "name": "Spectacle Island - Sunken Treasure 22",
+        "access_rules": [
+          "treasure22"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 263,
+            "y": 190
+          }
+        ]
+      },
+      {
+        "name": "Diamond Steppe Island - Sunken Treasure 23",
+        "access_rules": [
+          "treasure23"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 63,
+            "y": 609
+          }
+        ]
+      },
+      {
+        "name": "Northern Fairy Island - Sunken Treasure 24",
+        "access_rules": [
+          "treasure24"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 300,
+            "y": 82
+          }
+        ]
+      },
+      {
+        "name": "Forsaken Fortress Sector - Sunken Treasure 25",
+        "access_rules": [
+          "treasure25"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 61,
+            "y": 60
+          }
+        ]
+      },
+      {
+        "name": "Northern Triangle Island - Sunken Treasure 26",
+        "access_rules": [
+          "treasure26"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 390,
+            "y": 281
+          }
+        ]
+      },
+      {
+        "name": "Star Belt Archipelago - Sunken Treasure 27",
+        "access_rules": [
+          "treasure27"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 698,
+            "y": 281
+          }
+        ]
+      },
+      {
+        "name": "Needle Rock Isle - Sunken Treasure 28",
+        "access_rules": [
+          "treasure28"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 81,
+            "y": 521
+          }
+        ]
+      },
+      {
+        "name": "Mother and Child Isles - Sunken Treasure 29",
+        "access_rules": [
+          "treasure29"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 190,
+            "y": 175
+          }
+        ]
+      },
+      {
+        "name": "Pawprint Isle - Sunken Treasure 30",
+        "access_rules": [
+          "treasure30"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 479,
+            "y": 190
+          }
+        ]
+      },
+      {
+        "name": "Forest Haven - Sunken Treasure 31",
+        "access_rules": [
+          "treasure31"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 620,
+            "y": 610
+          }
+        ]
+      },
+      {
+        "name": "Boating Course - Sunken Treasure 32",
+        "access_rules": [
+          "treasure32"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 588,
+            "y": 699
+          }
+        ]
+      },
+      {
+        "name": "Five-Star Isles - Sunken Treasure 33",
+        "access_rules": [
+          "treasure33"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 738,
+            "y": 696
+          }
+        ]
+      },
+      {
+        "name": "Eastern Triangle Island - Sunken Treasure 34",
+        "access_rules": [
+          "treasure34"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 609,
+            "y": 392
+          }
+        ]
+      },
+      {
+        "name": "Islet of Steel - Sunken Treasure 35",
+        "access_rules": [
+          "treasure35"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 191,
+            "y": 480
+          }
+        ]
+      },
+      {
+        "name": "Bird's Peak Rock - Sunken Treasure 36",
+        "access_rules": [
+          "treasure36"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 718,
+            "y": 501
+          }
+        ]
+      },
+      {
+        "name": "Fire Mountain - Sunken Treasure 37",
+        "access_rules": [
+          "treasure37"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 588,
+            "y": 258
+          }
+        ]
+      },
+      {
+        "name": "Three-Eye Reef - Sunken Treasure 38",
+        "access_rules": [
+          "treasure38, bombs",
+          "treasure38, @General Logic/Normal Logic Precision",
+          "treasure38, @Macros/can_use_magic_armor, @General Logic/Normal Logic Obscurity"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 42,
+            "y": 410
+          }
+        ]
+      },
+      {
+        "name": "Dragon Roost Island - Sunken Treasure 39",
+        "access_rules": [
+          "treasure39"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 610,
+            "y": 168
+          }
+        ]
+      },
+      {
+        "name": "Headstone Island - Sunken Treasure 40",
+        "access_rules": [
+          "treasure40"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 301,
+            "y": 740
+          }
+        ]
+      },
+      {
+        "name": "Four-Eye Reef - Sunken Treasure 41",
+        "access_rules": [
+          "treasure41, bombs",
+          "treasure41, @General Logic/Normal Logic Precision",
+          "treasure41, @Macros/can_use_magic_armor, @General Logic/Normal Logic Obscurity"
+        ],
+        "sections": [
+          {
+            "name": "Salvage"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "salvage",
+            "x": 81,
+            "y": 152
+          }
+        ]
+      }
+    ]
+  }
+]

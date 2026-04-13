@@ -1,0 +1,958 @@
+[
+    {
+        "name": "Telescope",
+        "type": "toggle",
+        "img": "images/items/item0.png",
+        "codes": "telescope"
+    },
+    {
+        "name": "Swift Sail",
+        "type": "toggle",
+        "img": "images/items/item1.png",
+        "initial_active_state": true,
+        "codes": "sail"
+    },
+    {
+        "name": "Wind Waker",
+        "type": "toggle",
+        "img": "images/items/item2.png",
+        "codes": "windwaker"
+    },
+    {
+        "name": "Grappling Hook",
+        "type": "toggle",
+        "img": "images/items/item3.png",
+        "codes": "grapple"
+    },
+    {
+        "name": "Spoils Bag",
+        "type": "toggle",
+        "img": "images/items/item4.png",
+        "codes": "spoils"
+    },
+    {
+        "name": "Boomerang",
+        "type": "toggle",
+        "img": "images/items/item5.png",
+        "codes": "boomerang"
+    },
+    {
+        "name": "Deku Leaf",
+        "type": "toggle",
+        "img": "images/items/item6.png",
+        "codes": "leaf"
+    },
+    {
+        "name": "Tingle Tuner",
+        "type": "toggle",
+        "img": "images/items/item7.png",
+        "codes": "tuner"
+    },
+    {
+        "name": "Iron Boots",
+        "type": "toggle",
+        "img": "images/items/item9.png",
+        "codes": "boots"
+    },
+    {
+        "name": "Magic Armor",
+        "type": "toggle",
+        "img": "images/items/item10.png",
+        "codes": "armor"
+    },
+    {
+        "name": "Bait Bag",
+        "type": "toggle",
+        "img": "images/items/item11.png",
+        "codes": "bait"
+    },
+    {
+        "name": "Bombs",
+        "type": "toggle",
+        "img": "images/items/item13.png",
+        "codes": "bombs"
+    },
+    {
+        "name": "Delivery Bag",
+        "type": "toggle",
+        "img": "images/items/item18.png",
+        "codes": "delivery"
+    },
+    {
+        "name": "Hookshot",
+        "type": "toggle",
+        "img": "images/items/item19.png",
+        "codes": "hookshot"
+    },
+    {
+        "name": "Skull Hammer",
+        "type": "toggle",
+        "img": "images/items/item20.png",
+        "codes": "hammer"
+    },
+    {
+        "name": "Power Bracelets",
+        "type": "toggle",
+        "img": "images/items/item22.png",
+        "codes": "power"
+    },
+    {
+        "name": "Hero's Charm",
+        "type": "toggle",
+        "img": "images/items/item27.png",
+        "codes": "charm"
+    },
+    {
+        "name": "Hurricane Spin",
+        "type": "toggle",
+        "codes": "hurricane"
+    },
+    {
+		"name": "Tingle Statue",
+		"type": "consumable",
+		"img": "images/items/item31.png",
+		"codes": "statue",
+		"max_quantity": 5
+	},
+    {
+        "name": "Wind's Requiem",
+        "type": "toggle",
+        "img": "images/items/song0.png",
+        "codes": "requiem"
+    },
+    {
+        "name": "Ballad of Gales",
+        "type": "toggle",
+        "img": "images/items/song1.png",
+        "codes": "ballad"
+    },
+    {
+        "name": "Command Melody",
+        "type": "toggle",
+        "img": "images/items/song2.png",
+        "codes": "melody"
+    },
+    {
+        "name": "Earth God's Lyric",
+        "type": "toggle",
+        "img": "images/items/song3.png",
+        "codes": "lyric"
+    },
+    {
+        "name": "Wind God's Aria",
+        "type": "toggle",
+        "img": "images/items/song4.png",
+        "codes": "aria"
+    },
+    {
+        "name": "Song of Passing",
+        "type": "toggle",
+        "img": "images/items/song5.png",
+        "codes": "passing"
+    },
+    {
+        "name": "Triforce Shards",
+        "type": "progressive",
+        "allow_disabled": false,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/triforce0.png",
+                "codes": "triforce",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/triforce1.png",
+                "codes": "triforce_1",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/triforce2.png",
+                "codes": "triforce_2",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/triforce3.png",
+                "codes": "triforce_3",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/triforce4.png",
+                "codes": "triforce_4",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/triforce5.png",
+                "codes": "triforce_5",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/triforce6.png",
+                "codes": "triforce_6",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/triforce7.png",
+                "codes": "triforce_7",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/triforce8.png",
+                "codes": "triforce_8",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+		"name": "Green Chu Jelly",
+		"type": "consumable",
+		"img": "images/items/chu_green.png",
+		"codes": "green",
+		"max_quantity": 15
+	},
+    {
+		"name": "Knight's Crest",
+		"type": "consumable",
+		"img": "images/items/crest.png",
+		"codes": "crest",
+		"max_quantity": 10
+	},
+    {
+        "name": "Note to Mom",
+        "type": "toggle",
+        "img": "images/items/item17.png",
+        "codes": "mom"
+    },
+    {
+        "name": "Maggie's Letter",
+        "type": "toggle",
+        "img": "images/items/item15.png",
+        "codes": "maggie"
+    },
+    {
+        "name": "Moblin's Letter",
+        "type": "toggle",
+        "img": "images/items/item16.png",
+        "codes": "moblin"
+    },
+    {
+        "name": "Cabana Deed",
+        "type": "toggle",
+        "img": "images/items/item24.png",
+        "codes": "deed"
+    },
+    {
+        "name": "Nayru's Pearl",
+        "type": "toggle",
+        "img": "images/items/pearl3.png",
+        "codes": "nayru"
+    },
+    {
+        "name": "Din's Pearl",
+        "type": "toggle",
+        "img": "images/items/pearl1.png",
+        "codes": "din"
+    },
+    {
+        "name": "Farore's Pearl",
+        "type": "toggle",
+        "img": "images/items/pearl2.png",
+        "codes": "farore"
+    },
+    {
+        "name": "Progressive Sword",
+        "type": "progressive",
+        "allow_disabled": true,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/item21.png",
+                "codes": "sword",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item21_2.png",
+                "codes": "mastersword",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item21_3.png",
+                "codes": "mastersword_half",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item21_4.png",
+                "codes": "mastersword_full",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+        "name": "Progressive Shield",
+        "type": "progressive",
+        "allow_disabled": true,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/item30.png",
+                "codes": "shield",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item30_2.png",
+                "codes": "shield_2",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+        "name": "Picto Box",
+        "type": "progressive",
+        "allow_disabled": true,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/item8.png",
+                "codes": "picto",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item8_2.png",
+                "codes": "picto_2",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+        "name": "Hero's Bow",
+        "type": "progressive",
+        "allow_disabled": true,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/item12.png",
+                "codes": "bow",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item12_2.png",
+                "codes": "bow_2",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item12_3.png",
+                "codes": "bow_3",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+        "name": "Progressive Magic Meter",
+        "type": "progressive",
+        "allow_disabled": true,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/item26.png",
+                "codes": "magic",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item26_2.png",
+                "codes": "magic_2",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+        "name": "Quiver Capacity Upgrade",
+        "type": "progressive",
+        "allow_disabled": true,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/item28.png",
+                "codes": "quiver",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item28_2.png",
+                "codes": "quiver_2",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+        "name": "Bomb Bag Capacity Upgrade",
+        "type": "progressive",
+        "allow_disabled": true,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/item29.png",
+                "codes": "bombbag",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item29_2.png",
+                "codes": "bombbag_2",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+        "name": "Wallet Capacity Upgrade",
+        "type": "progressive",
+        "allow_disabled": true,
+        "initial_stage_idx": 0,
+        "stages": [
+            {
+                "img": "images/items/item25.png",
+                "codes": "wallet",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/items/item25_2.png",
+                "codes": "wallet_2",
+                "inherit_codes": true
+            }
+        ]
+    },
+    {
+		"name": "Empty Bottle",
+		"type": "consumable",
+		"img": "images/items/bottle.png",
+		"codes": "bottle",
+		"max_quantity": 4
+	},
+    {
+		"name": "Piece of Heart",
+		"type": "consumable",
+		"img": "images/items/heart1.png",
+		"codes": "heart_piece",
+		"max_quantity": 44
+	},
+    {
+		"name": "Heart Container",
+		"type": "consumable",
+		"img": "images/items/heart2.png",
+		"codes": "heart_container",
+		"max_quantity": 6
+	},
+    {
+        "name": "Ghost Ship Chart",
+        "type": "toggle",
+        "img": "images/items/item23.png",
+        "codes": "ghost"
+    },
+    {
+		"name": "DRC Small Keys",
+		"type": "consumable",
+		"img": "images/items/smallkey.png",
+		"codes": "drc_small",
+		"max_quantity": 4
+	},
+    {
+		"name": "FW Small Keys",
+		"type": "consumable",
+		"img": "images/items/smallkey.png",
+		"codes": "fw_small",
+		"max_quantity": 1
+	},
+    {
+		"name": "TotG Small Keys",
+		"type": "consumable",
+		"img": "images/items/smallkey.png",
+		"codes": "totg_small",
+		"max_quantity": 2
+	},
+    {
+		"name": "ET Small Keys",
+		"type": "consumable",
+		"img": "images/items/smallkey.png",
+		"codes": "et_small",
+		"max_quantity": 3
+	},
+    {
+		"name": "WT Small Keys",
+		"type": "consumable",
+		"img": "images/items/smallkey.png",
+		"codes": "wt_small",
+		"max_quantity": 2
+	},
+    {
+        "name": "DRC Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "drc_big"
+    },
+    {
+        "name": "FW Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "fw_big"
+    },
+    {
+        "name": "TotG Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "totg_big"
+    },
+    {
+        "name": "ET Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "et_big"
+    },
+    {
+        "name": "WT Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "wt_big"
+    },
+    {
+        "name": "DRC Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "drc_map"
+    },
+    {
+        "name": "FW Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "fw_map"
+    },
+    {
+        "name": "TotG Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "totg_map"
+    },
+    {
+        "name": "ET Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "et_map"
+    },
+    {
+        "name": "WT Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "wt_map"
+    },
+    {
+        "name": "FF Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "ff_map"
+    },
+    {
+        "name": "DRC Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "drc_compass"
+    },
+    {
+        "name": "FW Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "fw_compass"
+    },
+    {
+        "name": "TotG Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "totg_compass"
+    },
+    {
+        "name": "ET Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "et_compass"
+    },
+    {
+        "name": "WT Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "wt_compass"
+    },
+    {
+        "name": "FF Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "ff_compass"
+    },
+    {
+        "name": "Dragon Roost Cavern",
+        "type": "static",
+        "img": "images/items/dungeon1.png",
+        "codes": "dungeon1"
+    },
+    {
+        "name": "Forbidden Woods",
+        "type": "static",
+        "img": "images/items/dungeon2.png",
+        "codes": "dungeon2"
+    },
+    {
+        "name": "Tower of the Gods",
+        "type": "static",
+        "img": "images/items/dungeon3.png",
+        "codes": "dungeon3"
+    },
+    {
+        "name": "Earth Temple",
+        "type": "static",
+        "img": "images/items/dungeon4.png",
+        "codes": "dungeon4"
+    },
+    {
+        "name": "Wind Temple",
+        "type": "static",
+        "img": "images/items/dungeon5.png",
+        "codes": "dungeon5"
+    },
+    {
+        "name": "Triforce Chart 1 - Greatfish Isle",
+        "type": "toggle",
+        "img": "images/items/chart2.png",
+        "initial_active_state": false,
+        "codes": "triforce1"
+    },
+    {
+        "name": "Triforce Chart 2 - Gale Isle",
+        "type": "toggle",
+        "img": "images/items/chart2.png",
+        "initial_active_state": false,
+        "codes": "triforce2"
+    },
+    {
+        "name": "Triforce Chart 3- Stone Watcher Island",
+        "type": "toggle",
+        "img": "images/items/chart2.png",
+        "initial_active_state": false,
+        "codes": "triforce3"
+    },
+    {
+        "name": "Triforce Chart 4 - Outset Island",
+        "type": "toggle",
+        "img": "images/items/chart2.png",
+        "initial_active_state": false,
+        "codes": "triforce4"
+    },
+    {
+        "name": "Triforce Chart 5 - Cliff Plateau Isles",
+        "type": "toggle",
+        "img": "images/items/chart2.png",
+        "initial_active_state": false,
+        "codes": "triforce5"
+    },
+    {
+        "name": "Triforce Chart 6 - Southern Triangle Island",
+        "type": "toggle",
+        "img": "images/items/chart2.png",
+        "initial_active_state": false,
+        "codes": "triforce6"
+    },
+    {
+        "name": "Triforce Chart 7 - Seven-Star Isles",
+        "type": "toggle",
+        "img": "images/items/chart2.png",
+        "initial_active_state": false,
+        "codes": "triforce7"
+    },
+    {
+        "name": "Triforce Chart 8 - Two-Eye Reef",
+        "type": "toggle",
+        "img": "images/items/chart2.png",
+        "initial_active_state": false,
+        "codes": "triforce8"
+    },
+    {
+        "name": "Treasure Chart 1 - Private Oasis",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure1"
+    },
+    {
+        "name": "Treasure Chart 2 - Rock Spire Isle",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure2"
+    },
+    {
+        "name": "Treasure Chart 3 - Eastern Fairy Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure3"
+    },
+    {
+        "name": "Treasure Chart 4 - Southern Fairy Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure4"
+    },
+    {
+        "name": "Treasure Chart 5 - Thorned Fairy Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure5"
+    },
+    {
+        "name": "Treasure Chart 6 - Six-Eye Reef",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure6"
+    },
+    {
+        "name": "Treasure Chart 7 - Star Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure7"
+    },
+    {
+        "name": "Treasure Chart 8 - Western Fairy Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure8"
+    },
+    {
+        "name": "Treasure Chart 9 - Horseshoe Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure9"
+    },
+    {
+        "name": "Treasure Chart 10 - Tingle Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure10"
+    },
+    {
+        "name": "Treasure Chart 11 - Crescent Moon Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure11"
+    },
+    {
+        "name": "Treasure Chart 12 - Five-Eye Reef",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure12"
+    },
+    {
+        "name": "Treasure Chart 13 - Overlook Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure13"
+    },
+    {
+        "name": "Treasure Chart 14 - Tower of The Gods Sector",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure14"
+    },
+    {
+        "name": "Treasure Chart 15 - Angular Isles",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure15"
+    },
+    {
+        "name": "Treasure Chart 16 - Shark Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure16"
+    },
+    {
+        "name": "Treasure Chart 17 - Ice Ring Isle",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure17"
+    },
+    {
+        "name": "Treasure Chart 18 - Windfall Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure18"
+    },
+    {
+        "name": "Treasure Chart 19 - Flight Control Platform",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure19"
+    },
+    {
+        "name": "Treasure Chart 20 - Bomb Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure20"
+    },
+    {
+        "name": "Treasure Chart 21 - Cyclops Reef",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure21"
+    },
+    {
+        "name": "Treasure Chart 22 - Spectacle Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure22"
+    },
+    {
+        "name": "Treasure Chart 23 - Diamond Steppe Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure23"
+    },
+    {
+        "name": "Treasure Chart 24 - Northern Fairy Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure24"
+    },
+    {
+        "name": "Treasure Chart 25 - Forsaken Fortress Sector",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure25"
+    },
+    {
+        "name": "Treasure Chart 26 - Northern Triangle Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure26"
+    },
+    {
+        "name": "Treasure Chart 27 - Star Belt Archipelago",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure27"
+    },
+    {
+        "name": "Treasure Chart 28 - Needle Rock Isle",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure28"
+    },
+    {
+        "name": "Treasure Chart 29 - Mother and Child Isles",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure29"
+    },
+    {
+        "name": "Treasure Chart 30 - Pawprint Isle",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure30"
+    },
+    {
+        "name": "Treasure Chart 31 - Forest Haven",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure31"
+    },
+    {
+        "name": "Treasure Chart 32 - Boating Course",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure32"
+    },
+    {
+        "name": "Treasure Chart 33 - Five-Star Isles",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure33"
+    },
+    {
+        "name": "Treasure Chart 34 - Eastern Triangle Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure34"
+    },
+    {
+        "name": "Treasure Chart 35 - Islet of Steel",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure35"
+    },
+    {
+        "name": "Treasure Chart 36 - Bird's Peak Rock",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure36"
+    },
+    {
+        "name": "Treasure Chart 37 - Fire Mountain",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure37"
+    },
+    {
+        "name": "Treasure Chart 38 - Three-Eye Reef",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure38"
+    },
+    {
+        "name": "Treasure Chart 39 - Dragon Roost Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure39"
+    },
+    {
+        "name": "Treasure Chart 40 - Headstone Island",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure40"
+    },
+    {
+        "name": "Treasure Chart 41 - Four-Eye Reef",
+        "type": "toggle",
+        "img": "images/items/chart1.png",
+        "initial_active_state": false,
+        "codes": "treasure41"
+    }
+]

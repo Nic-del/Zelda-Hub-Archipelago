@@ -1,0 +1,18 @@
+{
+    "name": "st",
+    "version": "1.0",
+    "mapping": {
+        "FACE_BOTTOM": "B",
+        "FACE_RIGHT": "A",
+        "FACE_LEFT": "Y",
+        "FACE_TOP": "X",
+        "START": "Start",
+        "SELECT": "Select",
+        "L1": "L",
+        "R1": "R",
+        "Pad N": "Dpad_Up",
+        "Pad S": "Dpad_Down",
+        "Pad W": "Dpad_Left",
+        "Pad E": "Dpad_Right"
+    }
+}

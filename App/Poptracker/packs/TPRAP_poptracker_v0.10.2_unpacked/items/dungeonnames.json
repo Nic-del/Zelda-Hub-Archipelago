@@ -1,0 +1,47 @@
+[
+	{
+		"type": "static",
+		"img": "images/Dungeons/Forest Temple/Name.png",
+		"codes": "ftname"
+	},
+	{
+		"type": "static",
+		"img": "images/Dungeons/Goron Mines/Name.png",
+		"codes": "gmname"
+	},
+	{
+		"type": "static",
+		"img": "images/Dungeons/Lakebed Temple/Name.png",
+		"codes": "ltname"
+	},
+	{
+		"type": "static",
+		"img": "images/Dungeons/Arbiter's Grounds/Name.png",
+		"codes": "agname"
+	},
+	{
+		"type": "static",
+		"img": "images/Dungeons/Snowpeak Ruins/Name.png",
+		"codes": "srname"
+	},
+	{
+		"type": "static",
+		"img": "images/Dungeons/Temple of Time/Name.png",
+		"codes": "ttname"
+	},
+	{
+		"type": "static",
+		"img": "images/Dungeons/City in the Sky/Name.png",
+		"codes": "csname"
+	},
+	{
+		"type": "static",
+		"img": "images/Dungeons/Palace of Twilight/Name.png",
+		"codes": "ptname"
+	},
+	{
+		"type": "static",
+		"img": "images/Dungeons/Hyrule Castle/Name.png",
+		"codes": "hcname"
+	}
+]

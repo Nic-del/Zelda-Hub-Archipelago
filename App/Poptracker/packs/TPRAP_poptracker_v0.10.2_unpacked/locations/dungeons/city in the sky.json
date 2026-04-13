@@ -1,0 +1,730 @@
+[
+	{
+		"name": "City in the Sky",
+		"children": [
+			{
+				"name": "B3",
+				"children": [
+					{
+						"name": "Aeralfos Chest",
+						"map_locations": [
+							{
+								"map": "csb3",
+								"x": 1935,
+								"y": 610
+							},
+							{
+								"map": "csfull",
+								"x": 645,
+								"y": 203
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyEastWing, clawshot, boots, $canDefeatDinalfos, $canDefeatTileWorm, $canDefeatAeralfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, boots, $canDefeatDinalfos, $canDefeatAeralfosGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "B1",
+				"children": [
+					{
+						"name": "East Wing Lower Level Chest",
+						"map_locations": [
+							{
+								"map": "csb1",
+								"x": 1385,
+								"y": 639
+							},
+							{
+								"map": "csfull",
+								"x": 1827,
+								"y": 213
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyEastWing, doubleclawshot, $canDefeatTileWorm, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Wing Baba Balcony Chest",
+						"map_locations": [
+							{
+								"map": "csb1",
+								"x": 277,
+								"y": 500
+							},
+							{
+								"map": "csfull",
+								"x": 1458,
+								"y": 167
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "1F",
+				"children": [
+					{
+						"name": "Underwater East Chest",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 887,
+								"y": 1338
+							},
+							{
+								"map": "csfull",
+								"x": 296,
+								"y": 981
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyEntrance, boots"
+								]
+							}
+						]
+					},
+					{
+						"name": "Underwater West Chest",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 775,
+								"y": 1338
+							},
+							{
+								"map": "csfull",
+								"x": 258,
+								"y": 981
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyEntrance, boots"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Wing First Chest",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 99,
+								"y": 638
+							},
+							{
+								"map": "csfull",
+								"x": 33,
+								"y": 748
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing"
+								]
+							}
+						]
+					},
+					{
+						"name": "East First Wing Chest After Fans",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 1724,
+								"y": 641
+							},
+							{
+								"map": "csfull",
+								"x": 575,
+								"y": 749
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyEastWing, clawshot",
+									"[glitcheson], @CityinTheSkyEastWing, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"name": "East Tile Worm Small Chest",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 1623,
+								"y": 722
+							},
+							{
+								"map": "csfull",
+								"x": 541,
+								"y": 776
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyEastWing, clawshot",
+									"[glitcheson], @CityinTheSkyEastWing, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Wing Narrow Ledge Chest",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 158,
+								"y": 584
+							},
+							{
+								"map": "csfull",
+								"x": 53,
+								"y": 730
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Wing Tile Worm Chest",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 296,
+								"y": 517
+							},
+							{
+								"map": "csfull",
+								"x": 99,
+								"y": 708
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Chest Behind North Fan",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 834,
+								"y": 204
+							},
+							{
+								"map": "csfull",
+								"x": 278,
+								"y": 603
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyNorthWing, doubleclawshot",
+									"[glitcheson], @CityinTheSkyNorthWing, clawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "2F",
+				"children": [
+					{
+						"name": "East Wing After Dinalfos Alcove Chest",
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 1708,
+								"y": 806
+							},
+							{
+								"map": "csfull",
+								"x": 1252,
+								"y": 804
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyEastWing, clawshot, $canDefeatTileWorm, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, $canDefeatTileWormGlitched, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, boots"
+								]
+							}
+						]
+					},
+					{
+						"name": "East Wing After Dinalfos Ledge Chest",
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 1508,
+								"y": 791
+							},
+							{
+								"map": "csfull",
+								"x": 1185,
+								"y": 799
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyEastWing, clawshot, $canDefeatTileWorm, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, $canDefeatTileWormGlitched, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, boots"
+								]
+							}
+						]
+					},
+					{
+						"name": "Baba Tower Narrow Ledge Chest",
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 199,
+								"y": 351
+							},
+							{
+								"map": "csfull",
+								"x": 749,
+								"y": 652
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBabaGlitched",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBabaGlitched"
+								]
+							}
+						]
+					},
+					{
+						"name": "Baba Tower Alcove Chest",
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 105,
+								"y": 450
+							},
+							{
+								"map": "csfull",
+								"x": 718,
+								"y": 685
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBabaGlitched",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBabaGlitched"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Garden Lone Island Chest",
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 121,
+								"y": 806
+							},
+							{
+								"map": "csfull",
+								"x": 723,
+								"y": 804
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Garden Lower Chest",
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 199,
+								"y": 572
+							},
+							{
+								"map": "csfull",
+								"x": 749,
+								"y": 726
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes2F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
+				"children": [
+					{
+						"name": "Garden Island Poe",
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 191,
+								"y": 787,
+								"shape": "diamond"
+							},
+							{
+								"map": "csfull",
+								"x": 746,
+								"y": 798,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "3F",
+				"children": [
+					{
+						"name": "Baba Tower Top Small Chest",
+						"map_locations": [
+							{
+								"map": "cs3f",
+								"x": 48,
+								"y": 382
+							},
+							{
+								"map": "csfull",
+								"x": 1381,
+								"y": 663
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBabaGlitched",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBabaGlitched"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Garden Corner Chest",
+						"map_locations": [
+							{
+								"map": "cs3f",
+								"x": 44,
+								"y": 660
+							},
+							{
+								"map": "csfull",
+								"x": 1380,
+								"y": 755
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Garden Ledge Chest",
+						"map_locations": [
+							{
+								"map": "cs3f",
+								"x": 248,
+								"y": 718
+							},
+							{
+								"map": "csfull",
+								"x": 1448,
+								"y": 775
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Chest Below Big Key Chest",
+						"map_locations": [
+							{
+								"map": "cs3f",
+								"x": 833,
+								"y": 577
+							},
+							{
+								"map": "csfull",
+								"x": 1643,
+								"y": 728
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyCentralTowerSecondFloor, $canDefeatHelmasaur",
+									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatHelmasaurGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "4F",
+				"children": [
+					{
+						"name": "Central Outside Ledge Chest",
+						"map_locations": [
+							{
+								"map": "cs4f",
+								"x": 837,
+								"y": 677
+							},
+							{
+								"map": "csfull",
+								"x": 279,
+								"y": 1296
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorok, shadowcrystal",
+									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorokGlitched, shadowcrystal",
+									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Central Outside Poe Island Chest",
+						"map_locations": [
+							{
+								"map": "cs4f",
+								"x": 1045,
+								"y": 620
+							},
+							{
+								"map": "csfull",
+								"x": 348,
+								"y": 1277
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyCentralTowerSecondFloor, shadowcrystal, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorok",
+									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, shadowcrystal, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorokGlitched",
+									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, shadowcrystal, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Big Key Chest",
+						"map_locations": [
+							{
+								"map": "cs4f",
+								"x": 771,
+								"y": 621
+							},
+							{
+								"map": "csfull",
+								"x": 257,
+								"y": 1278
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyCentralTowerSecondFloor, clawshot, boots, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorok, shadowcrystal",
+									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorokGlitched, shadowcrystal",
+									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes4F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
+				"children": [
+					{
+						"name": "Poe Above Central Fan",
+						"map_locations": [
+							{
+								"map": "cs4f",
+								"x": 1008,
+								"y": 635,
+								"shape": "diamond"
+							},
+							{
+								"map": "csfull",
+								"x": 336,
+								"y": 1282,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@CityinTheSkyCentralTowerSecondFloor, $canDefeatWalltula, shadowcrystal",
+									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatWalltulaGlitched, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "5F",
+				"children": [
+					{
+						"name": "Argorok Boss",
+						"access_rules": [
+							"@CityinTheSkyBossRoom"
+						],
+						"map_locations": [
+							{
+								"map": "cs5f",
+								"x": 696,
+								"y": 132
+							},
+							{
+								"map": "csfull",
+								"x": 915,
+								"y": 1116
+							}
+						],
+						"sections": [
+							{
+								"name": "Argorok Heart Container",
+								"access_rules": [
+									"$canDefeatArgorok",
+									"[glitcheson], $canDefeatArgorokGlitched"
+								]
+							},
+							{
+								"name": "Dungeon Reward",
+								"access_rules": [
+									"$canDefeatArgorok",
+									"[glitcheson], $canDefeatArgorokGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 1007,
+								"y": 609,
+								"shape": "diamond"
+							},
+							{
+								"map": "csfull",
+								"x": 336,
+								"y": 738,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@CityinTheSkyEntrance}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

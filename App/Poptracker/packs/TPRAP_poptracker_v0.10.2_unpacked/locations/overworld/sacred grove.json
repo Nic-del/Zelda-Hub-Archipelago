@@ -1,0 +1,256 @@
+[
+	{
+		"name": "Sacred Grove",
+		"children": [
+			{
+				"name": "Pedestal",
+				"access_rules": [
+					"@SacredGroveLower"
+				],
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 926,
+						"y": 95
+					}
+				],
+				"sections": [
+					{
+						"name": "Master Sword",
+						"access_rules": [
+							""
+						]
+					},
+					{
+						"name": "Shadow Crystal",
+						"access_rules": [
+							""
+						]
+					}
+				]
+			},
+			{
+				"name": "Past Owl Statue Chest",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 924,
+						"y": 478
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SacredGrovePast, dominionrod",
+							"[glitcheson], @SacredGrovePast, $canDoLJA"
+						]
+					}
+				]
+			},
+			{
+				"name": "Spinner Chest",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 705,
+						"y": 446
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@LostWoodsLowerBattleArena, spinner",
+							"[glitcheson], @LostWoodsLowerBattleArena, $canDoLJA"
+						]
+					}
+				]
+			},
+			{
+				"name": "Baba Serpent Grotto Chest",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 749,
+						"y": 409
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpent, $canKnockDownHangingBaba",
+							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, $canKnockDownHangingBaba",
+							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, sword",
+							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, slingshot",
+							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, ballchain",
+							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, $hasBombs"
+						]
+					}
+				]
+			},
+			{
+				"name": "Lost Woods Lantern Chest",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 516,
+						"y": 260
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@LostWoods, lantern"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Sacred Grove Poes",
+		"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+		"chest_opened_img": "images/Items/PoeSoul.png",
+		"visibility_rules": [
+			"poeson"
+		],
+		"children": [
+			{
+				"name": "Master Sword Poe",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 936,
+						"y": 159,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SacredGroveLower, shadowcrystal"
+						]
+					}
+				]
+			},
+			{
+				"name": "Past Owl Statue Poe",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 887,
+						"y": 472,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SacredGrovePast, shadowcrystal, dominionrod"
+						]
+					}
+				]
+			},
+			{
+				"name": "Lost Woods Boulder Poe",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 790,
+						"y": 430,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@LostWoodsLowerBattleArena, shadowcrystal, $canDefeatSkullKid, $canSmash",
+							"@LostWoodsLowerBattleArena, shadowcrystal, ttopen, $canSmash",
+							"@LostWoodsLowerBattleArena, shadowcrystal, ttopengrove, $canSmash"
+						]
+					}
+				]
+			},
+			{
+				"name": "Lost Woods Waterfall Poe",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 288,
+						"y": 465,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@LostWoods, shadowcrystal"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Sacred Grove Bugs",
+		"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
+		"chest_opened_img": "images/Items/GoldenBug.png",
+		"visibility_rules": [
+			"bugson"
+		],
+		"children": [
+			{
+				"name": "Bugs",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 961,
+						"y": 470,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"name": "Present - Male Snail",
+						"access_rules": [
+							"@SacredGroveLower, boomerang",
+							"@SacredGrovePast, clawshot"
+						]
+					},
+					{
+						"name": "Past - Female Snail",
+						"access_rules": [
+							"@SacredGrovePast, boomerang",
+							"@SacredGrovePast, clawshot"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Sacred Grove Hint Signs",
+		"children": [
+			{
+				"name": "Hint Sign",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 876,
+						"y": 506,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"{@SacredGroveUpper}"
+						],
+						"visibility_rules": [
+							"hintson"
+						]
+					}
+				]
+			}
+		]
+	}
+]

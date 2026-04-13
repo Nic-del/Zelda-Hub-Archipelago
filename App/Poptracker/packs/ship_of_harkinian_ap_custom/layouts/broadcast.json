@@ -1,0 +1,21 @@
+{
+    "tracker_broadcast": {
+        "type": "container",
+        "background": null,
+        "content": {
+            "type": "array",
+            "orientation": "vertical",
+            "margin": "10,10,10,10",
+            "content": [
+                {
+                    "type": "layout",
+                    "key": "shared_item_grid_vertical"
+                },
+                {
+                    "type": "layout",
+                    "key": "shared_songs_and_medallions_vertical"
+                }
+            ]
+        }
+    }
+}

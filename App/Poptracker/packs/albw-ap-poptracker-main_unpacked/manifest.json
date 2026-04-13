@@ -1,0 +1,31 @@
+﻿{
+  "name": "ALBW Auto PopTracker",
+  "game_name": "The Legend of Zelda: A Link Between Worlds",
+  "package_version": "1.4.2",
+  "package_uid": "albw-ap-poptracker",
+  "author": "Legend",
+  "versions_url": "https://raw.githubusercontent.com/Legendgreat/albw-ap-poptracker/refs/heads/versions/versions.json",
+  "min_poptracker_version": "0.31.0",
+  "variants": {
+    "map_horizontal_compact": {
+      "display_name": "Map Tracker (Horizontal)",
+      "flags": ["ap"]
+    },
+    "map_vertical_compact": {
+      "display_name": "Map Tracker (Vertical)",
+      "flags": ["ap"]
+    },
+    "standard": {
+      "display_name": "Full Map Tracker (Horizontal) QHD+ recommended",
+      "flags": ["ap"]
+    },
+    "z_map_vertical": {
+      "display_name": "Full Map Tracker (Vertical) QHD+ recommended",
+      "flags": ["ap"]
+    },
+    "zz_items_only": {
+      "display_name": "Item-only Tracker",
+      "flags": ["ap"]
+    }
+  }
+}

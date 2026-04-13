@@ -1,0 +1,53 @@
+[
+  {
+    "name": "General Logic",
+    "children": [
+      {
+        "name": "Normal Logic Precision",
+        "access_rules": [
+          "tww_precise_1",
+          "setting_show_higher_logic_next_only_enabled, [tww_precise_1]"
+        ]
+      },
+      {
+        "name": "Hard Logic Precision",
+        "access_rules": [
+          "tww_precise_2",
+          "setting_show_higher_logic_next_only_disabled, [tww_precise_2]",
+          "setting_show_higher_logic_next_only_enabled, tww_precise_1, [tww_precise_2]"
+        ]
+      },
+      {
+        "name": "Very Hard Logic Precision",
+        "access_rules": [
+          "tww_precise_3",
+          "setting_show_higher_logic_next_only_disabled, [tww_precise_3]",
+          "setting_show_higher_logic_next_only_enabled, tww_precise_2, [tww_precise_3]"
+        ]
+      },
+      {
+        "name": "Normal Logic Obscurity",
+        "access_rules": [
+          "tww_obscure_1",
+          "setting_show_higher_logic_next_only_enabled, [tww_obscure_1]"
+        ]
+      },
+      {
+        "name": "Hard Logic Obscurity",
+        "access_rules": [
+          "tww_obscure_2",
+          "setting_show_higher_logic_next_only_disabled, [tww_obscure_2]",
+          "setting_show_higher_logic_next_only_enabled, tww_obscure_1, [tww_obscure_2]"
+        ]
+      },
+      {
+        "name": "Very Hard Logic Obscurity",
+        "access_rules": [
+          "tww_obscure_3",
+          "setting_show_higher_logic_next_only_disabled, [tww_obscure_3]",
+          "setting_show_higher_logic_next_only_enabled, tww_obscure_2, [tww_obscure_3]"
+        ]
+      }
+    ]
+  }
+]

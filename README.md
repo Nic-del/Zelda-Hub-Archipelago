@@ -48,10 +48,9 @@ Suivez attentivement ces étapes pour garantir le bon fonctionnement de l'ensemb
 
 #### 1️⃣ Installation & Prérequis
 
-- **Python 3.10+** : Installez-le et installez les dépendances :
-  ```powershell
-  pip install customtkinter Pillow psutil pywin32 keyboard obs-websocket-py
-  ```
+- **Python 3.12** : [Téléchargez et installez Python 3.12](https://www.python.org/downloads/). _Important : Cochez bien la case "Add Python to PATH" lors de l'installation._
+- **Node.js** : [Téléchargez et installez Node.js](https://nodejs.org/). (Nécessaire pour le fonctionnement des trackers web).
+- **Scripts d'installation** : Une fois les prérequis installés, allez dans le dossier `scripts/` et lancez **`INSTALL_ALL.bat`**. Ce script s'occupera d'installer toutes les dépendances Python et Node pour vous.
 - **Archipelago (Obligatoire)** : Téléchargez et installez la dernière version de **Archipelago**.
 
 #### 2️⃣ Configuration Archipelago
@@ -204,10 +203,9 @@ Follow these steps carefully to ensure the entire system works correctly.
 
 #### 1️⃣ Installation & Prerequisites
 
-- **Python 3.10+**: Install it and then install the dependencies:
-  ```powershell
-  pip install customtkinter Pillow psutil pywin32 keyboard obs-websocket-py
-  ```
+- **Python 3.12**: [Download and install Python 3.12](https://www.python.org/downloads/). _Important: Make sure to check "Add Python to PATH" during installation._
+- **Node.js**: [Download and install Node.js](https://nodejs.org/). (Required for web trackers).
+- **Setup Scripts**: Once the prerequisites are installed, go to the `scripts/` folder and run **`INSTALL_ALL.bat`**. This script will automatically install all Python and Node dependencies for you.
 - **Archipelago (Required)**: Download and install the latest version of **Archipelago**.
 
 #### 2️⃣ Archipelago Configuration

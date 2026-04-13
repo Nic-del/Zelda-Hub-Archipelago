@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Show Bee Boost Glitches",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/display/bottle_bee.png",
+        "img_mods": "@disabled,overlay|images/display/Hide.png",
+        "codes": "beeBoost_hide",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/display/bottle_bee.png",
+        "img_mods": "overlay|images/display/Show.png",
+        "codes": "beeBoost_show",
+        "inherit_codes": false
+      }
+    ]
+  }
+]

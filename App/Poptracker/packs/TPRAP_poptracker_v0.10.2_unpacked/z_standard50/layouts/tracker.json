@@ -1,0 +1,61 @@
+{
+	"tracker_default": {
+		"background": "#1D1A14",
+		"type": "dock",
+		"content": [
+			{
+				"type": "dock",
+				"background": "#212121",
+				"dock": "left",
+				"content": [
+					{
+						"type": "tabbed",
+						"dock": "top",
+						"tabs": [
+							{
+								"title": "Items",
+								"content": {
+									"type": "layout",
+									"key": "item_grid50"
+								}
+							},
+							{
+								"title": "Bugs",
+								"content": {
+									"type": "layout",
+									"key": "bugs50"
+								}
+							},
+							{
+								"title": "Portals",
+								"content": {
+									"type": "layout",
+									"key": "portals50"
+								}
+							}
+						]
+					},
+					{
+						"type": "group",
+						"header": "Keys & Dungeons",
+						"dock": "top",
+						"background": "#525260",
+						"content": {
+							"type": "layout",
+							"key": "keys_bosses50"
+						}
+					}
+				]
+			},
+			{
+				"type": "container",
+				"content": [
+					{
+						"type": "layout",
+						"key": "layout_maps"
+					}
+				]
+			}
+		]
+	}
+}

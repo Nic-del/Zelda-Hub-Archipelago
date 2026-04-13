@@ -1,0 +1,130 @@
+﻿{
+  "map_tabs": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Termina",
+        "content": {
+          "type": "map",
+          "maps": ["overworld"]
+        }
+      },
+      {
+        "title": "Overworld",
+        "content": {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Clock Town",
+              "content": {
+                "type": "map",
+                "maps": ["clock_town"]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "Dungeons",
+        "content": {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Main",
+              "content": {
+                "type": "tabbed",
+                "tabs": [
+                  {
+                    "title": "Woodfall Temple",
+                    "content": {
+                      "type": "map",
+                      "maps": ["woodfall_temple"]
+                    }
+                  },
+                  {
+                    "title": "Snowhead Temple",
+                    "content": {
+                      "type": "map",
+                      "maps": ["snowhead_temple"]
+                    }
+                  },
+                  {
+                    "title": "Great Bay Temple",
+                    "content": {
+                      "type": "map",
+                      "maps": ["great_bay_temple"]
+                    }
+                  },
+                  {
+                    "title": "Stone Tower Temple",
+                    "content": {
+                      "type": "map",
+                      "maps": ["stone_tower_temple"]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Other",
+              "content": {
+                "type": "tabbed",
+                "tabs": [
+                  {
+                    "title": "Swamp Spider House",
+                    "content": {
+                      "type": "map",
+                      "maps": ["swamp_spider_house"]
+                    }
+                  },
+                  {
+                    "title": "Ocean Spider House",
+                    "content": {
+                      "type": "map",
+                      "maps": ["ocean_spider_house"]
+                    }
+                  },
+                  {
+                    "title": "Pirates' Fortress",
+                    "content": {
+                      "type": "map",
+                      "maps": ["pirates_fortress"]
+                    }
+                  },
+                  {
+                    "title": "Beneath the Well",
+                    "content": {
+                      "type": "map",
+                      "maps": ["beneath_the_well"]
+                    }
+                  },
+                  {
+                    "title": "Ikana Castle",
+                    "content": {
+                      "type": "map",
+                      "maps": ["ikana_castle"]
+                    }
+                  },
+                  {
+                    "title": "Secret Shrine",
+                    "content": {
+                      "type": "map",
+                      "maps": ["secret_shrine"]
+                    }
+                  },
+                  {
+                    "title": "Moon",
+                    "content": {
+                      "type": "map",
+                      "maps": ["moon"]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

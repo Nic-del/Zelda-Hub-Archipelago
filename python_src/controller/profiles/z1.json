@@ -1,0 +1,16 @@
+{
+    "name": "z1",
+    "version": "1.0",
+    "mapping": {
+        "FACE_BOTTOM": "A",
+        "FACE_RIGHT": "B",
+        "FACE_LEFT": "Select",
+        "FACE_TOP": "Start",
+        "START": "Start",
+        "SELECT": "Select",
+        "Pad N": "Dpad_Up",
+        "Pad S": "Dpad_Down",
+        "Pad W": "Dpad_Left",
+        "Pad E": "Dpad_Right"
+    }
+}

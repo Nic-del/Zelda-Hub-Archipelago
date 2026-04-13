@@ -1,0 +1,492 @@
+[
+	{
+		"name": "Hyrule Castle",
+		"children": [
+			{
+				"name": "1F",
+				"children": [
+					{
+						"name": "Graveyard Switch Room",
+						"access_rules": [
+							"@HyruleCastleGraveyard"
+						],
+						"map_locations": [
+							{
+								"map": "hc1f",
+								"x": 1042,
+								"y": 122
+							},
+							{
+								"map": "hcfull",
+								"x": 442,
+								"y": 52
+							}
+						],
+						"sections": [
+							{
+								"name": "Right Chest",
+								"access_rules": [
+									"$canSmash"
+								]
+							},
+							{
+								"name": "Front Left Chest",
+								"access_rules": [
+									"$canSmash"
+								]
+							},
+							{
+								"name": "Back Left Chest",
+								"access_rules": [
+									"$canSmash"
+								]
+							}
+						]
+					},
+					{
+						"name": "Graveyard Owl Statue Chest",
+						"map_locations": [
+							{
+								"map": "hc1f",
+								"x": 823,
+								"y": 347
+							},
+							{
+								"map": "hcfull",
+								"x": 349,
+								"y": 147
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleGraveyard, $canSmash, lantern, powereddominionrod"
+								]
+							}
+						]
+					},
+					{
+						"name": "East Wing Boomerang Puzzle Chest",
+						"map_locations": [
+							{
+								"map": "hc1f",
+								"x": 895,
+								"y": 328
+							},
+							{
+								"map": "hcfull",
+								"x": 379,
+								"y": 139
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleOutsideEastWing, boomerang"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Courtyard North Small Chest",
+						"map_locations": [
+							{
+								"map": "hc1f",
+								"x": 485,
+								"y": 296
+							},
+							{
+								"map": "hcfull",
+								"x": 206,
+								"y": 125
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleOutsideWestWing, $canDefeatBokoblin",
+									"[glitcheson], @HyruleCastleOutsideWestWing"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Courtyard Central Small Chest",
+						"map_locations": [
+							{
+								"map": "hc1f",
+								"x": 476,
+								"y": 629
+							},
+							{
+								"map": "hcfull",
+								"x": 202,
+								"y": 267
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleOutsideWestWing, $canDefeatBokoblin",
+									"[glitcheson], @HyruleCastleOutsideWestWing"
+								]
+							}
+						]
+					},
+					{
+						"name": "King Bulblin Key",
+						"map_locations": [
+							{
+								"map": "hc1f",
+								"x": 389,
+								"y": 392
+							},
+							{
+								"map": "hcfull",
+								"x": 165,
+								"y": 166
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleOutsideWestWing, $canDefeatKingBulblinCastle"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "2F",
+				"children": [
+					{
+						"name": "East Wing Balcony Chest",
+						"map_locations": [
+							{
+								"map": "hc2f",
+								"x": 1093,
+								"y": 789
+							},
+							{
+								"map": "hcfull",
+								"x": 1146,
+								"y": 334
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleOutsideEastWing, boomerang"
+								]
+							}
+						]
+					},
+					{
+						"name": "Main Hall Northeast Chest",
+						"map_locations": [
+							{
+								"map": "hc2f",
+								"x": 965,
+								"y": 558
+							},
+							{
+								"map": "hcfull",
+								"x": 1092,
+								"y": 237
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleMainHall, $canDefeatBokoblin, $canDefeatLizalfos, clawshot",
+									"@HyruleCastleMainHall, $canDefeatBokoblinGlitched, $canDefeatLizalfos, clawshot",
+									"@HyruleCastleMainHall, $canDefeatBokoblin, $canDefeatLizalfosGlitched, clawshot",
+									"@HyruleCastleMainHall, $canDefeatBokoblinGlitched, $canDefeatLizalfosGlitched, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Lantern Staircase Chest",
+						"map_locations": [
+							{
+								"map": "hc2f",
+								"x": 835,
+								"y": 410
+							},
+							{
+								"map": "hcfull",
+								"x": 1037,
+								"y": 174
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleMainHall, doubleclawshot, $canDefeatDarknut, boomerang",
+									"[glitcheson], @HyruleCastleMainHall, clawshot, $canDefeatDarknut, boomerang"
+								]
+							}
+						]
+					},
+					{
+						"name": "Main Hall Southwest Chest",
+						"map_locations": [
+							{
+								"map": "hc2f",
+								"x": 766,
+								"y": 715
+							},
+							{
+								"map": "hcfull",
+								"x": 1007,
+								"y": 303
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleMainHall, $canDefeatDarknut, doubleclawshot, glitchesoff, $canKnockDownHCPainting, boomerang, lantern",
+									"[glitcheson], @HyruleCastleMainHall, $canDefeatDarknut, clawshot, $canKnockDownHCPaintingGlitched, boomerang, lantern",
+									"[glitcheson], @HyruleCastleMainHall, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Main Hall Northwest Chest",
+						"map_locations": [
+							{
+								"map": "hc2f",
+								"x": 704,
+								"y": 588
+							},
+							{
+								"map": "hcfull",
+								"x": 981,
+								"y": 249
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleMainHall, $canDefeatDarknut, doubleclawshot, glitchesoff, $canKnockDownHCPainting, boomerang, lantern",
+									"[glitcheson], @HyruleCastleMainHall, $canDefeatDarknut, clawshot, $canKnockDownHCPaintingGlitched, boomerang, lantern",
+									"[glitcheson], @HyruleCastleMainHall, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Southeast Balcony Tower Chest",
+						"map_locations": [
+							{
+								"map": "hc2f",
+								"x": 1336,
+								"y": 1004
+							},
+							{
+								"map": "hcfull",
+								"x": 1249,
+								"y": 426
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleThirdFloorBalcony, $canDefeatAeralfos",
+									"[glitcheson], @HyruleCastleThirdFloorBalcony, $canDefeatAeralfosGlitched"
+								]
+							}
+						]
+					},
+					{
+						"name": "Big Key Chest",
+						"map_locations": [
+							{
+								"map": "hc2f",
+								"x": 333,
+								"y": 1004
+							},
+							{
+								"map": "hcfull",
+								"x": 824,
+								"y": 426
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@HyruleCastleThirdFloorBalcony"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "4F",
+				"children": [
+					{
+						"name": "Treasure Room",
+						"access_rules": [
+							"@HyruleCastleTreasureRoom"
+						],
+						"map_locations": [
+							{
+								"map": "hc4f",
+								"x": 993,
+								"y": 741
+							},
+							{
+								"map": "hcfull",
+								"x": 421,
+								"y": 860
+							}
+						],
+						"sections": [
+							{
+								"name": "First Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Second Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Third Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Fourth Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Fifth Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "First Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Second Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Third Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Fourth Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Fifth Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Sixth Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Seventh Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Eighth Small Chest",
+								"access_rules": [
+									""
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "5F",
+				"children": [
+					{
+						"name": "Victory",
+						"map_locations": [
+							{
+								"map": "hc5f",
+								"x": 834,
+								"y": 609
+							},
+							{
+								"map": "hcfull",
+								"x": 1037,
+								"y": 805
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@GanondorfCastle"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "hc1f",
+								"x": 835,
+								"y": 1288,
+								"shape": "diamond"
+							},
+							{
+								"map": "hcfull",
+								"x": 354,
+								"y": 472,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@HyruleCastleEntrance}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

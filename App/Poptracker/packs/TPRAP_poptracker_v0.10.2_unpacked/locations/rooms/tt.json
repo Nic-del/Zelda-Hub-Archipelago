@@ -1,0 +1,91 @@
+[
+	{
+		"name": "TempleofTimeArmosAntechamber",
+		"access_rules": [
+			"@TempleofTimeCentralMechanicalPlatform, spinner",
+			"[glitcheson], @TempleofTimeCentralMechanicalPlatform, $canDoLJA"
+		]
+	},
+	{
+		"name": "TempleofTimeBossRoom",
+		"access_rules": [
+			"@TempleofTimeCrumblingCorridor, dominionrod, ttbigkey",
+			"@TempleofTimeCrumblingCorridor, dominionrod, bkkeysy"
+		]
+	},
+	{
+		"name": "TempleofTimeCentralMechanicalPlatform",
+		"access_rules": [
+			"@TempleofTimeArmosAntechamber",
+			"@TempleofTimeConnectingCorridors, $hasRangedItem, $canDefeatYoungGohma, $canDefeatLizalfos",
+			"[glitcheson], @TempleofTimeConnectingCorridors, $hasRangedItem, $canDefeatYoungGohmaGlitched, $canDefeatLizalfosGlitched",
+			"@TempleofTimeMovingWallHallways"
+		]
+	},
+	{
+		"name": "TempleofTimeConnectingCorridors",
+		"access_rules": [
+			"@TempleofTimeCentralMechanicalPlatform",
+			"@TempleofTimeEntrance, ttsmallkey:1",
+			"@TempleofTimeEntrance, skkeysy"
+		]
+	},
+	{
+		"name": "TempleofTimeCrumblingCorridor",
+		"access_rules": [
+			"@TempleofTimeEntrance, dominionrod, bow, spinner, $canDefeatLizalfos, $canDefeatDinalfos, $canDefeatDarknut, ttsmallkey:3",
+			"@TempleofTimeEntrance, dotopen",
+			"[glitcheson], @TempleofTimeEntrance, dominionrod"
+		]
+	},
+	{
+		"name": "TempleofTimeDarknutArena",
+		"access_rules": [
+			"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatLizalfos, $canDefeatBabyGohma, $canDefeatYoungGohma, $canDefeatArmos, ttsmallkey:3",
+			"[glitcheson], @TempleofTimeUpperSpikeTrapCorridor, $canDefeatLizalfosGlitched, $canDefeatBabyGohmaGlitched, $canDefeatYoungGohmaGlitched, $canDefeatArmosGlitched, ttsmallkey:3",
+			"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatLizalfos, $canDefeatBabyGohma, $canDefeatYoungGohma, $canDefeatArmos, skkeysy",
+			"[glitcheson], @TempleofTimeUpperSpikeTrapCorridor, $canDefeatLizalfosGlitched, $canDefeatBabyGohmaGlitched, $canDefeatYoungGohmaGlitched, $canDefeatArmosGlitched, skkeysy"
+		]
+	},
+	{
+		"name": "TempleofTimeEntrance",
+		"access_rules": [
+			"@SacredGrovePast, ttopen",
+			"@SacredGrovePast, mastersword",
+			"@TempleofTimeConnectingCorridors",
+			"@TempleofTimeCrumblingCorridor"
+		]
+	},
+	{
+		"name": "TempleofTimeFloorSwitchPuzzleRoom",
+		"access_rules": [
+			"@TempleofTimeScalesofTime, clawshot, spinner"
+		]
+	},
+	{
+		"name": "TempleofTimeMovingWallHallways",
+		"access_rules": [
+			"@TempleofTimeCentralMechanicalPlatform, spinner, ttsmallkey:2",
+			"@TempleofTimeCentralMechanicalPlatform, spinner, skkeysy",
+			"[glitcheson], @TempleofTimeCentralMechanicalPlatform, $canDoLJA, ttsmallkey:2",
+			"[glitcheson], @TempleofTimeCentralMechanicalPlatform, $canDoLJA, skkeysy",
+			"@TempleofTimeScalesofTime"
+		]
+	},
+	{
+		"name": "TempleofTimeScalesofTime",
+		"access_rules": [
+			"@TempleofTimeFloorSwitchPuzzleRoom",
+			"@TempleofTimeMovingWallHallways, bow, $canDefeatLizalfos, $canDefeatDinalfos",
+			"[glitcheson], @TempleofTimeMovingWallHallways, bow, $canDefeatLizalfosGlitched, $canDefeatDinalfos",
+			"@TempleofTimeUpperSpikeTrapCorridor"
+		]
+	},
+	{
+		"name": "TempleofTimeUpperSpikeTrapCorridor",
+		"access_rules": [
+			"@TempleofTimeDarknutArena, $canDefeatDarknut, dominionrod",
+			"@TempleofTimeScalesofTime"
+		]
+	}
+]

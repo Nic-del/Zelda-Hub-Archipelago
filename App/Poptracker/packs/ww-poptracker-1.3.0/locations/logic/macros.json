@@ -1,0 +1,1393 @@
+[
+  {
+    "name": "Macros",
+    "children": [
+      {
+        "name": "can_play_winds_requiem",
+        "access_rules": [
+          "windwaker, requiem"
+        ]
+      },
+      {
+        "name": "can_play_command_melody",
+        "access_rules": [
+          "windwaker, melody"
+        ]
+      },
+      {
+        "name": "can_play_earth_gods_lyric",
+        "access_rules": [
+          "windwaker, lyric"
+        ]
+      },
+      {
+        "name": "can_play_wind_gods_aria",
+        "access_rules": [
+          "windwaker, aria"
+        ]
+      },
+      {
+        "name": "can_play_song_of_passing",
+        "access_rules": [
+          "windwaker, passing",
+          "sequence_break_passing, [windwaker], [passing]"// All logically required use of the Song of Passing can be skipped by waiting.
+        ]
+      },
+      {
+        "name": "can_play_ballad_of_gales",
+        "access_rules": [
+          "windwaker, ballad"
+        ]
+      },
+      {
+        "name": "_can_play_ballad_of_gales_or_sequence_break",
+        "access_rules": [
+          "@Macros/can_play_ballad_of_gales",
+          "sequence_break_ballad, [@Macros/can_play_ballad_of_gales]"
+        ]
+      },
+      {
+        "name": "can_fly_with_deku_leaf_indoors",
+        "access_rules": [
+          "leaf, magic"
+        ]
+      },
+      {
+        "name": "can_fly_with_deku_leaf_outdoors",
+        "access_rules": [
+          "leaf, magic, @Macros/can_play_winds_requiem",
+          "@Macros/_swift_sail_sequence_break, leaf, magic, [@Macros/can_play_winds_requiem]"// Most flying with the deku leaf outdoors can be done by using the swift sail to set the wind in advance
+        ]
+      },
+      {
+        "name": "can_fan_with_deku_leaf",
+        "access_rules": [
+          "leaf"
+        ]
+      },
+      {
+        "name": "can_access_forest_haven",
+        "access_rules": [
+          "grapple",
+          "@Macros/can_fly_with_deku_leaf_outdoors"
+        ]
+      },
+      {
+        "name": "can_cut_grass",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "hammer",
+          "boomerang",
+          "bombs"
+        ]
+      },
+      {
+        "name": "_can_cut_grass_or_has_magic_meter_upgrade",
+        "access_rules": [
+          "@Macros/can_cut_grass",
+          "magic_2"
+        ]
+      },
+      {
+        "name": "can_defeat_boko_babas",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "boomerang",
+          "hammer",
+          "bow",
+          "hookshot",
+          "bombs",
+          "@Macros/can_fan_with_deku_leaf, grapple"
+        ]
+      },
+      {
+        "name": "can_defeat_red_chuchus",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "hammer",
+          "bombs",
+          "bow"
+        ]
+      },
+      {
+        "name": "can_defeat_green_chuchus",
+        "access_rules": [
+          "@Macros/can_defeat_red_chuchus"
+        ]
+      },
+      {
+        "name": "can_defeat_dark_chuchus"
+      },
+      {
+        "name": "can_defeat_yellow_chuchus",
+        "access_rules": [
+          "boomerang, @Macros/_has_hero_sword",
+          "bow",
+          "bombs",
+          "@Macros/can_fan_with_deku_leaf, @Macros/_has_hero_sword",
+          "hammer",
+          "grapple, @Macros/_has_hero_sword, @General Logic/Normal Logic Obscurity, @General Logic/Hard Logic Precision"
+        ]
+      },
+      {
+        "name": "can_defeat_floormasters",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "hammer, @General Logic/Normal Logic Precision"
+        ]
+      },
+      {
+        "name": "has_fire_arrows",
+        "access_rules": [
+          "magic, bow_2"
+        ]
+      },
+      {
+        "name": "has_ice_arrows",
+        "access_rules": [
+          "magic, bow_2"
+        ]
+      },
+      {
+        "name": "can_reach_tower_of_the_gods_second_floor",
+        "access_rules": [
+          [
+            "@Exit Logic/Tower of the Gods",
+            "bombs",
+            "totg_small:1",
+            "@Macros/can_defeat_yellow_chuchus"
+          ]
+        ]
+      },
+      {
+        "name": "_grapple_or_can_fly_with_deku_leaf_indoors",
+        "access_rules": [
+          "grapple",
+          "@Macros/can_fly_with_deku_leaf_indoors"
+        ]
+      },
+      {
+        "name": "_grapple_or_can_fly_with_deku_leaf_outdoors",
+        "access_rules": [
+          "grapple",
+          "@Macros/can_fly_with_deku_leaf_outdoors"
+        ]
+      },
+      {
+        "name": "_can_play_command_melody_or_bow",
+        "access_rules": [
+          "@Macros/can_play_command_melody",
+          "bow"
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_sun_statue_room",
+        "access_rules": [
+          [
+            "@Exit Logic/Earth Temple",
+            "@Macros/can_play_command_melody",
+            "@Macros/can_defeat_red_chuchus",
+            "@Macros/can_defeat_green_chuchus",
+            "@Macros/can_defeat_dark_chuchus"
+          ]
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_left_path",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_sun_statue_room, et_small:2"
+        ]
+      },
+      {
+        "name": "_can_play_command_melody_or_has_mirror_shield",
+        "access_rules": [
+          "@Macros/can_play_command_melody",
+          "shield_2"
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_moblins_and_poes_room",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_left_path",
+            "@Macros/has_fire_arrows",
+            "power",
+            "@Macros/can_defeat_floormasters",
+            "@Macros/_can_play_command_melody_or_has_mirror_shield"
+          ]
+        ]
+      },
+      {
+        "name": "_can_defeat_blue_bubbles_with_leaf_or_hookshot",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "grapple",
+          "hammer"
+        ]
+      },
+      {
+        "name": "_leaf_or_hookshot",
+        "access_rules": [
+          "leaf",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "can_defeat_blue_bubbles",
+        "access_rules": [
+          "@Macros/has_ice_arrows",
+          "bombs",
+          "@Macros/_leaf_or_hookshot, @Macros/_can_defeat_blue_bubbles_with_leaf_or_hookshot"
+        ]
+      },
+      {
+        "name": "can_reach_wind_temple_kidnapping_room",
+        "access_rules": [
+          [
+            "@Exit Logic/Wind Temple",
+            "@Macros/can_play_command_melody",
+            "boots",
+            "@Macros/can_fly_with_deku_leaf_indoors"
+          ]
+        ]
+      },
+      {
+        "name": "_can_reach_end_of_wind_temple_many_cyclones_room",
+        "access_rules": [
+          "boots, @Macros/can_fan_with_deku_leaf, @Macros/can_fly_with_deku_leaf_indoors, @Macros/can_cut_grass",
+          "hookshot, @Macros/can_defeat_blue_bubbles, @Macros/can_fly_with_deku_leaf_indoors",
+          "hookshot, @Macros/can_fly_with_deku_leaf_indoors, @General Logic/Normal Logic Obscurity, @General Logic/Hard Logic Precision"
+        ]
+      },
+      {
+        "name": "can_reach_end_of_wind_temple_many_cyclones_room",
+        "access_rules": [
+          "@Macros/can_reach_wind_temple_kidnapping_room, @Macros/_can_reach_end_of_wind_temple_many_cyclones_room"
+        ]
+      },
+      {
+        "name": "can_open_wind_temple_upper_giant_grate",
+        "access_rules": [
+          "@Macros/can_reach_end_of_wind_temple_many_cyclones_room, boots"
+        ]
+      },
+      {
+        "name": "can_access_hyrule",
+        "access_rules": [
+          "triforce_8"
+        ]
+      },
+      {
+        "name": "_can_reach_dragon_roost_cavern_boss_stairs",
+        "access_rules": [
+          "grapple",
+          "@Macros/can_fly_with_deku_leaf_indoors",
+          "hookshot",
+          "@Macros/has_ice_arrows"
+        ]
+      },
+      {
+        "name": "can_reach_dragon_roost_cavern_boss_stairs",
+        "access_rules": [
+          [
+            "@Exit Logic/Dragon Roost Cavern",
+            "drc_small:4",
+            "@Macros/_can_reach_dragon_roost_cavern_boss_stairs"
+          ]
+        ]
+      },
+      {
+        "name": "can_defeat_door_flowers",
+        "access_rules": [
+          "boomerang",
+          "bow",
+          "bombs",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "_can_defeat_door_flowers_or_grapple",
+        "access_rules": [
+          "@Macros/can_defeat_door_flowers",
+          "grapple"
+        ]
+      },
+      {
+        "name": "can_defeat_mothulas",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_bring_east_servant_of_the_tower"
+      },
+      {
+        "name": "can_bring_west_servant_of_the_tower",
+        "access_rules": [
+          [
+            "@Macros/_grapple_or_can_fly_with_deku_leaf_indoors",
+            "@Macros/can_play_command_melody",
+            "bow"
+          ]
+        ]
+      },
+      {
+        "name": "can_bring_north_servant_of_the_tower",
+        "access_rules": [
+          [
+            "totg_small:2",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_play_command_melody"
+          ],
+          [
+            "totg_small:2",
+            "@General Logic/Normal Logic Obscurity",
+            "@Macros/can_play_command_melody"
+          ]
+        ]
+      },
+      {
+        "name": "can_reach_tower_of_the_gods_third_floor",
+        "access_rules": [
+          [
+            "@Macros/can_reach_tower_of_the_gods_second_floor",
+            "@Macros/can_bring_east_servant_of_the_tower",
+            "@Macros/can_bring_west_servant_of_the_tower",
+            "@Macros/can_bring_north_servant_of_the_tower",
+            "windwaker"
+          ]
+        ]
+      },
+      {
+        "name": "can_defeat_armos",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "bombs",
+          "hammer",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "can_open_ganons_tower_dark_portal",
+        "access_rules": [
+          "@Macros/can_reach_ganons_tower_phantom_ganon_room, boomerang"
+        ]
+      },
+      {
+        "name": "can_get_past_forsaken_fortress_gate",
+        "access_rules": [
+          "bombs",
+          "@General Logic/Normal Logic Obscurity, @General Logic/Normal Logic Precision",
+          "@Macros/can_open_ganons_tower_dark_portal, @General Logic/Normal Logic Obscurity"
+        ]
+      },
+      {
+        "name": "can_get_inside_forsaken_fortress",
+        "access_rules": [
+          [
+            "hammer",
+            "@Macros/can_get_past_forsaken_fortress_gate"
+          ],
+          // Fly across to the other entrance into Forsaken Fortress, the door cannot be opened until Phantom Ganon has
+          // been defeated.
+          [
+            "sequence_break_other",
+            "@Macros/can_get_past_forsaken_fortress_gate",
+            "[hammer]",
+            "@Macros/can_fly_with_deku_leaf_outdoors",
+            "@Macros/can_reach_and_defeat_phantom_ganon"
+          ]
+        ]
+      },
+      {
+        "name": "_can_fly_with_deku_leaf_indoors_or_hookshot",
+        "access_rules": [
+          "@Macros/can_fly_with_deku_leaf_indoors",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "can_aim_mirror_shield",
+        "access_rules": [
+          "shield_2, @Macros/_has_hero_sword",
+          "shield_2, windwaker",
+          "shield_2, grapple",
+          "shield_2, boomerang",
+          "shield_2, leaf",
+          "shield_2, bow",
+          "shield_2, hookshot",
+          "sequence_break_other, shield_2, picto, [never]"
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_basement",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_sun_statue_room",
+            "@Macros/can_play_command_melody",
+            "@Macros/can_aim_mirror_shield"
+          ]
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_redead_hub_room",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_basement, @Macros/can_play_earth_gods_lyric"
+        ]
+      },
+      {
+        "name": "_can_play_command_melody_or_can_aim_mirror_shield",
+        "access_rules": [
+          "@Macros/can_play_command_melody",
+          "@Macros/can_aim_mirror_shield"
+        ]
+      },
+      {
+        "name": "can_defeat_red_bubbles",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "hammer",
+          "bow",
+          "bombs",
+          "@Macros/can_fan_with_deku_leaf, grapple",
+          "hookshot, grapple"
+        ]
+      },
+      {
+        "name": "_can_defeat_or_ignore_red_bubbles",
+        "access_rules": [
+          "@Macros/can_defeat_red_bubbles",
+          "@General Logic/Hard Logic Precision"
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_third_crypt",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_redead_hub_room",
+            "@Macros/_can_play_command_melody_or_can_aim_mirror_shield",
+            "power",
+            "hammer",
+            "et_small:3",
+            "@Macros/_can_defeat_or_ignore_red_bubbles",
+            "@Macros/can_play_command_melody",
+            "@Macros/can_aim_mirror_shield"
+          ]
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_tall_vine_room",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_third_crypt, @Macros/can_play_earth_gods_lyric"
+        ]
+      },
+      {
+        "name": "can_open_wind_temple_lower_giant_grate",
+        "access_rules": [
+          [
+            "@Macros/can_reach_wind_temple_kidnapping_room",
+            "hookshot",
+            "@Macros/can_defeat_blue_bubbles"
+          ]
+        ]
+      },
+      {
+        "name": "can_reach_wind_temple_tall_basement_room",
+        "access_rules": [
+          [
+            "@Macros/can_open_wind_temple_upper_giant_grate",
+            "@Macros/can_open_wind_temple_lower_giant_grate",
+            "wt_small:2"
+          ]
+        ]
+      },
+      {
+        "name": "can_cut_down_outset_trees",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "boomerang",
+          "hammer",
+          "power, @General Logic/Very Hard Logic Obscurity"
+        ]
+      },
+      {
+        "name": "can_reach_outset_island_upper_level",
+        "access_rules": [
+          "@Macros/can_cut_down_outset_trees",
+          "@Macros/can_fly_with_deku_leaf_outdoors, @General Logic/Normal Logic Obscurity"
+        ]
+      },
+      {
+        "name": "can_move_boulders",
+        "access_rules": [
+          "bombs",
+          "power"
+        ]
+      },
+      {
+        "name": "can_buy_hyoi_pears"
+      },
+      {
+        "name": "can_access_forest_of_fairies",
+        "access_rules": [
+          "@Macros/can_reach_outset_island_upper_level, @Macros/can_fly_with_deku_leaf_outdoors"
+        ]
+      },
+      {
+        "name": "can_defeat_gohma",
+        "access_rules": [
+          "grapple"
+        ]
+      },
+      {
+        "name": "can_defeat_winged_mothulas",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_defeat_kalle_demos",
+        "access_rules": [
+          "boomerang",
+          "sequence_break_other, [boomerang], bow, @Macros/_has_any_master_sword",// Unsure what the minimum arrows needed are, nor if you can one-cycle with the basic sword like you can with the mastersword
+          "sequence_break_other, [boomerang], bow, quiver, @Macros/_has_hero_sword"
+        ]
+      },
+      {
+        "name": "has_light_arrows",
+        "access_rules": [
+          "bow_3, magic"
+        ]
+      },
+      {
+        "name": "can_defeat_darknuts",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "@Macros/has_light_arrows",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_defeat_gohdan",
+        "access_rules": [
+          "bow, bombs",
+          "hookshot, @General Logic/Normal Logic Obscurity, @General Logic/Hard Logic Precision, bombs"
+        ]
+      },
+      {
+        "name": "can_defeat_helmaroc_king",
+        "access_rules": [
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_defeat_stalfos",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bombs",
+          "hammer",
+          "@Macros/has_light_arrows"
+        ]
+      },
+      {
+        "name": "_can_aim_mirror_shield_or_has_light_arrows",
+        "access_rules": [
+          "@Macros/can_aim_mirror_shield",
+          "@Macros/has_light_arrows"
+        ]
+      },
+      {
+        "name": "can_defeat_jalhalla_poes",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_defeat_jalhalla",
+        "access_rules": [
+          [
+            "@Macros/_can_aim_mirror_shield_or_has_light_arrows",
+            "power",
+            "@Macros/can_defeat_jalhalla_poes"
+          ]
+        ]
+      },
+      {
+        "name": "can_remove_peahat_armor",
+        "access_rules": [
+          "boomerang",
+          "hookshot",
+          "@Macros/can_fan_with_deku_leaf",
+          "hammer",
+          "bow",
+          "bombs"
+        ]
+      },
+      {
+        "name": "can_defeat_molgera",
+        "access_rules": [
+          "hookshot, @Macros/_has_hero_sword",
+          "hookshot, bow",
+          "hookshot, boomerang",
+          "hookshot, grapple",
+          "hookshot, hammer",
+          "hookshot, bombs"
+        ]
+      },
+      {
+        "name": "can_defeat_keese",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "hookshot",
+          "grapple",
+          "boomerang",
+          "bow",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_defeat_miniblins",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "grapple",
+          "boomerang",
+          "bow",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_defeat_magtails",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "hammer",
+          "boomerang",
+          "bombs",
+          "grapple",
+          "bow"
+        ]
+      },
+      {
+        "name": "can_defeat_fire_keese",
+        "access_rules": [
+          "@Macros/can_defeat_keese"
+        ]
+      },
+      {
+        "name": "can_defeat_peahats",
+        "access_rules": [
+          "boomerang",
+          "hookshot, @Macros/_has_hero_sword",
+          "@Macros/can_fan_with_deku_leaf, @Macros/_has_hero_sword",
+          "hammer",
+          "bow",
+          "bombs"
+        ]
+      },
+      {
+        "name": "can_defeat_wizzrobes",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "hookshot",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "_grapple_or_sword_or_hammer",
+        "access_rules": [
+          "grapple",
+          "@Macros/_has_hero_sword",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_defeat_redeads",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "@Macros/has_light_arrows",
+          "hammer",
+          "bombs"
+        ]
+      },
+      {
+        "name": "can_defeat_poes"
+      },
+      {
+        "name": "can_hit_diamond_switches_at_range",
+        "access_rules": [
+          "boomerang",
+          "bow",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "can_defeat_miniblins_easily",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "boomerang",
+          "bow",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_defeat_morths",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "boomerang",
+          "bow",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "can_defeat_kargarocs",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "boomerang",
+          "bow",
+          "hammer",
+          "bombs"
+        ]
+      },
+      {
+        "name": "can_defeat_wizzrobes_at_range",
+        "access_rules": [
+          "bow",
+          "hookshot, @General Logic/Normal Logic Precision"
+        ]
+      },
+      {
+        "name": "can_stun_magtails",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "hammer",
+          "boomerang",
+          "bombs",
+          "grapple",
+          "bow"
+        ]
+      },
+      {
+        "name": "can_defeat_darknuts_easily",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "@Macros/has_light_arrows"
+        ]
+      },
+      {
+        "name": "can_defeat_mighty_darknuts",
+        "access_rules": [
+          "@Macros/can_defeat_darknuts_easily",
+          "hammer, @General Logic/Very Hard Logic Precision"
+        ]
+      },
+      {
+        "name": "_can_reach_stone_watcher_cave_darknuts",
+        "access_rules": [
+          [
+            "@Exit Logic/Stone Watcher Island Secret Cave",
+            "@Macros/can_defeat_armos",
+            "@Macros/can_defeat_wizzrobes"
+          ]
+        ]
+      },
+      {
+        "name": "_can_reach_overlook_island_cave_darknuts",
+        "access_rules": [
+          [
+            "@Exit Logic/Overlook Island Secret Cave",
+            "@Macros/can_defeat_stalfos",
+            "@Macros/can_defeat_wizzrobes",
+            "@Macros/can_defeat_red_chuchus",
+            "@Macros/can_defeat_green_chuchus",
+            "@Macros/can_defeat_keese",
+            "@Macros/can_defeat_fire_keese",
+            "@Macros/can_defeat_morths",
+            "@Macros/can_defeat_kargarocs"
+          ]
+        ]
+      },
+      {
+        "name": "_can_farm_knights_crests",
+        "access_rules": [
+          "@The Great Sea/Ice Ring Isle Sector/Ice Ring Isle/Inner Cave - Chest",
+          "@Macros/_can_complete_savage_labyrinth_floor_30",
+          "@Earth Temple/Big Key Chest, @Macros/can_defeat_darknuts_easily",
+          "@Wind Temple/Big Key Chest, @Macros/can_defeat_darknuts_easily",
+          "@The Great Sea/Shark Island Sector/Shark Island - Cave/",
+          "@The Great Sea/Stone Watcher Island Sector/Stone Watcher Island - Cave/, @Macros/can_defeat_darknuts_easily",// This includes can_play_winds_requiem logic, but this logic is not actually required,
+          "sequence_break_other, @Macros/_can_reach_stone_watcher_cave_darknuts, [@The Great Sea/Stone Watcher Island Sector/Stone Watcher Island - Cave/], @Macros/can_defeat_darknuts_easily",
+          "@The Great Sea/Overlook Island Sector/Overlook Island - Cave/, @Macros/can_defeat_darknuts_easily",
+          "sequence_break_other, @Macros/_can_reach_overlook_island_cave_darknuts, [@The Great Sea/Overlook Island Sector/Overlook Island - Cave/], @Macros/can_defeat_darknuts_easily",
+          "@Macros/can_access_hyrule"
+        ]
+      },
+      {
+        "name": "can_farm_knights_crests",
+        "access_rules": [
+          "spoils, grapple, @Macros/_can_farm_knights_crests",
+          "sequence_break_spoils_grapple, [grapple], spoils, @Macros/_can_farm_knights_crests, @Macros/can_defeat_darknuts"
+        ]
+      },
+      {
+        "name": "can_sword_fight_with_orca",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "tww_in_swordless_mode"
+        ]
+      },
+      {
+        "name": "rescued_tingle"
+      },
+      {
+        "name": "can_defeat_blue_chuchus",
+        "access_rules": [
+          "@Macros/can_defeat_yellow_chuchus"
+        ]
+      },
+      {
+        "name": "can_get_blue_chu_jelly_from_blue_chuchus",
+        "access_rules": [
+          "@Macros/can_defeat_blue_chuchus",
+          "grapple"
+        ]
+      },
+      {
+        "name": "_can_obtain_15_blue_chu_jelly",
+        "access_rules": [
+          "@Macros/can_move_boulders",
+          "hookshot",
+          "bombs",
+          "grapple",
+          "@Entrance Logic/Secret Cave Entrance on Shark Island, @Macros/can_fly_with_deku_leaf_outdoors",
+          "@The Great Sea/Cliff Plateau Isles Sector/Cliff Plateau Isles/Highest Isle",
+          "@Macros/can_fan_with_deku_leaf",
+          "@Entrance Logic/Secret Cave Entrance on Boating Course"
+        ]
+      },
+      {
+        "name": "can_obtain_15_blue_chu_jelly",
+        "access_rules": [
+          [
+            "@Macros/can_get_blue_chu_jelly_from_blue_chuchus",
+            "@Macros/_can_obtain_15_blue_chu_jelly",
+            "spoils"
+          ]
+        ]
+      },
+      {
+        "name": "can_defeat_phantom_ganon",
+        "access_rules": [
+          "tww_outside_swordless_mode, mastersword",
+          "tww_in_swordless_mode, hammer"
+        ]
+      },
+      {
+        "name": "can_reach_and_defeat_phantom_ganon",
+        "access_rules": [
+          "@Macros/can_get_past_forsaken_fortress_gate, @Macros/can_defeat_phantom_ganon"
+        ]
+      },
+      {
+        "name": "can_cut_down_hanging_drc_platform",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bombs",
+          "bow",
+          "hammer",
+          "hookshot, @General Logic/Normal Logic Precision",
+          "grapple, @General Logic/Normal Logic Precision"
+        ]
+      },
+      {
+        "name": "can_reach_dragon_roost_cavern_gaping_maw",
+        "access_rules": [
+          "@Exit Logic/Dragon Roost Cavern, drc_small:4, @Macros/can_cut_down_hanging_drc_platform",
+          "@Exit Logic/Dragon Roost Cavern, drc_small:1, @Macros/can_fly_with_deku_leaf_indoors, @General Logic/Hard Logic Obscurity",
+          "@Exit Logic/Dragon Roost Cavern, drc_small:1, @Macros/has_ice_arrows, @General Logic/Hard Logic Obscurity, @General Logic/Hard Logic Precision"
+        ]
+      },
+      {
+        "name": "has_tingle_bombs",
+        "access_rules": [
+          "bombs",
+          "tunerlogic_on, tuner"
+        ]
+      },
+      {
+        "name": "can_destroy_seeds_hanging_by_vines",
+        "access_rules": [
+          "boomerang",
+          "bow",
+          "bombs",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "can_activate_tingle_bomb_triggers_without_tingle_tuner"
+      },
+      {
+        "name": "_has_tingle_bombs_or_can_activate_tingle_bomb_triggers_without_tingle_tuner",
+        "access_rules": [
+          "@Macros/has_tingle_bombs",
+          "@Macros/can_activate_tingle_bomb_triggers_without_tingle_tuner"
+        ]
+      },
+      {
+        "name": "_can_bring_any_servant_of_the_tower",
+        "access_rules": [
+          "@Macros/can_bring_east_servant_of_the_tower",
+          "@Macros/can_bring_west_servant_of_the_tower",
+          "@Macros/can_bring_north_servant_of_the_tower"
+        ]
+      },
+      {
+        "name": "_boomerang_or_hookshot",
+        "access_rules": [
+          "boomerang",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_right_path",
+        "access_rules": [
+          [
+            "@Macros/can_reach_earth_temple_sun_statue_room",
+            "@Macros/can_play_command_melody",
+            "hammer"
+          ]
+        ]
+      },
+      {
+        "name": "can_reach_earth_temple_many_mirrors_room",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_tall_vine_room"
+        ]
+      },
+      {
+        "name": "can_activate_wind_temple_giant_fan",
+        "access_rules": [
+          "@Macros/can_open_wind_temple_upper_giant_grate, @Macros/can_play_command_melody"
+        ]
+      },
+      {
+        "name": "can_defeat_12_eye_big_octos",
+        "access_rules": [
+          "bow, quiver",
+          "@Macros/has_light_arrows",
+          "bombs",
+          "boomerang"
+        ]
+      },
+      {
+        "name": "rescued_aryll"
+      },
+      {
+        "name": "_can_fly_with_deku_leaf_outdoors_or_hookshot",
+        "access_rules": [
+          "@Macros/can_fly_with_deku_leaf_outdoors",
+          "hookshot"
+        ]
+      },
+      {
+        "name": "can_farm_green_chu_jelly",
+        "access_rules": [
+          "grapple, spoils",
+          "sequence_break_spoils_grapple, [grapple], spoils, @Macros/can_defeat_green_chuchus"
+        ]
+      },
+      {
+        "name": "can_defeat_bokoblins",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_farm_joy_pendants",
+        "access_rules": [
+          "grapple, spoils",
+          "sequence_break_spoils_grapple, [grapple], spoils, @Macros/can_defeat_bokoblins"
+        ]
+      },
+      {
+        "name": "can_farm_skull_necklaces",
+        "access_rules": [
+          "grapple, spoils",
+          "sequence_break_spoils_grapple, [grapple], spoils, @Macros/can_defeat_moblins"
+        ]
+      },
+      {
+        "name": "can_farm_golden_feathers",
+        "access_rules": [
+          "grapple, spoils",
+          "sequence_break_spoils_grapple, [grapple], spoils, @Macros/can_defeat_kargarocs",
+          "sequence_break_spoils_grapple, [grapple], spoils, @Macros/can_defeat_peahats, @Forbidden Woods/Hole in Tree",
+          "sequence_break_spoils_grapple, [grapple], spoils, @Macros/can_defeat_peahats, @Entrance Logic/Dungeon Entrance in Forest Haven Sector"
+        ]
+      },
+      {
+        "name": "can_farm_lots_of_rupees"
+      },
+      {
+        "name": "can_destroy_cannons",
+        "access_rules": [
+          "bombs",
+          "boomerang"
+        ]
+      },
+      {
+        "name": "can_get_past_hyrule_barrier",
+        "access_rules": [
+          "@Macros/can_access_hyrule, mastersword_full",
+          "@Macros/can_access_hyrule, tww_in_swordless_mode"
+        ]
+      },
+      {
+        "name": "can_access_ganons_tower",
+        "access_rules": [
+          "@Macros/can_get_past_hyrule_barrier, @Macros/_can_fly_with_deku_leaf_indoors_or_hookshot"
+        ]
+      },
+      {
+        "name": "can_complete_memory_dragon_roost_cavern_and_gohma",
+        "access_rules": [
+          [
+            "grapple",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_gohma"
+          ]
+        ]
+      },
+      {
+        "name": "can_complete_memory_forbidden_woods_and_kalle_demos",
+        "access_rules": [
+          [
+            "@Macros/can_fan_with_deku_leaf",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_kalle_demos"
+          ]
+        ]
+      },
+      {
+        "name": "can_complete_memory_earth_temple_and_jalhalla",
+        "access_rules": [
+          "@Macros/can_defeat_jalhalla"
+        ]
+      },
+      {
+        "name": "can_complete_memory_wind_temple_and_molgera",
+        "access_rules": [
+          "@Macros/can_fly_with_deku_leaf_indoors, @Macros/can_defeat_molgera"
+        ]
+      },
+      {
+        "name": "can_complete_all_memory_dungeons_and_bosses",
+        "access_rules": [
+          [
+            "@Macros/can_complete_memory_dragon_roost_cavern_and_gohma",
+            "@Macros/can_complete_memory_forbidden_woods_and_kalle_demos",
+            "@Macros/can_complete_memory_earth_temple_and_jalhalla",
+            "@Macros/can_complete_memory_wind_temple_and_molgera"
+          ]
+        ]
+      },
+      {
+        "name": "can_unlock_ganons_tower_four_boss_door",
+        "access_rules": [
+          "@Macros/can_complete_all_memory_dungeons_and_bosses",
+          "tww_rematch_bosses_skipped"
+        ]
+      },
+      {
+        "name": "can_reach_ganons_tower_phantom_ganon_room",
+        "access_rules": [
+          "@Macros/can_access_ganons_tower, @Macros/can_unlock_ganons_tower_four_boss_door"
+        ]
+      },
+      {
+        "name": "can_defeat_moblins",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "bombs",
+          "hammer"
+        ]
+      },
+      {
+        "name": "can_unlock_puppet_ganon_door",
+        "access_rules": [
+          [
+            "@Macros/can_defeat_moblins",
+            "@Macros/can_defeat_mighty_darknuts",
+            "@Macros/can_defeat_all_required_bosses"
+          ]
+        ]
+      },
+      {
+        "name": "can_defeat_puppet_ganon",
+        "access_rules": [
+          "@Macros/has_light_arrows, boomerang",
+          "@Macros/has_light_arrows, @General Logic/Hard Logic Precision"
+        ]
+      },
+      {
+        "name": "can_reach_and_defeat_puppet_ganon",
+        "access_rules": [
+          [
+            "@Macros/can_reach_ganons_tower_phantom_ganon_room",
+            "@Macros/has_light_arrows",
+            "@Macros/can_unlock_puppet_ganon_door",
+            "@Macros/can_defeat_puppet_ganon"
+          ]
+        ]
+      },
+      {
+        "name": "_can_reflect_light_arrows",
+        "access_rules": [
+          "shield",
+          "hammer, @General Logic/Hard Logic Obscurity"
+        ]
+      },
+      {
+        "name": "can_defeat_ganondorf",
+        "access_rules": [
+          "sword, @Macros/_can_reflect_light_arrows",
+          "tww_in_swordless_mode, @Macros/_can_reflect_light_arrows"
+        ]
+      },
+      {
+        "name": "can_reach_and_defeat_ganondorf",
+        "access_rules": [
+          [
+            "@Macros/can_reach_and_defeat_puppet_ganon",
+            "grapple",
+            "hookshot",
+            "@Macros/can_defeat_ganondorf"
+          ]
+        ]
+      },
+      {
+        "name": "can_defeat_big_octos",
+        "access_rules": [
+          "bow",
+          "bombs",
+          "boomerang"
+        ]
+      },
+      {
+        "name": "can_buy_bait"
+      },
+      {
+        "name": "can_defeat_bombchus",
+        "access_rules": [
+          "@Macros/_has_hero_sword",
+          "bow",
+          "boomerang",
+          "hammer",
+          "grapple"
+        ]
+      },
+      {
+        "name": "can_defeat_seahats",
+        "access_rules": [
+          "boomerang",
+          "bow",
+          "hookshot",
+          "bombs"
+        ]
+      },
+      {
+        "name": "_forest_haven_grapple_skip_magic_use",
+        "access_rules": [
+          "@Macros/can_cut_grass, @General Logic/Normal Logic Precision",
+          "magic_2, @General Logic/Hard Logic Precision"
+        ]
+      },
+      {
+        "name": "_forest_haven_grapple_skip",
+        "access_rules": [
+          [
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/_can_fly_with_deku_leaf_outdoors_no_swift_sail_sequence_break",// Must be able to fly out and then back, requiring a change in wind direction half way
+            "@General Logic/Normal Logic Obscurity",
+            "@Macros/_forest_haven_grapple_skip_magic_use"
+          ]
+        ]
+      },
+      {
+        "name": "_can_defeat_et_big_key_chest_blue_bubbles",
+        "access_rules": [
+          "@Macros/can_defeat_blue_bubbles",
+          "bow, @General Logic/Normal Logic Obscurity",
+          "@Macros/_has_hero_sword, @General Logic/Normal Logic Obscurity, @General Logic/Normal Logic Precision",
+          "hammer, @General Logic/Normal Logic Obscurity, @General Logic/Normal Logic Precision"
+        ]
+      },
+      {
+        "name": "can_use_magic_armor",
+        "access_rules": [
+          "armor, magic"
+        ]
+      },
+      {
+        "name": "can_get_fairies"
+      },
+      {
+        "name": "_can_fly_with_deku_leaf_outdoors_no_swift_sail_sequence_break",
+        "access_rules": [
+          "leaf, magic, @Macros/can_play_winds_requiem"
+        ]
+      },
+      {
+        "name": "_swift_sail_sequence_break",
+        "access_rules": [
+          "sequence_break_swift_sail, sail, swift_sail"
+        ]
+      },
+      {
+        "name": "_can_access_outdoors_boss_entrance_in_forsaken_fortress",
+        "access_rules": [
+          "@Macros/can_defeat_bokoblins",
+          "@Macros/can_fly_with_deku_leaf_outdoors",// Swift Sail sequence break is allowed because the player must have hammer for the boss entrance, so they can get inside FF without out-of-logic flying to the other FF entrance by setting the wind direction with swift sail
+          "grapple"
+        ]
+      },
+      {
+        "name": "_can_defeat_gohma_required_boss",
+        "access_rules": [
+          "required_bosses_drc_excluded",
+          "required_bosses_drc_required, @Dragon Roost Cavern/Gohma Heart Container"
+        ]
+      },
+      {
+        "name": "_can_defeat_kalle_demos_required_boss",
+        "access_rules": [
+          "required_bosses_fw_excluded",
+          "required_bosses_fw_required, @Forbidden Woods/Kalle Demos Heart Container"
+        ]
+      },
+      {
+        "name": "_can_defeat_gohdan_required_boss",
+        "access_rules": [
+          "required_bosses_totg_excluded",
+          "required_bosses_totg_required, @Tower of the Gods/Gohdan Heart Container"
+        ]
+      },
+      {
+        "name": "_can_defeat_jalhalla_required_boss",
+        "access_rules": [
+          "required_bosses_et_excluded",
+          "required_bosses_et_required, @Earth Temple/Jalhalla Heart Container"
+        ]
+      },
+      {
+        "name": "_can_defeat_molgera_required_boss",
+        "access_rules": [
+          "required_bosses_wt_excluded",
+          "required_bosses_wt_required, @Wind Temple/Molgera Heart Container"
+        ]
+      },
+      {
+        "name": "_can_defeat_helmaroc_king_required_boss",
+        "access_rules": [
+          "required_bosses_ff_excluded",
+          "required_bosses_ff_required, @Forsaken Fortress/Helmaroc King Heart Container"
+        ]
+      },
+      {
+        "name": "can_defeat_all_required_bosses",
+        "access_rules": [
+          [
+            "required_bosses_disabled"
+          ],
+          [
+            "@Macros/_can_defeat_gohma_required_boss",
+            "@Macros/_can_defeat_kalle_demos_required_boss",
+            "@Macros/_can_defeat_gohdan_required_boss",
+            "@Macros/_can_defeat_jalhalla_required_boss",
+            "@Macros/_can_defeat_molgera_required_boss",
+            "@Macros/_can_defeat_helmaroc_king_required_boss"
+          ]
+        ]
+      },
+      {
+        "name": "_has_hero_sword",
+        "access_rules": [
+          // Support out-of-logic swords in swords optional mode, or starting inventory/plando swords in swordless mode.
+          "[tww_outside_swordless_mode], sword"
+        ]
+      },
+      {
+        "name": "_has_any_master_sword",
+        "access_rules": [
+          // Support out-of-logic swords in swords optional mode, or starting inventory/plando swords in swordless mode.
+          "[tww_outside_swordless_mode], mastersword"
+        ]
+      },
+      {
+        "name": "_can_complete_savage_labyrinth_floor_30",
+        "access_rules": [
+          [
+            "@Exit Logic/Savage Labyrinth",
+            "@Macros/can_defeat_keese",
+            "@Macros/can_defeat_miniblins",
+            "@Macros/can_defeat_red_chuchus",
+            "@Macros/can_defeat_magtails",
+            "@Macros/can_defeat_fire_keese",
+            "@Macros/can_defeat_peahats",
+            "@Macros/can_defeat_green_chuchus",
+            "@Macros/can_defeat_boko_babas",
+            "@Macros/can_defeat_mothulas",
+            "@Macros/can_defeat_winged_mothulas",
+            "@Macros/can_defeat_wizzrobes",
+            "@Macros/can_defeat_armos",
+            "@Macros/can_defeat_yellow_chuchus",
+            "@Macros/can_defeat_red_bubbles",
+            "@Macros/can_defeat_darknuts",
+            "@Macros/can_play_winds_requiem",
+            "@Macros/_grapple_or_sword_or_hammer"
+          ]
+        ]
+      },
+      {
+        "name": "_can_complete_savage_labyrinth_floor_50",
+        "access_rules": [
+          [
+            "@Macros/_can_complete_savage_labyrinth_floor_30",
+            "@Macros/can_aim_mirror_shield",
+            "@Macros/can_defeat_redeads",
+            "@Macros/can_defeat_blue_bubbles",
+            "@Macros/can_defeat_dark_chuchus",
+            "@Macros/can_defeat_poes",
+            "@Macros/can_defeat_stalfos",
+            "hammer"
+          ]
+        ]
+      },
+      {
+        "name": "_tingle_tuner_sequence_break",
+        "access_rules": [
+          "sequence_break_tingle_tuner, tuner"
+        ]
+      }
+    ]
+  }
+]

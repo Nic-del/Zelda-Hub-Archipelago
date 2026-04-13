@@ -1,0 +1,98 @@
+{
+    "tracker_broadcast": {
+        "type": "container",
+        "orientation": "vertical",
+        "margin": "0,0",
+        "content": [
+            {
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_margin": "5,5,5,5",
+				"item_size": "50,50",
+				"item_v_alignment": "center",
+				"rows":[
+                    [
+                        "fir_label",
+                        "wnd_label",
+                        "crg_label",
+                        "ghs_label",
+                        "gor_label",
+                        "ice_label",
+                        "mut_label",
+                        "tok_label"
+                    ],
+                    [
+                        "fir_reward",
+                        "wnd_reward",
+                        "crg_reward",
+                        "ghs_reward",
+                        "gor_reward",
+                        "ice_reward",
+                        "mut_reward",
+                        "tok_reward"
+                    ],
+                    [
+						"FF",
+						"FF",
+						"FF",
+						"FF",
+						"FF",
+						"FF",
+						"FF",
+						"FF"
+					],
+					[
+                        "sword",
+                        "boomerang",
+                        "bombs",
+                        "bow",
+                        "bombchus",
+                        "grapplinghook",
+                        "hammer",
+                        "shovel"
+                    ],
+                    [
+                        "swseachart",
+                        "nwseachart",
+                        "seseachart",
+                        "neseachart",
+                        "sunkey",
+                        "ghostkey",
+                        "kingskey",
+                        "regalnecklace"
+                    ],
+                    [
+                        "cannon",
+                        "salvagearm",
+                        "spiritofpower",
+                        "spiritofwisdom",
+                        "spiritofcourage",
+                        "powergem",
+                        "wisdomgem",
+                        "couragegem"
+                    ],
+                    [
+                        "fishingrod",
+                        "cycloneslate",
+                        "warpx",
+                        "warpphi",
+                        "warpn",
+                        "warpomega",
+                        "warpw",
+                        "warpsquare"
+                    ],
+                    [
+                        "letter",
+                        "Hourglass",
+                        "blade",
+                        "clothes",
+                        "kaleidoscope",
+                        "notebook",
+                        "woodheart",
+                        "scroll",
+                    ]    
+                ]
+            }
+        ]
+    }
+}

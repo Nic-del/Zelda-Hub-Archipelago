@@ -1,0 +1,1262 @@
+[
+  {
+    "name": "Bee Badge",
+    "type": "toggle",
+    "img": "images/items/bee_badge.png",
+    "codes": "bee_badge, beebadge"
+  },
+  {
+    "name": "Bell",
+    "type": "toggle",
+    "img": "images/items/bell.png",
+    "codes": "bell"
+  },
+  {
+    "name": "Big Key",
+    "type": "toggle",
+    "img": "images/items/key_big.png",
+    "codes": "bigkey"
+  },
+  {
+    "name": "Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "compass"
+  },
+  {
+    "name": "Blacksmith",
+    "type": "toggle",
+    "img": "images/checks/blacksmith.png",
+    "codes": "blacksmith"
+  },
+  // {
+  //   "name": "Blue Rupee",
+  //   "type": "toggle",
+  //   "img": "images/junk/rupee_blue.png",
+  //   "codes": "rupee_blue"
+  // },
+  {
+    "name": "Bombs",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Bombs",
+        "img": "images/items/bombs.png",
+        "codes": "p_bombs, bombs"
+      },
+      {
+        "name": "Nice Bombs",
+        "img": "images/items/bombs_nice.png",
+        "codes": "p_bombs, nicebombs"
+      }
+    ]
+  },
+  {
+    "name": "Boomerang",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Boomerang",
+        "img": "images/items/boomerang.png",
+        "codes": "p_boomerang, boomerang"
+      },
+      {
+        "name": "Nice Boomerang",
+        "img": "images/items/boomerang_nice.png",
+        "codes": "p_boomerang, niceboomerang"
+      }
+    ]
+  },
+  {
+    "name": "Letter in a Bottle",
+    "type": "toggle",
+    "img": "images/items/bottle_letter.png",
+    "codes": "letter"
+  },
+  {
+    "name": "Premium Milk",
+    "type": "toggle",
+    "img": "images/items/bottle_milk_premium.png",
+    "codes": "milk"
+  },
+  {
+    "name": "Trade Item",
+    "type": "progressive",
+    "stages": [
+      {
+        "img": "images/items/bottle_letter_milk.png",
+        "img_mods": "@disabled",
+        "codes": "trade"
+      },
+      {
+        "name": "Letter in a Bottle",
+        "img": "images/items/bottle_letter.png",
+        "codes": "trade, letter"
+      },
+      {
+        "name": "Premium Milk",
+        "img": "images/items/bottle_milk_premium.png",
+        "codes": "trade, milk"
+      }
+    ]
+  },
+  // {
+  //   "name": "Bee",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_bee.png",
+  //   "codes": "bottle_bee"
+  // },
+  //  {
+  //    "name": "Golden Bee",
+  //    "type": "toggle_badged",
+  //    "base_item": "bottles",
+  //    "img": "images/items/bottle_bee_golden_overlap.png",
+  //    "codes": "bottle_bee_golden, gold_bee, golden_bee, goldbee, goldenbee",
+  //  },
+  // {
+  //   "name": "Apple",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_apple.png",
+  //   "codes": "bottle_apple"
+  // },
+  // {
+  //   "name": "Green Apple",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_apple_green.png",
+  //   "codes": "bottle_apple_green"
+  // },
+  // {
+  //   "name": "Fairy",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_fairy.png",
+  //   "codes": "bottle_fairy"
+  // },
+  // {
+  //   "name": "Heart",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_heart.png",
+  //   "codes": "bottle_heart"
+  // },
+  // {
+  //   "name": "Milk",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_milk.png",
+  //   "codes": "bottle_milk"
+  // },
+  // {
+  //   "name": "Red Potion",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_red.png",
+  //   "codes": "potion_red"
+  // },
+  // {
+  //   "name": "Blue Potion",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_blue.png",
+  //   "codes": "potion_blue"
+  // },
+  // {
+  //   "name": "Yellow Potion",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_yellow.png",
+  //   "codes": "potion_yellow"
+  // },
+  // {
+  //   "name": "Purple Potion",
+  //   "type": "toggle",
+  //   "img": "images/items/bottle_purple.png",
+  //   "codes": "potion_purple"
+  // },
+  {
+    "name": "Lost Maiamai",
+    "type": "toggle",
+    "img": "images/items/maiamai.png",
+    "codes": "maiamai_single"
+  },
+  {
+    "name": "Bow",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Bow",
+        "img": "images/items/bow.png",
+        "codes": "p_bow, bow"
+      },
+      {
+        "name": "Nice Bow",
+        "img": "images/items/bow_nice.png",
+        "codes": "p_bow, nicebow"
+      }
+    ]
+  },
+  {
+    "name": "Bow of Light",
+    "type": "toggle",
+    "img": "images/items/bow_light.png",
+    "codes": "bow_of_light, bowoflight, bow_light, bowlight"
+  },
+  {
+    "name": "Bug Net",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Bug Net",
+        "img": "images/items/net.png",
+        "codes": "p_net, net, bugnet"
+      },
+      {
+        "name": "Super Net",
+        "img": "images/items/net_super.png",
+        "codes": "p_net, supernet, superbugnet"
+      }
+    ]
+  },
+  {
+    "name": "Fire Rod",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Fire Rod",
+        "img": "images/items/frod.png",
+        "codes": "p_firerod, frod, firerod"
+      },
+      {
+        "name": "Nice Fire Rod",
+        "img": "images/items/frod_nice.png",
+        "codes": "p_firerod, nicefrod, nicefirerod"
+      }
+    ]
+  },
+  {
+    "name": "Foul Fruit",
+    "type": "toggle",
+    "img": "images/items/fruit_foul.png",
+    "codes": "foul, foulfruit"
+  },
+  // {
+  //   "name": "Gold Rupee",
+  //   "type": "toggle",
+  //   "img": "images/junk/rupee_gold.png",
+  //   "codes": "rupee_gold"
+  // },
+  // {
+  //   "name": "Green Rupee",
+  //   "type": "toggle",
+  //   "img": "images/junk/rupee_green.png",
+  //   "codes": "rupee_green"
+  // },
+  {
+    "name": "Great Spin",
+    "type": "toggle",
+    "img": "images/items/great_spin.png",
+    "codes": "great_spin"
+  },
+  {
+    "name": "Go Mode",
+    "type": "toggle",
+    "img": "images/misc/gomode.png",
+    "codes": "gomode"
+  },
+  {
+    "name": "Hammer",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Hammer",
+        "img": "images/items/hammer.png",
+        "codes": "p_hammer, hammer"
+      },
+      {
+        "name": "Nice Hammer",
+        "img": "images/items/hammer_nice.png",
+        "codes": "p_hammer, nicehammer"
+      }
+    ]
+  },
+  // {
+  //   "name": "Heart",
+  //   "type": "toggle",
+  //   "img": "images/junk/heart.png",
+  //   "codes": "heart"
+  // },
+  // {
+  //   "name": "Heart Container",
+  //   "type": "toggle",
+  //   "img": "images/junk/heart_container.png",
+  //   "codes": "hc"
+  // },
+  // {
+  //   "name": "Heart Piece",
+  //   "type": "toggle",
+  //   "img": "images/junk/heart_piece.png",
+  //   "codes": "hp"
+  // },
+  {
+    "name": "Hint Glasses",
+    "type": "toggle",
+    "img": "images/items/hint_glasses.png",
+    "codes": "hint_glasses, glasses"
+  },
+  {
+    "name": "Hookshot",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Hookshot",
+        "img": "images/items/hookshot.png",
+        "codes": "p_hookshot, hookshot"
+      },
+      {
+        "name": "Nice Hookshot",
+        "img": "images/items/hookshot_nice.png",
+        "codes": "p_hookshot, nicehookshot"
+      }
+    ]
+  },
+  {
+    "name": "Ice Rod",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Ice Rod",
+        "img": "images/items/irod.png",
+        "codes": "p_icerod, irod, icerod"
+      },
+      {
+        "name": "Nice Ice Rod",
+        "img": "images/items/irod_nice.png",
+        "codes": "p_icerod, niceirod, niceicerod"
+      }
+    ]
+  },
+  {
+    "name": "Lamp",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Lamp",
+        "img": "images/items/lamp.png",
+        "codes": "p_lamp, lamp"
+      },
+      {
+        "name": "Super Lamp",
+        "img": "images/items/lamp_super.png",
+        "codes": "p_lamp, superlamp"
+      }
+    ]
+  },
+  {
+    "name": "Lost Maiamai",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/items/maiamai.png",
+        "img_mods": "@disabled",
+        "codes": "maiamai"
+      },
+      {
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_10"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_1_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_20"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_2_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_30"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_3_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_40"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_4_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_50"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_5_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_60"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_6_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_70"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_7_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_80"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_8_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__0.png",
+        "codes": "maiamai_90"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__1.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__2.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__3.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__4.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__5.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__6.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__7.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__8.png"
+      },
+      {
+        "img_mods": "overlay|images/numbers/maiamai_9_.png",
+        "img": "images/numbers/maiamai__9.png"
+      },
+      {
+        "img": "images/numbers/maiamai_100.png",
+        "codes": "maiamai_100"
+      }
+    ]
+  },
+  {
+    "name": "Master Ore",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "name": "0 Master Ore",
+        "img": "images/items/master_ore.png",
+        "img_mods": "@disabled",
+        "codes": "masterore, ore"
+      },
+      {
+        "name": "1 Master Ore",
+        "img": "images/items/master_ore.png",
+        "img_mods": "overlay|images/numbers/ore_1.png",
+        "codes": "ore_1"
+      },
+      {
+        "name": "2 Master Ore",
+        "img": "images/items/master_ore.png",
+        "img_mods": "overlay|images/numbers/ore_2.png",
+        "codes": "ore_2"
+      },
+      {
+        "name": "3 Master Ore",
+        "img": "images/items/master_ore.png",
+        "img_mods": "overlay|images/numbers/ore_3.png",
+        "codes": "ore_3"
+      },
+      {
+        "name": "4 Master Ore",
+        "img": "images/items/master_ore.png",
+        "img_mods": "overlay|images/numbers/ore_4.png",
+        "codes": "ore_4"
+      }
+    ]
+  },
+  // {
+  //   "name": "Monster Guts",
+  //   "type": "toggle",
+  //   "img": "images/junk/monster_guts.png",
+  //   "codes": "guts"
+  // },
+  // {
+  //   "name": "Monster Horn",
+  //   "type": "toggle",
+  //   "img": "images/junk/monster_horn.png",
+  //   "codes": "horn"
+  // },
+  // {
+  //   "name": "Monster Tail",
+  //   "type": "toggle",
+  //   "img": "images/junk/monster_tail.png",
+  //   "codes": "tail"
+  // },
+  {
+    "name": "Pegasus Boots",
+    "type": "toggle",
+    "img": "images/items/pegasus_boots.png",
+    "codes": "boots, pegasusboots"
+  },
+  {
+    "name": "Pouch",
+    "type": "toggle",
+    "img": "images/items/pouch.png",
+    "codes": "pouch"
+  },
+  {
+    "name": "Power Glove / Titan's Mitt",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Power Glove",
+        "img": "images/items/power_glove.png",
+        "codes": "p_glove, power_glove, glove"
+      },
+      {
+        "name": "Titan's Mitt",
+        "img": "images/items/titans_mitt.png",
+        "codes": "p_glove, titansmitt"
+      }
+    ]
+  },
+  // {
+  //   "name": "Purple Rupee",
+  //   "type": "toggle",
+  //   "img": "images/junk/rupee_purple.png",
+  //   "codes": "rupee_purple"
+  // },
+  // {
+  //   "name": "Quake",
+  //   "type": "toggle",
+  //   "img": "images/items/quake.png",
+  //   "codes": "quake",
+  //   "loop": true,
+  //   "initial_active_state": false
+  // },
+  {
+    "name": "Quake",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/items/quake.png",
+        "img_mods": "@disabled",
+        "codes": "quake, quake_off"
+      },
+      {
+        "img": "images/items/quake.png",
+        "codes": "quake, quake_on"
+      }
+    ]
+  },
+  {
+    "name": "Ravio's Shop",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/checks/ravio.png",
+        "img_mods": "@disabled",
+        "codes": "ravio_shop"
+      },
+      {
+        "img": "images/checks/signs.png",
+        "codes": "ravio_shop_signs"
+      },
+      {
+        "img": "images/checks/ravio.png",
+        "codes": "ravio_shop_open"
+      }
+    ]
+  },
+  {
+    "name": "Ravio's Bracelet",
+    "type": "progressive",
+    "stages": [
+      {
+        "img": "images/items/bracelet.png",
+        "codes": "p_bracelet, bracelet"
+      },
+      {
+        "img": "images/items/merge.png",
+        "codes": "p_bracelet, merge"
+      }
+    ]
+  },
+  // {
+  //   "name": "Red Rupee",
+  //   "type": "toggle",
+  //   "img": "images/junk/rupee_red.png",
+  //   "codes": "rupee_red"
+  // },
+  {
+    "name": "Sand Rod",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Sand Rod",
+        "img": "images/items/srod.png",
+        "codes": "p_sandrod, srod, sandrod"
+      },
+      {
+        "name": "Nice Sand Rod",
+        "img": "images/items/srod_nice.png",
+        "codes": "p_sandrod, nicesrod, nicesandrod"
+      }
+    ]
+  },
+  {
+    "name": "Scoot Fruit",
+    "type": "toggle",
+    "img": "images/items/fruit_scoot.png",
+    "codes": "scoot, scootfruit"
+  },
+  // {
+  //   "name": "Scoot / Foul Fruit",
+  //   "type": "composite_toggle",
+  //   "item_left": "scoot",
+  //   "item_right": "foul",
+  //   "codes": "fruit",
+  //   "images": [
+  //     {
+  //       "left": false,
+  //       "right": false,
+  //       "img": "images/items/fruit_scoot.png",
+  //       "img_mods": "@disabled"
+  //     },
+  //     {
+  //       "left": true,
+  //       "right": false,
+  //       "img": "images/items/fruit_scoot.png"
+  //     },
+  //     {
+  //       "left": false,
+  //       "right": true,
+  //       "img": "images/items/fruit_scoot.png",
+  //       "img_mods": "@disabled,overlay|images/items/fruit_foul_small.png"
+  //     },
+  //     {
+  //       "left": true,
+  //       "right": true,
+  //       "img": "images/items/fruit_scoot.png",
+  //       "img_mods": "overlay|images/items/fruit_foul_small.png"
+  //     }
+  //   ]
+  // },
+  {
+    "name": "Shady Guy",
+    "type": "toggle",
+    "img": "images/checks/shady_guy.png",
+    "codes": "shadyguy"
+  },
+  {
+    "name": "Lamp Trial",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/events/trial_lamp_off.png",
+        "codes": "trial_lamp_off"
+      },
+      {
+        "img": "images/events/trial_lamp_on.png",
+        "codes": "trial_lamp"
+      }
+    ]
+  },
+  {
+    "name": "Hookshot Trial",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/events/trial_hook_off.png",
+        "codes": "trial_hook_off"
+      },
+      {
+        "img": "images/events/trial_hook_on.png",
+        "codes": "trial_hook"
+      }
+    ]
+  },
+  {
+    "name": "Bomb Trial",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/events/trial_bomb_off.png",
+        "codes": "trial_bomb_off"
+      },
+      {
+        "img": "images/events/trial_bomb_on.png",
+        "codes": "trial_bomb"
+      }
+    ]
+  },
+  {
+    "name": "Tile Trial",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/events/trial_tile_off.png",
+        "codes": "trial_tile_off"
+      },
+      {
+        "img": "images/events/trial_tile_on.png",
+        "codes": "trial_tile"
+      }
+    ]
+  },
+  {
+    "name": "Shield",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Shield",
+        "img": "images/items/shield.png",
+        "codes": "p_shield, shield"
+      },
+      {
+        "name": "Hylian Shield",
+        "img": "images/items/shield_hylian.png",
+        "codes": "p_shield, hylianshield"
+      }
+    ]
+  },
+  // {
+  //   "name": "Silver Rupee",
+  //   "type": "toggle",
+  //   "img": "images/junk/rupee_silver.png",
+  //   "codes": "rupee_silver"
+  // },
+  {
+    "name": "Small Key",
+    "type": "toggle",
+    "img": "images/items/key_small.png",
+    "codes": "key"
+  },
+  //  {
+  //    "name": "Smooth Gem",
+  //    "type": "toggle",
+  //    "loop": true,
+  //    "img": "images/items/smooth_gem.png",
+  //    "codes": "smooth_gem, smoothgem"
+  //  },
+  {
+    "name": "Stamina Scroll",
+    "type": "toggle",
+    "img": "images/items/stamina_scroll.png",
+    "codes": "scroll, staminascroll"
+  },
+  // {
+  //   "name": "StreetPass Medals",
+  //   "type": "consumable",
+  //   "max_quantity": 50,
+  //   "img": "images/items/streetpass_medal.png",
+  //   "codes": "streetpass_medals"
+  // },
+  {
+    "name": "Sword",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 1,
+    "stages": [
+      {
+        "name": "Swordless",
+        "img": "images/items/fsword.png",
+        "img_mods": "overlay|images/items/x_small.png",
+        "codes": "p_sword, swordless"
+      },
+      {
+        "name": "Disabled Sword",
+        "img": "images/items/fsword.png",
+        "img_mods": "@disabled",
+        "codes": "p_sword",
+        "inherit_codes": false
+      },
+      {
+        "name": "Forgotten Sword",
+        "img": "images/items/fsword.png",
+        "codes": "p_sword, fsword, forgottensword, sword",
+        "inherit_codes": false
+      },
+      {
+        "name": "Master Sword",
+        "img": "images/items/msword.png",
+        "codes": "p_sword, msword, mastersword"
+      },
+      {
+        "name": "Master Sword Lv2",
+        "img": "images/items/msword2.png",
+        "codes": "p_sword, msword2, mastersword2, tempered, temperedsword"
+      },
+      {
+        "name": "Master Sword Lv3",
+        "img": "images/items/msword3.png",
+        "codes": "p_sword, msword3, mastersword3, butter, buttersword"
+      }
+    ]
+  },
+  {
+    "name": "Tornado Rod",
+    "type": "progressive",
+    "stages": [
+      {
+        "img": "images/items/trod.png",
+        "codes": "p_tornadorod, trod, tornadorod"
+      },
+      {
+        "name": "Nice Tornado Rod",
+        "img": "images/items/trod_nice.png",
+        "codes": "p_tornadorod, nicetrod, nicetornadorod"
+      }
+    ]
+  },
+  {
+    "name": "Triforce",
+    "type": "toggle",
+    "img": "images/prizes/triforce.png",
+    "codes": "triforce_full"
+  },
+  {
+    "name": "Triforce of Courage",
+    "type": "toggle",
+    "img": "images/items/triforce_courage.png",
+    "codes": "triforce, triforce_courage, triforce_of_courage"
+  },
+  {
+    "name": "Tunic / Mail",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "name": "Green Tunic",
+        "img": "images/items/mail_green.png",
+        "codes": "p_mail, green_tunic, greentunic"
+      },
+      {
+        "name": "Blue Mail",
+        "img": "images/items/mail_blue.png",
+        "codes": "p_mail, bluemail"
+      },
+      {
+        "name": "Red Mail",
+        "img": "images/items/mail_red.png",
+        "codes": "p_mail, redmail"
+      }
+    ]
+  },
+  {
+    "name": "Yuga",
+    "type": "toggle",
+    "img": "images/prizes/yuga.png",
+    "codes": "yuga"
+  },
+  {
+    "name": "Zelda",
+    "type": "toggle",
+    "img": "images/prizes/sage_zelda.png",
+    "codes": "zelda"
+  },
+  {
+    "name": "Zora's Flippers",
+    "type": "toggle",
+    "img": "images/items/flippers.png",
+    "codes": "flippers"
+  },
+  {
+    "name": "Smooth Gem",
+    "type": "toggle",
+    "img": "images/items/smooth_gem.png",
+    "codes": "smooth_gem"
+  },
+  {
+    "name": "Zora's Flippers / Smooth Gem",
+    "type": "composite_toggle",
+    "item_left": "flippers",
+    "item_right": "smooth_gem",
+    "codes": "flippers_smooth_gem",
+    "images": [
+      {
+        "left": false,
+        "right": false,
+        "img": "images/items/flippers.png",
+        "img_mods": "overlay|images/items/smooth_gem_small.png,@disabled"
+      },
+      {
+        "left": true,
+        "right": false,
+        "img": "images/items/flippers.png",
+        "img_mods": "overlay|images/items/smooth_gem_small_disabled.png"
+      },
+      {
+        "left": false,
+        "right": true,
+        "img": "images/items/flippers.png",
+        "img_mods": "@disabled,overlay|images/items/smooth_gem_small.png"
+      },
+      {
+        "left": true,
+        "right": true,
+        "img": "images/items/flippers.png",
+        "img_mods": "overlay|images/items/smooth_gem_small.png"
+      }
+    ]
+  },
+  // For display only
+  {
+    "name": "Letter in a Bottle",
+    "type": "toggle",
+    "img": "images/items/bottle_letter.png",
+    "codes": "letter_check"
+  },
+  {
+    "name": "Premium Milk",
+    "type": "toggle",
+    "img": "images/items/bottle_milk_premium.png",
+    "codes": "milk_check"
+  },
+  {
+    "name": "Empty Bottle / Golden Bee",
+    "type": "progressive",
+    "stages": [
+      {
+        "name": "Empty Bottle",
+        "img": "images/items/bottle.png",
+        "codes": "p_bottle, bottle, empty_bottle"
+      },
+      {
+        "name": "Golden Bee",
+        "img": "images/items/bottle_bee_golden.png",
+        "codes": "p_bottle, golden_bee, goldenbee"
+      }
+    ]
+  }
+]

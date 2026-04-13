@@ -1,0 +1,16 @@
+{
+    "description": "Profil specifique pour Minish Cap (GBA / BizHawk)",
+    "version": "1.0",
+    "mapping": {
+        "START": "Start",
+        "SELECT": "Select",
+        "Pad N": "Dpad_Up",
+        "Pad S": "Dpad_Down",
+        "Pad W": "Dpad_Left",
+        "Pad E": "Dpad_Right",
+        "FACE_BOTTOM": "B",
+        "R1": "R",
+        "L1": "L",
+        "FACE_RIGHT": "A"
+    }
+}

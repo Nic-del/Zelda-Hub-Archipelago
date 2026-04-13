@@ -1,0 +1,53 @@
+{
+	"settings_popup": {
+		"type": "itemgrid",
+		"item_margin": "2,2",
+		"h_alignment": "left",
+		"item_size": "96,96",
+		"rows": [
+			[
+				"glitched",
+				"poes",
+				"goldenbugs",
+				"castlerequirements",
+				"palacerequirements",
+				"faronwoods"
+			],
+			[
+				"skiplakebedentrance",
+				"skiparbitersentrance",
+				"skipsnowpeakentrance",
+				"skipcityintheskyentrance",
+				"skipmdh",
+				"skipprologue"
+			],
+			[
+				"goronminesentrance",
+				"templeoftimeentrance",
+				"dooroftime",
+				"farontwilightcleared",
+				"eldintwilightcleared",
+				"lanayrutwilightcleared"
+			],
+			[
+				"increasewallet",
+				"transformanywhere",
+				"bonksdodamage",
+				"damagemagnification",
+				"smallkeys",
+				"bigkeys"
+			],
+			[
+				"openmap"
+			],
+			[
+				"hints",
+				"splitmap",
+				"broadcast",
+				"hidelayout",
+				"aplayout",
+				"autotab"
+			]
+		]
+	}
+}

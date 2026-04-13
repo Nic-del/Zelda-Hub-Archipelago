@@ -1,0 +1,124 @@
+{
+    "tracker_default": {
+        "type": "container",
+        "background": "#00000000",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "dock",
+                    "dock": "left",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Inventory",
+                            "dock": "top",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "inventory_item_grid"
+                            }
+                        },
+						{
+                            "type": "group",
+                            "header": "Boat Items",
+                            "dock": "top",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "boat_item_grid"
+                            }
+                        },
+						{
+                            "type": "group",
+                            "header": "Quest Items",
+                            "dock": "top",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "quest_item_grid"
+                            }
+                        },
+						{
+                            "type": "group",
+                            "header": "Trading Quests",
+                            "dock": "top",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "trading_quest_grid"
+                            }
+                        },
+						{
+                            "type": "group",
+                            "header": "Dungeons",
+                            "dock": "top",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "dungeons_item_grid"
+                            }
+                        },
+                    ]
+                },
+				{
+                    "type": "dock",
+                    "dock": "left",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Salvageable Treasures",
+                            "dock": "top",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "salvage_item_grid"
+                            }
+                        },
+						{
+                            "type": "group",
+                            "header": "Fishing Quest",
+                            "dock": "top",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "fishing_item_grid"
+                            }
+                        },
+                    ]
+                }
+            ]
+        }
+    },
+	"settings_popup": {
+		"type": "array",
+		"orientation": "horizontal",
+		"h_alignment": "left",
+		"content": [
+			{
+				"type": "group",
+				"header": "Settings",
+				"dock": "bottom",
+				"content": {
+					"type": "layout",
+					"key": "settings_grid"
+				}
+			}
+		]
+	}
+}

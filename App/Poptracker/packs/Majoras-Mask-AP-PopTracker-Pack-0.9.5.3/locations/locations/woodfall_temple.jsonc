@@ -1,0 +1,349 @@
+[
+  {
+    "name": "Woodfall Temple",
+    "children": [
+      {
+        "name": "Entrance Chest",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Entrance Chest SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 826,
+            "y": 1100
+          }
+        ]
+      },
+      {
+        "name": "Switch Chest",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Switch Chest SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 724,
+            "y": 816
+          }
+        ]
+      },
+      {
+        "name": "Ledge Chest",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Ledge Chest"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 965,
+            "y": 607
+          }
+        ]
+      },
+      {
+        "name": "Turtle Chest",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Turtle Chest"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 1149,
+            "y": 734
+          }
+        ]
+      },
+      {
+        "name": "Dinolfos Chest",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Dinolfos Chest"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 966,
+            "y": 1018
+          }
+        ]
+      },
+      {
+        "name": "Boss Key Chest",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Gekko Chest"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 966,
+            "y": 351
+          }
+        ]
+      },
+      {
+        "name": "Dragonfly Chest",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Dragonfly Chest"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 507,
+            "y": 973
+          }
+        ]
+      },
+      {
+        "name": "Black Boe Room Chest",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Dark Room Chest SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 69,
+            "y": 291
+          }
+        ]
+      },
+      {
+        "name": "Entrance Freestanding SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Entrance Freestanding SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 701,
+            "y": 1123
+          }
+        ]
+      },
+      {
+        "name": "Wooden Flower Deku Baba SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Deku Baba SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 592,
+            "y": 755
+          }
+        ]
+      },
+      {
+        "name": "Wooden Flower Bubble SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Main Room Bubble SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 680,
+            "y": 609
+          }
+        ]
+      },
+      {
+        "name": "Wooden Flower Pot SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Pot SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 854,
+            "y": 867
+          }
+        ]
+      },
+      {
+        "name": "Woodfall Temple Platform Hive SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Platform Hive SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 904,
+            "y": 600
+          }
+        ]
+      },
+      {
+        "name": "Woodfall Temple Skulltula SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Skulltula SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 442,
+            "y": 601
+          }
+        ]
+      },
+      {
+        "name": "Bridge Room Bubble SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Bridge Room Bubble SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 508,
+            "y": 736
+          }
+        ]
+      },
+      {
+        "name": "Bridge Room Hive SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Bridge Room Hive SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 304,
+            "y": 712
+          }
+        ]
+      },
+      {
+        "name": "Pre-Boss Upper Right Bubble SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Pre-Boss Upper Right Bubble SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 773,
+            "y": 569
+          }
+        ]
+      },
+      {
+        "name": "Pre-Boss Lower Right Bubble SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Pre-Boss Lower Right Bubble SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 835,
+            "y": 540
+          }
+        ]
+      },
+      {
+        "name": "Pre-Boss Upper Left Bubble SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Pre-Boss Upper Left Bubble SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 582,
+            "y": 483
+          }
+        ]
+      },
+      {
+        "name": "Pre-Boss Pillar Bubble SF",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Pre-Boss Pillar Bubble SF"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 681,
+            "y": 414
+          }
+        ]
+      },
+      {
+        "name": "Odolwa",
+        "sections": [
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Heart Container"
+          },
+          {
+            "ref": "Dungeons/Woodfall Temple/Woodfall Temple Odolwa's Remains"
+          },
+          {
+            "ref": "Dungeons/Woodfall Temple/Oath to Order"
+          }
+    
+        ],
+        "map_locations": [
+          {
+            "map": "woodfall_temple",
+            "x": 722,
+            "y": 104
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,116 @@
+{
+	"bugs50": {
+		"type": "container",
+        "background": "#525260",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_size": 33,
+				"item_margin": "1,1",
+				"margin": "1,1,1,1",
+				"item_h_alignment": "center",
+				"item_v_alignment": "center",
+				"rows": [
+					[
+						"bug0",
+						"bug1",
+						"",
+						"bug2",
+						"bug3",
+						"",
+						"bug4",
+						"bug5"
+					],
+					[
+						"bug6",
+						"bug7",
+						"",
+						"bug8",
+						"bug9",
+						"",
+						"bug10",
+						"bug11"
+					],
+					[
+						"bug12",
+						"bug13",
+						"",
+						"bug14",
+						"bug15",
+						"",
+						"bug16",
+						"bug17"
+					],
+					[
+						"bug18",
+						"bug19",
+						"",
+						"bug20",
+						"bug21",
+						"",
+						"bug22",
+						"bug23"
+					]
+				]
+			}
+		]
+	},
+	"bugs_broadcast": {
+		"type": "container",
+        "background": "#525260",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_size": 48,
+				"item_margin": "1,1",
+				"margin": "1,1,1,1",
+				"item_h_alignment": "center",
+				"item_v_alignment": "center",
+				"rows": [
+					[
+						"bug0",
+						"bug1",
+						"",
+						"bug2",
+						"bug3",
+						"",
+						"bug4",
+						"bug5"
+					],
+					[
+						"bug6",
+						"bug7",
+						"",
+						"bug8",
+						"bug9",
+						"",
+						"bug10",
+						"bug11"
+					],
+					[
+						"bug12",
+						"bug13",
+						"",
+						"bug14",
+						"bug15",
+						"",
+						"bug16",
+						"bug17"
+					],
+					[
+						"bug18",
+						"bug19",
+						"",
+						"bug20",
+						"bug21",
+						"",
+						"bug22",
+						"bug23"
+					]
+				]
+			}
+		]
+	}
+}

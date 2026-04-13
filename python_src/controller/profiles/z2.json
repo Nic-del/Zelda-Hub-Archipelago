@@ -1,0 +1,16 @@
+{
+    "name": "z2",
+    "version": "1.0",
+    "mapping": {
+        "FACE_RIGHT": "A",
+        "FACE_LEFT": "Select",
+        "FACE_TOP": "Start",
+        "START": "Start",
+        "SELECT": "Select",
+        "Pad N": "Dpad_Up",
+        "Pad S": "Dpad_Down",
+        "Pad W": "Dpad_Left",
+        "Pad E": "Dpad_Right",
+        "FACE_BOTTOM": "B"
+    }
+}

@@ -1,0 +1,1124 @@
+[
+	{
+		"name": "Overworld",
+		"children": [
+			{
+				"name": "Dungeons",
+				"children": [
+					{
+						"name": "Arbiter's Grounds",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 123,
+								"y": 817,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "gd",
+								"x": 386,
+								"y": 275,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "Arbiter's Grounds/1F/Big Key Chest/",
+								"name": "Big Key Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/B2/Death Sword Chest/",
+								"name": "Death Sword Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/4F/Stallord Boss/Dungeon Reward",
+								"name": "Stallord Boss Dungeon Reward"
+							},
+							{
+								"ref": "Arbiter's Grounds/B1/East Lower Turnable Redead Chest/",
+								"name": "East Lower Turnable Redead Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/Poes1F/East Turning Room Poe/",
+								"name": "East Turning Room Poe"
+							},
+							{
+								"ref": "Arbiter's Grounds/2F/East Upper Turnable Chest/",
+								"name": "East Upper Turnable Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/2F/East Upper Turnable Redead Chest/",
+								"name": "East Upper Turnable Redead Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/1F/Entrance Chest/",
+								"name": "Entrance Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/2F/Ghoul Rat Room Chest/",
+								"name": "Ghoul Rat Room Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/Poes2F/Hidden Wall Poe/",
+								"name": "Hidden Wall Poe"
+							},
+							{
+								"ref": "Arbiter's Grounds/B1/North Turning Room Chest/",
+								"name": "North Turning Room Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/B2/Spinner Room First Small Chest/",
+								"name": "Spinner Room First Small Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/B2/Spinner Room Lower Central Small Chest/",
+								"name": "Spinner Room Lower Central Small Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/B1/Spinner Room Lower North Chest/",
+								"name": "Spinner Room Lower North Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/B2/Spinner Room Second Small Chest/",
+								"name": "Spinner Room Second Small Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/B2/Spinner Room Stalfos Alcove Chest/",
+								"name": "Spinner Room Stalfos Alcove Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/4F/Stallord Boss/Stallord Heart Container",
+								"name": "Stallord Boss Stallord Heart Container"
+							},
+							{
+								"ref": "Arbiter's Grounds/1F/Torch Room East Chest/",
+								"name": "Torch Room East Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/Poes1F/Torch Room Poe/",
+								"name": "Torch Room Poe"
+							},
+							{
+								"ref": "Arbiter's Grounds/1F/Torch Room West Chest/",
+								"name": "Torch Room West Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/1F/West Chandelier Chest/",
+								"name": "West Chandelier Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/Poes2F/West Poe/",
+								"name": "West Poe"
+							},
+							{
+								"ref": "Arbiter's Grounds/1F/West Small Chest Behind Block/",
+								"name": "West Small Chest Behind Block"
+							},
+							{
+								"ref": "Arbiter's Grounds/1F/West Stalfos Northeast Chest/",
+								"name": "West Stalfos Northeast Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/1F/West Stalfos West Chest/",
+								"name": "West Stalfos West Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "City in the Sky",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 643,
+								"y": 1089,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "lh",
+								"x": 937,
+								"y": 1234,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "lr",
+								"x": 300,
+								"y": 1895,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "City in the Sky/B3/Aeralfos Chest/",
+								"name": "Aeralfos Chest"
+							},
+							{
+								"ref": "City in the Sky/5F/Argorok Boss/Argorok Heart Container",
+								"name": "Argorok Boss Argorok Heart Container"
+							},
+							{
+								"ref": "City in the Sky/2F/Baba Tower Alcove Chest/",
+								"name": "Baba Tower Alcove Chest"
+							},
+							{
+								"ref": "City in the Sky/2F/Baba Tower Narrow Ledge Chest/",
+								"name": "Baba Tower Narrow Ledge Chest"
+							},
+							{
+								"ref": "City in the Sky/3F/Baba Tower Top Small Chest/",
+								"name": "Baba Tower Top Small Chest"
+							},
+							{
+								"ref": "City in the Sky/4F/Big Key Chest/",
+								"name": "Big Key Chest"
+							},
+							{
+								"ref": "City in the Sky/4F/Central Outside Ledge Chest/",
+								"name": "Central Outside Ledge Chest"
+							},
+							{
+								"ref": "City in the Sky/4F/Central Outside Poe Island Chest/",
+								"name": "Central Outside Poe Island Chest"
+							},
+							{
+								"ref": "City in the Sky/1F/Chest Behind North Fan/",
+								"name": "Chest Behind North Fan"
+							},
+							{
+								"ref": "City in the Sky/3F/Chest Below Big Key Chest/",
+								"name": "Chest Below Big Key Chest"
+							},
+							{
+								"ref": "City in the Sky/5F/Argorok Boss/Dungeon Reward",
+								"name": "Argorok Boss Dungeon Reward"
+							},
+							{
+								"ref": "City in the Sky/1F/East First Wing Chest After Fans/",
+								"name": "East First Wing Chest After Fans"
+							},
+							{
+								"ref": "City in the Sky/1F/East Tile Worm Small Chest/",
+								"name": "East Tile Worm Small Chest"
+							},
+							{
+								"ref": "City in the Sky/2F/East Wing After Dinalfos Alcove Chest/",
+								"name": "East Wing After Dinalfos Alcove Chest"
+							},
+							{
+								"ref": "City in the Sky/2F/East Wing After Dinalfos Ledge Chest/",
+								"name": "East Wing After Dinalfos Ledge Chest"
+							},
+							{
+								"ref": "City in the Sky/B1/East Wing Lower Level Chest/",
+								"name": "East Wing Lower Level Chest"
+							},
+							{
+								"ref": "City in the Sky/Poes2F/Garden Island Poe/",
+								"name": "Garden Island Poe"
+							},
+							{
+								"ref": "City in the Sky/Poes4F/Poe Above Central Fan/",
+								"name": "Poe Above Central Fan"
+							},
+							{
+								"ref": "City in the Sky/1F/Underwater East Chest/",
+								"name": "Underwater East Chest"
+							},
+							{
+								"ref": "City in the Sky/1F/Underwater West Chest/",
+								"name": "Underwater West Chest"
+							},
+							{
+								"ref": "City in the Sky/3F/West Garden Corner Chest/",
+								"name": "West Garden Corner Chest"
+							},
+							{
+								"ref": "City in the Sky/3F/West Garden Ledge Chest/",
+								"name": "West Garden Ledge Chest"
+							},
+							{
+								"ref": "City in the Sky/2F/West Garden Lone Island Chest/",
+								"name": "West Garden Lone Island Chest"
+							},
+							{
+								"ref": "City in the Sky/2F/West Garden Lower Chest/",
+								"name": "West Garden Lower Chest"
+							},
+							{
+								"ref": "City in the Sky/B1/West Wing Baba Balcony Chest/",
+								"name": "West Wing Baba Balcony Chest"
+							},
+							{
+								"ref": "City in the Sky/1F/West Wing First Chest/",
+								"name": "West Wing First Chest"
+							},
+							{
+								"ref": "City in the Sky/1F/West Wing Narrow Ledge Chest/",
+								"name": "West Wing Narrow Ledge Chest"
+							},
+							{
+								"ref": "City in the Sky/1F/West Wing Tile Worm Chest/",
+								"name": "West Wing Tile Worm Chest"
+							},
+							{
+								"ref": "City in the Sky/Hint Signs/Hint Sign",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Forest Temple",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 840,
+								"y": 1423,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "fw",
+								"x": 181,
+								"y": 62,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "fr",
+								"x": 93,
+								"y": 1171,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "Forest Temple/1F/Big Baba Key/",
+								"name": "Big Baba Key"
+							},
+							{
+								"ref": "Forest Temple/1F/Big Key Chest/",
+								"name": "Big Key Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/Central Chest Behind Stairs/",
+								"name": "Central Chest Behind Stairs"
+							},
+							{
+								"ref": "Forest Temple/1F/Central Chest Hanging From Web/",
+								"name": "Central Chest Hanging From Web"
+							},
+							{
+								"ref": "Forest Temple/1F/Central North Chest/",
+								"name": "Central North Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/Diababa Boss/Diababa Heart Container",
+								"name": "Diababa Boss Diababa Heart Container"
+							},
+							{
+								"ref": "Forest Temple/1F/Diababa Boss/Dungeon Reward",
+								"name": "Diababa Boss Dungeon Reward"
+							},
+							{
+								"ref": "Forest Temple/1F/East Tile Worm Chest/",
+								"name": "East Tile Worm Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/East Water Cave Chest/",
+								"name": "East Water Cave Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/Entrance Vines Chest/",
+								"name": "Entrance Vines Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/Gale Boomerang/",
+								"name": "Gale Boomerang"
+							},
+							{
+								"ref": "Forest Temple/1F/North Deku Like Chest/",
+								"name": "North Deku Like Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/Second Monkey Under Bridge Chest/",
+								"name": "Second Monkey Under Bridge Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/Totem Pole Chest/",
+								"name": "Totem Pole Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/West Deku Like Chest/",
+								"name": "West Deku Like Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/West Tile Worm Chest Behind Stairs/",
+								"name": "West Tile Worm Chest Behind Stairs"
+							},
+							{
+								"ref": "Forest Temple/1F/West Tile Worm Room Vines Chest/",
+								"name": "West Tile Worm Room Vines Chest"
+							},
+							{
+								"ref": "Forest Temple/1F/Windless Bridge Chest/",
+								"name": "Windless Bridge Chest"
+							},
+							{
+								"ref": "Forest Temple/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Goron Mines",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 1672,
+								"y": 748,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "dm",
+								"x": 270,
+								"y": 183,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "er",
+								"x": 1261,
+								"y": 995,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "Goron Mines/2F/After Crystal Switch Room Magnet Wall Chest/",
+								"name": "After Crystal Switch Room Magnet Wall Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Beamos Room Chest/",
+								"name": "Beamos Room Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Chest Before Dangoro/",
+								"name": "Chest Before Dangoro"
+							},
+							{
+								"ref": "Goron Mines/2F/Crystal Switch Room Small Chest/",
+								"name": "Crystal Switch Room Small Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Crystal Switch Room Underwater Chest/",
+								"name": "Crystal Switch Room Underwater Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Dangoro Chest/",
+								"name": "Dangoro Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Fyrus Boss/Dungeon Reward",
+								"name": "Fyrus Boss Dungeon Reward"
+							},
+							{
+								"ref": "Goron Mines/1F/Entrance Chest/",
+								"name": "Entrance Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Fyrus Boss/Fyrus Heart Container",
+								"name": "Fyrus Boss Fyrus Heart Container"
+							},
+							{
+								"ref": "Goron Mines/1F/Gor Amato Chest/",
+								"name": "Gor Amato Chest"
+							},
+							{
+								"ref": "Goron Mines/1F/Gor Amato Key Shard/",
+								"name": "Gor Amato Key Shard"
+							},
+							{
+								"ref": "Goron Mines/1F/Gor Amato Small Chest/",
+								"name": "Gor Amato Small Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Gor Ebizo Chest/",
+								"name": "Gor Ebizo Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Gor Ebizo Key Shard/",
+								"name": "Gor Ebizo Key Shard"
+							},
+							{
+								"ref": "Goron Mines/2F/Gor Liggs Chest/",
+								"name": "Gor Liggs Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Gor Liggs Key Shard/",
+								"name": "Gor Liggs Key Shard"
+							},
+							{
+								"ref": "Goron Mines/1F/Magnet Maze Chest/",
+								"name": "Magnet Maze Chest"
+							},
+							{
+								"ref": "Goron Mines/1F/Main Magnet Room Bottom Chest/",
+								"name": "Main Magnet Room Bottom Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Main Magnet Room Top Chest/",
+								"name": "Main Magnet Room Top Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Outside Beamos Chest/",
+								"name": "Outside Beamos Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Outside Clawshot Chest/",
+								"name": "Outside Clawshot Chest"
+							},
+							{
+								"ref": "Goron Mines/2F/Outside Underwater Chest/",
+								"name": "Outside Underwater Chest"
+							},
+							{
+								"ref": "Goron Mines/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Hyrule Castle",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 965,
+								"y": 753,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "ct",
+								"x": 375,
+								"y": 0,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "lr",
+								"x": 866,
+								"y": 1311,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "Hyrule Castle/2F/Big Key Chest/",
+								"name": "Big Key Chest"
+							},
+							{
+								"ref": "Hyrule Castle/2F/East Wing Balcony Chest/",
+								"name": "East Wing Balcony Chest"
+							},
+							{
+								"ref": "Hyrule Castle/1F/East Wing Boomerang Puzzle Chest/",
+								"name": "East Wing Boomerang Puzzle Chest"
+							},
+							{
+								"ref": "Hyrule Castle/1F/Graveyard Switch Room/Back Left Chest",
+								"name": "Graveyard Switch Room Back Left Chest"
+							},
+							{
+								"ref": "Hyrule Castle/1F/Graveyard Switch Room/Front Left Chest",
+								"name": "Graveyard Switch Room Front Left Chest"
+							},
+							{
+								"ref": "Hyrule Castle/1F/Graveyard Switch Room/Right Chest",
+								"name": "Graveyard Switch Room Right Chest"
+							},
+							{
+								"ref": "Hyrule Castle/1F/Graveyard Owl Statue Chest/",
+								"name": "Graveyard Owl Statue Chest"
+							},
+							{
+								"ref": "Hyrule Castle/1F/King Bulblin Key/",
+								"name": "King Bulblin Key"
+							},
+							{
+								"ref": "Hyrule Castle/2F/Lantern Staircase Chest/",
+								"name": "Lantern Staircase Chest"
+							},
+							{
+								"ref": "Hyrule Castle/2F/Main Hall Northeast Chest/",
+								"name": "Main Hall Northeast Chest"
+							},
+							{
+								"ref": "Hyrule Castle/2F/Main Hall Northwest Chest/",
+								"name": "Main Hall Northwest Chest"
+							},
+							{
+								"ref": "Hyrule Castle/2F/Main Hall Southwest Chest/",
+								"name": "Main Hall Southwest Chest"
+							},
+							{
+								"ref": "Hyrule Castle/2F/Southeast Balcony Tower Chest/",
+								"name": "Southeast Balcony Tower Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Eighth Small Chest",
+								"name": "Treasure Room Eighth Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Fifth Chest",
+								"name": "Treasure Room Fifth Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Fifth Small Chest",
+								"name": "Treasure Room Fifth Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/First Chest",
+								"name": "Treasure Room First Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/First Small Chest",
+								"name": "Treasure Room First Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Fourth Chest",
+								"name": "Treasure Room Fourth Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Fourth Small Chest",
+								"name": "Treasure Room Fourth Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Second Chest",
+								"name": "Treasure Room Second Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Second Small Chest",
+								"name": "Treasure Room Second Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Seventh Small Chest",
+								"name": "Treasure Room Seventh Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Sixth Small Chest",
+								"name": "Treasure Room Sixth Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Third Chest",
+								"name": "Treasure Room Third Chest"
+							},
+							{
+								"ref": "Hyrule Castle/4F/Treasure Room/Third Small Chest",
+								"name": "Treasure Room Third Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/1F/West Courtyard Central Small Chest/",
+								"name": "West Courtyard Central Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/1F/West Courtyard North Small Chest/",
+								"name": "West Courtyard North Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Lakebed Temple",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 709,
+								"y": 988,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "lh",
+								"x": 1260,
+								"y": 740,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "lr",
+								"x": 432,
+								"y": 1726,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "Lakebed Temple/1F/Before Deku Toad Alcove Chest/",
+								"name": "Before Deku Toad Alcove Chest"
+							},
+							{
+								"ref": "Lakebed Temple/B1/Before Deku Toad Underwater Left Chest/",
+								"name": "Before Deku Toad Underwater Left Chest"
+							},
+							{
+								"ref": "Lakebed Temple/B1/Before Deku Toad Underwater Right Chest/",
+								"name": "Before Deku Toad Underwater Right Chest"
+							},
+							{
+								"ref": "Lakebed Temple/B1/Big Key Chest/",
+								"name": "Big Key Chest"
+							},
+							{
+								"ref": "Lakebed Temple/1F/Central Room Chest/",
+								"name": "Central Room Chest"
+							},
+							{
+								"ref": "Lakebed Temple/1F/Central Room Small Chest/",
+								"name": "Central Room Small Chest"
+							},
+							{
+								"ref": "Lakebed Temple/B1/Central Room Spire Chest/",
+								"name": "Central Room Spire Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/Chandelier Chest/",
+								"name": "Chandelier Chest"
+							},
+							{
+								"ref": "Lakebed Temple/1F/Deku Toad Chest/",
+								"name": "Deku Toad Chest"
+							},
+							{
+								"ref": "Lakebed Temple/B2/Morpheel Boss/Dungeon Reward",
+								"name": "Morpheel Boss Dungeon Reward"
+							},
+							{
+								"ref": "Lakebed Temple/B1/East Lower Waterwheel Bridge Chest/",
+								"name": "East Lower Waterwheel Bridge Chest"
+							},
+							{
+								"ref": "Lakebed Temple/B1/East Lower Waterwheel Stalactite Chest/",
+								"name": "East Lower Waterwheel Stalactite Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/East Second Floor Southeast Chest/",
+								"name": "East Second Floor Southeast Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/East Second Floor Southwest Chest/",
+								"name": "East Second Floor Southwest Chest"
+							},
+							{
+								"ref": "Lakebed Temple/4F/East Water Supply Clawshot Chest/",
+								"name": "East Water Supply Clawshot Chest"
+							},
+							{
+								"ref": "Lakebed Temple/4F/East Water Supply Small Chest/",
+								"name": "East Water Supply Small Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/Lobby Left Chest/",
+								"name": "Lobby Left Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/Lobby Rear Chest/",
+								"name": "Lobby Rear Chest"
+							},
+							{
+								"ref": "Lakebed Temple/B2/Morpheel Boss/Morpheel Heart Container",
+								"name": "Morpheel Boss Morpheel Heart Container"
+							},
+							{
+								"ref": "Lakebed Temple/2F/Stalactite Room Chest/",
+								"name": "Stalactite Room Chest"
+							},
+							{
+								"ref": "Lakebed Temple/1F/Underwater Maze Small Chest/",
+								"name": "Underwater Maze Small Chest"
+							},
+							{
+								"ref": "Lakebed Temple/1F/West Lower Small Chest/",
+								"name": "West Lower Small Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/West Second Floor Central Small Chest/",
+								"name": "West Second Floor Central Small Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/West Second Floor Northeast Chest/",
+								"name": "West Second Floor Northeast Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/West Second Floor Southeast Chest/",
+								"name": "West Second Floor Southeast Chest"
+							},
+							{
+								"ref": "Lakebed Temple/2F/West Second Floor Southwest Underwater Chest/",
+								"name": "West Second Floor Southwest Underwater Chest"
+							},
+							{
+								"ref": "Lakebed Temple/4F/West Water Supply Chest/",
+								"name": "West Water Supply Chest"
+							},
+							{
+								"ref": "Lakebed Temple/4F/West Water Supply Small Chest/",
+								"name": "West Water Supply Small Chest"
+							},
+							{
+								"ref": "Lakebed Temple/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Palace of Twilight",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 123,
+								"y": 746,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "gd",
+								"x": 385,
+								"y": 155,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "Palace of Twilight/3F/Big Key Chest/",
+								"name": "Big Key Chest"
+							},
+							{
+								"ref": "Palace of Twilight/2F/Central First Room Chest/",
+								"name": "Central First Room Chest"
+							},
+							{
+								"ref": "Palace of Twilight/3F/Central Outdoor Chest/",
+								"name": "Central Outdoor Chest"
+							},
+							{
+								"ref": "Palace of Twilight/3F/Central Tower Chest/",
+								"name": "Central Tower Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/Collect Both Sols/",
+								"name": "Collect Both Sols"
+							},
+							{
+								"ref": "Palace of Twilight/1F/East Wing First Room East Alcove Chest/",
+								"name": "East Wing First Room East Alcove Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/East Wing First Room North Small Chest/",
+								"name": "East Wing First Room North Small Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/East Wing First Room West Alcove Chest/",
+								"name": "East Wing First Room West Alcove Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/East Wing First Room Zant Head Chest/",
+								"name": "East Wing First Room Zant Head Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/East Wing Second Room Northeast Chest/",
+								"name": "East Wing Second Room Northeast Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/East Wing Second Room Northwest Chest/",
+								"name": "East Wing Second Room Northwest Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/East Wing Second Room Southeast Chest/",
+								"name": "East Wing Second Room Southeast Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/East Wing Second Room Southwest Chest/",
+								"name": "East Wing Second Room Southwest Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/West Wing Chest Behind Wall of Darkness/",
+								"name": "West Wing Chest Behind Wall of Darkness"
+							},
+							{
+								"ref": "Palace of Twilight/1F/West Wing First Room Central Chest/",
+								"name": "West Wing First Room Central Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/West Wing Second Room Central Chest/",
+								"name": "West Wing Second Room Central Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/West Wing Second Room Lower South Chest/",
+								"name": "West Wing Second Room Lower South Chest"
+							},
+							{
+								"ref": "Palace of Twilight/1F/West Wing Second Room Southeast Chest/",
+								"name": "West Wing Second Room Southeast Chest"
+							},
+							{
+								"ref": "Palace of Twilight/4F/Zant Boss/Zant Heart Container",
+								"name": "Zant Boss Zant Heart Container"
+							},
+							{
+								"ref": "Palace of Twilight/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Snowpeak Ruins",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 251,
+								"y": 524,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "sm",
+								"x": 109,
+								"y": 1438,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "Snowpeak Ruins/1F/Ball and Chain/",
+								"name": "Ball and Chain"
+							},
+							{
+								"ref": "Snowpeak Ruins/3F/Blizzeta Boss/Blizzeta Heart Container",
+								"name": "Blizzeta Boss Blizzeta Heart Container"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Broken Floor Chest/",
+								"name": "Broken Floor Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/2F/Chapel Chest/",
+								"name": "Chapel Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Chest After Darkhammer/",
+								"name": "Chest After Darkhammer"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Courtyard Central Chest/",
+								"name": "Courtyard Central Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/3F/Blizzeta Boss/Dungeon Reward",
+								"name": "Blizzeta Boss Dungeon Reward"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/East Courtyard Buried Chest/",
+								"name": "East Courtyard Buried Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/East Courtyard Chest/",
+								"name": "East Courtyard Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/Poes2F/Ice Room Poe/",
+								"name": "Ice Room Poe"
+							},
+							{
+								"ref": "Snowpeak Ruins/Poes1F/Lobby Armor Poe/",
+								"name": "Lobby Armor Poe"
+							},
+							{
+								"ref": "Snowpeak Ruins/2F/Lobby Chandelier Chest/",
+								"name": "Lobby Chandelier Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Lobby East Armor Chest/",
+								"name": "Lobby East Armor Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/Poes1F/Lobby Poe/",
+								"name": "Lobby Poe"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Lobby West Armor Chest/",
+								"name": "Lobby West Armor Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Mansion Map/",
+								"name": "Mansion Map"
+							},
+							{
+								"ref": "Snowpeak Ruins/2F/Northeast Chandelier Chest/",
+								"name": "Northeast Chandelier Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Ordon Pumpkin Chest/",
+								"name": "Ordon Pumpkin Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/West Cannon Room Central Chest/",
+								"name": "West Cannon Room Central Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/West Cannon Room Corner Chest/",
+								"name": "West Cannon Room Corner Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/West Courtyard Buried Chest/",
+								"name": "West Courtyard Buried Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Wooden Beam Central Chest/",
+								"name": "Wooden Beam Central Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/2F/Wooden Beam Chandelier Chest/",
+								"name": "Wooden Beam Chandelier Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/1F/Wooden Beam Northwest Chest/",
+								"name": "Wooden Beam Northwest Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							}
+						]
+					},
+					{
+						"name": "Temple of Time",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 754,
+								"y": 1473,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "sg",
+								"x": 925,
+								"y": 41,
+								"size": 40,
+								"border_thickness": 8
+							}
+						],
+						"sections": [
+							{
+								"ref": "Temple of Time/1F/Armogohma Boss/Armogohma Heart Container",
+								"name": "Armogohma Boss Armogohma Heart Container"
+							},
+							{
+								"ref": "Temple of Time/5F/Armos Antechamber East Chest/",
+								"name": "Armos Antechamber East Chest"
+							},
+							{
+								"ref": "Temple of Time/5F/Armos Antechamber North Chest/",
+								"name": "Armos Antechamber North Chest"
+							},
+							{
+								"ref": "Temple of Time/5F/Armos Antechamber Statue Chest/",
+								"name": "Armos Antechamber Statue Chest"
+							},
+							{
+								"ref": "Temple of Time/7F/Big Key Chest/",
+								"name": "Big Key Chest"
+							},
+							{
+								"ref": "Temple of Time/8F/Chest Before Darknut/",
+								"name": "Chest Before Darknut"
+							},
+							{
+								"ref": "Temple of Time/8F/Darknut Chest/",
+								"name": "Darknut Chest"
+							},
+							{
+								"ref": "Temple of Time/1F/Armogohma Boss/Dungeon Reward",
+								"name": "Armogohma Boss Dungeon Reward"
+							},
+							{
+								"ref": "Temple of Time/3F/First Staircase Armos Chest/",
+								"name": "First Staircase Armos Chest"
+							},
+							{
+								"ref": "Temple of Time/2F/First Staircase Gohma Gate Chest/",
+								"name": "First Staircase Gohma Gate Chest"
+							},
+							{
+								"ref": "Temple of Time/3F/First Staircase Window Chest/",
+								"name": "First Staircase Window Chest"
+							},
+							{
+								"ref": "Temple of Time/7F/Floor Switch Puzzle Room Upper Chest/",
+								"name": "Floor Switch Puzzle Room Upper Chest"
+							},
+							{
+								"ref": "Temple of Time/7F/Gilloutine Chest/",
+								"name": "Gilloutine Chest"
+							},
+							{
+								"ref": "Temple of Time/1F/Lobby Lantern Chest/",
+								"name": "Lobby Lantern Chest"
+							},
+							{
+								"ref": "Temple of Time/5F/Moving Wall Beamos Room Chest/",
+								"name": "Moving Wall Beamos Room Chest"
+							},
+							{
+								"ref": "Temple of Time/5F/Moving Wall Dinalfos Room Chest/",
+								"name": "Moving Wall Dinalfos Room Chest"
+							},
+							{
+								"ref": "Temple of Time/Poes7F/Poe Above Scales/",
+								"name": "Poe Above Scales"
+							},
+							{
+								"ref": "Temple of Time/Poes3F/Poe Behind Gate/",
+								"name": "Poe Behind Gate"
+							},
+							{
+								"ref": "Temple of Time/6F/Scales Gohma Chest/",
+								"name": "Scales Gohma Chest"
+							},
+							{
+								"ref": "Temple of Time/7F/Scales Upper Chest/",
+								"name": "Scales Upper Chest"
+							},
+							{
+								"ref": "Temple of Time/Hint Signs/Entrance Hint Sign/",
+								"name": "Entrance Hint Sign"
+							},
+							{
+								"ref": "Temple of Time/Hint Signs/Walls Hint Sign/",
+								"name": "Walls Hint Sign"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

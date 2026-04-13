@@ -1,0 +1,404 @@
+{
+    "keys_bosses75": {
+        "type": "dock",
+        "background": "#525260",
+        "content": [
+            {
+                "dock": "top",
+                "type": "array",
+                "orientation": "horizontal",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_size": 41,
+                        "item_margin": "1,1",
+                        "margin": "4,1,1,10",
+                        "item_h_alignment": "center",
+                        "item_v_alignment": "center",
+                        "rows": [
+                            [
+                                "",
+                                "faronvesseloflight",
+                                "eldinvesseloflight",
+                                "lanayruvesseloflight",
+                                "splitmap",
+                                "fwkey",
+                                "gatekeys",
+                                "bckey",
+                                ""
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "dock":"top",
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_size": 37,
+                        "item_margin": "1,0",
+                        "margin": "5,0,1,0",
+                        "item_h_alignment": "center",
+                        "item_v_alignment": "center",
+                        "rows": [
+                            [
+                                "ftcompleted",
+                                "gmcompleted",
+                                "ltcompleted",
+                                "agcompleted",
+                                "",
+                                "",
+                                "ttcompleted",
+                                "cscompleted",
+                                "ptcompleted",
+                                "hccompleted"
+                            ]
+                        ]
+                    },
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "v_alignment": "center",
+                        "item_size": 37,
+                        "margin": "177,-42,1,0",
+                        "item_h_alignment": "center",
+                        "item_v_alignment": "center",
+                        "rows": [
+                            [
+                                "srcompleted"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "dock": "top",
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "margin": "5,10,-2,1",
+                        "content": [
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "FT"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "GM"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "LT"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "AG"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "    "
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "    "
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "TT"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "CS"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "PT"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "HC"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "array",
+                        "margin": "0,-14,0,2",
+                        "orientation": "horizontal",
+                        "content": [
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "SR"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_size": 37,
+                        "item_margin": "1,1",
+                        "margin": "5,5,1,1",
+                        "item_h_alignment": "center",
+                        "item_v_alignment": "center",
+                        "rows": [
+                            [
+                                "ftsmallkey",
+                                "gmsmallkey",
+                                "ltsmallkey",
+                                "agsmallkey",
+                                "srsmallkey",
+                                "ordonpumpkin",
+                                "ttsmallkey",
+                                "cssmallkey",
+                                "ptsmallkey",
+                                "hcsmallkey"
+                            ],
+                            [
+                                "ftbigkey",
+                                "gmbigkey",
+                                "ltbigkey",
+                                "agbigkey",
+                                "srbigkey",
+                                "ordongoatcheese",
+                                "ttbigkey",
+                                "csbigkey",
+                                "ptbigkey",
+                                "hcbigkey"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "keys_bosses_broadcast": {
+        "type": "dock",
+        "background": "#525260",
+        "content": [
+            {
+                "dock": "top",
+                "type": "array",
+                "orientation": "horizontal",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_size": 41,
+                        "item_margin": "1,1",
+                        "margin": "4,1,1,10",
+                        "item_h_alignment": "center",
+                        "item_v_alignment": "center",
+                        "rows": [
+                            [
+                                "",
+                                "faronvesseloflight",
+                                "eldinvesseloflight",
+                                "lanayruvesseloflight",
+                                "",
+                                "fwkey",
+                                "gatekeys",
+                                "bckey",
+                                ""
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "dock": "top",
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_size": 37,
+                        "item_margin": "1,0",
+                        "margin": "5,0,1,0",
+                        "item_h_alignment": "center",
+                        "item_v_alignment": "center",
+                        "rows": [
+                            [
+                                "ftcompleted",
+                                "gmcompleted",
+                                "ltcompleted",
+                                "agcompleted",
+                                "",
+                                "",
+                                "ttcompleted",
+                                "cscompleted",
+                                "ptcompleted",
+                                "hccompleted"
+                            ]
+                        ]
+                    },
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "v_alignment": "center",
+                        "item_size": 37,
+                        "margin": "177,-42,1,0",
+                        "item_h_alignment": "center",
+                        "item_v_alignment": "center",
+                        "rows": [
+                            [
+                                "srcompleted"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "dock": "top",
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "margin": "5,10,-2,1",
+                        "content": [
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "FT"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "GM"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "LT"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "AG"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "    "
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "    "
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "TT"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "CS"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "PT"
+                            },
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "HC"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "array",
+                        "margin": "0,-14,0,0",
+                        "orientation": "horizontal",
+                        "content": [
+                            {
+                                "type": "text",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "text": "SR"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_size": 37,
+                        "item_margin": "1,0",
+                        "margin": "5,5,1,0",
+                        "item_h_alignment": "center",
+                        "item_v_alignment": "center",
+                        "rows": [
+                            [
+                                "ftsmallkey",
+                                "gmsmallkey",
+                                "ltsmallkey",
+                                "agsmallkey",
+                                "srsmallkey",
+                                "ordonpumpkin",
+                                "ttsmallkey",
+                                "cssmallkey",
+                                "ptsmallkey",
+                                "hcsmallkey"
+                            ],
+                            [
+                                "ftbigkey",
+                                "gmbigkey",
+                                "ltbigkey",
+                                "agbigkey",
+                                "srbigkey",
+                                "ordongoatcheese",
+                                "ttbigkey",
+                                "csbigkey",
+                                "ptbigkey",
+                                "hcbigkey"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,241 @@
+[
+	{
+		"name": "Snowpeak Mountain",
+		"children": [
+			{
+				"name": "Ashei Sketch",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1979,
+						"y": 319
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakClimbLower"
+						]
+					}
+				]
+			},
+			{
+				"name": "Freezard Grotto Chest",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1546,
+						"y": 204
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakFreezardGrotto, ballchain"
+						]
+					}
+				]
+			},
+			{
+				"name": "Cave Ice Lantern Chest",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1304,
+						"y": 357
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakSummitUpper, ballchain, lantern"
+						]
+					}
+				]
+			},
+			{
+				"name": "Snowboard Racing Prize",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1148,
+						"y": 366
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakSummitUpper, srcompleted"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Snowpeak Mountain Poes",
+		"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+		"chest_opened_img": "images/Items/PoeSoul.png",
+		"visibility_rules": [
+			"poeson"
+		],
+		"children": [
+			{
+				"name": "Above Freezard Grotto Poe",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1570,
+						"y": 223,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakClimbUpper, shadowcrystal",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch"
+						]
+					}
+				]
+			},
+			{
+				"name": "Blizzard Poe",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1431,
+						"y": 148,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakClimbUpper, shadowcrystal",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch"
+						]
+					}
+				]
+			},
+			{
+				"name": "Poe Among Trees",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1339,
+						"y": 166,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakClimbUpper, shadowcrystal",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent",
+							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch"
+						]
+					}
+				]
+			},
+			{
+				"name": "Cave Ice Poe",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1333,
+						"y": 349,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakSummitUpper, ballchain, shadowcrystal"
+						]
+					}
+				]
+			},
+			{
+				"name": "Icy Summit Poe",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 150,
+						"y": 1701,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageoff",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagevanilla",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagedouble",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagetriple",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagequadruple",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, $canUseBottledFairy, @LakeHylia"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Snowpeak Mountain Golden Wolves",
+		"children": [
+			{
+				"name": "Kakariko Graveyard Stone",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1366,
+						"y": 245
+					}
+				],
+				"sections": [
+					{
+						"hosted_item": "smhowlingstone",
+						"access_rules": [
+							"{@SnowpeakClimbUpper, shadowcrystal}",
+							"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance}",
+							"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent}",
+							"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch}"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Snowpeak Mountain Hint Signs",
+		"children": [
+			{
+				"name": "Hint Sign",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1710,
+						"y": 247,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"{@SnowpeakClimbLower}"
+						],
+						"visibility_rules": [
+							"hintson"
+						]
+					}
+				]
+			}
+		]
+	}
+]

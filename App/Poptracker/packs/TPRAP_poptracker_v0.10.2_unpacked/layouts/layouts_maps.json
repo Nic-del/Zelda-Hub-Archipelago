@@ -1,0 +1,1103 @@
+{
+	"layout_maps": {
+		"type": "tabbed",
+		"tabs": [
+			{
+				"title": "Overworld",
+				"content": {
+					"type": "tabbed",
+					"tabs": [
+						{
+							"title": "Main Map",
+							"content": [
+								{
+									"type": "map",
+									"maps": [
+										"overworld"
+									]
+								}
+							]
+						},
+						{
+							"title": "Faron",
+							"content": {
+								"type": "tabbed",
+								"tabs": [
+									{
+										"title": "Faron Region",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"fr"
+												]
+											}
+										]
+									},
+									{
+										"title": "Faron Woods",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"fw"
+												]
+											}
+										]
+									},
+									{
+										"title": "Faron Field",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"ff"
+												]
+											}
+										]
+									}
+								]
+							}
+						},
+						{
+							"title": "Eldin",
+							"content": {
+								"type": "tabbed",
+								"tabs": [
+									{
+										"title": "Eldin Region",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"er"
+												]
+											}
+										]
+									},
+									{
+										"title": "Kakariko Gorge",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"kg"
+												]
+											}
+										]
+									},
+									{
+										"title": "Kakariko",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"kakariko"
+												]
+											}
+										]
+									},
+									{
+										"title": "Death Mountain",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"dm"
+												]
+											}
+										]
+									},
+									{
+										"title": "Eldin Field",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"ef"
+												]
+											}
+										]
+									},
+									{
+										"title": "Hidden Village",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"hv"
+												]
+											}
+										]
+									}
+								]
+							}
+						},
+						{
+							"title": "Lanayru",
+							"content": {
+								"type": "tabbed",
+								"tabs": [
+									{
+										"title": "Lanayru Region",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"lr"
+												]
+											}
+										]
+									},
+									{
+										"title": "Lake Hylia",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"lh"
+												]
+											}
+										]
+									},
+									{
+										"title": "Lanayru Field",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"lf"
+												]
+											}
+										]
+									},
+									{
+										"title": "Beside Castle Town",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"bct"
+												]
+											}
+										]
+									},
+									{
+										"title": "South Castle Town",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"sct"
+												]
+											}
+										]
+									},
+									{
+										"title": "Upper Zora's River",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"uzr"
+												]
+											}
+										]
+									},
+									{
+										"title": "Zora's Domain",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"zd"
+												]
+											}
+										]
+									}
+								]
+							}
+						},
+						{
+							"title": "Ordon",
+							"content": [
+								{
+									"type": "map",
+									"maps": [
+										"ordon"
+									]
+								}
+							]
+						},
+						{
+							"title": "Sacred Grove",
+							"content": [
+								{
+									"type": "map",
+									"maps": [
+										"sg"
+									]
+								}
+							]
+						},
+						{
+							"title": "Snowpeak Mountain",
+							"content": [
+								{
+									"type": "map",
+									"maps": [
+										"sm"
+									]
+								}
+							]
+						},
+						{
+							"title": "Gerudo Desert",
+							"content": [
+								{
+									"type": "map",
+									"maps": [
+										"gd"
+									]
+								}
+							]
+						},
+						{
+							"title": "Castle Town",
+							"content": [
+								{
+									"type": "map",
+									"maps": [
+										"ct"
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "Forest Temple",
+				"icon": "images/Items/Boomerang.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "ftname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ftfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ft1f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "Goron Mines",
+				"icon": "images/Items/Bow1.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "gmname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"gmfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"gm1f"
+											]
+										}
+									]
+								},
+								{
+									"title": "2F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"gm2f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "Lakebed Temple",
+				"icon": "images/Items/Clawshot1.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "ltname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ltfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "B2",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ltb2"
+											]
+										}
+									]
+								},
+								{
+									"title": "B1",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ltb1"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"lt1f"
+											]
+										}
+									]
+								},
+								{
+									"title": "2F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"lt2f"
+											]
+										}
+									]
+								},
+								{
+									"title": "3F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"lt3f"
+											]
+										}
+									]
+								},
+								{
+									"title": "4F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"lt4f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "Arbiter's Grounds",
+				"icon": "images/Items/Spinner.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "agname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"agfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "B2",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"agb2"
+											]
+										}
+									]
+								},
+								{
+									"title": "B1",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"agb1"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ag1f"
+											]
+										}
+									]
+								},
+								{
+									"title": "2F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ag2f"
+											]
+										}
+									]
+								},
+								{
+									"title": "3F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ag3f"
+											]
+										}
+									]
+								},
+								{
+									"title": "4F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ag4f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "Snowpeak Ruins",
+				"icon": "images/Items/BallAndChain.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "srname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"srfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"sr1f"
+											]
+										}
+									]
+								},
+								{
+									"title": "2F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"sr2f"
+											]
+										}
+									]
+								},
+								{
+									"title": "3F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"sr3f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "Temple of Time",
+				"icon": "images/Items/DominionRod2.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "ttname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ttfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"tt1f"
+											]
+										}
+									]
+								},
+								{
+									"title": "2F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"tt2f"
+											]
+										}
+									]
+								},
+								{
+									"title": "3F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"tt3f"
+											]
+										}
+									]
+								},
+								{
+									"title": "4F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"tt4f"
+											]
+										}
+									]
+								},
+								{
+									"title": "5F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"tt5f"
+											]
+										}
+									]
+								},
+								{
+									"title": "6F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"tt6f"
+											]
+										}
+									]
+								},
+								{
+									"title": "7F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"tt7f"
+											]
+										}
+									]
+								},
+								{
+									"title": "8F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"tt8f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "City in the Sky",
+				"icon": "images/Items/Clawshot2.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "csname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"csfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "B3",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"csb3"
+											]
+										}
+									]
+								},
+								{
+									"title": "B2",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"csb2"
+											]
+										}
+									]
+								},
+								{
+									"title": "B1",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"csb1"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"cs1f"
+											]
+										}
+									]
+								},
+								{
+									"title": "2F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"cs2f"
+											]
+										}
+									]
+								},
+								{
+									"title": "3F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"cs3f"
+											]
+										}
+									]
+								},
+								{
+									"title": "4F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"cs4f"
+											]
+										}
+									]
+								},
+								{
+									"title": "5F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"cs5f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "Palace of Twilight",
+				"icon": "images/Items/Sword4.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "ptname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"ptfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"pt1f"
+											]
+										}
+									]
+								},
+								{
+									"title": "2F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"pt2f"
+											]
+										}
+									]
+								},
+								{
+									"title": "3F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"pt3f"
+											]
+										}
+									]
+								},
+								{
+									"title": "4F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"pt4f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"title": "Hyrule Castle",
+				"icon": "images/Items/ShadowCrystal.png",
+				"content": {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "item",
+							"item": "hcname",
+							"max_width": 450,
+							"item_h_alignment": "center",
+							"item_v_alignment": "center"
+						},
+						{
+							"type": "tabbed",
+							"tabs": [
+								{
+									"title": "Full Map",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"hcfull"
+											]
+										}
+									]
+								},
+								{
+									"title": "1F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"hc1f"
+											]
+										}
+									]
+								},
+								{
+									"title": "2F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"hc2f"
+											]
+										}
+									]
+								},
+								{
+									"title": "3F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"hc3f"
+											]
+										}
+									]
+								},
+								{
+									"title": "4F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"hc4f"
+											]
+										}
+									]
+								},
+								{
+									"title": "5F",
+									"content": [
+										{
+											"type": "map",
+											"background": "#1D1A14",
+											"maps": [
+												"hc5f"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
+}

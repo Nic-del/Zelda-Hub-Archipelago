@@ -1,0 +1,9 @@
+pywin32
+psutil
+keyboard
+obs-websocket-py
+customtkinter
+pygame-ce
+Pillow
+darkdetect
+pywebview

@@ -1,0 +1,29 @@
+{
+	"name": "Twilight Princess Archipelago Tracker",
+	"game_name": "The Legend of Zelda: Twilight Princess",
+	"package_uid": "tpr_ap_tracker",
+	"package_version": "0.10.2",
+	"platform": "GameCube",
+	"author": "Kizugaya",
+	"versions_url": "https://raw.githubusercontent.com/Kizugaya/TPRAP_poptracker/versions/versions.json",
+	"variants": {
+		"standard": {
+			"display_name": "Standard Map Tracker",
+			"flags": [
+				"ap"
+			]
+		},
+		"y_standard75": {
+			"display_name": "75% Icon Size Map Tracker",
+			"flags": [
+				"ap"
+			]
+		},
+		"z_standard50": {
+			"display_name": "50% Icon Size Map Tracker",
+			"flags": [
+				"ap"
+			]
+		}
+	}
+}

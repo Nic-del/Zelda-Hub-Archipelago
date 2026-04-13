@@ -1,0 +1,659 @@
+[
+	{
+		"name": "Arbiter's Grounds",
+		"children": [
+			{
+				"name": "B2",
+				"children": [
+					{
+						"name": "Death Sword Chest",
+						"map_locations": [
+							{
+								"map": "agb2",
+								"x": 995,
+								"y": 23
+							},
+							{
+								"map": "agfull",
+								"x": 336,
+								"y": 8
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsAfterPoeGate, agsmallkey:5, clawshot, $canDefeatStalfos, $canDefeatDeathSword",
+									"@ArbitersGroundsAfterPoeGate, skkeysy, clawshot, $canDefeatStalfos, $canDefeatDeathSword",
+									"[glitcheson], @ArbitersGroundsAfterPoeGate, agsmallkey:4, shadowcrystal, clawshot, $canDefeatStalfos, $canDefeatDeathSword"
+								]
+							}
+						]
+					},
+					{
+						"name": "Spinner Room First Small Chest",
+						"map_locations": [
+							{
+								"map": "agb2",
+								"x": 413,
+								"y": 580
+							},
+							{
+								"map": "agfull",
+								"x": 140,
+								"y": 196
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsAfterPoeGate, agsmallkey:5, clawshot, $canDefeatStalfos, spinner",
+									"@ArbitersGroundsAfterPoeGate, skkeysy, clawshot, $canDefeatStalfos, spinner",
+									"[glitcheson], @ArbitersGroundsAfterPoeGate, agsmallkey:4, shadowcrystal, clawshot, $canDefeatStalfos, spinner"
+								]
+							}
+						]
+					},
+					{
+						"name": "Spinner Room Second Small Chest",
+						"map_locations": [
+							{
+								"map": "agb2",
+								"x": 269,
+								"y": 575
+							},
+							{
+								"map": "agfull",
+								"x": 91,
+								"y": 194
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsAfterPoeGate, agsmallkey:5, clawshot, $canDefeatStalfos, spinner",
+									"@ArbitersGroundsAfterPoeGate, skkeysy, clawshot, $canDefeatStalfos, spinner",
+									"[glitcheson], @ArbitersGroundsAfterPoeGate, agsmallkey:4, shadowcrystal, clawshot, $canDefeatStalfos, spinner"
+								]
+							}
+						]
+					},
+					{
+						"name": "Spinner Room Lower Central Small Chest",
+						"map_locations": [
+							{
+								"map": "agb2",
+								"x": 217,
+								"y": 465
+							},
+							{
+								"map": "agfull",
+								"x": 73,
+								"y": 157
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsAfterPoeGate, agsmallkey:5, clawshot, $canDefeatStalfos, spinner",
+									"@ArbitersGroundsAfterPoeGate, skkeysy, clawshot, $canDefeatStalfos, spinner",
+									"[glitcheson], @ArbitersGroundsAfterPoeGate, agsmallkey:4, shadowcrystal, clawshot, $canDefeatStalfos, spinner"
+								]
+							}
+						]
+					},
+					{
+						"name": "Spinner Room Stalfos Alcove Chest",
+						"map_locations": [
+							{
+								"map": "agb2",
+								"x": 644,
+								"y": 512
+							},
+							{
+								"map": "agfull",
+								"x": 218,
+								"y": 173
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsAfterPoeGate, agsmallkey:5, clawshot, $canDefeatStalfos, spinner",
+									"@ArbitersGroundsAfterPoeGate, skkeysy, clawshot, $canDefeatStalfos, spinner",
+									"[glitcheson], @ArbitersGroundsAfterPoeGate, agsmallkey:4, shadowcrystal, clawshot, $canDefeatStalfos, spinner"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "B1",
+				"children": [
+					{
+						"name": "East Lower Turnable Redead Chest",
+						"map_locations": [
+							{
+								"map": "agb1",
+								"x": 1368,
+								"y": 665
+							},
+							{
+								"map": "agfull",
+								"x": 1145,
+								"y": 225
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsEastWing, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"name": "North Turning Room Chest",
+						"map_locations": [
+							{
+								"map": "agb1",
+								"x": 1341,
+								"y": 441
+							},
+							{
+								"map": "agfull",
+								"x": 1136,
+								"y": 149
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsAfterPoeGate, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Spinner Room Lower North Chest",
+						"map_locations": [
+							{
+								"map": "agb1",
+								"x": 599,
+								"y": 374
+							},
+							{
+								"map": "agfull",
+								"x": 885,
+								"y": 126
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsAfterPoeGate, agsmallkey:5, clawshot, $canDefeatStalfos, spinner",
+									"@ArbitersGroundsAfterPoeGate, skkeysy, clawshot, $canDefeatStalfos, spinner",
+									"[glitcheson], @ArbitersGroundsAfterPoeGate, agsmallkey:4, shadowcrystal, clawshot, $canDefeatStalfos, spinner"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "1F",
+				"children": [
+					{
+						"name": "Entrance Chest",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 819,
+								"y": 1114
+							},
+							{
+								"map": "agfull",
+								"x": 1642,
+								"y": 377
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsEntrance, $canBreakWoodenDoor",
+									"[glitcheson], @ArbitersGroundsEntrance, $canBreakWoodenDoorGlitched"
+								]
+							}
+						]
+					},
+					{
+						"name": "Torch Room West Chest",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 954,
+								"y": 629
+							},
+							{
+								"map": "agfull",
+								"x": 1688,
+								"y": 213
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsLobby"
+								]
+							}
+						]
+					},
+					{
+						"name": "Torch Room East Chest",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 1147,
+								"y": 629
+							},
+							{
+								"map": "agfull",
+								"x": 1753,
+								"y": 213
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsLobby"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Small Chest Behind Block",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 735,
+								"y": 640
+							},
+							{
+								"map": "agfull",
+								"x": 1614,
+								"y": 216
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsWestWing"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Chandelier Chest",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 701,
+								"y": 850
+							},
+							{
+								"map": "agfull",
+								"x": 1602,
+								"y": 287
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsWestWing, agsmallkey:4, shadowcrystal",
+									"@ArbitersGroundsWestWing, skkeysy, shadowcrystal",
+									"[glitcheson], @ArbitersGroundsWestWing, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Stalfos West Chest",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 285,
+								"y": 758
+							},
+							{
+								"map": "agfull",
+								"x": 1462,
+								"y": 256
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsWestWing, $canBreakWoodenDoor, agsmallkey:4, $canDefeatGhoulRat",
+									"@ArbitersGroundsWestWing, $canBreakWoodenDoor, skkeysy, $canDefeatGhoulRat",
+									"[glitcheson], @ArbitersGroundsWestWing, $canBreakWoodenDoorGlitched, agsmallkey:4, $canDefeatGhoulRat",
+									"[glitcheson], @ArbitersGroundsWestWing, $canBreakWoodenDoorGlitched, skkeysy, $canDefeatGhoulRat",
+									"[glitcheson], @ArbitersGroundsWestWing, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Stalfos Northeast Chest",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 426,
+								"y": 716
+							},
+							{
+								"map": "agfull",
+								"x": 1509,
+								"y": 242
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsWestWing, $canBreakWoodenDoor, agsmallkey:4, $canDefeatGhoulRat",
+									"@ArbitersGroundsWestWing, $canBreakWoodenDoor, skkeysy, $canDefeatGhoulRat",
+									"[glitcheson], @ArbitersGroundsWestWing, $canBreakWoodenDoorGlitched, agsmallkey:4, $canDefeatGhoulRat",
+									"[glitcheson], @ArbitersGroundsWestWing, $canBreakWoodenDoorGlitched, skkeysy, $canDefeatGhoulRat",
+									"[glitcheson], @ArbitersGroundsWestWing, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"name": "Big Key Chest",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 783,
+								"y": 375
+							},
+							{
+								"map": "agfull",
+								"x": 1630,
+								"y": 127
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsAfterPoeGate, agsmallkey:5, clawshot, spinner, $canSmash",
+									"@ArbitersGroundsAfterPoeGate, skkeysy, clawshot, spinner, $canSmash",
+									"[glitcheson], @ArbitersGroundsAfterPoeGate, agsmallkey:4, shadowcrystal, clawshot, spinner, $canSmash"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes1F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"name": "Torch Room Poe",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 1049,
+								"y": 758,
+								"shape": "diamond"
+							},
+							{
+								"map": "agfull",
+								"x": 1720,
+								"y": 256,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsLobby, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"name": "East Turning Room Poe",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 1367,
+								"y": 488,
+								"shape": "diamond"
+							},
+							{
+								"map": "agfull",
+								"x": 1828,
+								"y": 165,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsEastWing, shadowcrystal, clawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "2F",
+				"children": [
+					{
+						"name": "East Upper Turnable Chest",
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 1771,
+								"y": 1133
+							},
+							{
+								"map": "agfull",
+								"x": 599,
+								"y": 958
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsEastWing, agsmallkey:2",
+									"@ArbitersGroundsEastWing, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"name": "East Upper Turnable Redead Chest",
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 1990,
+								"y": 1055
+							},
+							{
+								"map": "agfull",
+								"x": 673,
+								"y": 932
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsEastWing, agsmallkey:2, $hasDamagingItem",
+									"@ArbitersGroundsEastWing, skkeysy, $hasDamagingItem"
+								]
+							}
+						]
+					},
+					{
+						"name": "Ghoul Rat Room Chest",
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 1369,
+								"y": 834
+							},
+							{
+								"map": "agfull",
+								"x": 463,
+								"y": 857
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnight",
+									"@ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes2F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"name": "Hidden Wall Poe",
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 1478,
+								"y": 1054,
+								"shape": "diamond"
+							},
+							{
+								"map": "agfull",
+								"x": 500,
+								"y": 931,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsEastWing, agsmallkey:3, $canDefeatRedeadKnight, shadowcrystal",
+									"@ArbitersGroundsEastWing, skkeysy, $canDefeatRedeadKnight, shadowcrystal",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatRedeadKnightGlitched, shadowcrystal",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatRedeadKnightGlitched, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Poe",
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 694,
+								"y": 1014,
+								"shape": "diamond"
+							},
+							{
+								"map": "agfull",
+								"x": 235,
+								"y": 918,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@ArbitersGroundsWestWing, agsmallkey:4, $canSmash, shadowcrystal",
+									"@ArbitersGroundsWestWing, skkeysy, $canSmash, shadowcrystal",
+									"[glitcheson], @ArbitersGroundsWestWing, $canDoLJA, $canSmash, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "4F",
+				"children": [
+					{
+						"name": "Stallord Boss",
+						"access_rules": [
+							"@ArbitersGroundsBossRoom"
+						],
+						"map_locations": [
+							{
+								"map": "ag4f",
+								"x": 1051,
+								"y": 764
+							},
+							{
+								"map": "agfull",
+								"x": 1721,
+								"y": 833
+							}
+						],
+						"sections": [
+							{
+								"name": "Stallord Heart Container",
+								"access_rules": [
+									"$canDefeatStallord"
+								]
+							},
+							{
+								"name": "Dungeon Reward",
+								"access_rules": [
+									"$canDefeatStallord"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 1025,
+								"y": 638,
+								"shape": "diamond"
+							},
+							{
+								"map": "agfull",
+								"x": 1712,
+								"y": 216,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@ArbitersGroundsLobby}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

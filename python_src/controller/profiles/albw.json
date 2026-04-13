@@ -1,0 +1,20 @@
+{
+    "description": "Profil specifique pour A Link Between Worlds (3DS / Citra)",
+    "version": "1.0",
+    "mapping": {
+        "FACE_BOTTOM": "B",
+        "FACE_LEFT": "Y",
+        "FACE_TOP": "X",
+        "START": "Start",
+        "SELECT": "Select",
+        "LEFT_STICK_X": "Circle_X",
+        "LEFT_STICK_Y": "Circle_Y",
+        "L1": "L",
+        "R1": "R",
+        "Pad N": "Dpad_Up",
+        "Pad S": "Dpad_Down",
+        "Pad W": "Dpad_Left",
+        "Pad E": "Dpad_Right",
+        "FACE_RIGHT": "A"
+    }
+}

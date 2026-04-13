@@ -1,0 +1,902 @@
+[
+  {
+    "name": "Entrance Logic",
+    "children": [
+      {
+        "name": "Dungeon Entrance on Dragon Roost Island",
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Dungeon Entrance on Dragon Roost Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 467,
+            "y": 117
+          }
+        ]
+      },
+      {
+        "name": "Dungeon Entrance in Forest Haven Sector",
+        "access_rules": [
+          [
+            "@Macros/can_access_forest_haven",
+            "grapple",
+            "@Macros/can_fly_with_deku_leaf_outdoors",
+            "@Macros/_can_cut_grass_or_has_magic_meter_upgrade"
+          ],
+          [
+            "@Macros/can_access_forest_haven",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@General Logic/Normal Logic Obscurity",
+            "@General Logic/Normal Logic Precision",
+            "@Macros/_can_fly_with_deku_leaf_outdoors_no_swift_sail_sequence_break",// The wind direction to get into Forest Haven without grappling hook is different to the wind direction required to fly to the dungeon entrance
+            "@Macros/_can_cut_grass_or_has_magic_meter_upgrade"
+          ]
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Dungeon Entrance in Forest Haven Sector"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 426,
+            "y": 455
+          }
+        ]
+      },
+      {
+        "name": "Dungeon Entrance in Tower of the Gods Sector",
+        "access_rules": [
+          "din, farore, nayru"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Dungeon Entrance in Tower of the Gods Sector"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 378,
+            "y": 286
+          }
+        ]
+      },
+      {
+        "name": "Dungeon Entrance on Headstone Island",
+        "access_rules": [
+          "power"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Dungeon Entrance on Headstone Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 210,
+            "y": 552
+          }
+        ]
+      },
+      {
+        "name": "Dungeon Entrance on Gale Isle",
+        "access_rules": [
+          "boots, hammer"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Dungeon Entrance on Gale Isle"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 293,
+            "y": 42
+          }
+        ]
+      },
+      {
+        "name": "Miniboss Entrance in Forbidden Woods",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple",
+            "fw_small:1"
+          ]
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Miniboss Entrance in Forbidden Woods"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 632,
+            "y": 157
+          }
+        ]
+      },
+      {
+        "name": "Miniboss Entrance in Tower of the Gods",
+        "access_rules": [
+          [
+            "@Macros/can_reach_tower_of_the_gods_second_floor",
+            "@Macros/_grapple_or_can_fly_with_deku_leaf_indoors",
+            "@Macros/_can_play_command_melody_or_bow"
+          ]
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Miniboss Entrance in Tower of the Gods"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 632,
+            "y": 242
+          }
+        ]
+      },
+      {
+        "name": "Miniboss Entrance in Earth Temple",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_moblins_and_poes_room, et_small:3"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Miniboss Entrance in Earth Temple"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 632,
+            "y": 327
+          }
+        ]
+      },
+      {
+        "name": "Miniboss Entrance in Wind Temple",
+        "access_rules": [
+          "@Macros/can_open_wind_temple_upper_giant_grate, wt_small:2"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Miniboss Entrance in Wind Temple"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 632,
+            "y": 412
+          }
+        ]
+      },
+      {
+        "name": "Miniboss Entrance in Hyrule Castle",
+        "access_rules": [
+          "@Macros/can_access_hyrule"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Miniboss Entrance in Hyrule Castle"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 378,
+            "y": 309
+          }
+        ]
+      },
+      {
+        "name": "Boss Entrance in Dragon Roost Cavern",
+        "access_rules": [
+          "@Macros/can_reach_dragon_roost_cavern_boss_stairs, drc_big"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Boss Entrance in Dragon Roost Cavern"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 659,
+            "y": 70
+          }
+        ]
+      },
+      {
+        "name": "Boss Entrance in Forbidden Woods",
+        "access_rules": [
+          [
+            "fw_big",
+            "@Forbidden Woods/Double Mothula Room"
+          ]
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Boss Entrance in Forbidden Woods"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 659,
+            "y": 157
+          }
+        ]
+      },
+      {
+        "name": "Boss Entrance in Tower of the Gods",
+        "access_rules": [
+          [
+            "@Macros/can_reach_tower_of_the_gods_third_floor",
+            "@Macros/can_defeat_armos",
+            "totg_big"
+          ]
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Boss Entrance in Tower of the Gods"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 659,
+            "y": 242
+          }
+        ]
+      },
+      {
+        "name": "Boss Entrance in Forsaken Fortress",
+        "access_rules": [
+          [
+            "@Macros/can_get_inside_forsaken_fortress",
+            "hammer",
+            "@Macros/_can_fly_with_deku_leaf_indoors_or_hookshot",
+            "@Macros/_can_access_outdoors_boss_entrance_in_forsaken_fortress"
+          ],
+          [
+            "@Macros/can_get_inside_forsaken_fortress",
+            "hammer",
+            "@General Logic/Hard Logic Obscurity",
+            "@General Logic/Hard Logic Precision",
+            "@Macros/_can_access_outdoors_boss_entrance_in_forsaken_fortress"
+          ]
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Boss Entrance in Forsaken Fortress"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 34,
+            "y": 35
+          }
+        ]
+      },
+      {
+        "name": "Boss Entrance in Earth Temple",
+        "access_rules": [
+          "@Macros/can_reach_earth_temple_tall_vine_room, et_big"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Boss Entrance in Earth Temple"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 659,
+            "y": 327
+          }
+        ]
+      },
+      {
+        "name": "Boss Entrance in Wind Temple",
+        "access_rules": [
+          [
+            "@Macros/can_reach_wind_temple_tall_basement_room",
+            "hookshot",
+            "boots",
+            "@Macros/can_play_command_melody",
+            "@Macros/can_play_wind_gods_aria",
+            "wt_big"
+          ]
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Boss Entrance in Wind Temple"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 659,
+            "y": 412
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Outset Island",
+        "access_rules": [
+          "power, @Macros/can_reach_outset_island_upper_level, @Macros/can_fly_with_deku_leaf_outdoors",
+          "power, hookshot"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Outset Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 85,
+            "y": 543
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Dragon Roost Island",
+        "_comment": "Tingle Bombs can be used here.",
+        "access_rules": [
+          "@Macros/can_move_boulders",
+          "@Macros/_tingle_tuner_sequence_break, [@Macros/can_move_boulders]"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Dragon Roost Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 451,
+            "y": 152
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Fire Mountain",
+        "access_rules": [
+          "@Macros/has_ice_arrows"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Fire Mountain"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 461,
+            "y": 212
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Ice Ring Isle",
+        "access_rules": [
+          "@Macros/has_fire_arrows"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Ice Ring Isle"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 374,
+            "y": 464
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Private Oasis",
+        "access_rules": [
+          "delivery, deed, grapple"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Private Oasis"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 381,
+            "y": 374
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Needle Rock Isle",
+        "access_rules": [
+          "@Macros/has_fire_arrows",
+          "sequence_break_other, [@Macros/has_fire_arrows], @Macros/_has_hero_sword"// Spin attacks and quick spins slowly reduce the size of the ice
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Needle Rock Isle"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 33,
+            "y": 371
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Angular Isles",
+        "access_rules": [
+          "@Macros/can_fly_with_deku_leaf_outdoors",
+          "hookshot"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Angular Isles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 383,
+            "y": 549
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Boating Course",
+        "access_rules": [
+          "@Macros/can_fly_with_deku_leaf_outdoors",
+          "hookshot"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Boating Course"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 463,
+            "y": 544
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Stone Watcher Island",
+        "access_rules": [
+          "power"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Stone Watcher Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 213,
+            "y": 379
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Overlook Island",
+        "access_rules": [
+          "hookshot"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Overlook Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 552,
+            "y": 45
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Bird's Peak Rock",
+        "access_rules": [
+          "bait, @Macros/can_buy_hyoi_pears",
+          "sequence_break_other, [bait], [@Macros/can_buy_hyoi_pears], grapple"// The bars blocking the entrance can be clipped through by swinging and jumping with the grappling hook
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Bird's Peak Rock"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 563,
+            "y": 392
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Pawprint Isle",
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Pawprint Isle"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 383,
+            "y": 127
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Pawprint Isle Side Isle",
+        "access_rules": [
+          "hookshot"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Pawprint Isle Side Isle"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 363,
+            "y": 127
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Diamond Steppe Island",
+        "access_rules": [
+          "hookshot"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Diamond Steppe Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 50,
+            "y": 466
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Bomb Island",
+        "access_rules": [
+          "@Macros/can_move_boulders"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Bomb Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 461,
+            "y": 383
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Rock Spire Isle",
+        "_comment": [
+          "Tingle Bombs can be used here. The second bomb needs to be positioned with the GBA dpad, the others can be",
+          " placed right on the edge before the rock."
+        ],
+        "access_rules": [
+          "bombs",
+          "@Macros/_tingle_tuner_sequence_break, [bombs]"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Rock Spire Isle"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 119,
+            "y": 219
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Shark Island",
+        "access_rules": [
+          "boots, hammer",
+          // This might be possible with hammer instead of sword, but this needs to be proven before it is added.
+          // This might be possible using Tingle Bombs.
+          "sequence_break_other, sword, [boots], [hammer], bombs"// The knockback from a bomb explosion can launch Link into the entrance from the elevated section, a jump slash is needed.
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Shark Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 210,
+            "y": 471
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Cliff Plateau Isles",
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Cliff Plateau Isles"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 556,
+            "y": 463
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Horseshoe Island",
+        "access_rules": [
+          "@Macros/can_fan_with_deku_leaf"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Horseshoe Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 37,
+            "y": 559
+          }
+        ]
+      },
+      {
+        "name": "Secret Cave Entrance on Star Island",
+        "_comment": "Tingle Bombs can be used here.",
+        "access_rules": [
+          "@Macros/can_move_boulders",
+          "@Macros/_tingle_tuner_sequence_break, [@Macros/can_move_boulders]"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Secret Cave Entrance on Star Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 117,
+            "y": 48
+          }
+        ]
+      },
+      {
+        "name": "Inner Entrance in Ice Ring Isle Secret Cave",
+        "access_rules": [
+          "@Exit Logic/Ice Ring Isle Secret Cave, boots"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Inner Entrance in Ice Ring Isle Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 374,
+            "y": 484
+          }
+        ]
+      },
+      {
+        "name": "Inner Entrance in Cliff Plateau Isles Secret Cave",
+        "access_rules": [
+          [
+            "@Exit Logic/Cliff Plateau Isles Secret Cave",
+            "@Macros/can_defeat_boko_babas",
+            "@Macros/can_fly_with_deku_leaf_indoors"
+          ]
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Inner Entrance in Cliff Plateau Isles Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 536,
+            "y": 463
+          }
+        ]
+      },
+      {
+        "name": "Fairy Fountain Entrance on Outset Island",
+        "access_rules": [
+          "@Macros/can_access_forest_of_fairies, @Macros/can_move_boulders"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Fairy Fountain Entrance on Outset Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 107,
+            "y": 561
+          }
+        ]
+      },
+      {
+        "name": "Fairy Fountain Entrance on Thorned Fairy Island",
+        "access_rules": [
+          "hammer"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Fairy Fountain Entrance on Thorned Fairy Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 546,
+            "y": 296
+          }
+        ]
+      },
+      {
+        "name": "Fairy Fountain Entrance on Eastern Fairy Island",
+        "access_rules": [
+          "@Macros/can_move_boulders"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Fairy Fountain Entrance on Eastern Fairy Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 380,
+            "y": 212
+          }
+        ]
+      },
+      {
+        "name": "Fairy Fountain Entrance on Western Fairy Island",
+        "access_rules": [
+          "hammer"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Fairy Fountain Entrance on Western Fairy Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 41,
+            "y": 212
+          }
+        ]
+      },
+      {
+        "name": "Fairy Fountain Entrance on Southern Fairy Island",
+        "access_rules": [
+          "bombs",
+          "@Macros/has_fire_arrows"
+        ],
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Fairy Fountain Entrance on Southern Fairy Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 294,
+            "y": 468
+          }
+        ]
+      },
+      {
+        "name": "Fairy Fountain Entrance on Northern Fairy Island",
+        "sections": [
+          {
+            "name": "Can Enter",
+            "hosted_item": "Fairy Fountain Entrance on Northern Fairy Island"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "entrances",
+            "x": 210,
+            "y": 41
+          }
+        ]
+      }
+    ]
+  }
+]

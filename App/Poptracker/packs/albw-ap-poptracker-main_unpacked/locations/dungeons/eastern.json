@@ -1,0 +1,384 @@
+[
+  {
+    "name": "Eastern Palace",
+    "color": "#00FF00",
+    "chest_unopened_img": "images/checks/chest_small_unopened.png",
+    "chest_opened_img": "images/checks/chest_small_opened.png",
+    "access_rules": [
+      "merge",
+      "bow",
+      "hookshot",
+      "boomerang",
+      "bombs",
+      "great_spin, fsword",
+      "niceirod",
+      "[hard], glove, msword",
+      "[hard], irod, msword",
+      "[hard], bell, wv_eastern, msword"
+    ],
+    "children": [
+      {
+        "name": "(1F) Merge Chest",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 224,
+            "y": 662
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_1f_merge_chest",
+            "access_rules": ["merge"]
+          }
+        ]
+      },
+      {
+        "name": "(1F) Left Door Chest",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 143,
+            "y": 618
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_1f_left_door_chest",
+            "access_rules": [
+              "{csmc_on}",
+              "bow",
+              "hookshot",
+              "boomerang",
+              "bombs",
+              "great_spin, fsword",
+              "niceirod",
+              "[hard]"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "(1F) Popo Room",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 87,
+            "y": 506
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_1f_popo_room",
+            "access_rules": ["$attack"]
+          }
+        ]
+      },
+      {
+        "name": "(1F) Secret Room",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 87,
+            "y": 561
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_1f_secret_room",
+            "access_rules": ["$attack"]
+          }
+        ]
+      },
+      {
+        "name": "(1F) Switch Room",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 277,
+            "y": 508
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_1f_switch_room",
+            "access_rules": [
+              "{csmc_on}",
+              "bow",
+              "boomerang",
+              "hookshot",
+              "bombs",
+              "great_spin, fsword",
+              "[hard], irod",
+              "[hard], msword"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "(2F) Ball Room",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 493,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_2f_ball_room",
+            "access_rules": ["$ep_small_keys|1, $attack"]
+          }
+        ]
+      },
+      {
+        "name": "(2F) Defeat Popos",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 650,
+            "y": 106
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_2f_defeat_popos",
+            "access_rules": ["$ep_small_keys|1, $attack"]
+          }
+        ]
+      },
+      {
+        "name": "(2F) Switch Room",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 724,
+            "y": 238
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_2f_switch_room",
+            "access_rules": [
+              "$ep_small_keys|1, bow",
+              "$ep_small_keys|1, bombs",
+              "$ep_small_keys|1, irod",
+              "$ep_small_keys|1, $attack, boomerang",
+              "$ep_small_keys|1, $attack, hookshot",
+              "$ep_small_keys|1, great_spin, fsword",
+              // You can use 4 of the 6 pots
+              "[hard], $ep_small_keys|1, $attack"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "(2F) Big Chest",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 478,
+            "y": 216
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_2f_big_chest",
+            "access_rules": [
+              "$ep_small_keys|2, $attack",
+              "[advanced], $ep_small_keys|1, trod"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Yuga",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 174,
+            "y": 172
+          }
+        ],
+        "sections": [
+          {
+            "name": "Yuga Rewards",
+            "hosted_item": "ep_yuga",
+            "access_rules": ["^$yuga_eastern"]
+          }
+        ]
+      },
+      {
+        "name": "(3F) Escape Chest",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 261,
+            "y": 172
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "hosted_item": "ep_3f_escape_chest",
+            "access_rules": ["^$yuga_eastern, merge"]
+          }
+        ]
+      },
+      {
+        "name": "(1F) Escape Chest",
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 78,
+            "y": 604
+          }
+        ],
+        "sections": [
+          {
+            "name": "Chest",
+            "capture_item": true,
+            "hosted_item": "ep_1f_escape_chest",
+            "access_rules": ["^$yuga_eastern, merge"]
+          }
+        ]
+      },
+      {
+        "name": "Eastern Palace Reward",
+        "sections": [
+          {
+            "name": "Reward",
+            "hosted_item": "ep",
+            "access_rules": ["^$yuga_eastern"]
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "eastern",
+            "x": 174,
+            "y": 690,
+            "size": 24
+          }
+        ]
+      },
+      {
+        "name": "Eastern Palace",
+        "sections": [
+          {
+            "name": "(1F) Merge Chest",
+            "hosted_item": "ep_1f_merge_chest",
+            "access_rules": ["merge"]
+          },
+          {
+            "name": "(1F) Left Door Chest",
+            "hosted_item": "ep_1f_left_door_chest",
+            "access_rules": [
+              "{csmc_on}",
+              "bow",
+              "hookshot",
+              "boomerang",
+              "bombs",
+              "great_spin, fsword",
+              "niceirod",
+              "[hard]"
+            ]
+          },
+          {
+            "name": "(1F) Popo Room",
+            "hosted_item": "ep_1f_popo_room",
+            "access_rules": ["$attack"]
+          },
+          {
+            "name": "(1F) Secret Room",
+            "hosted_item": "ep_1f_secret_room",
+            "access_rules": ["$attack"]
+          },
+          {
+            "name": "(1F) Switch Room",
+            "hosted_item": "ep_1f_switch_room",
+            "access_rules": [
+              "{csmc_on}",
+              "bow",
+              "boomerang",
+              "hookshot",
+              "bombs",
+              "great_spin, fsword",
+              "[hard], irod",
+              "[hard], msword"
+            ]
+          },
+          {
+            "name": "(2F) Ball Room",
+            "hosted_item": "ep_2f_ball_room",
+            "access_rules": ["$ep_small_keys|1, $attack"]
+          },
+          {
+            "name": "(2F) Defeat Popos",
+            "hosted_item": "ep_2f_defeat_popos",
+            "access_rules": ["$ep_small_keys|1, $attack"]
+          },
+          {
+            "name": "(2F) Switch Room",
+            "hosted_item": "ep_2f_switch_room",
+            "access_rules": [
+              "$ep_small_keys|1, bow",
+              "$ep_small_keys|1, bombs",
+              "$ep_small_keys|1, irod",
+              "$ep_small_keys|1, $attack, boomerang",
+              "$ep_small_keys|1, $attack, hookshot",
+              "$ep_small_keys|1, great_spin, fsword",
+              // You can use 4 of the 6 pots
+              "[hard], $ep_small_keys|1, $attack"
+            ]
+          },
+          {
+            "name": "(2F) Big Chest",
+            "hosted_item": "ep_2f_big_chest",
+            "access_rules": [
+              "$ep_small_keys|2, $attack",
+              "[advanced], $ep_small_keys|1, trod"
+            ]
+          },
+          {
+            "name": "Yuga",
+            "hosted_item": "ep_yuga",
+            "access_rules": ["^$yuga_eastern"]
+          },
+          {
+            "name": "(3F) Escape Chest",
+            "hosted_item": "ep_3f_escape_chest",
+            "access_rules": ["^$yuga_eastern, merge"]
+          },
+          {
+            "name": "(1F) Escape Chest",
+            "capture_item": true,
+            "hosted_item": "ep_1f_escape_chest",
+            "access_rules": ["^$yuga_eastern, merge"]
+          },
+          {
+            "name": "Reward",
+            "hosted_item": "ep",
+            "access_rules": ["^$yuga_eastern"]
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "hyrule",
+            "x": 1921,
+            "y": 820,
+            "size": 80
+          }
+        ]
+      }
+    ]
+  }
+]

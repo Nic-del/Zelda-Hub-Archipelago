@@ -1,0 +1,192 @@
+[
+	{
+		"name": "Sunken City",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"color": "#00ff08",
+		"children": [
+			{
+				"name": "See the Season",
+				"visibility_rules": ["defaultseasonsoff", "singularity_random"],
+				"sections": [
+					{
+						"name": "Sunken City",
+						"access_rules": ["{^$CanReach|SunkenCityFindSeason}"],
+						"chest_unopened_img": "images/labels/season_icons.png",
+						"chest_opened_img": "images/labels/season_icons_disabled.png"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 585,
+						"y": 257,
+						"shape": "diamond"
+					},
+					{
+						"map": "holodrum",
+						"x": 503,
+						"y": 110,
+						"shape": "diamond"
+					}
+				]
+			},
+			{
+				"name": "Sunken City Tree",
+				"sections": [
+					{
+						"name": "Sunken City: Seed Tree",
+						"access_rules": ["^$CanReach|SunkenTree"],
+						"chest_unopened_img": "images/items/tree_gale.png",
+						"chest_opened_img": "images/items/tree_gale_disabled.png"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 661,
+						"y": 235
+					}
+				]
+			},
+			{
+				"name": "Diver Secret",
+				"sections": [
+					{
+						"name": "Underwater Race",
+						"visibility_rules": ["secrets_on"],
+						"access_rules": ["^$CanReach|DiverSecret"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 585,
+						"y": 230
+					}
+				]
+			},
+			{
+				"name": "Ingo's House",
+				"sections": [
+					{
+						"name": "Sunken City: Vase Trade",
+						"access_rules": ["^$CanReach|SunkenVaseTrade"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 570,
+						"y": 187
+					}
+				]
+			},
+			{
+				"name": "Syrup's Hut",
+				"sections": [
+					{
+						"name": "Sunken City: Syrup Trade",
+						"access_rules": ["^$CanReach|Syrup"]
+					},
+					{
+						"name": "Sunken City: Syrup Shop #1",
+						"access_rules": ["^$CanReach|SyrupShop"]
+					},
+					{
+						"name": "Sunken City: Syrup Shop #2",
+						"access_rules": ["^$CanReach|SyrupShop"]
+					},
+					{
+						"name": "Sunken City: Syrup Shop #3",
+						"access_rules": ["^$CanReach|SyrupShop"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 620,
+						"y": 237
+					}
+				]
+			},
+			{
+				"name": "Waterfall Challenge",
+				"sections": [
+					{
+						"name": "Sunken City: Master Diver's Challenge Chest",
+						"access_rules": ["^$CanReach|MasterChallenge"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 605,
+						"y": 120
+					}
+				]
+			},
+			{
+				"name": "Waterfall",
+				"sections": [
+					{
+						"name": "Sunken City: Master's Plaque Trade",
+						"access_rules": ["^$CanReach|MasterDiver"]
+					},
+					{
+						"name": "Sunken City: Chest in Master Diver's Cave",
+						"access_rules": ["^$CanReach|SunkenMasterDiverChest"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 625,
+						"y": 120
+					}
+				]
+			},
+			{
+				"name": "Sunken City Gasha Spot",
+				"visibility_rules": ["^$CanSeeGasha|1"],
+				"sections": [
+					{
+						"name": "Near Master Diver",
+						"chest_unopened_img": "images/items/gasha_spot.png",
+						"chest_opened_img": "images/items/gasha_spot_gray.png",
+						"access_rules": ["^$CanReach|SunkenGashaSpot"]
+					},
+					{
+						"name": "Harvested",
+						"chest_unopened_img": "images/items/gasha_nut.png",
+						"chest_opened_img": "images/items/gasha_nut_gray.png",
+						"access_rules": ["^$HasPlanted|@Sunken City/Sunken City Gasha Spot/Near Master Diver"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 660,
+						"y": 155
+					}
+				]
+			},
+			{
+				"name": "Sunken City Cliffs",
+				"sections": [
+					{
+						"name": "Sunken City: Chest in Summer Cave",
+						"access_rules": ["^$CanReach|SunkenSummerCave"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 652,
+						"y": 185
+					}
+				]
+			}
+		]
+	}
+]

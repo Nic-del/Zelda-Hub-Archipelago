@@ -1,0 +1,30 @@
+{
+    "tracker_broadcast": {
+        "type": "container",
+        "background": "#00000000",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "array",
+                    "orientation": "vertical",
+                    "content": [
+                        {
+                            "type": "layout",
+                            "key": "item_grid"
+                        },
+                        {
+                            "type": "layout",
+                            "key": "spell_grid"
+                        },
+                        {
+                            "type": "layout",
+                            "key": "key_grid"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

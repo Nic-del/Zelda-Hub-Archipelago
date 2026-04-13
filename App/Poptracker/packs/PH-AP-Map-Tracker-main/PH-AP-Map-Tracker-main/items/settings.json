@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Spirit Gems Pack",
+		"type": "consumable",
+		"img": "images/items/PowerGemSprite.png",
+		"codes": "gem_packs",
+		"min_quantity": 1,
+		"max_quantity": 20
+	},
+	{
+		"name": "Salvageable Treasures",
+		"type": "toggle",
+		"img": "images/items/salvage_arm.png",
+		"codes": "salvage_setting"
+	},
+	{
+		"name": "Fishing Quest",
+		"type": "toggle",
+		"img": "images/items/fishing_rod.png",
+		"codes": "fishing_setting"
+	}
+]

@@ -1,0 +1,266 @@
+import os
+import sys
+import json
+import time
+import queue
+import asyncio
+import logging
+import traceback
+import threading
+import argparse
+import websockets
+
+from pathlib import Path
+
+try:
+    from flaskwebgui import FlaskUI
+    webGuiLoaded = True
+except:
+    logging.error(f'Error importing flaskwebgui: {traceback.format_exc()}')
+    webGuiLoaded = False
+
+import endpoints
+import localSettings
+
+if sys.platform.lower().startswith('win'):
+    import ctypes
+
+    def hideConsole():
+        """
+        Hides the console window in GUI mode. Necessary for frozen application, because
+        this application support both, command line processing AND GUI mode and therefor
+        cannot be run via pythonw.exe.
+        """
+
+        whnd = ctypes.windll.kernel32.GetConsoleWindow()
+        if whnd != 0:
+            ctypes.windll.user32.ShowWindow(whnd, 0)
+            # if you wanted to close the handles...
+            #ctypes.windll.kernel32.CloseHandle(whnd)
+
+    def showConsole():
+        """Unhides console window"""
+        whnd = ctypes.windll.kernel32.GetConsoleWindow()
+        if whnd != 0:
+            ctypes.windll.user32.ShowWindow(whnd, 1)
+
+def startLocal(width, height, settings, debug, noGui, x=None, y=None, maximized=False):
+    if width == None:
+        width = settings['width']
+    else:
+        settings['width'] = width
+
+    if height == None:
+        height = settings['height']
+    else:
+        settings['height'] = height
+    
+    if height != None or width != None:
+        localSettings.writeSettings(settings)
+
+    if sys.platform.lower().startswith('win') and not debug:
+        if getattr(sys, 'frozen', False):
+            hideConsole()
+
+    chromePaths = [r'%ProgramFiles%\Google\Chrome\Application\chrome.exe',
+                    r'%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe',
+                    r'%LocalAppData%\Google\Chrome\Application\chrome.exe']
+    
+    browserPath = None
+    
+    for path in chromePaths:
+        expanded = os.path.expandvars(path)
+        if os.path.exists(expanded):
+            browserPath = expanded
+            print(f'Found Chrome at {browserPath}')
+            break
+    
+    if webGuiLoaded and not noGui:
+        extraFlags = []
+        if x != None and y != None:
+            extraFlags.append(f"--window-position={x},{y}")
+
+        uiWidth = width
+        uiHeight = height
+        if maximized:
+            uiWidth = None
+            uiHeight = None
+
+        ui = FlaskUI(
+            server=startFlask,
+            server_kwargs={
+                "app": endpoints.app,
+                "port": 16114,
+            },
+            width=uiWidth,
+            height=uiHeight,
+            fullscreen=maximized,
+            extra_flags=extraFlags
+        )
+
+        ui.run()
+    else:
+        startFlask(app=endpoints.app, port=16114)
+        
+        while True:
+            time.sleep(1)
+
+def startFlask(**serverKwargs):
+    app = serverKwargs.pop("app", None)
+    serverKwargs.pop("debug", None)
+    serverKwargs['max_request_header_size'] = 1073741824
+    serverKwargs['max_request_body_size'] = 1073741824
+
+    try:
+        import waitress
+
+        waitress.serve(app, **serverKwargs)
+    except:
+        app.run(**serverKwargs)
+
+async def sendMessage(message, socket):
+    await socket.send(json.dumps(message))
+
+messageLock = asyncio.Lock()
+masterMessages = {}
+async def broadcastLoop(socket, sharedMessages):
+    print("Started broadcaster loop")
+
+    lastMessages = {}
+
+    while True:
+        try:
+            async with messageLock:
+                try:
+                    messageText = await asyncio.wait_for(socket.recv(), timeout=0.1)
+                    message = None
+
+                    try:
+                        message = json.loads(messageText)
+                    except:
+                        print(f'Error parsing message: {traceback.format_exc()}')
+                        print(f'Message text: {messageText}')
+                    
+                    message['time'] = time.time()
+                    sharedMessages[message['type']] = message
+                    lastMessages[message['type']] = message['time']
+                except asyncio.TimeoutError:
+                    pass
+
+                for type,msg in sharedMessages.items():
+                    if type not in lastMessages or lastMessages[type] < msg['time']:
+                        await sendMessage(msg, socket)
+                        lastMessages[type] = msg['time']
+        except websockets.exceptions.ConnectionClosedOK:
+            pass
+        except Exception as e:
+            error = traceback.format_exc()
+            logging.error(f'Error in broadcastLoop: {error}')
+            await asyncio.sleep(1)
+
+        await asyncio.sleep(0.1)
+
+async def broadcaster():
+    import websockets
+    import functools
+
+    broadcastPartial = functools.partial(broadcastLoop, sharedMessages=masterMessages)
+    async with websockets.serve(broadcastPartial, host=None, port=17025, max_size=1024*1024*10):
+        await asyncio.Future()
+
+def startBroadcaster():
+    asyncio.run(broadcaster())
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--local', dest='local', action='store_true', help='Start as a local application')
+    parser.add_argument('--no-gui', dest='noGui', action='store_true', help='Skip the GUI when running as a local application')
+    parser.add_argument('--nested', dest='nested', action='store_true', help='Magpie is being run from a directory one level higher up the tree')
+    parser.add_argument('--double-nested', dest='doubleNested', action='store_true', help='Magpie is being run from a directory two levels higher up the tree')
+    parser.add_argument('--debug', dest='debug', action='store_true', help='Prevent the command prompt from being hidden')
+    parser.add_argument('--width', dest='width', action='store', type=int, help='Local application starting window width')
+    parser.add_argument('--height', dest='height', action='store', type=int, help='Local application starting window height')
+    parser.add_argument('--ap-server', dest='apServer', action='store', help='Archipelago server address')
+    parser.add_argument('--ap-slot', dest='apSlot', action='store', help='Archipelago slot name')
+    parser.add_argument('--ap-password', dest='apPassword', action='store', help='Archipelago password')
+    parser.add_argument('--screen', dest='screen', action='store', type=int, help='Screen index to center the window on (1, 2, ...)')
+    args = parser.parse_args()
+
+    endpoints.app.config['local'] = args.local
+    endpoints.app.config['apServer'] = args.apServer
+    endpoints.app.config['apSlot'] = args.apSlot
+    endpoints.app.config['apPassword'] = args.apPassword
+    localSettings.nested = args.nested
+    localSettings.doubleNested = args.doubleNested
+
+    if endpoints.app.config['local']:
+        import broadcastView
+        from broadcastView import BroadcastView
+        endpoints.itemsBroadcastView = BroadcastView(endpoints.mainThreadQueue, broadcastView.types.items)
+        endpoints.mapBroadcastView = BroadcastView(endpoints.mainThreadQueue, broadcastView.types.map)
+
+        settings = localSettings.readSettings()
+
+        x = None
+        y = None
+        maximized = False
+
+        if args.width == None and args.height == None:
+            sizePath = Path(__file__).parent / 'windowSize.json'
+            if sizePath.is_file():
+                try:
+                    with open(sizePath, 'r') as file:
+                        size = json.load(file)
+                        args.width = size.get('width')
+                        args.height = size.get('height')
+                        x = size.get('x')
+                        y = size.get('y')
+                        maximized = size.get('maximized', False)
+                except:
+                    pass
+
+        if args.screen != None:
+            try:
+                import ctypes
+                user32 = ctypes.windll.user32
+                # Note: This is a simplification. Windows usually stacks monitors horizontally.
+                # Screen 1 is 0. Screen 2 is 1920, etc. (assuming 1080p)
+                # For a more precise result, we'd need EnumDisplayMonitors.
+                w = args.width or settings.get('width', 1150)
+                h = args.height or settings.get('height', 720)
+                
+                monitor_width = user32.GetSystemMetrics(0) # Primary width
+                monitor_height = user32.GetSystemMetrics(1)
+                
+                offset_x = (args.screen - 1) * monitor_width
+                x = offset_x + (monitor_width - w) // 2
+                y = (monitor_height - h) // 2
+            except:
+                pass
+
+        thread = threading.Thread(target=startLocal, args=(args.width, args.height, settings, args.debug, args.noGui, x, y, maximized))
+        thread.start()
+
+        broadcastThread = threading.Thread(target=startBroadcaster)
+        broadcastThread.start()
+
+        while thread.is_alive():
+            try:
+                (callback, args) = endpoints.mainThreadQueue.get(False)
+                callback(*args)
+            except queue.Empty:
+                endpoints.mapBroadcastView.updateWindow()
+                endpoints.itemsBroadcastView.updateWindow()
+            
+            time.sleep(0.1)
+
+        thread.join()
+
+        if sys.platform.lower().startswith('win') and not args.debug:
+            if getattr(sys, 'frozen', False):
+                showConsole()
+    else:
+        endpoints.app.run()
+
+if __name__ == "__main__":
+    main()

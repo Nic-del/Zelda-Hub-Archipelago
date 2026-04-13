@@ -1,0 +1,70 @@
+[
+	{
+		"name": "ForestTempleBossRoom",
+		"access_rules": [
+			"@ForestTempleNorthWing, ftbigkey, boomerang, $canFreeAllMonkeys",
+			"[glitcheson], @ForestTempleNorthWing, ftbigkey, boomerang, $canFreeAllMonkeysGlitched",
+			"@ForestTempleNorthWing, ftbigkey, boomerang, clawshot",
+			"@ForestTempleNorthWing, bkkeysy, boomerang, $canFreeAllMonkeys",
+			"[glitcheson], @ForestTempleNorthWing, bkkeysy, boomerang, $canFreeAllMonkeysGlitched",
+			"@ForestTempleNorthWing, bkkeysy, boomerang, clawshot",
+			"[glitcheson], @ForestTempleNorthWing, ftbigkey, $canDoLJA",
+			"[glitcheson], @ForestTempleNorthWing, bkkeysy, $canDoLJA"
+		]
+	},
+	{
+		"name": "ForestTempleEastWing",
+		"access_rules": [
+			"@ForestTempleLobby",
+			"@ForestTempleNorthWing"
+		]
+	},
+	{
+		"name": "ForestTempleEntrance",
+		"access_rules": [
+			"@NorthFaronWoods",
+			"@ForestTempleLobby"
+		]
+	},
+	{
+		"name": "ForestTempleLobby",
+		"access_rules": [
+			"@ForestTempleEastWing",
+			"@ForestTempleEntrance, $canDefeatWalltula, $canDefeatBokoblin, $canBreakMonkeyCage",
+			"[glitcheson], @ForestTempleEntrance, $canDefeatWalltulaGlitched, $canDefeatBokoblinGlitched, $canBreakMonkeyCageGlitched",
+			"@ForestTempleWestWing"
+		]
+	},
+	{
+		"name": "ForestTempleNorthWing",
+		"access_rules": [
+			"@ForestTempleEastWing"
+		]
+	},
+	{
+		"name": "ForestTempleWestWing",
+		"access_rules": [
+			"@ForestTempleLobby, $canBurnWebs, ftsmallkey:2, $canDefeatBokoblin",
+			"[glitcheson], @ForestTempleLobby, $canBurnWebs, ftsmallkey:2, $canDefeatBokoblinGlitched",
+			"@ForestTempleLobby, $canBurnWebs, skkeysy, $canDefeatBokoblin",
+			"[glitcheson], @ForestTempleLobby, $canBurnWebs, skkeysy, $canDefeatBokoblinGlitched",
+			"@ForestTempleLobby, $canBurnWebs, clawshot",
+			"[glitcheson], @ForestTempleLobby, $canBurnWebs, $canDoLJA",
+			"@Ook, $canDefeatOok, boomerang",
+			"[glitcheson], @Ook, $canDefeatOokGlitched, boomerang"
+		]
+	},
+	{
+		"name": "Ook",
+		"access_rules": [
+			"@ForestTempleEntrance, lantern, $canDefeatWalltula, $canDefeatBokoblin, $canBreakMonkeyCage, ftsmallkey:4",
+			"[glitcheson], @ForestTempleEntrance, lantern, $canDefeatWalltulaGlitched, $canDefeatBokoblinGlitched, $canBreakMonkeyCageGlitched, ftsmallkey:4",
+			"@ForestTempleEntrance, lantern, $canDefeatWalltula, $canDefeatBokoblin, $canBreakMonkeyCage, skkeysy",
+			"[glitcheson], @ForestTempleEntrance, lantern, $canDefeatWalltulaGlitched, $canDefeatBokoblinGlitched, $canBreakMonkeyCageGlitched, skkeysy",
+			"@ForestTempleWestWing, boomerang",
+			"[glitcheson], @ForestTempleWestWing, shadowcrystal",
+			"[glitcheson], @ForestTempleWestWing, sword",
+			"[glitcheson], @ForestTempleWestWing, $hasBombs"
+		]
+	}
+]

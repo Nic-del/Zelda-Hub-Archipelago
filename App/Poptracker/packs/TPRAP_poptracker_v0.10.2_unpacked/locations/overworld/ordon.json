@@ -1,0 +1,231 @@
+[
+	{
+		"name": "Ordon",
+		"children": [
+			{
+				"name": "Link's House",
+				"access_rules": [
+					"@OrdonLinksHouse"
+				],
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 445,
+						"y": 527
+					}
+				],
+				"sections": [
+					{
+						"name": "Wooden Sword Chest",
+						"access_rules": [
+							""
+						]
+					},
+					{
+						"name": "Basement Chest",
+						"access_rules": [
+							"lantern"
+						]
+					}
+				]
+			},
+			{
+				"name": "Rusl's House",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 294,
+						"y": 830
+					}
+				],
+				"sections": [
+					{
+						"name": "Uli Cradle Delivery",
+						"access_rules": [
+							"@OrdonVillage"
+						]
+					},
+					{
+						"name": "Ordon Sword",
+						"access_rules": [
+							"@OrdonSwordHouse, $canCompletePrologue",
+							"@OrdonSwordHouse, $faronTwilightCleared"
+						]
+					}
+				]
+			},
+			{
+				"name": "Sera's Shop",
+				"access_rules": [
+					"@OrdonSerasShop"
+				],
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 431,
+						"y": 710
+					}
+				],
+				"sections": [
+					{
+						"name": "Sera Shop Slingshot",
+						"access_rules": [
+							""
+						]
+					},
+					{
+						"name": "Ordon Cat Rescue",
+						"access_rules": [
+							"fishingrod"
+						]
+					}
+				]
+			},
+			{
+				"name": "Ordon Shield",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 515,
+						"y": 777
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageoff",
+							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, damagevanilla",
+							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, damagedouble",
+							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, damagetriple",
+							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, damagequadruple",
+							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, $canUseBottledFairies, @LakeHylia",
+							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageoff",
+							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, damagevanilla",
+							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, damagedouble",
+							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, damagetriple",
+							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, damagequadruple",
+							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, $canUseBottledFairies, @LakeHylia"
+						]
+					}
+				]
+			},
+			{
+				"name": "Wrestling With Bo",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 439,
+						"y": 909
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@OrdonBosHouse"
+						]
+					}
+				]
+			},
+			{
+				"name": "Herding Goats Reward",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 472,
+						"y": 1263
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@OrdonRanch, $canCompletePrologue"
+						]
+					}
+				]
+			},
+			{
+				"name": "Ranch Grotto Lantern Chest",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 257,
+						"y": 1262
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"@OrdonRanchGrotto, lantern"
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Ordon Golden Wolves",
+		"children": [
+			{
+				"name": "Golden Wolf",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 296,
+						"y": 272
+					}
+				],
+				"sections": [
+					{
+						"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
+						"chest_opened_img": "images/Items/GoldenWolf.png",
+						"access_rules": [
+							"@OrdonSpring, @DeathMountainTrail, shadowcrystal, dmhowlingstone"
+						]
+					}
+				]
+			},
+			{
+				"name": "Death Mountain Stone",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 270,
+						"y": 280,
+						"size": 16
+					}
+				],
+				"sections": [
+					{
+						"ref": "Eldin Region/Death Mountain Golden Wolves/Ordon Spring Stone/"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Ordon Hint Signs",
+		"children": [
+			{
+				"name": "Hint Sign",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 450,
+						"y": 580,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"{@OutsideLinksHouse}"
+						],
+						"visibility_rules": [
+							"hintson"
+						]
+					}
+				]
+			}
+		]
+	}
+]

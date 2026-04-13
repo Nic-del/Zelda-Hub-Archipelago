@@ -1,0 +1,398 @@
+[
+	{
+		"name": "Holodrum Plain",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"color": "#00ff08",
+		"children": [
+			{
+				"name": "See the Season",
+				"visibility_rules": ["defaultseasonsoff", "singularity_random"],
+				"sections": [
+					{
+						"name": "Holodrum Plain",
+						"access_rules": ["{^$CanReach|HolodrumPlainFindSeason}"],
+						"chest_unopened_img": "images/labels/season_icons.png",
+						"chest_opened_img": "images/labels/season_icons_disabled.png"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 323,
+						"y": 320,
+						"shape": "diamond"
+					}
+				]
+			},
+			{
+				"name": "See Your Companion",
+				"sections": [
+					{
+						"access_rules": ["{^$CanReach|SunkenDoorstep}", "{^$CanReach|MoblinKeepBridge}", "{^$CanReach|NatzuWest}"],
+						"chest_unopened_img": "images/items/companions.png",
+						"chest_opened_img": "images/items/companions_gray.png"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 323,
+						"y": 220,
+						"shape": "diamond"
+					}
+				]
+			},
+			{
+				"name": "Holodrum Plain Tree",
+				"sections": [
+					{
+						"name": "Holodrum Plain: Seed Tree",
+						"access_rules": ["^$CanReach|HolodrumPlainTree"],
+						"chest_unopened_img": "images/items/tree_scent.png",
+						"chest_opened_img": "images/items/tree_scent_disabled.png"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 323,
+						"y": 279
+					}
+				]
+			},
+			{
+				"name": "Blaino's Gym",
+				"sections": [
+					{
+						"access_rules": ["^$CanReach|Blaino"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 366,
+						"y": 322
+					}
+				]
+			},
+			{
+				"name": "Cave Behind Mushrooms",
+				"sections": [
+					{
+						"name": "Holodrum Plain: Chest in Flooded Cave Behind Mushrooms",
+						"access_rules": ["^$CanReach|HolodrumPlainMushroomCave"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 313,
+						"y": 364
+					}
+				]
+			},
+			{
+				"name": "Old Man Near Blaino's Gym",
+				"visibility_rules": ["old_men_locations"],
+				"sections": [
+					{
+						"name": "Holodrum Plain: Old Man Near Blaino's Gym",
+						"hosted_item": "event_northholplain_oldman",
+						"access_rules": ["^$CanReach|NorthHolodrumPlainOldMan"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 280,
+						"y": 286
+					}
+				]
+			},
+			{
+				"name": "Underwater Item Below Natzu Bridge",
+				"sections": [
+					{
+						"name": "Holodrum Plain: Underwater Item Below Natzu Bridge",
+						"access_rules": ["^$CanReach|UnderNatzuBridge"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 272,
+						"y": 262
+					}
+				]
+			},
+			{
+				"name": "Old Man in Treehouse",
+				"sections": [
+					{
+						"name": "Holodrum Plain: Old Man in Treehouse",
+						"access_rules": ["^$CanReach|TreehouseOldMan"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 237,
+						"y": 492
+					}
+				]
+			},
+			{
+				"name": "Flooded Cave",
+				"sections": [
+					{
+						"name": "Holodrum Plain: Chest in Flooded Cave South of Mrs. Ruul",
+						"access_rules": ["^$CanReach|HolodrumPlainFloodedCave"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 140,
+						"y": 482
+					}
+				]
+			},
+			{
+				"name": "Mrs. Ruul's House",
+				"sections": [
+					{
+						"name": "Holodrum Plain: Mrs. Ruul Trade",
+						"access_rules": ["^$CanReach|MrsRuul"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 140,
+						"y": 445
+					}
+				]
+			},
+			{
+				"name": "Old Man Near Mrs. Ruul's House",
+				"visibility_rules": ["old_men_locations"],
+				"sections": [
+					{
+						"name": "Holodrum Plain: Old Man Near Mrs. Ruul's House",
+						"hosted_item": "event_southholplain_oldman",
+						"access_rules": ["^$CanReach|SouthHolodrumPlainOldMan"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 195,
+						"y": 455
+					}
+				]
+			},
+			{
+				"name": "Lower Holodrum Plain Gasha Spot",
+				"visibility_rules": ["^$CanSeeGasha|1"],
+				"sections": [
+					{
+						"name": "Dig It Up",
+						"chest_unopened_img": "images/items/gasha_spot.png",
+						"chest_opened_img": "images/items/gasha_spot_gray.png",
+						"access_rules": ["^$CanReach|SouthHolodrumPlainGasha"]
+					},
+					{
+						"name": "Harvested",
+						"chest_unopened_img": "images/items/gasha_nut.png",
+						"chest_opened_img": "images/items/gasha_nut_gray.png",
+						"access_rules": ["^$HasPlanted|@Holodrum Plain/Lower Holodrum Plain Gasha Spot/Dig It Up"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 221,
+						"y": 407
+					}
+				]
+			},
+			{
+				"name": "Holodrum Plain Island Gasha Spot",
+				"visibility_rules": ["^$CanSeeGasha|1"],
+				"sections": [
+					{
+						"name": "Under Bushes",
+						"chest_unopened_img": "images/items/gasha_spot.png",
+						"chest_opened_img": "images/items/gasha_spot_gray.png",
+						"access_rules": ["^$CanReach|HolodrumPlainIsland"]
+					},
+					{
+						"name": "Harvested",
+						"chest_unopened_img": "images/items/gasha_nut.png",
+						"chest_opened_img": "images/items/gasha_nut_gray.png",
+						"access_rules": ["^$HasPlanted|@Holodrum Plain/Holodrum Plain Island Gasha Spot/Under Bushes"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 235,
+						"y": 320
+					}
+				]
+			},
+			{
+				"name": "North Natzu",
+				"sections": [
+					{
+						"name": "Natzu Region: Chest in Northern Cave",
+						"access_rules": ["^$CanReach|NatzuPlatformCave"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 420,
+						"y": 180
+					},
+					{
+						"map": "natzu",
+						"x": 608,
+						"y": 20,
+						"restrict_visibility_rules": ["natzu_ricky"]
+					},
+					{
+						"map": "natzu",
+						"x": 608,
+						"y": 532,
+						"restrict_visibility_rules": ["natzu_dimitri"]
+					},
+					{
+						"map": "natzu",
+						"x": 608,
+						"y": 1044,
+						"restrict_visibility_rules": ["natzu_moosh"]
+					}
+				]
+			},
+			{
+				"name": "Deku Secret",
+				"sections": [
+					{
+						"name": "Seed Master",
+						"visibility_rules": ["secrets_on"],
+						"access_rules": ["^$CanReach|DekuSecret"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 420,
+						"y": 320
+					},
+					{
+						"map": "natzu",
+						"x": 615,
+						"y": 455,
+						"restrict_visibility_rules": ["natzu_ricky"]
+					},
+					{
+						"map": "natzu",
+						"x": 713,
+						"y": 700,
+						"restrict_visibility_rules": ["natzu_dimitri"]
+					},
+					{
+						"map": "natzu",
+						"x": 570,
+						"y": 1240,
+						"restrict_visibility_rules": ["natzu_moosh"]
+					}
+				]
+			},
+			{
+				"name": "Moblin Keep",
+				"sections": [
+					{
+						"name": "Natzu: Chest after Moblin Keep",
+						"access_rules": ["^$CanReach|GreatMoblinChest"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 490,
+						"y": 230
+					},
+					{
+						"map": "natzu",
+						"x": 871,
+						"y": 160,
+						"restrict_visibility_rules": ["natzu_ricky"]
+					},
+					{
+						"map": "natzu",
+						"x": 871,
+						"y": 671,
+						"restrict_visibility_rules": ["natzu_dimitri"]
+					},
+					{
+						"map": "natzu",
+						"x": 871,
+						"y": 1182,
+						"restrict_visibility_rules": ["natzu_moosh"]
+					}
+				]
+			},
+			{
+				"name": "Onox Gasha Spot",
+				"visibility_rules": ["^$CanSeeGasha|1"],
+				"sections": [
+					{
+						"name": "Dig It Up",
+						"chest_unopened_img": "images/items/gasha_spot.png",
+						"chest_opened_img": "images/items/gasha_spot_gray.png",
+						"access_rules": ["^$CanReach|OnoxGasha"]
+					},
+					{
+						"name": "Harvested",
+						"chest_unopened_img": "images/items/gasha_nut.png",
+						"chest_opened_img": "images/items/gasha_nut_gray.png",
+						"access_rules": ["^$HasPlanted|@Holodrum Plain/Onox Gasha Spot/Dig It Up"]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 190,
+						"y": 195
+					}
+				]
+			},
+			{
+				"name": "Onox's Castle",
+				"access_rules": ["^$CanReach|OnoxCastle"],
+				"sections": [
+					{
+						"name": "Onox",
+						"hosted_item": "onox"
+					},
+					{
+						"name": "Ganon",
+						"visibility_rules": ["ganon_goal"],
+						"hosted_item": "ganon"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 150,
+						"y": 20,
+						"size": 25
+					}
+				]
+			}
+		]
+	}
+]

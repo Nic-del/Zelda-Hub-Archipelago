@@ -1,0 +1,845 @@
+[
+  {
+    "name": "Exit Logic",
+    "children": [
+      {
+        "name": "Dragon Roost Cavern",
+        "access_rules": [
+          "^$exit_accessibility|Dragon Roost Cavern"
+        ],
+        "sections": [
+          {
+            // The section names are extra long so that there is space to fit all/most of the overlay text on the hosted
+            // items because the location names are shorter
+            "name": "Entered                                                 ",
+            "hosted_item": "Dragon Roost Cavern"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 605,
+            "y": 70
+          }
+        ]
+      },
+      {
+        "name": "Forbidden Woods",
+        "access_rules": [
+          "^$exit_accessibility|Forbidden Woods"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Forbidden Woods"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 605,
+            "y": 157
+          }
+        ]
+      },
+      {
+        "name": "Tower of the Gods",
+        "access_rules": [
+          "^$exit_accessibility|Tower of the Gods"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Tower of the Gods"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 605,
+            "y": 242
+          }
+        ]
+      },
+      {
+        "name": "Earth Temple",
+        "access_rules": [
+          "^$exit_accessibility|Earth Temple"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Earth Temple"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 605,
+            "y": 327
+          }
+        ]
+      },
+      {
+        "name": "Wind Temple",
+        "access_rules": [
+          "^$exit_accessibility|Wind Temple"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Wind Temple"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 605,
+            "y": 412
+          }
+        ]
+      },
+      {
+        "name": "Forbidden Woods Miniboss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Forbidden Woods Miniboss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Forbidden Woods Miniboss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 632,
+            "y": 157
+          }
+        ]
+      },
+      {
+        "name": "Tower of the Gods Miniboss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Tower of the Gods Miniboss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Tower of the Gods Miniboss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 632,
+            "y": 242
+          }
+        ]
+      },
+      {
+        "name": "Earth Temple Miniboss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Earth Temple Miniboss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Earth Temple Miniboss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 632,
+            "y": 327
+          }
+        ]
+      },
+      {
+        "name": "Wind Temple Miniboss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Wind Temple Miniboss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Wind Temple Miniboss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 632,
+            "y": 412
+          }
+        ]
+      },
+      {
+        "name": "Master Sword Chamber",
+        "access_rules": [
+          "^$exit_accessibility|Master Sword Chamber"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Master Sword Chamber"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 378,
+            "y": 309
+          }
+        ]
+      },
+      {
+        "name": "Gohma Boss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Gohma Boss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Gohma Boss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 659,
+            "y": 70
+          }
+        ]
+      },
+      {
+        "name": "Kalle Demos Boss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Kalle Demos Boss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Kalle Demos Boss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 659,
+            "y": 157
+          }
+        ]
+      },
+      {
+        "name": "Gohdan Boss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Gohdan Boss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Gohdan Boss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 659,
+            "y": 242
+          }
+        ]
+      },
+      {
+        "name": "Helmaroc King Boss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Helmaroc King Boss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Helmaroc King Boss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 34,
+            "y": 35
+          }
+        ]
+      },
+      {
+        "name": "Jalhalla Boss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Jalhalla Boss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Jalhalla Boss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 659,
+            "y": 327
+          }
+        ]
+      },
+      {
+        "name": "Molgera Boss Arena",
+        "access_rules": [
+          "^$exit_accessibility|Molgera Boss Arena"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Molgera Boss Arena"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 659,
+            "y": 412
+          }
+        ]
+      },
+      {
+        "name": "Savage Labyrinth",
+        "access_rules": [
+          "^$exit_accessibility|Savage Labyrinth"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Savage Labyrinth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 85,
+            "y": 543
+          }
+        ]
+      },
+      {
+        "name": "Dragon Roost Island Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Dragon Roost Island Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Dragon Roost Island Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 451,
+            "y": 152
+          }
+        ]
+      },
+      {
+        "name": "Fire Mountain Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Fire Mountain Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Fire Mountain Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 461,
+            "y": 212
+          }
+        ]
+      },
+      {
+        "name": "Ice Ring Isle Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Ice Ring Isle Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Ice Ring Isle Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 374,
+            "y": 464
+          }
+        ]
+      },
+      {
+        "name": "Cabana Labyrinth",
+        "access_rules": [
+          "^$exit_accessibility|Cabana Labyrinth"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Cabana Labyrinth"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 381,
+            "y": 374
+          }
+        ]
+      },
+      {
+        "name": "Needle Rock Isle Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Needle Rock Isle Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Needle Rock Isle Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 33,
+            "y": 371
+          }
+        ]
+      },
+      {
+        "name": "Angular Isles Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Angular Isles Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Angular Isles Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 383,
+            "y": 549
+          }
+        ]
+      },
+      {
+        "name": "Boating Course Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Boating Course Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Boating Course Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 463,
+            "y": 544
+          }
+        ]
+      },
+      {
+        "name": "Stone Watcher Island Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Stone Watcher Island Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Stone Watcher Island Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 213,
+            "y": 379
+          }
+        ]
+      },
+      {
+        "name": "Overlook Island Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Overlook Island Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Overlook Island Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 552,
+            "y": 45
+          }
+        ]
+      },
+      {
+        "name": "Bird's Peak Rock Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Bird's Peak Rock Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Bird's Peak Rock Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 563,
+            "y": 392
+          }
+        ]
+      },
+      {
+        "name": "Pawprint Isle Chuchu Cave",
+        "access_rules": [
+          "^$exit_accessibility|Pawprint Isle Chuchu Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Pawprint Isle Chuchu Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 383,
+            "y": 127
+          }
+        ]
+      },
+      {
+        "name": "Pawprint Isle Wizzrobe Cave",
+        "access_rules": [
+          "^$exit_accessibility|Pawprint Isle Wizzrobe Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Pawprint Isle Wizzrobe Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 363,
+            "y": 127
+          }
+        ]
+      },
+      {
+        "name": "Diamond Steppe Island Warp Maze Cave",
+        "access_rules": [
+          "^$exit_accessibility|Diamond Steppe Island Warp Maze Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Diamond Steppe Island Warp Maze Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 50,
+            "y": 466
+          }
+        ]
+      },
+      {
+        "name": "Bomb Island Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Bomb Island Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Bomb Island Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 461,
+            "y": 383
+          }
+        ]
+      },
+      {
+        "name": "Rock Spire Isle Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Rock Spire Isle Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Rock Spire Isle Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 119,
+            "y": 219
+          }
+        ]
+      },
+      {
+        "name": "Shark Island Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Shark Island Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Shark Island Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 210,
+            "y": 471
+          }
+        ]
+      },
+      {
+        "name": "Cliff Plateau Isles Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Cliff Plateau Isles Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Cliff Plateau Isles Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 556,
+            "y": 463
+          }
+        ]
+      },
+      {
+        "name": "Horseshoe Island Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Horseshoe Island Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Horseshoe Island Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 37,
+            "y": 559
+          }
+        ]
+      },
+      {
+        "name": "Star Island Secret Cave",
+        "access_rules": [
+          "^$exit_accessibility|Star Island Secret Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Star Island Secret Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 117,
+            "y": 48
+          }
+        ]
+      },
+      {
+        "name": "Ice Ring Isle Inner Cave",
+        "access_rules": [
+          "^$exit_accessibility|Ice Ring Isle Inner Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Ice Ring Isle Inner Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 374,
+            "y": 484
+          }
+        ]
+      },
+      {
+        "name": "Cliff Plateau Isles Inner Cave",
+        "access_rules": [
+          "^$exit_accessibility|Cliff Plateau Isles Inner Cave"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Cliff Plateau Isles Inner Cave"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 536,
+            "y": 463
+          }
+        ]
+      },
+      {
+        "name": "Outset Fairy Fountain",
+        "access_rules": [
+          "^$exit_accessibility|Outset Fairy Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Outset Fairy Fountain"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 107,
+            "y": 561
+          }
+        ]
+      },
+      {
+        "name": "Thorned Fairy Fountain",
+        "access_rules": [
+          "^$exit_accessibility|Thorned Fairy Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Thorned Fairy Fountain"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 546,
+            "y": 296
+          }
+        ]
+      },
+      {
+        "name": "Eastern Fairy Fountain",
+        "access_rules": [
+          "^$exit_accessibility|Eastern Fairy Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Eastern Fairy Fountain"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 380,
+            "y": 212
+          }
+        ]
+      },
+      {
+        "name": "Western Fairy Fountain",
+        "access_rules": [
+          "^$exit_accessibility|Western Fairy Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Western Fairy Fountain"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 41,
+            "y": 212
+          }
+        ]
+      },
+      {
+        "name": "Southern Fairy Fountain",
+        "access_rules": [
+          "^$exit_accessibility|Southern Fairy Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Southern Fairy Fountain"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 294,
+            "y": 468
+          }
+        ]
+      },
+      {
+        "name": "Northern Fairy Fountain",
+        "access_rules": [
+          "^$exit_accessibility|Northern Fairy Fountain"
+        ],
+        "sections": [
+          {
+            "name": "Entered                                                 ",
+            "hosted_item": "Northern Fairy Fountain"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "exits",
+            "x": 210,
+            "y": 41
+          }
+        ]
+      }
+    ]
+  }
+]

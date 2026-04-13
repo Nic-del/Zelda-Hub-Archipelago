@@ -1,0 +1,2529 @@
+[
+  {
+    "name": "The Great Sea",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "children": [
+      {
+        "name": "Star Island Sector",
+        "children": [
+          {
+            "name": "Star Island - Cave",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Exit Logic/Star Island Secret Cave, @Macros/can_defeat_magtails"
+                ],
+                "visibility_rules": [
+                  "combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 139,
+                "y": 38,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Star Island - Lookout Platform",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 131,
+                "y": 62,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Northern Fairy Island Sector",
+        "children": [
+          {
+            "name": "Northern Fairy Island - Great Fairy",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Exit Logic/Northern Fairy Fountain"
+                ],
+                "visibility_rules": [
+                  "fairies_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 242,
+                "y": 68,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Northern Fairy Island - Submarine",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "visibility_rules": [
+                  "submarines_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 211,
+                "y": 49,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Crescent Moon Island Sector",
+        "children": [
+          {
+            "name": "Crescent Moon Island - Chest",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "visibility_rules": [
+                  "misc_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 400,
+                "y": 53,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Crescent Moon Island - Submarine",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_miniblins"
+                ],
+                "visibility_rules": [
+                  "submarines_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 408,
+                "y": 33,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Seven-Star Isles Sector",
+        "children": [
+          {
+            "name": "Seven-Star Isles - Lookout Platforms",
+            "visibility_rules": [
+              "lookouts_on"
+            ],
+            "sections": [
+              {
+                "name": "Center Lookout Platform"
+              },
+              {
+                "name": "Northern Lookout Platform"
+              },
+              {
+                "name": "Southern Lookout Platform",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_wizzrobes_at_range"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 495,
+                "y": 63,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Seven-Star Isles - Big Octo",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_salvage.png",
+                "chest_opened_img": "images/items/chest_salvage_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_12_eye_big_octos, grapple"
+                ],
+                "visibility_rules": [
+                  "octos_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 475,
+                "y": 65,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Overlook Island Sector",
+        "children": [
+          {
+            "name": "Overlook Island - Cave",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  [
+                    "@Macros/_can_reach_overlook_island_cave_darknuts",
+                    "@Macros/can_defeat_darknuts",
+                    "@Macros/can_play_winds_requiem"
+                  ]
+                ],
+                "visibility_rules": [
+                  "combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 573,
+                "y": 55,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Four-Eye Reef Sector",
+        "children": [
+          {
+            "name": "Four-Eye Reef - Destroy the Cannons and Gunboats",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "bombs, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "reefs_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 68,
+                "y": 120,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mother and Child Isles Sector",
+        "children": [
+          {
+            "name": "Mother and Child Isles - Inside Mother Isle",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Macros/can_play_ballad_of_gales"
+                ],
+                "visibility_rules": [
+                  "misc_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 155,
+                "y": 136,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Spectacle Island Sector",
+        "children": [
+          {
+            "name": "Spectacle Island",
+            "sections": [
+              {
+                "name": "Barrel Shooting - First Prize",
+                "visibility_rules": [
+                  "minigames_on"
+                ]
+              },
+              {
+                "name": "Barrel Shooting - Second Prize",
+                "visibility_rules": [
+                  "minigames_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 212,
+                "y": 149,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dragon Roost Island Sector",
+        "children": [
+          {
+            "name": "Dragon Roost Island",
+            "sections": [
+              {
+                "name": "Wind Shrine",
+                "access_rules": [
+                  "windwaker"
+                ],
+                "visibility_rules": [
+                  "misc_on"
+                ]
+              },
+              {
+                "name": "Rito Aerie - Give Hoskit 20 Golden Feathers",
+                "access_rules": [
+                  "spoils, @Macros/can_farm_golden_feathers"
+                ],
+                "visibility_rules": [
+                  "spoilssq_on"
+                ]
+              },
+              {
+                "name": "Chest on Top of Boulder",
+                "access_rules": [
+                  "bow",
+                  "bait, @Macros/can_buy_hyoi_pears",
+                  "boomerang",
+                  "bombs"
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Fly Across Platforms Around Island",
+                "access_rules": [
+                  "@Macros/_can_fly_with_deku_leaf_outdoors_no_swift_sail_sequence_break, @Macros/_can_cut_grass_or_has_magic_meter_upgrade"
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Rito Aerie - Mail Sorting",
+                "visibility_rules": [
+                  "minigames_on"
+                ]
+              },
+              {
+                "name": "Secret Cave",
+                "access_rules": [
+                  [
+                    "@Exit Logic/Dragon Roost Island Secret Cave",
+                    "@Macros/can_defeat_keese",
+                    "@Macros/can_defeat_red_chuchus"
+                  ]
+                ],
+                "visibility_rules": [
+                  "combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 485,
+                "y": 138,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pawprint Isle Sector",
+        "children": [
+          {
+            "name": "Pawprint Isle",
+            "sections": [
+              {
+                "name": "Chuchu Cave - Chest",
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Exit Logic/Pawprint Isle Chuchu Cave"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              },
+              {
+                "name": "Chuchu Cave - Behind Left Boulder",
+                "access_rules": [
+                  "@Exit Logic/Pawprint Isle Chuchu Cave, @Macros/can_move_boulders"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              },
+              {
+                "name": "Chuchu Cave - Behind Right Boulder",
+                "access_rules": [
+                  "@Exit Logic/Pawprint Isle Chuchu Cave, @Macros/can_move_boulders"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              },
+              {
+                "name": "Chuchu Cave - Scale the Wall",
+                "access_rules": [
+                  "@Exit Logic/Pawprint Isle Chuchu Cave, grapple"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              },
+              {
+                "name": "Wizzrobe Cave",
+                "access_rules": [
+                  [
+                    "@Exit Logic/Pawprint Isle Wizzrobe Cave",
+                    "@Macros/can_defeat_wizzrobes_at_range",
+                    "@Macros/can_defeat_fire_keese",
+                    "@Macros/can_defeat_magtails",
+                    "@Macros/can_defeat_red_chuchus",
+                    "@Macros/can_defeat_green_chuchus",
+                    "@Macros/can_defeat_yellow_chuchus",
+                    "@Macros/can_defeat_red_bubbles",
+                    "@Macros/can_remove_peahat_armor"
+                  ]
+                ],
+                "visibility_rules": [
+                  "combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 383,
+                "y": 149,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Pawprint Isle - Lookout Platform - Defeat the Enemies",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 404,
+                "y": 133,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Flight Control Platform Sector",
+        "children": [
+          {
+            "name": "Flight Control Platform - Bird-Man Content - First Prize",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Macros/can_fly_with_deku_leaf_outdoors, magic_2",
+                  "sequence_break_other, [@Macros/can_fly_with_deku_leaf_outdoors], [magic_2], bombs, windwaker, passing"
+                ],
+                "_comment": [
+                  "Start the contest and use a bomb with a jump attack to escape the area. Sail over to the end of the",
+                  " contest area and play the song of passing, now exit KoRL and you should win the contest."
+                ],
+                "visibility_rules": [
+                  "minigames_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 571,
+                "y": 133,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Flight Control Platform - Submarine",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  [
+                    "@Macros/can_defeat_wizzrobes",
+                    "@Macros/can_defeat_red_chuchus",
+                    "@Macros/can_defeat_green_chuchus",
+                    "@Macros/can_defeat_miniblins",
+                    "@Macros/can_defeat_wizzrobes_at_range"
+                  ]
+                ],
+                "visibility_rules": [
+                  "submarines_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 574,
+                "y": 150,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Western Fairy Island Sector",
+        "children": [
+          {
+            "name": "Western Fairy Island - Great Fairy",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Exit Logic/Western Fairy Fountain"
+                ],
+                "visibility_rules": [
+                  "fairies_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 35,
+                "y": 218,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Western Fairy Island - Lookout Platform",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 63,
+                "y": 225,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rock Spire Isle Sector",
+        "children": [
+          {
+            "name": "Rock Spire Isle",
+            "sections": [
+              {
+                "name": "Cave",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "@Exit Logic/Rock Spire Isle Secret Cave"
+                ],
+                "visibility_rules": [
+                  "combat_on"
+                ]
+              },
+              {
+                "name": "Beedle's Special Shop Ship - 500 Item",
+                "access_rules": [
+                  "wallet, @Macros/can_farm_lots_of_rupees",
+                  "{}"
+                ],
+                "visibility_rules": [
+                  "expensive_on"
+                ]
+              },
+              {
+                "name": "Beedle's Special Shop Ship - 900 Item",
+                "access_rules": [
+                  "wallet, @Macros/can_farm_lots_of_rupees",
+                  "{}"
+                ],
+                "visibility_rules": [
+                  "expensive_on"
+                ]
+              },
+              {
+                "name": "Beedle's Special Shop Ship - 950 Item",
+                "access_rules": [
+                  "wallet, @Macros/can_farm_lots_of_rupees",
+                  "{}"
+                ],
+                "visibility_rules": [
+                  "expensive_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 122,
+                "y": 201,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Rock Spire Isle - Lookout Platforms",
+            "sections": [
+              {
+                "name": "Western Lookout Platform - Destroy the Cannons",
+                "access_rules": [
+                  "@Macros/can_destroy_cannons, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              },
+              {
+                "name": "Eastern Lookout Platform - Destroy the Cannons",
+                "access_rules": [
+                  "@Macros/can_destroy_cannons, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              },
+              {
+                "name": "Center Lookout Platform",
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 147,
+                "y": 217,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Rock Spire Isle - Southeast Gunboat",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_salvage.png",
+                "chest_opened_img": "images/items/chest_salvage_gray.png",
+                "access_rules": [
+                  "bombs, grapple"
+                ],
+                "visibility_rules": [
+                  "octos_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 128,
+                "y": 230,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tingle Island Sector",
+        "children": [
+          {
+            "name": "Tingle Island - Ankle - Reward for All Tingle Statues",
+            "sections": [
+              {
+                "access_rules": [
+                  "statue:5"
+                ],
+                "visibility_rules": [
+                  "misc_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 226,
+                "y": 233,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tingle Island - Big Octo",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_salvage.png",
+                "chest_opened_img": "images/items/chest_salvage_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_12_eye_big_octos, grapple"
+                ],
+                "visibility_rules": [
+                  "octos_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 220,
+                "y": 205,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Eastern Fairy Island Sector",
+        "children": [
+          {
+            "name": "Eastern Fairy Island - Great Fairy",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Exit Logic/Eastern Fairy Fountain"
+                ],
+                "visibility_rules": [
+                  "fairies_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 416,
+                "y": 234,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Eastern Fairy Island - Lookout Platform - Defeat the Cannons and Enemies",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Macros/can_destroy_cannons"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 391,
+                "y": 214,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Fire Mountain Sector",
+        "children": [
+          {
+            "name": "Fire Mountain - Cave - Chest",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Exit Logic/Fire Mountain Secret Cave, @Macros/can_defeat_magtails"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on, combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 469,
+                "y": 201,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fire Mountain - Lookout Platform",
+            "visibility_rules": [
+              "lookouts_on"
+            ],
+            "sections": [
+              {
+                "name": "Chest"
+              },
+              {
+                "name": "Destroy the Cannons",
+                "access_rules": [
+                  "@Macros/can_destroy_cannons"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 486,
+                "y": 215,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fire Mountain - Big Octo",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_salvage.png",
+                "chest_opened_img": "images/items/chest_salvage_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_big_octos, grapple"
+                ],
+                "visibility_rules": [
+                  "octos_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 502,
+                "y": 227,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Star Belt Archipelago Sector",
+        "children": [
+          {
+            "name": "Star Belt Archipelago - Lookout Platform",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 597,
+                "y": 213,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Three-Eye Reef Sector",
+        "children": [
+          {
+            "name": "Three-Eye Reef - Destroy the Cannons and Gunboats",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "bombs, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "reefs_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 37,
+                "y": 314,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Greatfish Isle Sector",
+        "children": [
+          {
+            "name": "Greatfish Isle - Hidden Chest",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 140,
+                "y": 300,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cyclops Reef Sector",
+        "children": [
+          {
+            "name": "Cyclops Reef - Destroy the Cannons and Gunboats",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "bombs, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "reefs_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 241,
+                "y": 315,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Cyclops Reef - Lookout Platform - Defeat the Enemies",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 217,
+                "y": 297,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Six-Eye Reef Sector",
+        "children": [
+          {
+            "name": "Six-Eye Reef - Destroy the Cannons and Gunboats",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "bombs, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "reefs_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 329,
+                "y": 284,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Six-Eye Reef - Lookout Platform - Destroy the Cannons",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Macros/can_destroy_cannons"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 326,
+                "y": 309,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Six-Eye Reef - Submarine",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "visibility_rules": [
+                  "submarines_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 305,
+                "y": 315,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tower of the Gods Sector",
+        "children": [
+          {
+            "name": "Hyrule",
+            "sections": [
+              {
+                "name": "Master Sword Chamber",
+                "access_rules": [
+                  "@Exit Logic/Master Sword Chamber, @Macros/can_defeat_mighty_darknuts"
+                ],
+                "visibility_rules": [
+                  // Hyrule can never be a non-required dungeon, so is unaffected by Required Bosses.
+                  "dungeons_on"
+                ]
+              },
+              {
+                "name": "Ganon's Tower - Maze Chest",
+                "access_rules": [
+                  [
+                    "@Macros/can_reach_ganons_tower_phantom_ganon_room",
+                    "@Macros/can_defeat_phantom_ganon"
+                  ]
+                ],
+                "visibility_rules": [
+                  // Hyrule can never be a non-required dungeon, so is unaffected by Required Bosses.
+                  "dungeons_on"
+                ]
+              },
+              {
+                // The goal is always be present, even with dungeons disabled, so the other locations within Hyrule need
+                // to use individual visibility rules.
+                "name": "Defeat Ganondorf (Goal)",
+                "access_rules": [
+                  "@Macros/can_reach_and_defeat_ganondorf"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 398,
+                "y": 300,
+                "size": 18
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Thorned Fairy Island Sector",
+        "children": [
+          {
+            "name": "Thorned Fairy Island - Great Fairy",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Exit Logic/Thorned Fairy Fountain"
+                ],
+                "visibility_rules": [
+                  "fairies_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 590,
+                "y": 314,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Thorned Fairy Island - Lookout Platforms",
+            "sections": [
+              {
+                "name": "Northeastern Lookout Platform - Destroy the Cannons",
+                "access_rules": [
+                  "@Macros/can_destroy_cannons"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              },
+              {
+                "name": "Southwestern Lookout Platform - Defeat the Enemies",
+                "access_rules": [
+                  "@Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 573,
+                "y": 299,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Needle Rock Isle Sector",
+        "children": [
+          {
+            "name": "Needle Rock Isle",
+            "sections": [
+              {
+                "name": "Chest in Ring of Fire",
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "_comment": [
+                  "The switch can be activated out-of-logic by shooting a fire arrow near it."
+                ],
+                "access_rules": [
+                  "bait, @Macros/can_buy_hyoi_pears",
+                  "sequence_break_other, @Macros/has_fire_arrows, [bait], [@Macros/can_buy_hyoi_pears]"
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Cave",
+                "access_rules": [
+                  "@Exit Logic/Needle Rock Isle Secret Cave, @Macros/has_fire_arrows"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 68,
+                "y": 398,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Needle Rock Isle - Golden Gunboat",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_salvage.png",
+                "chest_opened_img": "images/items/chest_salvage_gray.png",
+                "access_rules": [
+                  "bombs, grapple"
+                ],
+                "visibility_rules": [
+                  "octos_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 40,
+                "y": 375,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Islet of Steel Sector",
+        "children": [
+          {
+            "name": "Islet of Steel - Interior",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "bombs, @Macros/can_play_winds_requiem"
+                ],
+                "visibility_rules": [
+                  "misc_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 154,
+                "y": 366,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Islet of Steel - Lookout Platform - Defeat the Enemies",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Macros/can_defeat_wizzrobes_at_range"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 136,
+                "y": 385,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stone Watcher Island Sector",
+        "children": [
+          {
+            "name": "Stone Watcher Island - Cave",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  [
+                    "@Macros/_can_reach_stone_watcher_cave_darknuts",
+                    "@Macros/can_defeat_darknuts",
+                    "@Macros/can_play_winds_requiem"
+                  ]
+                ],
+                "visibility_rules": [
+                  "combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 209,
+                "y": 382,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Stone Watcher Island - Lookout Platform",
+            "sections": [
+              {
+                "name": "Chest",
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              },
+              {
+                "name": "Destroy the Cannons",
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Macros/can_destroy_cannons"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 238,
+                "y": 385,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Private Oasis Sector",
+        "children": [
+          {
+            "name": "Private Oasis",
+            "sections": [
+              {
+                "name": "Chest at Top of Waterfall",
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "hookshot",
+                  "@Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Cabana Labyrinth - Lower Floor Chest",
+                "access_rules": [
+                  "@Exit Logic/Cabana Labyrinth, hammer"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              },
+              {
+                "name": "Cabana Labyrinth - Upper Floor Chest",
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  [
+                    "@Exit Logic/Cabana Labyrinth",
+                    "hammer",
+                    "@Macros/can_play_winds_requiem"
+                  ]
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 415,
+                "y": 398,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Private Oasis - Big Octo",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_salvage.png",
+                "chest_opened_img": "images/items/chest_salvage_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_big_octos, grapple"
+                ],
+                "visibility_rules": [
+                  "octos_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 389,
+                "y": 382,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bomb Island Sector",
+        "children": [
+          {
+            "name": "Bomb Island - Cave",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Exit Logic/Bomb Island Secret Cave, @Macros/can_stun_magtails"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 502,
+                "y": 365,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Bomb Island - Lookout Platform - Defeat the Enemies",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 485,
+                "y": 378,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Bomb Island - Submarine",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "submarines_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 491,
+                "y": 399,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bird's Peak Rock Sector",
+        "children": [
+          {
+            "name": "Bird's Peak Rock - Cave",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Exit Logic/Bird's Peak Rock Secret Cave, @Macros/can_play_winds_requiem"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 573,
+                "y": 382,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Diamond Steppe Island Sector",
+        "children": [
+          {
+            "name": "Diamond Steppe Island - Warp Maze Cave",
+            "access_rules": [
+              "@Exit Logic/Diamond Steppe Island Warp Maze Cave"
+            ],
+            "visibility_rules": [
+              "puzzlecaves_on"
+            ],
+            "sections": [
+              {
+                "name": "First Chest"
+              },
+              {
+                "name": "Second Chest",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 52,
+                "y": 463,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Diamond Steppe Island - Big Octo",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_salvage.png",
+                "chest_opened_img": "images/items/chest_salvage_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_big_octos, grapple"
+                ],
+                "visibility_rules": [
+                  "octos_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 69,
+                "y": 475,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Five-Eye Reef Sector",
+        "children": [
+          {
+            "name": "Five-Eye Reef - Destroy the Cannons",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "@Macros/can_destroy_cannons, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "reefs_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 123,
+                "y": 448,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Five-Eye Reef - Lookout Platform",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 145,
+                "y": 465,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Shark Island Sector",
+        "children": [
+          {
+            "name": "Shark Island - Cave",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Exit Logic/Shark Island Secret Cave, @Macros/can_defeat_miniblins"
+                ],
+                "visibility_rules": [
+                  "combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 225,
+                "y": 481,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Southern Fairy Island Sector",
+        "children": [
+          {
+            "name": "Southern Fairy Island - Great Fairy",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Exit Logic/Southern Fairy Fountain"
+                ],
+                "visibility_rules": [
+                  "fairies_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 297,
+                "y": 449,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Southern Fairy Island - Lookout Platform",
+            "sections": [
+              {
+                "name": "Destroy the Northwest Cannons",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "@Macros/can_destroy_cannons, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              },
+              {
+                "name": "Destroy the Southeast Cannons",
+                "access_rules": [
+                  "@Macros/can_destroy_cannons, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 317,
+                "y": 466,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ice Ring Isle Sector",
+        "children": [
+          {
+            "name": "Ice Ring Isle",
+            "sections": [
+              {
+                "name": "Frozen Chest",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "@Macros/has_fire_arrows"
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Cave - Chest",
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "@Exit Logic/Ice Ring Isle Secret Cave"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              },
+              {
+                "name": "Inner Cave - Chest",
+                "access_rules": [
+                  "@Exit Logic/Ice Ring Isle Inner Cave, @Macros/has_fire_arrows"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on, combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 383,
+                "y": 479,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Forest Haven Sector",
+        "children": [
+          {
+            "name": "Forest Haven",
+            "sections": [
+              {
+                "name": "On Tree Branch",
+                "access_rules": [
+                  [
+                    "@Macros/can_access_forest_haven",
+                    "grapple"
+                  ],
+                  [
+                    "@Macros/can_access_forest_haven",
+                    "@Macros/_forest_haven_grapple_skip"
+                  ]
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Small Island Chest",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  [
+                    "@Macros/can_access_forest_haven",
+                    "grapple",
+                    "@Macros/can_fly_with_deku_leaf_outdoors",
+                    "@Macros/_can_cut_grass_or_has_magic_meter_upgrade"
+                  ],
+                  [
+                    "@Macros/can_access_forest_haven",
+                    "@Macros/_forest_haven_grapple_skip",
+                    "@Macros/can_fly_with_deku_leaf_outdoors",
+                    "@Macros/_can_cut_grass_or_has_magic_meter_upgrade"
+                  ]
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 499,
+                "y": 464,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cliff Plateau Isles Sector",
+        "children": [
+          {
+            "name": "Cliff Plateau Isles",
+            "sections": [
+              {
+                "name": "Cave",
+                "access_rules": [
+                  "@Exit Logic/Cliff Plateau Isles Secret Cave, @Macros/can_defeat_boko_babas",
+                  "@Exit Logic/Cliff Plateau Isles Secret Cave, grapple, @General Logic/Normal Logic Obscurity, @General Logic/Normal Logic Precision"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              },
+              {
+                "name": "Highest Isle",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "@Exit Logic/Cliff Plateau Isles Inner Cave"
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 557,
+                "y": 448,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Cliff Plateau Isles - Lookout Platform",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 586,
+                "y": 461,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Horseshoe Island Sector",
+        "children": [
+          {
+            "name": "Horseshoe Island",
+            "sections": [
+              {
+                "name": "Play Golf",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  [
+                    "@Macros/can_fan_with_deku_leaf",
+                    "@Macros/_can_fly_with_deku_leaf_outdoors_or_hookshot"
+                  ]
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Cave",
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  [
+                    "@Exit Logic/Horseshoe Island Secret Cave",
+                    "@Macros/can_defeat_mothulas",
+                    "@Macros/can_defeat_winged_mothulas"
+                  ]
+                ],
+                "visibility_rules": [
+                  "combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 35,
+                "y": 546,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Horseshoe Island - Lookout Platforms",
+            "visibility_rules": [
+              "lookouts_on"
+            ],
+            "sections": [
+              {
+                "name": "Northwestern Lookout Platform"
+              },
+              {
+                "name": "Southeastern Lookout Platform"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 63,
+                "y": 561,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Outset Island Sector",
+        "children": [
+          {
+            "name": "Outset Island",
+            "sections": [
+              {
+                "name": "Underneath Link's House",
+                "visibility_rules": [
+                  "misc_on"
+                ]
+              },
+              {
+                "name": "Mesa the Grasscutter's House",
+                "visibility_rules": [
+                  "misc_on"
+                ]
+              },
+              {
+                "name": "Orca - Give 10 Knight's Crests",
+                "access_rules": [
+                  [
+                    "spoils",
+                    "@Macros/can_farm_knights_crests",
+                    "@Macros/can_sword_fight_with_orca",
+                    "magic"
+                  ]
+                ],
+                "visibility_rules": [
+                  "spoilssq_on"
+                ]
+              },
+              {
+                "name": "Great Fairy",
+                "access_rules": [
+                  "@Exit Logic/Outset Fairy Fountain"
+                ],
+                "visibility_rules": [
+                  "fairies_on"
+                ]
+              },
+              {
+                "name": "Jabun's Cave",
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "access_rules": [
+                  "bombs"
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Dig up Black Soil",
+                "access_rules": [
+                  [
+                    "bait",
+                    "@Macros/can_buy_bait",
+                    "power"
+                  ]
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Savage Labyrinth - Floor 30",
+                "inspectable_sequence_break": true,
+                "access_rules": [
+                  [
+                    "@Macros/_can_complete_savage_labyrinth_floor_30"
+                  ],
+                  [
+                    "{$exit_accessibility_no_sequence_break|Savage Labyrinth}"
+                  ]
+                ],
+                "visibility_rules": [
+                  "labyrinth_on"
+                ]
+              },
+              {
+                "name": "Savage Labyrinth - Floor 50",
+                "inspectable_sequence_break": true,
+                "_comment": [
+                  "'@' rules turn Inspect into Normal accessibility, so Floor 50 cannot use",
+                  " '@The Great Sea (Deprecated)/Outset Island/Savage Labyrinth - Floor 30' in its access rules."
+                ],
+                "access_rules": [
+                  [
+                    "@Macros/_can_complete_savage_labyrinth_floor_50"
+                  ],
+                  [
+                    "{$exit_accessibility_no_sequence_break|Savage Labyrinth}"
+                  ]
+                ],
+                "visibility_rules": [
+                  "labyrinth_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 140,
+                "y": 561,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Headstone Island Sector",
+        "children": [
+          {
+            "name": "Headstone Island - Top of the Island",
+            "sections": [
+              {
+                "access_rules": [
+                  "bait, @Macros/can_buy_hyoi_pears"
+                ],
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 241,
+                "y": 560,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Headstone Island - Submarine",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_bombchus"
+                ],
+                "visibility_rules": [
+                  "submarines_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 219,
+                "y": 532,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Two-Eye Reef Sector",
+        "children": [
+          {
+            "name": "Two-Eye Reef - Destroy the Cannons and Gunboats",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  "bombs, @Macros/can_fly_with_deku_leaf_outdoors"
+                ],
+                "visibility_rules": [
+                  "reefs_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 314,
+                "y": 532,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Two-Eye Reef - Lookout Platform",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 321,
+                "y": 561,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Two-Eye Reef - Big Octo Great Fairy",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_salvage.png",
+                "chest_opened_img": "images/items/chest_salvage_gray.png",
+                "access_rules": [
+                  "@Macros/can_defeat_big_octos"
+                ],
+                "visibility_rules": [
+                  "fairies_on,octos_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 296,
+                "y": 543,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Angular Isles Sector",
+        "children": [
+          {
+            "name": "Angular Isles",
+            "sections": [
+              {
+                "name": "Peak",
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "visibility_rules": [
+                  "islandpuzzles_on"
+                ]
+              },
+              {
+                "name": "Cave",
+                "access_rules": [
+                  [
+                    "@Exit Logic/Angular Isles Secret Cave",
+                    "@Macros/can_aim_mirror_shield",
+                    "@Macros/_can_fly_with_deku_leaf_indoors_or_hookshot"
+                  ]
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 400,
+                "y": 562,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Boating Course Sector",
+        "children": [
+          {
+            "name": "Boating Course - Raft",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 488,
+                "y": 554,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Boating Course - Cave",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_metal.png",
+                "chest_opened_img": "images/items/chest_metal_gray.png",
+                "access_rules": [
+                  [
+                    "@Exit Logic/Boating Course Secret Cave",
+                    "@Macros/can_hit_diamond_switches_at_range",
+                    "@Macros/can_defeat_miniblins_easily"
+                  ],
+                  [
+                    "@Exit Logic/Boating Course Secret Cave",
+                    "@Macros/can_hit_diamond_switches_at_range",
+                    "@General Logic/Hard Logic Precision"
+                  ]
+                ],
+                "visibility_rules": [
+                  "puzzlecaves_on, combat_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 470,
+                "y": 530,
+                "size": 16,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Five-Star Isles Sector",
+        "children": [
+          {
+            "name": "Five-Star Isles - Raft",
+            "sections": [
+              {
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 611,
+                "y": 568,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Five-Star Isles - Submarine",
+            "sections": [
+              {
+                "chest_unopened_img": "images/items/chest_spiky.png",
+                "chest_opened_img": "images/items/chest_spiky_gray.png",
+                "visibility_rules": [
+                  "submarines_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 595,
+                "y": 564,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Five-Star Isles - Lookout Platform - Destroy the Cannons",
+            "sections": [
+              {
+                "access_rules": [
+                  "@Macros/can_destroy_cannons"
+                ],
+                "visibility_rules": [
+                  "lookouts_on"
+                ]
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "seachart",
+                "x": 567,
+                "y": 547,
+                "restrict_visibility_rules": [
+                  "setting_show_precise_sea_locations"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

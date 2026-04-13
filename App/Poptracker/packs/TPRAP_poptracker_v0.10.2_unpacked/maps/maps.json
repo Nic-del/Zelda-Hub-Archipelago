@@ -1,0 +1,520 @@
+[
+	{
+		"name": "overworld",
+		"location_size": 48,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Full Map.png"
+	},
+	{
+		"name": "fr",
+		"location_size": 48,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Faron Region.png"
+	},
+	{
+		"name": "er",
+		"location_size": 48,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Eldin Region.png"
+	},
+	{
+		"name": "lr",
+		"location_size": 48,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Lanayru Region.png"
+	},
+	{
+		"name": "ft1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Forest Temple/1F.png"
+	},
+	{
+		"name": "ftfull",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Forest Temple/Full.png"
+	},
+	{
+		"name": "gm1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Goron Mines/1F.png"
+	},
+	{
+		"name": "gm2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Goron Mines/2F.png"
+	},
+	{
+		"name": "gmfull",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Goron Mines/Full.png"
+	},
+	{
+		"name": "ltb2",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Lakebed Temple/B2.png"
+	},
+	{
+		"name": "ltb1",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Lakebed Temple/B1.png"
+	},
+	{
+		"name": "lt1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Lakebed Temple/1F.png"
+	},
+	{
+		"name": "lt2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Lakebed Temple/2F.png"
+	},
+	{
+		"name": "lt3f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Lakebed Temple/3F.png"
+	},
+	{
+		"name": "lt4f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Lakebed Temple/4F.png"
+	},
+	{
+		"name": "ltfull",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Lakebed Temple/Full.png"
+	},
+	{
+		"name": "agb2",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Arbiter's Grounds/B2.png"
+	},
+	{
+		"name": "agb1",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Arbiter's Grounds/B1.png"
+	},
+	{
+		"name": "ag1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Arbiter's Grounds/1F.png"
+	},
+	{
+		"name": "ag2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Arbiter's Grounds/2F.png"
+	},
+	{
+		"name": "ag3f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Arbiter's Grounds/3F.png"
+	},
+	{
+		"name": "ag4f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Arbiter's Grounds/4F.png"
+	},
+	{
+		"name": "agfull",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Arbiter's Grounds/Full.png"
+	},
+	{
+		"name": "sr1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Snowpeak Ruins/1F.png"
+	},
+	{
+		"name": "sr2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Snowpeak Ruins/2F.png"
+	},
+	{
+		"name": "sr3f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Snowpeak Ruins/3F.png"
+	},
+	{
+		"name": "srfull",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Snowpeak Ruins/Full.png"
+	},
+	{
+		"name": "tt1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/1F.png"
+	},
+	{
+		"name": "tt2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/2F.png"
+	},
+	{
+		"name": "tt3f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/3F.png"
+	},
+	{
+		"name": "tt4f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/4F.png"
+	},
+	{
+		"name": "tt5f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/5F.png"
+	},
+	{
+		"name": "tt6f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/6F.png"
+	},
+	{
+		"name": "tt7f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/7F.png"
+	},
+	{
+		"name": "tt8f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/8F.png"
+	},
+	{
+		"name": "ttfull",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Temple of Time/Full.png"
+	},
+	{
+		"name": "csb3",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/B3.png"
+	},
+	{
+		"name": "csb2",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/B2.png"
+	},
+	{
+		"name": "csb1",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/B1.png"
+	},
+	{
+		"name": "cs1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/1F.png"
+	},
+	{
+		"name": "cs2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/2F.png"
+	},
+	{
+		"name": "cs3f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/3F.png"
+	},
+	{
+		"name": "cs4f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/4F.png"
+	},
+	{
+		"name": "cs5f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/5F.png"
+	},
+	{
+		"name": "csfull",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/City in the Sky/Full.png"
+	},
+	{
+		"name": "pt1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Palace of Twilight/1F.png"
+	},
+	{
+		"name": "pt2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Palace of Twilight/2F.png"
+	},
+	{
+		"name": "pt3f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Palace of Twilight/3F.png"
+	},
+	{
+		"name": "pt4f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Palace of Twilight/4F.png"
+	},
+	{
+		"name": "ptfull",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Palace of Twilight/Full.png"
+	},
+	{
+		"name": "hc1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Hyrule Castle/1F.png"
+	},
+	{
+		"name": "hc2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Hyrule Castle/2F.png"
+	},
+	{
+		"name": "hc3f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Hyrule Castle/3F.png"
+	},
+	{
+		"name": "hc4f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Hyrule Castle/4F.png"
+	},
+	{
+		"name": "hc5f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Hyrule Castle/5F.png"
+	},
+	{
+		"name": "hcfull",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Dungeons/Hyrule Castle/Full.png"
+	},
+	{
+		"name": "bct",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Beside Castle Town.png"
+	},
+	{
+		"name": "ct",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Castle Town.png"
+	},
+	{
+		"name": "dm",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Death Mountain.png"
+	},
+	{
+		"name": "ef",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Eldin Field.png"
+	},
+	{
+		"name": "ff",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Faron Field.png"
+	},
+	{
+		"name": "fw",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Faron Woods.png"
+	},
+	{
+		"name": "gd",
+		"location_size": 28,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Gerudo Desert.png"
+	},
+	{
+		"name": "hv",
+		"location_size": 16,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Hidden Village.png"
+	},
+	{
+		"name": "kakariko",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Kakariko.png"
+	},
+	{
+		"name": "kg",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Kakariko Gorge.png"
+	},
+	{
+		"name": "lh",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Lake Hylia.png"
+	},
+	{
+		"name": "lf",
+		"location_size": 40,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Lanayru Field.png"
+	},
+	{
+		"name": "ordon",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Ordon.png"
+	},
+	{
+		"name": "sg",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Sacred Grove.png"
+	},
+	{
+		"name": "sm",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Snowpeak Mountain.png"
+	},
+	{
+		"name": "sct",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/South Castle Town.png"
+	},
+	{
+		"name": "uzr",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Upper Zora's River.png"
+	},
+	{
+		"name": "zd",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Zora's Domain.png"
+	}
+]

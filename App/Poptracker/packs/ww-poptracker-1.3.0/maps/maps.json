@@ -1,0 +1,62 @@
+[
+    {
+        "name": "seachart",
+        "location_size": 14,
+        "location_border_thickness": 1,
+        "img": "images/maps/sea_chart.png"
+    },
+    {
+        "name": "salvage",
+        "location_size": 20,
+        "location_border_thickness": 2,
+        "img": "images/maps/salvage.png"
+    },
+    {
+        "name": "drc",
+        "location_size": 15,
+        "location_border_thickness": 2,
+        "img": "images/maps/drc.png"
+    },
+    {
+        "name": "fw",
+        "location_size": 15,
+        "location_border_thickness": 2,
+        "img": "images/maps/fw.png"
+    },
+    {
+        "name": "totg",
+        "location_size": 15,
+        "location_border_thickness": 2,
+        "img": "images/maps/totg.png"
+    },
+    {
+        "name": "ff",
+        "location_size": 15,
+        "location_border_thickness": 2,
+        "img": "images/maps/ff.png"
+    },
+    {
+        "name": "et",
+        "location_size": 15,
+        "location_border_thickness": 2,
+        "img": "images/maps/et.png"
+    },
+    {
+        "name": "wt",
+        "location_size": 15,
+        "location_border_thickness": 2,
+        "img": "images/maps/wt.png"
+    },
+    {
+        "name": "entrances",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/entrances_chart.png"
+    },
+    {
+        "name": "exits",
+        "location_size": 16,
+        "location_border_thickness": 2,
+        "img": "images/maps/entrances_chart.png"
+    }
+]

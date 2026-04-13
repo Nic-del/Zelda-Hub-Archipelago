@@ -1,0 +1,97 @@
+{
+  "settings_popup": {
+    "type": "container",
+    "background": "#000000",
+    "content": {
+      "type": "dock",
+      "dropshadow": true,
+      "content": [
+        {
+          "type": "group",
+          "header": "Game",
+          "dock": "left",
+          "content": {
+            "type": "dock",
+            "dock": "left",
+            "content": [
+              {
+                "type": "group",
+                "header": "Locations",
+                "dock": "left",
+                "content": {
+                  "type": "layout",
+                  "key": "progression_settings_grid"
+                }
+              },
+              {
+                "type": "group",
+                "header": "Required Bosses",
+                "dock": "left",
+                "content": {
+                  "type": "layout",
+                  "key": "required_bosses_grid"
+                }
+              },
+              {
+                "type": "group",
+                "header": "Logic",
+                "dock": "left",
+                "content": {
+                  "type": "layout",
+                  "key": "logic_settings_grid"
+                }
+              },
+              {
+                "type": "group",
+                "header": "Other",
+                "dock": "left",
+                "content": {
+                  "type": "layout",
+                  "key": "other_settings_grid"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "header": "Tracker",
+          "dock": "left",
+          "content": {
+            "type": "dock",
+            "dock": "left",
+            "content": [
+              {
+                "type": "group",
+                "header": "Sequence Breaks",
+                "dock": "left",
+                "content": {
+                  "type": "layout",
+                  "key": "sequence_break_settings_grid"
+                }
+              },
+              {
+                "type": "group",
+                "header": "Auto Tracking",
+                "dock": "left",
+                "content": {
+                  "type": "layout",
+                  "key": "auto_tracking_settings_grid"
+                }
+              },
+              {
+                "type": "group",
+                "header": "Other",
+                "dock": "left",
+                "content": {
+                  "type": "layout",
+                  "key": "other_tracker_settings_grid"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,605 @@
+[
+  {
+    "name": "Forbidden Woods",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "visibility_rules": [
+      "dungeons_on, required_bosses_disabled",
+      "dungeons_on, required_bosses_fw_required"
+    ],
+    "map_locations": [
+      {
+        "map": "seachart",
+        "x": 695,
+        "y": 157,
+        "size": 18
+      }
+    ],
+    "sections": [
+      {
+        "name": "First Room",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          "@Exit Logic/Forbidden Woods"
+        ]
+      },
+      {
+        "name": "Inside Hollow Tree's Mouth",
+        "access_rules": [
+          "@Exit Logic/Forbidden Woods, @Macros/can_defeat_door_flowers",
+          "@Exit Logic/Forbidden Woods, @Macros/can_defeat_boko_babas"
+        ]
+      },
+      {
+        "name": "Climb to Top Using Boko Baba Bulbs",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_door_flowers"
+          ]
+        ]
+      },
+      {
+        "name": "Pot High Above Hollow Tree",
+        "access_rules": [
+          "@Exit Logic/Forbidden Woods, @Macros/can_fly_with_deku_leaf_indoors"
+        ],
+        "visibility_rules": [
+          "secretpot_on"
+        ]
+      },
+      {
+        "name": "Hole in Tree",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas"
+          ]
+        ]
+      },
+      {
+        "name": "Morth Pit",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple"
+          ]
+        ]
+      },
+      {
+        "name": "Vine Maze Left Chest",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple"
+          ]
+        ]
+      },
+      {
+        "name": "Vine Maze Right Chest",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple"
+          ]
+        ]
+      },
+      {
+        "name": "Highest Pot in Vine Maze",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple"
+          ]
+        ],
+        "visibility_rules": [
+          "secretpot_on"
+        ]
+      },
+      {
+        "name": "Tall Room Before Miniboss",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple",
+            "fw_small:1",
+            "@Macros/can_defeat_peahats"
+          ],
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple",
+            "fw_small:1",
+            "@General Logic/Hard Logic Precision"
+          ]
+        ]
+      },
+      {
+        "name": "Mothula Miniboss Room",
+        "chest_unopened_img": "images/items/chest_spiky.png",
+        "chest_opened_img": "images/items/chest_spiky_gray.png",
+        "access_rules": [
+          "@Exit Logic/Forbidden Woods Miniboss Arena, @Macros/can_defeat_winged_mothulas"
+        ]
+      },
+      {
+        "name": "Past Seeds Hanging by Vines",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple",
+            "fw_small:1",
+            "@Macros/can_defeat_door_flowers",
+            "@Macros/can_destroy_seeds_hanging_by_vines"
+          ],
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple",
+            "fw_small:1",
+            "@Macros/can_defeat_door_flowers",
+            "@General Logic/Normal Logic Precision"
+          ]
+        ]
+      },
+      {
+        "name": "Chest Across Red Hanging Flower",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple",
+            "boomerang"
+          ]
+        ]
+      },
+      {
+        "name": "Tingle Statue Chest",
+        "chest_unopened_img": "images/items/chest_spiky.png",
+        "chest_opened_img": "images/items/chest_spiky_gray.png",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "grapple",
+            "boomerang",
+            "@Macros/_has_tingle_bombs_or_can_activate_tingle_bomb_triggers_without_tingle_tuner"
+          ]
+        ],
+        "visibility_rules": [
+          "tinglechests_on"
+        ]
+      },
+      {
+        "name": "Chest in Locked Tree Trunk",
+        "chest_unopened_img": "images/items/chest_metal.png",
+        "chest_opened_img": "images/items/chest_metal_gray.png",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple",
+            "boomerang"
+          ]
+        ]
+      },
+      {
+        "name": "Big Key Chest",
+        "chest_unopened_img": "images/items/chest_bigkey.png",
+        "chest_opened_img": "images/items/chest_bigkey_gray.png",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "grapple",
+            "boomerang"
+          ]
+        ]
+      },
+      {
+        "name": "Double Mothula Room",
+        "access_rules": [
+          [
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "@Macros/_can_defeat_door_flowers_or_grapple",
+            "@Macros/can_defeat_mothulas"
+          ],
+          [
+            // Without a normal means to defeat mothulas, a Deku Stick can be brought into this room in order to defeat
+            // the Mothulas. Defeat a Boku Baba in the room with the Hole in Tree chest and carry the Deku Stick all the
+            // way to this room. Note that it is the randomizer that adds the ability to carry items between rooms.
+            "sequence_break_other",
+            "@Exit Logic/Forbidden Woods",
+            "@Macros/can_fly_with_deku_leaf_indoors",
+            "@Macros/can_defeat_boko_babas",
+            "@Macros/_can_defeat_door_flowers_or_grapple",
+            "[@Macros/can_defeat_mothulas]"
+          ]
+        ]
+      },
+      {
+        "name": "Kalle Demos Heart Container",
+        "chest_unopened_img": "images/items/heart2.png",
+        "chest_opened_img": "images/items/heart2_gray.png",
+        "access_rules": [
+          "@Exit Logic/Kalle Demos Boss Arena, @Macros/can_defeat_kalle_demos"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Forbidden Woods Dungeon",
+    "chest_unopened_img": "images/items/chest_wood.png",
+    "chest_opened_img": "images/items/chest_wood_gray.png",
+    "children": [
+      {
+        "name": "First Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/First Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 155,
+                "y": 565
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Inside Hollow Tree's Mouth",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Inside Hollow Tree's Mouth"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 208,
+                "y": 517
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Climb to Top Using Boko Baba Bulbs",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Climb to Top Using Boko Baba Bulbs"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 125,
+                "y": 467
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pot High Above Hollow Tree",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Pot High Above Hollow Tree"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 238,
+                "y": 450
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hole in Tree",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Hole in Tree"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 330,
+                "y": 357
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Morth Pit",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Morth Pit"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 380,
+                "y": 184
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vine Maze Left Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Vine Maze Left Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 298,
+                "y": 165
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vine Maze Right Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Vine Maze Right Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 287,
+                "y": 142
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Highest Pot in Vine Maze",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Highest Pot in Vine Maze"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 347,
+                "y": 122
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tall Room Before Miniboss",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Tall Room Before Miniboss"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 592,
+                "y": 106
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mothula Miniboss Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Mothula Miniboss Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 626,
+                "y": 49
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Past Seeds Hanging by Vines",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Past Seeds Hanging by Vines"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 512,
+                "y": 174
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest Across Red Hanging Flower",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Chest Across Red Hanging Flower"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 138,
+                "y": 207
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tingle Statue Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Tingle Statue Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 202,
+                "y": 226
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chest in Locked Tree Trunk",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Chest in Locked Tree Trunk"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 213,
+                "y": 172
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Big Key Chest",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Big Key Chest"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 109,
+                "y": 288
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Double Mothula Room",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Double Mothula Room"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 504,
+                "y": 336
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kalle Demos Heart Container",
+        "children": [
+          {
+            "sections": [
+              {
+                "ref": "Forbidden Woods/Kalle Demos Heart Container"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "fw",
+                "x": 642,
+                "y": 410
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

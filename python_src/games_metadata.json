@@ -1,0 +1,130 @@
+{
+    "games": [
+        {
+            "id": "Ocarina of Time",
+            "display_name": "Ocarina of Time",
+            "image": "oot.png",
+            "color": "#2ecc71",
+            "profile": "oot",
+            "client_name": "OoT Client",
+            "client_title": "Archipelago Ocarina of Time Client*"
+        },
+        {
+            "id": "OOT (SOH)",
+            "display_name": "OOT (SOH)",
+            "image": "oot_soh.png",
+            "color": "#2ecc71",
+            "profile": "soh",
+            "is_native": true
+        },
+        {
+            "id": "Majora's Mask",
+            "display_name": "Majora's Mask",
+            "image": "mm.png",
+            "color": "#9b59b6",
+            "profile": "mm",
+            "is_native": true
+        },
+        {
+            "id": "Wind Waker",
+            "display_name": "Wind Waker",
+            "image": "ww.png",
+            "color": "#3498db",
+            "profile": "ww",
+            "client_name": "The Wind Waker Client",
+            "client_title": "Archipelago The Wind Waker Client*"
+        },
+        {
+            "id": "Twilight Princess",
+            "display_name": "Twilight Princess",
+            "image": "tp.png",
+            "color": "#34495e",
+            "profile": "tp",
+            "client_name": "Twilight Princess Client",
+            "client_title": "Archipelago Twilight Princess Client*"
+        },
+        {
+            "id": "Skyward Sword",
+            "display_name": "Skyward Sword",
+            "image": "ss.png",
+            "color": "#e67e22",
+            "profile": "ss",
+            "client_name": "Skyward Sword Client",
+            "client_title": "Archipelago Skyward Sword Client*"
+        },
+        {
+            "id": "A Link Between Worlds",
+            "display_name": "A Link Between Worlds",
+            "image": "albw.png",
+            "color": "#f1c40f",
+            "profile": "albw",
+            "client_name": "A Link Between Worlds Client",
+            "client_title": "Archipelago A Link Between Worlds Client*"
+        },
+        {
+            "id": "A Link to the Past",
+            "display_name": "A Link to the Past",
+            "image": "alttp.png",
+            "color": "#27ae60",
+            "profile": "alttp"
+        },
+        {
+            "id": "Minish Cap",
+            "display_name": "Minish Cap",
+            "image": "mc.png",
+            "color": "#e74c3c",
+            "profile": "mc"
+        },
+        {
+            "id": "Link's Awakening DX",
+            "display_name": "Link's Awakening DX",
+            "image": "ladx.png",
+            "color": "#1abc9c",
+            "profile": "ladx",
+            "client_name": "Links Awakening DX Client",
+            "client_title": "*Links Awakening DX Client*"
+        },
+        {
+            "id": "The Legend of Zelda",
+            "display_name": "The Legend of Zelda",
+            "image": "z1.png",
+            "color": "#f39c12",
+            "profile": "z1"
+        },
+        {
+            "id": "Zelda II",
+            "display_name": "Zelda II",
+            "image": "z2.png",
+            "color": "#c0392b",
+            "profile": "z2"
+        },
+        {
+            "id": "Oracle of Ages",
+            "display_name": "Oracle of Ages",
+            "image": "ooa.png",
+            "color": "#2980b9",
+            "profile": "ooa"
+        },
+        {
+            "id": "Oracle of Seasons",
+            "display_name": "Oracle of Seasons",
+            "image": "oos.png",
+            "color": "#d35400",
+            "profile": "oos"
+        },
+        {
+            "id": "Phantom Hourglass",
+            "display_name": "Phantom Hourglass",
+            "image": "ph.png",
+            "color": "#1abc9c",
+            "profile": "ph"
+        },
+        {
+            "id": "Spirit Tracks",
+            "display_name": "Spirit Tracks",
+            "image": "st.png",
+            "color": "#16a085",
+            "profile": "st"
+        }
+    ]
+}

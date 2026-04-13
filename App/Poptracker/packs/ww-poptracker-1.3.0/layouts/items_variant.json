@@ -1,0 +1,12 @@
+{
+  "auto_tracking_settings_grid": {
+    "type": "itemgrid",
+    "h_alignment": "center",
+    "item_margin": "5,3",
+    "item_size": "48,48",
+    "rows": [
+      ["setting_map_tracking"],
+      ["setting_map_tracking_dungeons_only"]
+    ]
+  }
+}
