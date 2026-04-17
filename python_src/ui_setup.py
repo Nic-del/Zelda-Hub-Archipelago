@@ -4,6 +4,16 @@ from tkinter import filedialog, messagebox
 import json
 import os
 import zipfile
+import threading
+import time
+
+try:
+    import pygame
+    HAS_PYGAME = True
+    from controller.device_detector import DeviceDetector
+except ImportError:
+    HAS_PYGAME = False
+    DeviceDetector = None
 
 try:
     import win32api
@@ -152,7 +162,7 @@ def save_config(config):
         return False
 
 class SetupUI(ctk.CTk):
-    def __init__(self):
+    def __init__(self, start_page="emus"):
         super().__init__()
 
         # Appearance configuration
@@ -245,8 +255,9 @@ class SetupUI(ctk.CTk):
         )
         self.btn_save.pack(side="right")
 
-        # No more full setup_pages at init
-        self.show_page("emus")
+        # Start with specified page
+        self.show_page(start_page)
+
 
     def _create_emus_page(self):
         page = self.create_page_frame()
@@ -408,6 +419,16 @@ class SetupUI(ctk.CTk):
         
         entry_ctrl = ctk.CTkEntry(inner_ctrl, textvariable=self.ctrl_shortcut_var, height=35, fg_color="#0d0d0d", border_color="#2a2a2a")
         entry_ctrl.pack(side="left", fill="x", expand=True, padx=5)
+        
+        # Bouton de détection auto
+        self.btn_detect_ctrl = ctk.CTkButton(
+            inner_ctrl, text="🎙️ " + Loc.get("assign_btn"), width=100, height=35,
+            fg_color="#2c3e50", hover_color="#34495e",
+            command=self.start_controller_detection
+        )
+        self.btn_detect_ctrl.pack(side="left", padx=5)
+        
+        self.is_detecting_ctrl = False
         
         ctk.CTkLabel(inner_ctrl, text=Loc.get("hint_combo"), font=ctk.CTkFont(size=10), text_color="#555").pack(side="left", padx=5)
         
@@ -958,6 +979,86 @@ class SetupUI(ctk.CTk):
                 if isinstance(var, tk.BooleanVar): var.set(False)
                 else: var.set("")
 
+    def start_controller_detection(self):
+        """Lance l'écoute pour détecter un bouton de manette."""
+        if not HAS_PYGAME:
+            messagebox.showerror("Erreur", "Pygame n'est pas installé.")
+            return
+
+        if self.is_detecting_ctrl:
+            self.stop_controller_detection()
+            return
+
+        # Initialisation pygame si besoin
+        if not pygame.get_init():
+            pygame.init()
+        if not pygame.joystick.get_init():
+            pygame.joystick.init()
+        
+        # Detector pour normaliser les noms (comme dans ui_controller.py)
+        if not hasattr(self, 'detector') or self.detector is None:
+            self.detector = DeviceDetector()
+
+        self.is_detecting_ctrl = True
+        self.btn_detect_ctrl.configure(text=Loc.get("listening_btn"), fg_color="#c0392b")
+        self.ctrl_shortcut_var.set("...")
+        self.listening_combo_current = set()
+        self.listening_combo_final = set()
+        
+        # On utilise after pour ne pas bloquer l'UI
+        self.poll_controller_for_shortcut()
+
+    def stop_controller_detection(self):
+        self.is_detecting_ctrl = False
+        self.btn_detect_ctrl.configure(text="🎙️ " + Loc.get("assign_btn"), fg_color="#2c3e50")
+        if self.ctrl_shortcut_var.get() == "...":
+            self.ctrl_shortcut_var.set(self.config.get("hub_controller_open_btn", "CAPTURE"))
+
+    def poll_controller_for_shortcut(self):
+        if not self.is_detecting_ctrl:
+            return
+
+        # Vider la file d'attente et traiter les événements
+        for event in pygame.event.get():
+            norm_event = self.detector.process_event(event)
+            if not norm_event:
+                continue
+
+            input_id = norm_event["id"]
+            state = norm_event.get("state", 0)
+
+            # Identification du type d'événement (Presse vs Relâche)
+            is_press = False
+            if norm_event["type"] in ["button", "hat"]:
+                is_press = (state == 1)
+            elif norm_event["type"] == "axis":
+                is_press = abs(state) > 0.8
+
+            if is_press:
+                # Ajouter à la combo en cours
+                if input_id not in self.listening_combo_final:
+                    self.listening_combo_final.add(input_id)
+                self.listening_combo_current.add(input_id)
+                
+                # Mise à jour visuelle immédiate
+                combo_str = "+".join(sorted(list(self.listening_combo_final)))
+                self.ctrl_shortcut_var.set(combo_str)
+            else:
+                # Retirer de l'état "maintenu"
+                if input_id in self.listening_combo_current:
+                    self.listening_combo_current.remove(input_id)
+                
+                # Si TOUT est relâché et qu'on a capté quelque chose -> On valide
+                if not self.listening_combo_current and self.listening_combo_final:
+                    final_str = "+".join(sorted(list(self.listening_combo_final)))
+                    self.ctrl_shortcut_var.set(final_str)
+                    self.stop_controller_detection()
+                    self.config["hub_controller_open_btn"] = final_str
+                    return
+
+        # Continuer de poller si rien trouvé ou si boutons encore maintenus
+        self.after(20, self.poll_controller_for_shortcut)
+
     def save_and_exit(self):
         for (category, key), var in self.path_vars.items():
             if category is None:
@@ -1026,6 +1127,21 @@ class SetupUI(ctk.CTk):
         except Exception as e: print(f"Manifest error: {e}")
         return []
 
+    def on_closing(self):
+        if HAS_PYGAME and pygame.get_init():
+            pygame.quit()
+        self.destroy()
+
 if __name__ == "__main__":
-    app = SetupUI()
+    import sys
+    start_p = "emus"
+    if "--page" in sys.argv:
+        try:
+            idx = sys.argv.index("--page")
+            if idx + 1 < len(sys.argv):
+                start_p = sys.argv[idx + 1]
+        except: pass
+        
+    app = SetupUI(start_page=start_p)
+    app.protocol("WM_DELETE_WINDOW", app.on_closing)
     app.mainloop()

@@ -81,6 +81,45 @@ Si vous n'avez pas encore les fichiers `.apworld`, voici où les trouver :
 - **Phantom Hourglass** : [GitHub Releases](https://github.com/carrotinator/Archipelago/releases)
 - **Spirit Tracks** : [GitHub Releases](https://github.com/DayKat/spirit-tracks/releases)
 
+
+#### 📦 Liens PopTracker
+Pour profiter du tracking automatique, voici les packs recommandés pour chaque jeu. **Note : Il est vivement recommandé de rejoindre les discords des différentes communautés pour avoir les dernières versions à jour.**
+
+- **Soh Ocarina of Time** : [GitHub Releases](https://github.com/Brian0255/ship-of-harkinian-ap-tracker/releases)
+- **Ocarina of Time** : [GitHub Releases](https://github.com/StripesOO7/oot-tracker/releases)
+- **Majora's Mask** : [GitHub Releases](https://github.com/G4M3RL1F3/Majoras-Mask-AP-PopTracker-Pack/releases)
+- **Twilight Princess** : [GitHub Releases](https://github.com/Kizugaya/TPRAP_poptracker/releases)
+- **Zelda 1** : [GitHub Releases](https://github.com/Br00ty/tloz_brooty/releases)
+- **Zelda 2, Adventure of Link** : [GitHub Releases](https://github.com/palex00/zelda-2-ap-tracker/releases/latest/)
+- **Oracle of Ages** : [GitHub Releases](https://github.com/Dranzior/ooa_brooty/releases)
+- **Oracle of Seasons** : [GitHub Releases](https://github.com/OmegaZeron/Oracle-of-Seasons-AP-Poptracker-Pack/releases/latest)
+- **Link's Awakening DX** : [Magpie Tracker](https://magpietracker.us/)
+- **A Link Between Worlds** : [GitHub Releases](https://github.com/Legendgreat/albw-ap-poptracker/releases)
+- **A Link to the Past** : [GitHub Releases](https://github.com/StripesOO7/alttp-ap-poptracker-pack/releases)
+- **Minish Cap** : [GitHub Releases](https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases)
+- **Phantom Hourglass** : [GitHub Repo](https://github.com/ZobeePlays/PH-AP-Item-Tracker/tree/main)
+- **Spirit Tracks** : _Non trouvé pour le moment_
+
+#### 📖 Guides de Configuration (Setup)
+Voici les guides officiels pour configurer chaque jeu avec Archipelago :
+
+- **Soh Ocarina of Time** : [Guide Setup](https://github.com/HarbourMasters/Archipelago-SoH/blob/oot-soh/worlds/oot_soh/docs/guide_en.md)
+- **Ocarina of Time** : [Archipelago Tutorial](https://archipelago.gg/tutorial/Ocarina%20of%20Time/setup_en)
+- **Majora's Mask** : [GitHub Repo](https://github.com/RecompRando/MMRecompRando)
+- **Twilight Princess** : [Guide Setup](https://github.com/WritingHusky/Twilight_Princess_apworld/blob/main/docs/setup_en.md)
+  - _Note : Placez les 3 fichiers (`REL loader`, `custom seed`, `RandomizerAP.US.gci`) dans le dossier `SaveData` de Dolphin (GameCube)._
+- **Zelda 1** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda/multiworld_en)
+- **Zelda 2** : [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases/tag/Zelda2ap1.1)
+- **Oracle of Ages** : [Guide Setup](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
+- **Oracle of Seasons** : [Guide Setup](https://github.com/Dinopony/ArchipelagoOoS/blob/oos/worlds/tloz_oos/docs/oos_setup_en.md)
+- **Link's Awakening DX** : [Archipelago Tutorial](https://archipelago.gg/tutorial/#Links%20Awakening%20DX)
+- **A Link Between Worlds** : [Guide Setup](https://github.com/randomsalience/albw-archipelago/blob/main/docs/setup_en.md)
+  - _Important (Azahar) : Allez dans `File > Open Azahar Folder`. Créez un dossier `load`, et à l'intérieur un dossier `mods`. Ensuite, dans `Emulation > Configure > General > Debug`, assurez-vous que `Enable RPC Server` est coché._
+- **A Link to the Past** : [Archipelago Tutorial](https://archipelago.gg/tutorial/#A%20Link%20to%20the%20Past)
+- **Minish Cap** : [Guide Setup](https://github.com/eternalcode0/Archipelago/blob/feat/new-game-minish-cap/worlds/tmc/docs/setup_en.md)
+- **Phantom Hourglass** : [Guide Setup](https://github.com/carrotinator/Archipelago/blob/main/worlds/tloz_ph/docs/setup.md)
+- **Spirit Tracks** : [Guide Setup](https://github.com/DayKat/spirit-tracks/blob/main/worlds/tloz_st/docs/setup.md)
+
 #### 3️⃣ Configuration du Zelda Hub
 
 Lancez Zelda-Hub.exe et configurez les onglets suivants via le bouton **⚙️ Chemins Install** :
@@ -235,6 +274,44 @@ If you don't have the `.apworld` files yet, here is where to find them:
 - **Minish Cap**: [GitHub Releases](https://github.com/eternalcode0/Archipelago/releases)
 - **Phantom Hourglass**: [GitHub Releases](https://github.com/carrotinator/Archipelago/releases)
 - **Spirit Tracks**: [GitHub Releases](https://github.com/DayKat/spirit-tracks/releases)
+
+#### 📦 PopTracker Links
+To enjoy automatic tracking, here are the recommended packs for each game. **Note: It is strongly recommended to join the various community Discord servers to get the latest versions.**
+
+- **Soh Ocarina of Time** : [GitHub Releases](https://github.com/Brian0255/ship-of-harkinian-ap-tracker/releases)
+- **Ocarina of Time** : [GitHub Releases](https://github.com/StripesOO7/oot-tracker/releases)
+- **Majora's Mask** : [GitHub Releases](https://github.com/G4M3RL1F3/Majoras-Mask-AP-PopTracker-Pack/releases)
+- **Twilight Princess** : [GitHub Releases](https://github.com/Kizugaya/TPRAP_poptracker/releases)
+- **Zelda 1** : [GitHub Releases](https://github.com/Br00ty/tloz_brooty/releases)
+- **Zelda 2, Adventure of Link** : [GitHub Releases](https://github.com/palex00/zelda-2-ap-tracker/releases/latest/)
+- **Oracle of Ages** : [GitHub Releases](https://github.com/Dranzior/ooa_brooty/releases)
+- **Oracle of Seasons** : [GitHub Releases](https://github.com/OmegaZeron/Oracle-of-Seasons-AP-Poptracker-Pack/releases/latest)
+- **Link's Awakening DX** : [Magpie Tracker](https://magpietracker.us/)
+- **A Link Between Worlds** : [GitHub Releases](https://github.com/Legendgreat/albw-ap-poptracker/releases)
+- **A Link to the Past** : [GitHub Releases](https://github.com/StripesOO7/alttp-ap-poptracker-pack/releases)
+- **Minish Cap** : [GitHub Releases](https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases)
+- **Phantom Hourglass** : [GitHub Repo](https://github.com/ZobeePlays/PH-AP-Item-Tracker/tree/main)
+- **Spirit Tracks** : _Not found yet_
+
+#### 📖 Setup Guides
+Official guides to configure each game with Archipelago:
+
+- **Soh Ocarina of Time**: [Setup Guide](https://github.com/HarbourMasters/Archipelago-SoH/blob/oot-soh/worlds/oot_soh/docs/guide_en.md)
+- **Ocarina of Time**: [Archipelago Tutorial](https://archipelago.gg/tutorial/Ocarina%20of%20Time/setup_en)
+- **Majora's Mask**: [GitHub Repo](https://github.com/RecompRando/MMRecompRando)
+- **Twilight Princess**: [Setup Guide](https://github.com/WritingHusky/Twilight_Princess_apworld/blob/main/docs/setup_en.md)
+  - _Note: Place the 3 files (`REL loader`, `custom seed`, `RandomizerAP.US.gci`) in Dolphin's `SaveData` folder (GameCube)._
+- **Zelda 1**: [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda/multiworld_en)
+- **Zelda 2**: [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases/tag/Zelda2ap1.1)
+- **Oracle of Ages**: [Setup Guide](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
+- **Oracle of Seasons**: [Setup Guide](https://github.com/Dinopony/ArchipelagoOoS/blob/oos/worlds/tloz_oos/docs/oos_setup_en.md)
+- **Link's Awakening DX**: [Archipelago Tutorial](https://archipelago.gg/tutorial/#Links%20Awakening%20DX)
+- **A Link Between Worlds**: [Setup Guide](https://github.com/randomsalience/albw-archipelago/blob/main/docs/setup_en.md)
+  - _Important (Azahar): Select `File > Open Azahar Folder`. Create a `load` folder inside, and a `mods` folder inside that. Also, in `Emulation > Configure > General > Debug`, ensure `Enable RPC Server` is enabled._
+- **A Link to the Past**: [Archipelago Tutorial](https://archipelago.gg/tutorial/#A%20Link%20to%20the%20Past)
+- **Minish Cap**: [Setup Guide](https://github.com/eternalcode0/Archipelago/blob/feat/new-game-minish-cap/worlds/tmc/docs/setup_en.md)
+- **Phantom Hourglass**: [Setup Guide](https://github.com/carrotinator/Archipelago/blob/main/worlds/tloz_ph/docs/setup.md)
+- **Spirit Tracks**: [Setup Guide](https://github.com/DayKat/spirit-tracks/blob/main/worlds/tloz_st/docs/setup.md)
 
 #### 3️⃣ Zelda Hub Configuration
 

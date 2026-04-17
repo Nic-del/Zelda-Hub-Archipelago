@@ -114,20 +114,20 @@ class GameCard:
         if has_tracker:
             self.create_icon_toggle(self.ctrl_container, "🗺️", v_pop, "#00ff99", is_registered)
         
-        v_pad = tk.BooleanVar()
-        self.ui.auto_config_per_game[self.name] = v_pad
-        if os.path.exists(self.ui.config_path):
-            try:
-                with open(self.ui.config_path, "r", encoding="utf-8") as f:
-                    config_data = json.load(f)
-                    v_pad.set(config_data.get("auto_controller_per_game", {}).get(self.name, True))
-            except: pass
+        # v_pad = tk.BooleanVar()
+        # self.ui.auto_config_per_game[self.name] = v_pad
+        # if os.path.exists(self.ui.config_path):
+        #     try:
+        #         with open(self.ui.config_path, "r", encoding="utf-8") as f:
+        #             config_data = json.load(f)
+        #             v_pad.set(config_data.get("auto_controller_per_game", {}).get(self.name, True))
+        #     except: pass
         
-        gp_cb = self.create_icon_toggle(self.ctrl_container, "🎮", v_pad, "#3498db", is_registered)
-        gp_cb.is_auto_config_supported = (self.name != "A Link Between Worlds")
-        if not gp_cb.is_auto_config_supported:
-            gp_cb.configure(state="disabled")
-        self.ui.gamepad_widgets.append(gp_cb)
+        # gp_cb = self.create_icon_toggle(self.ctrl_container, "🎮", v_pad, "#3498db", is_registered)
+        # gp_cb.is_auto_config_supported = (self.name != "A Link Between Worlds")
+        # if not gp_cb.is_auto_config_supported:
+        #     gp_cb.configure(state="disabled")
+        # self.ui.gamepad_widgets.append(gp_cb)
 
     def create_icon_toggle(self, parent, text, var, color, is_registered):
         cb = tk.Checkbutton(

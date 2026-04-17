@@ -26,7 +26,6 @@ from launcher_core import (
 from obs_controller import obs_controller
 from localization import Loc
 
-# Ajout des imports pour la gestion des manettes
 sys.path.append(os.path.join(BASE_DIR, "controller"))
 from controller_manager import ControllerManager
 
@@ -119,7 +118,8 @@ class LauncherUI:
         self.hub_btn = self.manager.hub_controller_open_btn # Initial value
         self.hub_keyboard_shortcut = "ctrl+shift+s"
         self.controller_pressed_buttons = set()
-        self.controller_manager.raw_input_callback = self._handle_controller_input
+        if self.controller_manager:
+            self.controller_manager.raw_input_callback = self._handle_controller_input
         
         # Charger les images
         self.HAS_PIL = HAS_PIL # Expose HAS_PIL for GameCard
@@ -194,7 +194,7 @@ class LauncherUI:
             btn.bind("<Leave>", lambda e: btn.configure(fg=self.colors["text_dim"]))
             return btn
 
-        self.btn_nav_ctrl = create_side_btn("🎮", self.open_controller_settings)
+        self.btn_nav_ctrl = None # create_side_btn("🎮", self.open_controller_settings)
         self.btn_nav_settings = create_side_btn("⚙️", self.open_setup)
         
         # Initial Selection Style
@@ -250,6 +250,18 @@ class LauncherUI:
         self.btn_qs.pack(side="left", padx=(15, 0))
         self.action_widgets.append(self.btn_qs)
 
+        # Bouton Config du Quick Switcher
+        self.btn_qs_setup = tk.Button(
+            self.top_right_frame, text="⚙️", font=("Segoe UI", 10),
+            bg=self.colors["sidebar_bg"], fg=self.colors["text_dim"],
+            activebackground=self.colors["accent"], activeforeground="black",
+            relief="flat", bd=0, cursor="hand2", 
+            command=lambda: self.open_setup("general")
+        )
+        self.btn_qs_setup.pack(side="left", padx=(5, 0), pady=15)
+        self.btn_qs_setup.bind("<Enter>", lambda e: self.btn_qs_setup.configure(fg=self.colors["accent"]))
+        self.btn_qs_setup.bind("<Leave>", lambda e: self.btn_qs_setup.configure(fg=self.colors["text_dim"]))
+
         # 2. MAIN CONTENT (Scrollable Game Grid)
         self.container = tk.Frame(self.content_area, bg=self.colors["bg"])
         self.container.pack(fill="both", expand=True, padx=10, pady=10)
@@ -293,19 +305,20 @@ class LauncherUI:
             "font": ("Segoe UI", 8, "bold")
         }
 
-        self.auto_config_cb = tk.Checkbutton(self.toggles_frame, text="🎮 CONTROLLERS", variable=self.auto_config_var, **checkbox_style, command=self._on_auto_config_change)
-        self.auto_config_cb.pack(side="left", padx=10)
-        self.action_widgets.append(self.auto_config_cb)
+        # self.auto_config_cb = tk.Checkbutton(self.toggles_frame, text="🎮 CONTROLLERS", variable=self.auto_config_var, **checkbox_style, command=self._on_auto_config_change)
+        # self.auto_config_cb.pack(side="left", padx=10)
+        # self.action_widgets.append(self.auto_config_cb)
+        self.auto_config_cb = None
 
-        self.auto_save_cb = tk.Checkbutton(self.toggles_frame, text="💾 AUTO-SAVE", variable=self.auto_save_var, **checkbox_style, command=self._on_auto_save_change)
+        self.auto_save_cb = tk.Checkbutton(self.toggles_frame, text=f"💾 {Loc.get('toggle_auto_save')}", variable=self.auto_save_var, **checkbox_style, command=self._on_auto_save_change)
         self.auto_save_cb.pack(side="left", padx=10)
         self.action_widgets.append(self.auto_save_cb)
 
-        self.broadcast_enabled_cb = tk.Checkbutton(self.toggles_frame, text="📡 BROADCAST", variable=self.broadcast_enabled_var, **checkbox_style, command=self.save_settings)
+        self.broadcast_enabled_cb = tk.Checkbutton(self.toggles_frame, text=f"📡 {Loc.get('toggle_broadcast')}", variable=self.broadcast_enabled_var, **checkbox_style, command=self.save_settings)
         self.broadcast_enabled_cb.pack(side="left", padx=10)
         self.action_widgets.append(self.broadcast_enabled_cb)
 
-        self.multi_game_cb = tk.Checkbutton(self.toggles_frame, text="🔄 HOT-SWAP", variable=self.multi_game_keep_alive_var, **checkbox_style, command=self._on_hot_swap_change)
+        self.multi_game_cb = tk.Checkbutton(self.toggles_frame, text=f"🔄 {Loc.get('toggle_hot_swap')}", variable=self.multi_game_keep_alive_var, **checkbox_style, command=self._on_hot_swap_change)
         self.multi_game_cb.pack(side="left", padx=10)
         self.action_widgets.append(self.multi_game_cb)
 
@@ -342,7 +355,8 @@ class LauncherUI:
 
     def _update_nav_styles(self, active_btn):
         """Met à jour l'apparence des boutons de navigation pour montrer la page active."""
-        for btn in [self.btn_nav_ctrl, self.btn_nav_settings]:
+        nav_buttons = [b for b in [self.btn_nav_ctrl, self.btn_nav_settings] if b is not None]
+        for btn in nav_buttons:
             if btn == active_btn:
                 btn.configure(fg=self.colors["accent"], bg="#1d1d26")
             else:
@@ -549,19 +563,22 @@ class LauncherUI:
         
         state = raw_event.get("state", 0)
         
-        # On ne track que les boutons et les directions du D-Pad (pas les axes continus)
+        # On track les boutons, le D-Pad et les pressions d'axes (Triggers)
         if raw_event["type"] in ["button", "hat"]:
             if state == 1 or (raw_event["type"] == "hat" and btn_id != "DPAD_RELEASE"):
                 self.controller_pressed_buttons.add(btn_id)
             else:
                 if btn_id == "DPAD_RELEASE":
-                    # On nettoie toutes les directions si release (plus simple pour Pygame)
-                    self.controller_pressed_buttons.discard("DPAD_UP")
-                    self.controller_pressed_buttons.discard("DPAD_DOWN")
-                    self.controller_pressed_buttons.discard("DPAD_LEFT")
-                    self.controller_pressed_buttons.discard("DPAD_RIGHT")
+                    # On nettoie toutes les directions si release
+                    for d in ["DPAD_UP", "DPAD_DOWN", "DPAD_LEFT", "DPAD_RIGHT"]:
+                        self.controller_pressed_buttons.discard(d)
                 else:
                     self.controller_pressed_buttons.discard(btn_id)
+        elif raw_event["type"] == "axis":
+            if abs(state) > 0.8:
+                self.controller_pressed_buttons.add(btn_id)
+            else:
+                self.controller_pressed_buttons.discard(btn_id)
 
         # 1. Si le Quick Switcher est ouvert, il est prioritaire sur les inputs
         if self.quick_switcher.overlay:
@@ -584,7 +601,7 @@ class LauncherUI:
 
     def poll_controllers(self):
         """Met à jour l'état des manettes régulièrement."""
-        if hasattr(self, 'controller_manager'):
+        if self.controller_manager:
             self.controller_manager.poll()
         self.root.after(self.controller_polling_interval, self.poll_controllers)
 
@@ -667,7 +684,7 @@ class LauncherUI:
         is_global_auto = self.auto_config_var.get()
         is_game_auto = self.auto_config_per_game.get(name, tk.BooleanVar(value=True)).get()
 
-        if is_global_auto and is_game_auto and profile:
+        if self.controller_manager and is_global_auto and is_game_auto and profile:
             print(f"[Launcher] Preparation manette pour {name} (Profil: {profile})...")
             
             # Charger et appliquer (Dolphin / BizHawk)
@@ -679,7 +696,7 @@ class LauncherUI:
                 self.controller_manager.exporter.force_copy_profile("ww.ini")
         else:
             print(f"[Launcher] Configuration automatique ignorée ou non définie pour {name}.")
-            if profile:
+            if self.controller_manager and profile:
                 self.controller_manager.disable_config_for_emulators(profile)
 
         # 2. RUN LOGIC IN THREAD WITH DELAY
@@ -1077,7 +1094,7 @@ class LauncherUI:
             
         threading.Thread(target=run_controller, daemon=True).start()
 
-    def open_setup(self):
+    def open_setup(self, page="emus"):
         self.status_var.set("Configuration en cours...")
         self.root.update()
         
@@ -1085,12 +1102,12 @@ class LauncherUI:
         self.root.attributes('-disabled', True)
         
         def run_setup():
-            # Ouvre `ui_setup.py` (chemin absolu) et attend
+            # Ouvre `ui_setup.py` (chemin absolu) avec la page demandée et attend
             setup_path = os.path.join(self.base_dir, "ui_setup.py")
-            subprocess.run([sys.executable, setup_path])
+            subprocess.run([sys.executable, setup_path, "--page", page])
             
             # Une fois fermé, on débloque
-            print("[Launcher] Retour du setup des chemins. Reloading config...")
+            print(f"[Launcher] Retour du setup ({page}). Reloading config...")
             self.root.after(0, self.finish_setup)
             
         threading.Thread(target=run_setup, daemon=True).start()
@@ -1182,19 +1199,22 @@ class LauncherUI:
                 Loc.set_lang(new_lang)
                 self.root.title(Loc.get("title"))
                 self.label.configure(text=Loc.get("header_title"))
-                self.sub_label.configure(text=Loc.get("header_subtitle"))
+                if getattr(self, 'sub_label', None):
+                    self.sub_label.configure(text=Loc.get("header_subtitle"))
                 
                 # NOUVEAU: Mettre à jour tous les textes de l'UI principale
-                if hasattr(self, 'lbl_port'): self.lbl_port.configure(text=Loc.get("port_label"))
-                if hasattr(self, 'btn_port'): self.btn_port.configure(text=Loc.get("ok_btn"))
-                if hasattr(self, 'btn_qs'): self.btn_qs.configure(text=Loc.get("quick_switcher_btn"))
-                if hasattr(self, 'settings_btn'): self.settings_btn.configure(text=Loc.get("config_btn"))
-                if hasattr(self, 'controller_btn'): self.controller_btn.configure(text=Loc.get("manage_controllers_btn"))
-                if hasattr(self, 'stop_btn'): self.stop_btn.configure(text=Loc.get("quit_game_btn"))
-                if hasattr(self, 'auto_config_cb'): self.auto_config_cb.configure(text=Loc.get("auto_config_label"))
-                if hasattr(self, 'auto_save_cb'): self.auto_save_cb.configure(text=Loc.get("auto_save_label"))
-                if hasattr(self, 'multi_game_cb'): self.multi_game_cb.configure(text=Loc.get("opt_multi_game_keep_alive"))
-                if hasattr(self, 'broadcast_enabled_cb'): self.broadcast_enabled_cb.configure(text=Loc.get("opt_enable_broadcast_main"))
+                # NOUVEAU: Mettre à jour tous les textes de l'UI principale
+                if getattr(self, 'lbl_port', None): self.lbl_port.configure(text=Loc.get("port_label"))
+                if getattr(self, 'btn_port', None): self.btn_port.configure(text=Loc.get("ok_btn"))
+                if getattr(self, 'btn_qs', None): self.btn_qs.configure(text=Loc.get("quick_switcher_btn"))
+                if getattr(self, 'stop_btn', None): self.stop_btn.configure(text=Loc.get("quit_game_btn"))
+                if getattr(self, 'auto_config_cb', None): self.auto_config_cb.configure(text=Loc.get("auto_config_label"))
+                if getattr(self, 'auto_save_cb', None): 
+                    self.auto_save_cb.configure(text=f"💾 {Loc.get('toggle_auto_save')}")
+                if getattr(self, 'multi_game_cb', None): 
+                    self.multi_game_cb.configure(text=f"🔄 {Loc.get('toggle_hot_swap')}")
+                if getattr(self, 'broadcast_enabled_cb', None): 
+                    self.broadcast_enabled_cb.configure(text=f"📡 {Loc.get('toggle_broadcast')}")
                 
                 print(f"[Launcher] Settings reloaded. Language: {new_lang}, Hub button: {self.hub_btn}")
             except Exception as e:
@@ -1244,7 +1264,7 @@ class LauncherUI:
         # Clear existing buttons
         # Nettoyage de la liste des widgets : on ne garde que ceux qui existent encore
         # et qui ne sont pas des enfants de game_frame (car ils vont être détruits)
-        self.action_widgets = [w for w in self.action_widgets if w.winfo_exists() and not str(w).startswith(str(self.game_frame))]
+        self.action_widgets = [w for w in self.action_widgets if w and w.winfo_exists() and not str(w).startswith(str(self.game_frame))]
 
         for widget in self.game_frame.winfo_children():
             widget.destroy()
@@ -1450,8 +1470,7 @@ if __name__ == "__main__":
 
     root = tk.Tk()
     
-    # Initialisation du ControllerManager (silencieuse)
-    # On le fait APRES tk.Tk() pour une meilleure compatibilité des contexts OS/SDL
+    # Initialisation du ControllerManager
     controller_manager = ControllerManager(profiles_dir=os.path.join(current_dir, "controller", "profiles"))
     
     app = LauncherUI(root, manager, controller_manager)
