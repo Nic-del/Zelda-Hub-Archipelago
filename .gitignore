@@ -6,3 +6,12 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# App Configs
+python_src/config.json
+App/UiBroadCast-Archipelago/broadcast_settings.json
+
+# Python temporary files
+__pycache__/
+*.pyc
+python_src/temp/
