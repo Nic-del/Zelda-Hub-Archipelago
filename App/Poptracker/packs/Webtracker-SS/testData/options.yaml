@@ -10,6 +10,22 @@
   permalink: false
   help: "Only generate a spoiler log, doesn't attempt to patch any game files."
   ui: option_dry_run
+- name: Print Client Messages
+  command: print-client-messages
+  type: boolean
+  default: true
+  permalink: false
+  cosmetic: true
+  help: "If checked, client messages will be printed on screen in-game."
+  ui: option_print_messages
+- name: Use Wii UDP Socket
+  command: use-wii-udp-socket
+  type: boolean
+  default: true
+  permalink: false
+  cosmetic: true
+  help: "If checked, the Wii will open a UDP server the AP client can connect to for console multiworld."
+  ui: option_use_socket
 - name: Output Path
   command: output-folder
   type: dirpath
@@ -28,6 +44,12 @@
   default: false
   permalink: false
   help: "Don't launch the randomizer UI, just read command line parameters."
+- name: APSSR File
+  command: apssr
+  type: dirpath
+  default: "."
+  permalink: false
+  help: "Path to the .apssr file given to you by the multiworld host."
 ## GUI options
 - name: GUI Theme Mode
   command: gui-theme
@@ -96,7 +118,6 @@
   bits: 2
   help: "The number of tablets to start with.
         Tablets are selected randomly and the remainder are randomized as progress items."
-  ui: option_starting_tablet_count
 - name: Open Thunderhead
   command: open-thunderhead
   type: singlechoice
@@ -109,7 +130,6 @@
   help: "Determines how the Thunderhead is unlocked.
         **Ballad**: the Thunderhead opens when the Ballad of the Goddess song is found.
         **Open**: the Thunderhead is open from the start of the game."
-  ui: option_open_thunderhead
 - name: Starting Sword
   command: starting-sword
   type: singlechoice
@@ -125,7 +145,6 @@
   default: Goddess Sword
   help: "Select which sword to start with.
         The remaining upgrades will be shuffled into the item pool."
-  ui: option_starting_sword
 - name: Required Dungeon Count
   command: required-dungeon-count
   type: int
@@ -137,26 +156,22 @@
         Beating Sky Keep is **NOT** required.
         Lanayru Mining Facility is beaten when exiting to the Temple of Time at the end of the dungeon.
         The other dungeons are only beaten when the Goddess Crest at the end is struck with a Skyward Strike."
-  ui: option_required_dungeon_count
 - name: Imp 2
   command: imp2-skip
   type: boolean
   default: true
   help: "If enabled, the requirement to defeat Imprisoned 2 at the end of the game is skipped."
-  ui: option_imp_2
 - name: Empty unrequired Dungeons
   command: empty-unrequired-dungeons
   type: boolean
   default: true
   help: "If enabled, only the required dungeons will contain progression items.
         If not enabled, all dungeons and Sky Keep can potentially contain progression items."
-  ui: option_empty_unrequired_dungeons
 - name: Triforce Required
   command: triforce-required
   type: boolean
   default: true
   help: "If enabled, the three Triforces will be required to open the door to Hylia's Realm at the end of the game."
-  ui: option_triforce_required
 - name: Triforce Shuffle
   command: triforce-shuffle
   type: singlechoice
@@ -170,7 +185,6 @@
         **Vanilla**: Triforces are placed in their vanilla locations in Sky Keep.
         **Sky Keep**: Triforces are shuffled only within Sky Keep.
         **Anywhere**: Triforces are shuffled with all other valid locations in the game."
-  ui: option_triforce_shuffle
 - name: Seed
   command: seed
   type: int
@@ -178,7 +192,6 @@
   permalink: false
   help: "Specify a seed to use for randomization.
         If set to -1, a random seed is used."
-  ui: seed
 - name: Randomize Entrances
   command: randomize-entrances
   type: singlechoice
@@ -194,13 +207,11 @@
         **Required Dungeons Separately**: required dungeons entrances are only shuffled with each other.
         **All Surface Dungeons**: all surface dungeons entrances are shuffled with each other.
         **All Surface Dungeons + Sky Keep** - all surface dungeon entrances AND the Sky Keep entrance are shuffled with each other."
-  ui: option_randomize_entrances
 - name: Randomize Silent Realms
   command: randomize-trials
   type: boolean
   default: false
   help: "If enabled, the Silent Realm that a Trial Gate entrance leads to is shuffled."
-  ui: option_randomize_trials
 - name: No Spoiler Log
   command: no-spoiler-log
   type: boolean
@@ -216,7 +227,6 @@
   help: "Determines if shops are randomized. When enabled, shop items and locations will be shuffled like normal items,
         and the shop locations will get a randomized item. When disabled, shops will always contain their vanilla items,
         however those items may still be required for progression. **Currently shuffled shops**: Beedle's Airshop"
-  ui: option_shopsanity
 - name: Rupoor Mode
   command: rupoor-mode
   type: singlechoice
@@ -233,7 +243,6 @@
         **Rupoor Mayhem**: replaces half of the junk items with Rupoors.
         **Rupoor Insanity**: replaces all junk items with Rupoors.
         Note, Rupoors may also be added if there are not enough junk items for the game to randomize."
-  ui: option_rupoor_mode
 - name: Rupeesanity
   command: rupeesanity
   type: boolean
@@ -242,7 +251,6 @@
   help: "Shuffles freestanding rupees. When unshuffled, all freestanding rupees will remain vanilla.
         Note, it is not possible to shuffle some freestanding rupees yet (e.g. the rupees on the Lumpy Pumpkin
         chandelier)."
-  ui: option_rupeesanity
 - name: Place Scrap Shop Upgrades
   command: gondo-upgrades
   type: boolean
@@ -250,7 +258,6 @@
   help: "If enabled, the extra progressive items upgradeable in the Scrap Shop in vanilla will be shuffled.
         Includes: Quick Beetle, Tough Beetle, Iron Bow, Sacred Bow, Big Bug Net and Scattershot.
         Note, there are no random items obtainable by talking to Gondo at the Scrap Shop."
-  ui: option_gondo_upgrades
 - name: Gate of Time Starting State
   command: got-start
   type: singlechoice
@@ -262,7 +269,6 @@
   help: "Determines whether the Gate of Time starts raised or lowered.
         **Lowered**: the Goddess's Harp is needed to raise the Gate of Time.
         **Raised**: the Gate of Time is raised from the start of the game."
-  ui: option_got_starting_state
 - name: Gate of Time Sword Requirement
   command: got-sword-requirement
   type: singlechoice
@@ -275,7 +281,6 @@
     - True Master Sword
   default: True Master Sword
   help: "Determines the sword needed to open the Gate of Time."
-  ui: option_got_sword_requirement
 - name: Gate of Time Dungeon Requirements
   command: got-dungeon-requirement
   type: singlechoice
@@ -287,7 +292,6 @@
   help: "Enables dungeon requirements for opening the Gate of Time.
         **Required**: beating the required dungeons is necessary to open the Gate of Time.
         **Unrequired**: the Gate of Time can be opened without beating the required dungeons."
-  ui: option_got_dungeon_requirement
 - name: Open Lanayru Mining Facility
   command: open-lmf
   type: singlechoice
@@ -302,26 +306,22 @@
         **Nodes**: requires activating the 3 nodes (vanilla).
         **Main Node**: requires only the main generator to be activated.
         **Open**: the Lanayru Mining Facility is open at the start of the game."
-  ui: option_open_lmf
 - name: Skip Horde
   command: skip-horde
   type: boolean
   default: false
   help: "If enabled, the requirement to defeat The Horde at the end of the game is skipped."
-  ui: option_horde
 - name: Skip Ghirahim 3
   command: skip-g3
   type: boolean
   default: false
   help: "If enabled, the requirement to defeat Ghirahim 3 at the end of the game is skipped."
-  ui: option_g3
 - name: Skip Demise
   command: skip-demise
   type: boolean
   default: false
   help: "If enabled, the requirement to defeat Demise at the end of the game is skipped.
         Entering the portal at the bottom of the Whirlpool in Hylia's Realm will play the credits."
-  ui: option_demise
 - name: Map Mode
   command: map-mode
   type: singlechoice
@@ -331,6 +331,7 @@
     - Vanilla
     - Own Dungeon - Restricted
     - Own Dungeon - Unrestricted
+    # - Own Dungeon - Any World
     # - Overworld Only
     # - Any Dungeon
     - Anywhere
@@ -341,27 +342,40 @@
         **Restricted**: dungeon maps cannot appear on boss heart containers or the ending checks of dungeons.
         **Unrestricted**: dungeon maps appear anywhere within their own dungeon.
         **Anywhere**: maps can appear outside of dungeons."
-  ui: option_map_mode
 - name: Small Key Mode
   command: small-key-mode
   type: singlechoice
   bits: 3
   choices:
     - Vanilla
-    - Own Dungeon - Restricted
+    - Own Dungeon
+    # - Own Dungeon - Any World
     # - Own Dungeon - Unrestricted
-    - Lanayru Caves Key Only
     # - Overworld Only
     # - Any Dungeon
     - Anywhere
-  default: Own Dungeon - Restricted
+  default: Own Dungeon
   help: "Determines the placement of small keys.
         **Vanilla**: keys will be in their vanilla locations (The Skyview Digging Spot will not contain a key).
         **Restricted**: keys will be within their own dungeons.
         **Lanayru Caves Key only**: shuffles the Lanayru Caves Small Key
             (all other keys are shuffled within their own dungeon).
         **Anywhere**: keys can appear outside of dungeons."
-  ui: option_small_key_mode
+- name: Lanayru Caves Small Key
+  command: lanayru-caves-small-key
+  type: singlechoice
+  bits: 3
+  choices:
+    - Start With
+    - Caves
+    - Lanayru
+    - Anywhere
+  default: Lanayru
+  help: "Determines the placement of the Lanayru Caves small key.
+        **Start With**: start with the key in your inventory.
+        **Caves**: places the key within the caves.
+        **Lanayru**: places the key in the Lanayru surface region. The key will only be in an accessible area of Lanayru.
+        **Anywhere**: key can appear outside of dungeons in any world."
 - name: Boss Key Mode
   command: boss-key-mode
   type: singlechoice
@@ -369,6 +383,7 @@
   choices:
     - Vanilla
     - Own Dungeon
+    # - Own Dungeon - Any World
     # - Overworld Only
     # - Any Dungeon
     - Anywhere
@@ -377,7 +392,6 @@
         **Vanilla**: boss keys appear in their vanilla locations.
         **Own Dungeon**: boss keys appear within their own dungeon.
         **Anywhere**: boss keys can appear outside of dungeons."
-  ui: option_boss_key_mode
 ## Logic
 - name: Logic Mode
   command: logic-mode
@@ -391,7 +405,6 @@
   help: "Determines the logic mode to use when placing items.
         **BiTless**: requires no tricks to beat the game but allows non-BiT tricks to be enabled.
         **No Logic**: items are placed without logic and will likely result in an unbeatable game."
-  ui: option_logic_mode
 ## Tricks
 - name: Enabled Tricks BiTless
   command: enabled-tricks-bitless
@@ -490,7 +503,6 @@
         **Basic**: the song text indicates if beating the trial rewards a progress item.
         **Advanced**: the song text indicates if beating the trial rewards a SotS, junk or potientially required item.
         **Direct**: the song text states the reward for beating the trial directly."
-  ui: option_song_hints
 - name: BiT Changes
   command: bit-patches
   type: singlechoice
@@ -505,7 +517,6 @@
         **Vanilla**: Keeps the vanilla game behaviour where BiT is possible but Eldin BiT (and others) will still crash.
         **Fix BiT Crashes**: Does not load some arcs to make all areas accessible in BiT.
         **WARNING**: All 3 files must be filled BEFORE activating BiT otherwise this will not work."
-  ui: option_bit_patches
 - name: Output placement file
   command: out-placement-file
   type: boolean
@@ -519,7 +530,6 @@
   default: true
   help: "If enabled, Impa in Hylia's Temple to give a hint to the location of the Stone of Trials.
         Does not appear if the Stone of Trials is a starting item."
-  ui: option_impa_sot_hint
 - name: Tunic Swap
   command: tunic-swap
   type: boolean
@@ -572,13 +582,11 @@
         **Heart Container**: end of required dungeon heart containers are swords.
         **Final Check**: the final check of required dungeons are swords.
         Note, if there aren't enough swords to place, some required dungeons will not force a sword at the end."
-  ui: option_sword_dungeon_reward
 - name: Open Earth Temple
   command: open-et
   type: boolean
   default: false
   help: "If enabled, the Earth Temple door (requiring 5 key pieces to unlock) is opened at the start of the game."
-  ui: option_open_et
 - name: Demise Count
   command: demise-count
   type: int
@@ -589,7 +597,6 @@
   help: "Determines how many demises appear in the final fight of the game.
         **WARNING**: Enabling more than one makes the fight very difficult.
         **DOUBLE WARNING**: Enabling more than 3 demises produces a lot of lag and can make the game unplayable."
-  ui: option_demise_count
 - name: Randomize Music
   command: music-rando
   type: singlechoice
@@ -630,14 +637,12 @@
   default: false
   help: "If enabled, when a SotS hint points to a Goddess Chest, the hint will change to indicate this and display
         which of the cube progress regions is SotS."
-  ui: option_cube_sots
 - name: Precise Item Hints
   command: precise-item
   type: boolean
   default: false
   help: "If enabled, item hints will indicate the exact location within a region that is being hinted.
         If disabled, only the region will be hinted."
-  ui: option_precise_item
 - name: Shuffle Trial Objects
   command: shuffle-trial-objects
   type: singlechoice
@@ -653,13 +658,11 @@
         **Simple**:only shuffles tears and light fruits.
         **Advanced**: also shuffles dusk relics.
         **Full**: also shuffles stamina fruits."
-  ui: option_shuffle_trial_objects
 - name: Fill Dowsing on White Sword
   command: dowsing-after-whitesword
   type: boolean
   default: true
   help: If enabled, obtaining the Goddess White Sword will unlock rupee, crystal, treasure and goddess cube dowsing.
-  ui: option_fill_dowsing_on_white_sword
 - name: Chest Dowsing
   command: chest-dowsing
   type: singlechoice
@@ -675,14 +678,12 @@
         **All Chests**: dowsing points to all chests (regardless of their contents).
         **Progress Items**: dowsing only points to chests containing progress items
             (doesn't work with Goddess Chests)."
-  ui: option_chest_dowsing
 - name: Allow Dowsing in Dungeons
   command: dungeon-dowsing
   type: boolean
   default: false
   help: "If enabled, dowsing will be re-enabled in dungeons and other dungeon-like areas like the Great Tree and
         Waterfall Cave."
-  ui: option_dungeon_dowsing
 ## Excluded Locations
 - name: Excluded Locations
   command: excluded-locations
@@ -749,7 +750,6 @@
         **Vanilla**: logically requires you to talk to Yerbal and draw on the Floria Gates to enter Lake Floria.
         **Talk to Yerbal**: logically requires you to talk to Yerbal to enter Lake Floria.
         **Open**: the Floria Gates are opened from the start of the game."
-  ui: option_open_lake_floria
 - name: Upgraded Skyward Strike
   command: upgraded-skyward-strike
   type: boolean
@@ -757,14 +757,12 @@
   permalink: true
   help: "If enabled, the Skyward Strike will be fully upgraded for all swords (excluding Practice Sword).
         This increases the reach and the charge speed of the Skyward Strike."
-  ui: option_upgraded_skyward_strike
 - name: Faster Air Meter Drain
   command: fast-air-meter
   type: boolean
   default: false
   permalink: true
   help: "If enabled, the air meter depletes twice as fast when under water."
-  ui: option_fast_air_meter
 - name: Heart Drops
   command: enable-heart-drops
   type: boolean
@@ -772,7 +770,6 @@
   permalinnk: true
   help: "If enabled, heart flowers will spawn and hearts may drop from defeated enemies, broken pots, broken barrels,
         cut grass, and digging spots."
-  ui: option_enable_heart_drops
 - name: Damage Multiplier
   command: damage-multiplier
   type: int
@@ -785,7 +782,6 @@
         **Normal Mode** (default) damage is x1.
         **Hero Hode** (new game +) damage is x2.
         At x12 or higher, the hot cave in Eldin Volcano logically requires Fireshield Earrings to traverse."
-  ui: option_damage_multiplier
 - name: Hint Distribution
   command: hint-distribution
   type: singlechoice
@@ -805,7 +801,6 @@
   default: Balanced
   help: "Determines the distribution of hints that appear on Gossip Stones.
         Determines the number, order and locations hints are generated in."
-  ui: option_hint_distribution
 ## Starting Items
 - name: Starting Items
   command: starting-items
@@ -912,7 +907,6 @@
   max: 13
   bits: 4
   help: How many gratitude crystal packs to start with.
-  ui: option_starting_crystal_packs
 - name: Random Starting Item
   command: random-starting-item
   type: boolean
@@ -920,7 +914,6 @@
   help: "Gives you a random progression item at the start of the game in addition to any starting items.
         This includes: Bow, Beetle, Slingshot, Digging Mitts, Pouch, Bomb Bag, Clawshots, Whip, Gust Bellows,
         Water Dragon's Scale, Fireshield Earrings, Goddess's Harp and Spiral Charge."
-  ui: option_random_starting_item
 - name: Starting Empty Bottles
   command: starting-bottles
   type: int
@@ -931,7 +924,6 @@
   help: "Determines how many empty bottles start in your pouch.
         **WARNING**: If you start with more pouch items than pouch slots, the extra items will become usable after
         finding additional pouches."
-  ui: option_starting_bottles
 - name: Start with Hylian Shield
   command: start-with-hylian-shield
   type: boolean
@@ -940,7 +932,6 @@
         **WARNING**: If you start with more pouch items than pouch slots, the extra items will become usable after
         finding additional pouches.
         Hylian Shield will always be placed in the first pouch slot."
-  ui: option_start_with_hylian_shield
 - name: Starting Heart Containers
   command: starting-heart-containers
   type: int
@@ -949,7 +940,6 @@
   max: 6
   bits: 3
   help: "Determines how many heart containers to start with."
-  ui: option_starting_heart_containers
 - name: Starting Heart Pieces
   command: starting-heart-pieces
   type: int
@@ -958,33 +948,28 @@
   max: 24
   bits: 5
   help: "Determines how many heart pieces to start with."
-  ui: option_starting_heart_pieces
 - name: Start with Full Wallet
   command: full-starting-wallet
   type: boolean
   default: false
   help: "If enabled, you will start with a full wallet.
         This changes based on the number of starting wallets and extra wallets."
-  ui: option_full_starting_wallet
 - name: Full Wallet Upgrades
   command: full-wallet-upgrades
   type: boolean
   default: false
   help: "If enabled, wallets you find throughout the game will already be filled with Rupees.
         E.g. Finding the Giant Wallet will add 4000 Rupees to your Rupee counter."
-  ui: option_full_wallet_upgrades
 - name: Start with Max Bugs
   command: max-starting-bugs
   type: boolean
   default: false
   help: "If enabled, you will start with 99 of each type of bug."
-  ui: option_max_starting_bugs
 - name: Start with Max Treasures
   command: max-starting-treasures
   type: boolean
   default: false
   help: "If enabled, you will start with 99 of each type of treasure."
-  ui: option_max_starting_treasures
 - name: Interface
   command: interface
   type: singlechoice
@@ -1007,7 +992,6 @@
   type: boolean
   default: false
   help: "If enabled, the starting position of the boss keys will be randomized."
-  ui: option_randomize_boss_key_puzzles
 - name: Tadtonesanity
   command: tadtonesanity
   type: boolean
@@ -1015,7 +999,6 @@
   help: "If enabled, 17 \"Group of Tadtones\" items will be shuffled throughout the world and each of the tadtone
         groups in Flooded Faron Woods will give an item when collected. Get all 17 \"Group of Tadtones\" items to
         complete the music scroll and receive an item from the Water Dragon in Flooded Faron Woods."
-  ui: option_tadtonesanity
 - name: Starting Tadtone Count
   command: starting-tadtones
   type: int
@@ -1024,7 +1007,6 @@
   max: 17
   bits: 5
   help: "How many groups of Tadtones to start with."
-  ui: option_starting_tadtones
 # Dungeon convenience patches - might change to multichoice later
 - name: FS Last Room Lava Flow
   command: fs-lava-flow
@@ -1032,7 +1014,6 @@
   default: false
   help: "If enabled, the lava in the last room of Fire Sanctuary will be flowing by default (without needing to
         blow up the underground boulder)."
-  ui: option_fs_lava_flow
 - name: Peatrice Conversations
   command: peatrice-conversations
   type: int
@@ -1041,7 +1022,6 @@
   max: 6
   bits: 3
   help: "How many times you need to talk to Peatrice before she calls you \"darling\" and you can start Peater's quest."
-  ui: option_peatrice_conversations
 # Player customisation stuff
 - name: Selected Player Model Pack
   command: selected-player-model-pack
@@ -1073,21 +1053,18 @@
         **Any Surface Region**: You will spawn at any valid surface entrance or Link's bedroom.
         **Any**: You will spawn at any valid entrance.
         **TIP**: You can ask Fi to warp you back to the starting point."
-  ui: option_random_start_entrance
 - name: Limit Starting Location
   command: limit-start-entrance
   type: boolean
   default: false
   help: "If enabled, you will only start at a location in a region unlocked by the tablets you start with.
         E.g. Starting with Ruby Tablet and Amber Tablet will mean you cannot start in Faron."
-  ui: option_limit_start_entrance
 - name: Treasuresanity in Silent Realms
   command: treasuresanity-in-silent-realms
   type: boolean
   default: false
   help: Randomizes treasures in Silent Realms to items. Items other than relics will glow in Silent Realms
         (Yellow in Faron, Blue in Eldin, Green in Lanayru, and Red on Skyloft).
-  ui: option_treasuresanity_in_silent_realms
 - name: Trial Treasure Amount
   command: trial-treasure-amount
   type: int
@@ -1096,7 +1073,6 @@
   max: 10
   bits: 4
   help: How many treasures per Silent Realm you want to randomize.
-  ui: option_trial_treasure_amount
 - name: Cryptic Location Hints
   command: cryptic-location-hints
   type: boolean
@@ -1112,7 +1088,6 @@
   default: false
   help: If enabled, the starting statue for each surface region will be randomized. All overworld statues
         except Inside the Volcano and Inside Fire Sanctuary may be chosen.
-  ui: option_random_start_statues
 - name: Random Puzzles
   command: random-puzzles
   type: boolean
@@ -1120,7 +1095,6 @@
   permalink: true
   help: "Randomizes the Isle of Songs puzzle, the Ancient Cistern/Sandship directional door puzzles,
         and the Lanayru Mining Facility switches puzzle."
-  ui: option_random_puzzles
 - name: Ammo Availability
   command: ammo-availability
   type: singlechoice
@@ -1136,4 +1110,20 @@
         **Vanilla**: Ammo will appear when breaking pots and barrels in the same way as the vanilla game.
         **Useful**: Ammo pots will be added in key places near checks requiring a specific ammo to reduce back-tracking.
         **Plentiful**: Ammo pots will be added next to all Bird Statues."
-  ui: option_ammo_availability
+- name: Batreaux Crystal Counts
+  command: batreaux-counts
+  type: singlechoice
+  bits: 2
+  default: Vanilla
+  choices: 
+    - Vanilla
+    - Half
+    - Shuffled
+    - Shuffled - High
+    - Shuffled - Low
+  help: "Determines the amount of crystals Batreaux will require for each of his rewards.
+        **Vanilla**: The normal required crystal counts (5, 10, 30, 40, 50, 70, 80).
+        **Half**: Half of the normal required crystal counts (2, 5, 15, 20, 25, 35, 40).
+        **Shuffled**: Completely random required crystal counts (min 1, max 80).
+        **Shuffled - High**: Higher random required crystal counts (min 30, max 80).
+        **Shuffled - Low**: Lower random required crystal counts (min 1, max 50)."

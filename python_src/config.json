@@ -197,7 +197,7 @@
             "OOT (SOH)": "Zelda OOT (SOH)"
         }
     },
-    "main_window_geometry": "1056x713+336+85",
+    "main_window_geometry": "1056x713+410+114",
     "active_games": {
         "Ocarina of Time": true,
         "Wind Waker": true,
@@ -213,8 +213,8 @@
         "Oracle of Ages": true,
         "Oracle of Seasons": true,
         "Link's Awakening DX": true,
-        "Phantom Hourglass": true,
-        "Spirit Tracks": true
+        "Phantom Hourglass": false,
+        "Spirit Tracks": false
     },
     "maximize_poptracker": true,
     "poptracker_broadcast_transparent": true,

@@ -10,6 +10,10 @@ const loadFileFromUrl = async (/** @type {string | URL | Request} */ url) => {
 };
 
 const loadFile = async (/** @type {string} */ file) => {
+    if (fs.existsSync(`./testData/${file}.yaml`)) {
+        const data = await fs.promises.readFile(`./testData/${file}.yaml`, 'utf-8');
+        return load(data);
+    }
     const fileUrl = baseFileUrl(file);
     const data = await loadFileFromUrl(fileUrl);
     return load(data);

@@ -109,7 +109,7 @@ describe('full logic tests', () => {
         );
         const zeldaClosetGift = tester.findCheckId(
             'Upper Skyloft',
-            "Zelda's Closet",
+            "In Zelda's Closet",
         );
 
         // Zelda's Closet is out of logic because it needs clawshots
@@ -663,7 +663,7 @@ describe('full logic tests', () => {
 
         const bat30Check = tester.findCheckId(
             "Batreaux's House",
-            '30 Crystals',
+            'Third Reward',
         );
         expect(checkState(bat30Check)).toBe('semiLogic');
 

@@ -60,7 +60,6 @@ DEFAULT_CONFIG = {
         "dolphin": "",
         "archipelago": "",
         "azahar": "",
-        "melonds": "",
         "poptracker": "",
         "broadcast": ""
     },
@@ -266,7 +265,6 @@ class SetupUI(ctk.CTk):
         self.create_path_row(page, Loc.get("lbl_emu_bizhawk"), "emulators", "bizhawk")
         self.create_path_row(page, Loc.get("lbl_emu_dolphin"), "emulators", "dolphin")
         self.create_path_row(page, Loc.get("lbl_emu_azahar"), "emulators", "azahar")
-        self.create_path_row(page, Loc.get("lbl_emu_melonds"), "emulators", "melonds")
         self.create_path_row(page, Loc.get("lbl_emu_poptracker"), "emulators", "poptracker")
         self.create_path_row(page, Loc.get("lbl_emu_broadcast"), "emulators", "broadcast", is_folder=True)
         return page
@@ -346,13 +344,13 @@ class SetupUI(ctk.CTk):
         self.create_check_row(page, Loc.get("opt_poptracker_broadcast"), "poptracker_broadcast")
         self.create_option_row(page, Loc.get("opt_broadcast_mode"), "broadcast_mode", ["all", "personal", "obs"])
         
-        btn_test_obs = ctk.CTkButton(
+        self.btn_test_obs = ctk.CTkButton(
             page, text=Loc.get("btn_test_obs"), 
             command=self.test_obs_connection, 
             fg_color="transparent", border_width=1, border_color="#3498db", text_color="#3498db", hover_color="#1a1a1a",
             height=40
         )
-        btn_test_obs.pack(pady=20, padx=15, anchor="e")
+        self.btn_test_obs.pack(pady=20, padx=15, anchor="e")
         
         self.create_section_label(page, Loc.get("sec_obs_scenes"))
         roms_list = list(self.config.get("roms", {}).keys())

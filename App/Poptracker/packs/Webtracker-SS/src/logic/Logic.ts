@@ -330,6 +330,37 @@ export function parseLogic(raw: RawLogic): Logic {
         ...Object.values(dungeonCompletionItems),
     ];
 
+    for (const exit of Object.keys(raw.exits)) {
+        rawItems.push(exit);
+    }
+    for (const entrance of Object.keys(raw.entrances)) {
+        rawItems.push(entrance);
+    }
+
+    const traverseAreas = (area: RawArea) => {
+        if (area.allowed_time_of_day === TimeOfDay.Both) {
+            rawItems.push(`${area.name}_DAY`);
+            rawItems.push(`${area.name}_NIGHT`);
+        } else if (!area.abstract) {
+            rawItems.push(area.name);
+        }
+
+        for (const locName of Object.keys(area.locations)) {
+            const fullLocName = locName.startsWith('\\')
+                ? locName
+                : `${area.name}\\${locName}`;
+            if (!raw.checks[fullLocName]) {
+                // virtual location
+                rawItems.push(fullLocName);
+            }
+        }
+
+        for (const sub of Object.values(area.sub_areas)) {
+            traverseAreas(sub);
+        }
+    };
+    traverseAreas(raw.areas);
+
     // Pessimistically, all items are opaque
     const opaqueItems = new BitVector();
     for (let i = 0; i < rawItems.length; i++) {
@@ -503,7 +534,6 @@ export function parseLogic(raw: RawLogic): Logic {
                 area.subAreas[rawSubArea.name] = subArea;
             }
         }
-
         return area;
     }
 
@@ -884,6 +914,22 @@ export function parseLogic(raw: RawLogic): Logic {
         staticRequirements,
     );
     mapAreaToBitLogic(newBuilder, areaGraph, opaqueItems);
+
+    // Patch Batreaux reward levels which are False in the dump
+    const batreauxLevels: [string, string][] = [
+        ['\\Can Receive Batreaux Level 1 Rewards', '\\5 Gratitude Crystals'],
+        ['\\Can Receive Batreaux Level 2 Rewards', '\\10 Gratitude Crystals'],
+        ['\\Can Receive Batreaux Level 3 Rewards', '\\30 Gratitude Crystals'],
+        ['\\Can Receive Batreaux Level 4 Rewards', '\\40 Gratitude Crystals'],
+        ['\\Can Receive Batreaux Level 5 Rewards', '\\50 Gratitude Crystals'],
+        ['\\Can Receive Batreaux Level 6 Rewards', '\\70 Gratitude Crystals'],
+        ['\\Can Receive Batreaux Level 7 Rewards', '\\80 Gratitude Crystals'],
+    ];
+    for (const [level, req] of batreauxLevels) {
+        if (itemLookup[level] !== undefined && itemLookup[req] !== undefined) {
+            newBuilder.addAlternative(level, newBuilder.singleBit(req));
+        }
+    }
 
     // check for orphaned locations. This again should probably not be in here
     // but in the rando instead...

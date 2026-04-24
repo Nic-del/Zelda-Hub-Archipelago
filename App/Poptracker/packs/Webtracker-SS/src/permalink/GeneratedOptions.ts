@@ -51,7 +51,9 @@ export interface GeneratedOptions {
     /** Map Mode */
     'map-mode': 'Removed' | 'Vanilla' | 'Own Dungeon - Restricted' | 'Own Dungeon - Unrestricted' | 'Anywhere';
     /** Small Key Mode */
-    'small-key-mode': 'Vanilla' | 'Own Dungeon - Restricted' | 'Lanayru Caves Key Only' | 'Anywhere';
+    'small-key-mode': 'Vanilla' | 'Own Dungeon' | 'Anywhere';
+    /** Lanayru Caves Small Key */
+    'lanayru-caves-small-key': 'Start With' | 'Caves' | 'Lanayru' | 'Anywhere';
     /** Boss Key Mode */
     'boss-key-mode': 'Vanilla' | 'Own Dungeon' | 'Anywhere';
     /** Logic Mode */
@@ -144,4 +146,6 @@ export interface GeneratedOptions {
     'random-puzzles': boolean;
     /** Ammo Availability */
     'ammo-availability': 'Scarce' | 'Vanilla' | 'Useful' | 'Plentiful';
+    /** Batreaux Crystal Counts */
+    'batreaux-counts': 'Vanilla' | 'Half' | 'Shuffled' | 'Shuffled - High' | 'Shuffled - Low';
 }

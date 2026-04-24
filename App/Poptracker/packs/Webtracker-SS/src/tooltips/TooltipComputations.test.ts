@@ -127,7 +127,7 @@ describe('tooltips', () => {
         it.concurrent('computes Batreaux', async ({ expect }) => {
             const result = await getTooltipExpression(
                 computer,
-                tester.findCheckId("Batreaux's House", '30 Crystals Chest'),
+                tester.findCheckId("Batreaux's House", 'Chest'),
             );
             expect(formatExpr(result)).toMatchInlineSnapshot(
                 `"(30 Gratitude Crystals)"`,
