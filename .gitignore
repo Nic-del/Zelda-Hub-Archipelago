@@ -15,3 +15,7 @@ App/UiBroadCast-Archipelago/broadcast_settings.json
 __pycache__/
 *.pyc
 python_src/temp/
+
+# Build artifacts and binaries
+*.o
+*.exe
