@@ -19,3 +19,4 @@ python_src/temp/
 # Build artifacts and binaries
 *.o
 *.exe
+!**/poptracker.exe
