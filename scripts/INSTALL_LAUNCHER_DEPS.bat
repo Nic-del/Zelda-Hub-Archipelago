@@ -23,19 +23,24 @@ if not exist "..\python_src\requirements.txt" (
 
 echo ETAPE 1 : Verification de Python...
 
-:: On essaye de trouver python ou py
-where py >nul 2>&1
-if %errorlevel% equ 0 (
-    set PY_CMD=py
+:: On essaye de trouver python 3.12 via py, sinon on teste py ou python
+py -3.12 --version >nul 2>&1
+if !errorlevel! equ 0 (
+    set PY_CMD=py -3.12
 ) else (
-    where python >nul 2>&1
-    if %errorlevel% equ 0 (
-        set PY_CMD=python
+    where py >nul 2>&1
+    if !errorlevel! equ 0 (
+        set PY_CMD=py
     ) else (
-        echo [ERREUR] Python n'est pas installe ou n'est pas dans le PATH.
-        echo Veuillez l'installer depuis https://www.python.org/
-        pause
-        exit /b
+        where python >nul 2>&1
+        if !errorlevel! equ 0 (
+            set PY_CMD=python
+        ) else (
+            echo [ERREUR] Python n'est pas installe ou n'est pas dans le PATH.
+            echo Veuillez l'installer depuis https://www.python.org/
+            pause
+            exit /b
+        )
     )
 )
 
