@@ -20,3 +20,4 @@ python_src/temp/
 *.o
 *.exe
 !**/poptracker.exe
+!**/patcher.exe
