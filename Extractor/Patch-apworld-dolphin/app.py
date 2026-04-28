@@ -5,27 +5,50 @@ import tempfile
 import webview
 import json
 import threading
+import sys
 
 class PatchApp:
     def __init__(self):
         self._window = None
 
+    def get_local_apworlds(self):
+        """Scans the current directory for .apworld files on launch."""
+        if getattr(sys, 'frozen', False):
+            target_dir = os.path.dirname(sys.executable)
+        else:
+            target_dir = os.path.dirname(os.path.abspath(__file__))
+            
+        apworlds = [f for f in os.listdir(target_dir) 
+                    if f.endswith('.apworld') and os.path.isfile(os.path.join(target_dir, f))]
+        return {"directory": target_dir, "files": apworlds}
+
     def select_directory(self):
         """Opens a directory picker and returns all found .apworld files."""
         result = self._window.create_file_dialog(webview.FOLDER_DIALOG)
         if result:
-            target_dir = result[0]
+            target_dir = result[0] if isinstance(result, (list, tuple)) else result
             # Exclude 'output' directory if it exists within the target
-            apworlds = [f for f in os.listdir(target_dir) 
-                        if f.endswith('.apworld') and os.path.isfile(os.path.join(target_dir, f))]
-            return {"directory": target_dir, "files": apworlds}
+            try:
+                apworlds = [f for f in os.listdir(target_dir) 
+                            if f.endswith('.apworld') and os.path.isfile(os.path.join(target_dir, f))]
+                return {"directory": target_dir, "files": apworlds}
+            except Exception as e:
+                print(f"Error reading directory {target_dir}: {e}")
+                return None
         return None
 
     def patch_files(self, directory, filenames):
         """Main patching logic."""
         results = []
-        # Create output directory
-        output_dir = os.path.join(directory, "output")
+        
+        # Determine application root directory
+        if getattr(sys, 'frozen', False):
+            app_dir = os.path.dirname(sys.executable)
+        else:
+            app_dir = os.path.dirname(os.path.abspath(__file__))
+            
+        # Create output directory in the app folder
+        output_dir = os.path.join(app_dir, "output")
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
@@ -38,9 +61,6 @@ class PatchApp:
 
         for filename in filenames:
             file_path = os.path.join(directory, filename)
-            output_dir = os.path.join(directory, "output")
-            if not os.path.exists(output_dir):
-                os.makedirs(output_dir)
             final_apworld_path = os.path.join(output_dir, filename)
 
             try:
@@ -284,6 +304,8 @@ class PatchApp:
                 .btn:active { transform: scale(0.98); }
                 .btn-success { background: var(--success); }
                 .btn-disabled { background: #334155; cursor: not-allowed; opacity: 0.7; }
+                .btn-remove { background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 0.5rem; border-radius: 0.5rem; box-shadow: none; border: 1px solid rgba(239, 68, 68, 0.2); }
+                .btn-remove:hover { background: rgba(239, 68, 68, 0.2); transform: scale(1.05); }
 
                 .list-container {
                     margin-top: 2rem;
@@ -371,31 +393,53 @@ class PatchApp:
                 let currentDir = "";
                 let filesToPatch = [];
 
+                function renderFileList() {
+                    if (filesToPatch.length === 0) {
+                        document.getElementById('file-list-area').innerHTML = '<div class="empty-state">Aucun .apworld sélectionné.</div>';
+                        document.getElementById('patch-section').style.display = 'none';
+                        return;
+                    }
+                    
+                    document.getElementById('patch-section').style.display = 'block';
+                    
+                    const listHtml = filesToPatch.map(f => `
+                        <div class="file-card">
+                            <div class="file-info" style="flex: 1; padding-right: 1rem;">
+                                <div class="file-name" title="${f}">${f}</div>
+                                <div class="file-meta">Attente...</div>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <span class="badge badge-pending">À Traiter</span>
+                                <button class="btn btn-remove" onclick="removeFile('${f.replace(/'/g, "\\'")}')" title="Retirer de la liste">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    `).join('');
+                    document.getElementById('file-list-area').innerHTML = listHtml;
+                }
+
+                function removeFile(filename) {
+                    filesToPatch = filesToPatch.filter(f => f !== filename);
+                    renderFileList();
+                }
+
+                window.addEventListener('pywebviewready', async function() {
+                    const res = await window.pywebview.api.get_local_apworlds();
+                    if (res && res.files.length > 0) {
+                        currentDir = res.directory;
+                        filesToPatch = res.files;
+                        renderFileList();
+                    }
+                });
+
                 async function selectDir() {
                     const res = await window.pywebview.api.select_directory();
                     if (!res) return;
                     
                     currentDir = res.directory;
                     filesToPatch = res.files;
-                    
-                    if (filesToPatch.length === 0) {
-                        document.getElementById('file-list-area').innerHTML = '<div class="empty-state">Aucun .apworld trouvé dans ce dossier.</div>';
-                        document.getElementById('patch-section').style.display = 'none';
-                        return;
-                    }
-
-                    document.getElementById('patch-section').style.display = 'block';
-                    
-                    const listHtml = filesToPatch.map(f => `
-                        <div class="file-card">
-                            <div class="file-info">
-                                <div class="file-name">${f}</div>
-                                <div class="file-meta">Attente...</div>
-                            </div>
-                            <span class="badge badge-pending">À Traiter</span>
-                        </div>
-                    `).join('');
-                    document.getElementById('file-list-area').innerHTML = listHtml;
+                    renderFileList();
                 }
 
                 async function patchAll() {
@@ -430,7 +474,7 @@ class PatchApp:
         </html>
         """
         self._window = webview.create_window('Zelda APWorld Patcher Pro', html=HTML, width=700, height=650, resizable=False)
-        self._window.expose(self.select_directory, self.patch_files)
+        self._window.expose(self.select_directory, self.patch_files, self.get_local_apworlds)
         webview.start()
 
 
