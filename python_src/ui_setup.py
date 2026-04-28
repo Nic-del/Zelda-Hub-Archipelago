@@ -386,8 +386,8 @@ class SetupUI(ctk.CTk):
                 if (None, "multi_game_keep_alive") in self.path_vars:
                     self.path_vars[(None, "multi_game_keep_alive")].set(False)
 
-        self.create_check_row(page, Loc.get("opt_multi_game_keep_alive"), "multi_game_keep_alive", command=on_hot_swap)
-        self.create_check_row(page, Loc.get("auto_save_label"), "auto_savestate_enabled", command=on_auto_save)
+        self.create_check_row(page, Loc.get("opt_multi_game_keep_alive"), "multi_game_keep_alive", command=on_hot_swap, default_val=False)
+        self.create_check_row(page, Loc.get("auto_save_label"), "auto_savestate_enabled", command=on_auto_save, default_val=False)
         
         # Language frame
         row = ctk.CTkFrame(page, fg_color="#141414", corner_radius=12)
@@ -628,16 +628,16 @@ class SetupUI(ctk.CTk):
                                  command=lambda: var.set(""))
         btn_clear.pack(side="left", padx=(2, 0))
 
-    def create_check_row(self, parent, label_text, key_or_category, subkey=None, command=None):
+    def create_check_row(self, parent, label_text, key_or_category, subkey=None, command=None, default_val=True):
         row = ctk.CTkFrame(parent, fg_color="#141414", corner_radius=12)
         row.pack(fill="x", pady=4, padx=10)
         
         if subkey:
-            val = self.config.get(key_or_category, {}).get(subkey, True)
+            val = self.config.get(key_or_category, {}).get(subkey, default_val)
             var = tk.BooleanVar(value=val)
             self.path_vars[(key_or_category, subkey)] = var
         else:
-            var = tk.BooleanVar(value=self.config.get(key_or_category, True))
+            var = tk.BooleanVar(value=self.config.get(key_or_category, default_val))
             self.path_vars[(None, key_or_category)] = var
             
         cb = ctk.CTkCheckBox(row, text=label_text, variable=var, font=ctk.CTkFont(size=11, weight="bold"), fg_color="#3498db", command=command)
@@ -1075,8 +1075,11 @@ class SetupUI(ctk.CTk):
                 self.config["obs_settings"]["scenes"][key] = var.get()
             else:
                 if category not in self.config: self.config[category] = {}
-                # Convert path to relative if possible for portability
-                self.config[category][key] = make_relative(var.get())
+                # Appliquer make_relative uniquement aux catégories contenant des chemins
+                if category in ["emulators", "roms", "poptracker_packs"]:
+                    self.config[category][key] = make_relative(var.get())
+                else:
+                    self.config[category][key] = var.get()
         
         if hasattr(self, 'lang_var'):
             self.config["language"] = self.lang_var.get()

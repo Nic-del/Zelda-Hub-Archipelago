@@ -1410,7 +1410,7 @@ class GameManager:
         self.archipelago_settings: dict = {}
         self.slot_names: dict = {}
         self.poptracker_broadcast: bool = False
-        self.auto_savestate_enabled: bool = True # Global toggle for the feature
+        self.auto_savestate_enabled: bool = False # Global toggle for the feature
         self.multi_game_keep_alive: bool = False # Nouveau mode Multi-Jeu
 
     def register_game(self, name: str, controller: EmulatorController):
@@ -1427,7 +1427,7 @@ class GameManager:
                 config = json.load(f)
             print(f"[GameManager] Config CHARGÉE depuis: {CONFIG_PATH}")
             print(f"[GameManager] Hub Button loaded: {config.get('hub_controller_open_btn')}")
-            self.auto_savestate_enabled = config.get("auto_savestate_enabled", True)
+            self.auto_savestate_enabled = config.get("auto_savestate_enabled", False)
         except Exception as e:
             print(f"Error loading config in GameManager: {e}")
             return

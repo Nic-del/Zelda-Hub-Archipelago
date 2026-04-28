@@ -104,7 +104,7 @@ class LauncherUI:
         self.poptracker_vars = {}
         self.status_var = tk.StringVar()
         self.auto_config_var = tk.BooleanVar(value=True)
-        self.auto_save_var = tk.BooleanVar(value=True)
+        self.auto_save_var = tk.BooleanVar(value=False)
         self.multi_game_keep_alive_var = tk.BooleanVar(value=False)
         self.broadcast_enabled_var = tk.BooleanVar(value=True)
         self.broadcast_mode_var = tk.StringVar(value="obs")
@@ -1164,7 +1164,7 @@ class LauncherUI:
                 with open(self.config_path, "r", encoding="utf-8") as f:
                     config = json.load(f)
                 self.auto_config_var.set(config.get("auto_controller_config", True))
-                self.auto_save_var.set(config.get("auto_savestate_enabled", True))
+                self.auto_save_var.set(config.get("auto_savestate_enabled", False))
                 self.multi_game_keep_alive_var.set(config.get("multi_game_keep_alive", False))
                 self.broadcast_enabled_var.set(config.get("auto_broadcast_enabled", True))
                 self.broadcast_mode_var.set(config.get("broadcast_mode", "obs"))
