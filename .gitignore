@@ -9,6 +9,7 @@ coverage/
 
 # App Configs
 python_src/config.json
+Extractor/Patcher/config.json
 App/UiBroadCast-Archipelago/broadcast_settings.json
 
 # Python temporary files
@@ -21,3 +22,17 @@ python_src/temp/
 *.exe
 !**/poptracker.exe
 !**/patcher.exe
+
+# ROMs and Game files
+*.sfc
+*.nes
+*.z64
+*.n64
+*.gb
+*.gbc
+*.gba
+*.iso
+*.wbfs
+*.cci
+*.3ds
+*.nds
