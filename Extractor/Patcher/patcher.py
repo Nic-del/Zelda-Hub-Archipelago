@@ -347,6 +347,7 @@ class PatcherApp:
         except: pass
 
     def refresh(self):
+        self.auto_discover_roms()
         self.detected_games = self.scan_for_games()
         self.setup_ui()
         self.log("Liste des jeux actualisée.")
