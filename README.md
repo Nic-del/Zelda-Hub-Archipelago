@@ -108,6 +108,7 @@ Voici les guides officiels pour configurer chaque jeu avec Archipelago :
 - **Majora's Mask** : [GitHub Repo](https://github.com/RecompRando/MMRecompRando)
 - **Twilight Princess** : [Guide Setup](https://github.com/WritingHusky/Twilight_Princess_apworld/blob/main/docs/setup_en.md)
   - _Note : Placez les 3 fichiers (`REL loader`, `custom seed`, `RandomizerAP.US.gci`) dans le dossier `SaveData` de Dolphin (GameCube)._
+- **Wind Waker** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Wind%20Waker/setup_en)
 - **Zelda 1** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda/multiworld_en)
 - **Zelda 2** : [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases/tag/Zelda2ap1.1)
 - **Oracle of Ages** : [Guide Setup](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
@@ -301,6 +302,7 @@ Official guides to configure each game with Archipelago:
 - **Majora's Mask**: [GitHub Repo](https://github.com/RecompRando/MMRecompRando)
 - **Twilight Princess**: [Setup Guide](https://github.com/WritingHusky/Twilight_Princess_apworld/blob/main/docs/setup_en.md)
   - _Note: Place the 3 files (`REL loader`, `custom seed`, `RandomizerAP.US.gci`) in Dolphin's `SaveData` folder (GameCube)._
+- **Wind Waker** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Wind%20Waker/setup_en)
 - **Zelda 1**: [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda/multiworld_en)
 - **Zelda 2**: [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases/tag/Zelda2ap1.1)
 - **Oracle of Ages**: [Setup Guide](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
