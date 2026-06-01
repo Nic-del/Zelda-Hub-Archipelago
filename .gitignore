@@ -36,3 +36,6 @@ python_src/temp/
 *.cci
 *.3ds
 *.nds
+
+# Releases
+release/

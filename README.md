@@ -6,13 +6,13 @@
 
 ## 🇫🇷 Version Française
 
-Ce projet est un hub centralisé qui automatise le lancement de vos jeux (Natif ou Émulés), la gestion de vos manettes, votre tracking (PopTracker) et vos connexions Archipelago.
+Ce projet est un hub centralisé qui automatise le lancement de vos jeux (Natif ou Émulés), votre tracking (PopTracker) et vos connexions Archipelago.
 
 ---
 
 ### 🔍 Analyse du Fonctionnement (Comment ça marche ?)
 
-Le Zelda Hub repose sur une architecture en trois couches principales :
+Le Zelda Hub repose sur une architecture en deux couches principales :
 
 #### 1. Le Cœur de Lancement (`launcher_core.py`)
 
@@ -25,18 +25,11 @@ C'est le "moteur" du Hub. Il gère l'interaction directe avec les processus Wind
   3.  **TaskKill (Force)** : Dernier recours si le processus est "gelé".
 - **Focus Automatique** : Force la fenêtre du jeu au premier plan au démarrage pour vous éviter de devoir cliquer dessus.
 
-#### 2. Le Gestionnaire de Manettes (`controller/`)
-
-Le Hub ne se contente pas de lancer le jeu, il prépare aussi votre matériel :
-
-- **Profilage Dynamique** : Quand vous lancez Ocarina of Time, le Hub charge le fichier `oot.json`. Quand vous passez sur Wind Waker, il charge `ww.json`.
-- **Mapping Direct** : Le système communique avec les émulateurs pour adapter les boutons à la volée selon le jeu sélectionné.
-
-#### 3. L'Interface Premium (`ui_main_v2.py`)
+#### 2. L'Interface Premium (`ui_main_v2.py`)
 
 L'interface utilisateur (UI) est construite avec **CustomTkinter** pour un rendu moderne (Bleu Saphir et Dark Mode) :
 
-- **Dashboard à Cartes** : Chaque jeu a sa "carte" avec sa jaquette, permettant d'activer/désactiver le tracker ou l'auto-config manette avant le lancement.
+- **Dashboard à Cartes** : Chaque jeu a sa "carte" avec sa jaquette, permettant d'activer/désactiver le tracker avant le lancement.
 - **Quick Switcher (V1 Engine + V2 Look)** : Un menu flottant ( accessible à la manette) qui permet de changer de jeu sans jamais toucher au clavier ni à la souris.
 - **OBS Integration** : Utilise `obs-websocket` pour changer automatiquement vos scènes de stream dès qu'un jeu est lancé.
 
@@ -125,9 +118,11 @@ Voici les guides officiels pour configurer chaque jeu avec Archipelago :
 
 Lancez Zelda-Hub.exe et configurez les onglets suivants via le bouton **⚙️ Chemins Install** :
 
-- **Tab Archipelago** : Insérez les noms des slots (ceux définis dans vos YAML) pour chaque jeu.
-- **Tab Connexion AP** : Renseignez l'adresse du serveur (ex: `archipelago.gg:12345`) et le mot de passe si nécessaire.
+- **Tab Slots** : Insérez les noms des slots (ceux définis dans vos YAML) pour chaque jeu.
+- **Tab Archipelago** : Renseignez l'adresse du serveur (ex: `archipelago.gg:12345`) et le mot de passe si nécessaire.
 - **Tab Émulateurs** : Renseignez les chemins vers vos émulateurs (`BizHawk.exe`, `Dolphin.exe`, etc.) ainsi que le chemin vers votre installation de **Archipelago**.
+
+
 
 #### 4️⃣ Préparation des ROMs (Extraction & Patch)
 
@@ -189,7 +184,6 @@ Le **Quick Switcher** est accessible via le raccourci clavier `Ctrl+Shift+S` ou 
 ### 📂 Organisation des Fichiers
 
 - `python_src/` : Code source Python.
-- `python_src/controller/profiles/` : Fichiers JSON contenant vos mappings par jeu.
 - `python_src/assets/images/` : Jaquettes des jeux affichées sur le Dashboard.
 - `config.json` : Stocke tous vos réglages, chemins et préférences.
 
@@ -201,13 +195,13 @@ Le **Quick Switcher** est accessible via le raccourci clavier `Ctrl+Shift+S` ou 
 
 ## 🇺🇸 English Version
 
-This project is a centralized hub that automates launching your games (Native or Emulated), managing your controllers, tracking your progress (PopTracker), and handling your Archipelago connections.
+This project is a centralized hub that automates launching your games (Native or Emulated), tracking your progress (PopTracker), and handling your Archipelago connections.
 
 ---
 
 ### 🔍 Functional Analysis (How it works?)
 
-The Zelda Hub is built on a three-layer architecture:
+The Zelda Hub is built on a two-layer architecture:
 
 #### 1. The Launch Core (`launcher_core.py`)
 
@@ -220,18 +214,11 @@ This is the "engine" of the Hub. It manages direct interactions with Windows pro
   3.  **TaskKill (Force)**: A last resort if the process is "frozen".
 - **Automatic Focus**: Forces the game window to the foreground on startup so you don't have to manually click it.
 
-#### 2. The Controller Manager (`controller/`)
-
-The Hub doesn't just launch the game; it also prepares your hardware:
-
-- **Dynamic Profiling**: When you launch Ocarina of Time, the Hub loads the `oot.json` file. When you switch to Wind Waker, it loads `ww.json`.
-- **Direct Mapping**: The system communicates with emulators to adapt buttons on the fly based on the selected game.
-
-#### 3. The Premium Interface (`ui_main_v2.py`)
+#### 2. The Premium Interface (`ui_main_v2.py`)
 
 The user interface (UI) is built with **CustomTkinter** for a modern look (Sapphire Blue and Dark Mode):
 
-- **Card Dashboard**: Each game has its "card" with its box art, allowing you to toggle the tracker or controller auto-config before launching.
+- **Card Dashboard**: Each game has its "card" with its box art, allowing you to toggle the tracker before launching.
 - **Quick Switcher (V1 Engine + V2 Look)**: A floating menu (accessible via controller) that lets you switch games without touching the keyboard or mouse.
 - **OBS Integration**: Uses `obs-websocket` to automatically change your stream scenes as soon as a game is launched.
 
@@ -319,8 +306,8 @@ Official guides to configure each game with Archipelago:
 
 Run `python python_src/ui_main_v2.py` and configure the following tabs via the **⚙️ Install Paths** button:
 
-- **Archipelago Tab**: Enter the slot names (defined in your YAMLs) for each game.
-- **AP Connection Tab**: Enter the server address (e.g., `archipelago.gg:12345`) and password if necessary.
+- **Slots Tab**: Enter the slot names (defined in your YAMLs) for each game.
+- **Archipelago Tab**: Enter the server address (e.g., `archipelago.gg:12345`) and password if necessary.
 - **Emulators Tab**: Enter the paths to your emulators (`BizHawk.exe`, `Dolphin.exe`, etc.) as well as the path to your **Archipelago** installation.
 
 #### 4️⃣ ROM Preparation (Extraction & Patch)
@@ -383,7 +370,6 @@ The **Quick Switcher** is accessible via the keyboard shortcut `Ctrl+Shift+S` or
 ### 📂 File Organization
 
 - `python_src/`: Python source code.
-- `python_src/controller/profiles/`: JSON files containing your per-game mappings.
 - `python_src/assets/images/`: Game box arts displayed on the Dashboard.
 - `config.json`: Stores all your settings, paths, and preferences.
 

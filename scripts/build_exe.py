@@ -25,11 +25,15 @@ def build():
     datas = [
         (os.path.join(python_src, "assets"), "assets"),
         (os.path.join(python_src, "controller"), "controller"),
-        (os.path.join(python_src, "profiles"), "profiles"),
         (os.path.join(python_src, "clipboard_paste.ps1"), "."),
         (os.path.join(python_src, "maximize_poptracker.ps1"), "."),
         (os.path.join(python_src, "minimize_lua_console.ps1"), "."),
         (os.path.join(python_src, "send_input.ps1"), "."),
+        (os.path.join(python_src, "games_metadata.json"), "."),
+        (os.path.join(python_src, "center_broadcast.ps1"), "."),
+        (os.path.join(python_src, "web_tracker_host.py"), "."),
+        (os.path.join(python_src, "ui_controller.py"), "."),
+        (os.path.join(python_src, "ui_setup.py"), "."),
     ]
     
     # CustomTkinter needs its resources

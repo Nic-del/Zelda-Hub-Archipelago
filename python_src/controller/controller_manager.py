@@ -49,91 +49,15 @@ class ControllerManager:
 
     def apply_config_to_emulators(self, profile_name=None):
         """
-        Prend le profil actuellement chargé (ou celui spécifié), le sauvegarde sur disque, 
-        puis l'exporte au format physique direct pour les émulateurs.
+        Désactivé : Ne modifie plus les fichiers de configuration des émulateurs.
         """
-        if profile_name:
-            # On s'assure que le profil spécifié est celui qui sera sauvegardé
-            self.profile_manager.active_profile_name = profile_name
-            
-        # Sauvegarde automatique du profil JSON (ex: ww.json) avant l'export
-        self.profile_manager.save_profile()
-
-        # On récupère la manette à utiliser
-        joys = self.detector.joysticks
-        if not joys:
-            print("[ControllerManager] Aucune manette détectée, rescan en cours...")
-            self.detector.scan_devices()
-            joys = self.detector.joysticks
-            
-        if not joys:
-            print("[ControllerManager] Erreur: Toujours aucune manette physique détectée pour l'export.")
-            return False
-            
-        # Priorité à la manette sélectionnée par l'utilisateur
-        target_joy_id = self.selected_joy_id
-        if target_joy_id is None or target_joy_id not in joys:
-            # Fallback sur la première disponible
-            target_joy_id = list(joys.keys())[0]
-            
-        joy_name = joys[target_joy_id]["name"]
-        ctrl_type = joys[target_joy_id].get("type", "Generic")
-        
-        # On inverse le mapping du profile_manager pour avoir : ActionLogique -> BoutonPhysique
-        reverse_map = {}
-        for k, v in self.profile_manager.mapping.items():
-            reverse_map[v] = k
-            
-        # Nom du fichier d'export Dolphin (.ini) basé sur le profil
-        export_name = "GCPadNew.ini"
-        if profile_name:
-            export_name = f"{profile_name}.ini"
-        elif self.profile_manager.active_profile_name:
-            export_name = f"{self.profile_manager.active_profile_name}.ini"
-
-        # Export Dolphin
-        self.exporter.export_dolphin_config(joy_name, reverse_map, profile_name=export_name, ctrl_type=ctrl_type)
-        
-        # Déterminer le système pour BizHawk
-        system = "N64"
-        if profile_name:
-            if profile_name.startswith("mc"):
-                system = "GBA"
-            elif profile_name.startswith("alttp"):
-                system = "SNES"
-            elif profile_name.startswith("z1") or profile_name.startswith("z2"):
-                system = "NES"
-            elif profile_name.startswith("st") or profile_name.startswith("ph"):
-                system = "NDS"
-        elif self.profile_manager.active_profile_name:
-            active = self.profile_manager.active_profile_name
-            if active.startswith("mc"):
-                system = "GBA"
-            elif active.startswith("alttp"):
-                system = "SNES"
-            elif active.startswith("z1") or active.startswith("z2"):
-                system = "NES"
-            elif active.startswith("st") or active.startswith("ph"):
-                system = "NDS"
-
-        # Export BizHawk
-        self.exporter.export_bizhawk_config(reverse_map, ctrl_type=ctrl_type, system=system)
-        
-        # Export Azahar (Désactivé pour l'instant)
-        # if profile_name == "albw" or self.profile_manager.active_profile_name == "albw":
-        #     self.exporter.export_azahar_config(joy_name, reverse_map, ctrl_type=ctrl_type)
-        
         return True
         
     def disable_config_for_emulators(self, profile_name):
         """
-        Retire les configurations injectées pour ce profil (Dolphin uniquement pour l'instant).
+        Désactivé : Ne modifie plus les fichiers de configuration des émulateurs.
         """
-        # ww -> GZL, tp -> GZ2
-        game_map = {"ww": "GZL", "tp": "GZ2"}
-        if profile_name in game_map:
-            print(f"[ControllerManager] Nettoyage configuration Dolphin pour {profile_name}...")
-            self.exporter.remove_dolphin_game_settings(game_map[profile_name])
+        pass
 
     def load_game_profile(self, game_name):
         """Demande au ProfileManager de basculer vers le profil demandé (ex: 'oot')."""

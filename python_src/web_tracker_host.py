@@ -33,11 +33,11 @@ def run_npm_server(path):
     # Check for node_modules
     if not os.path.exists(os.path.join(path, "node_modules")):
         print("[WebTracker] node_modules missing. Running npm install...")
-        subprocess.run(["npm", "install"], shell=True, cwd=path)
+        subprocess.run(["npm", "install"], shell=True, cwd=path, creationflags=subprocess.CREATE_NO_WINDOW if sys.platform == "win32" else 0)
     
     print("[WebTracker] Starting npm server on port 5176...")
     # Run npm start (which is 'vite' for the SS tracker)
-    return subprocess.Popen(["npm", "start", "--", "--port", "5176"], shell=True, cwd=path)
+    return subprocess.Popen(["npm", "start", "--", "--port", "5176"], shell=True, cwd=path, creationflags=subprocess.CREATE_NO_WINDOW if sys.platform == "win32" else 0)
 
 def main():
     if len(sys.argv) < 2:
@@ -153,7 +153,7 @@ def main():
         if npm_proc:
             print("[WebTracker] Shutting down NPM server...")
             # On Windows, we need to be aggressive with taskkill to kill the vite child process
-            subprocess.run(["taskkill", "/F", "/T", "/PID", str(npm_proc.pid)], shell=True)
+            subprocess.run(["taskkill", "/F", "/T", "/PID", str(npm_proc.pid)], shell=True, creationflags=subprocess.CREATE_NO_WINDOW if sys.platform == "win32" else 0)
 
 if __name__ == "__main__":
     main()

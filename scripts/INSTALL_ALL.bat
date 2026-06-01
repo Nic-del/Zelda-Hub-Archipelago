@@ -20,7 +20,7 @@ echo.
 
 :: 2. Installation de l'UI Broadcast (Node.js + Python Broadcast)
 echo [2/2] Installation de l'UI Broadcast...
-set BROADCAST_DIR=..\App\UiBroadCast-Archipelago
+set BROADCAST_DIR=..\App\BroadCast-Archipelago
 
 if exist "%BROADCAST_DIR%\INSTALLATION.bat" (
     pushd "%BROADCAST_DIR%"

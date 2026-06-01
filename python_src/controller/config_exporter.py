@@ -139,7 +139,7 @@ class ConfigExporter:
     def force_copy_profile(self, profile_name):
         """
         Copie directement un fichier .ini existant depuis le dossier Profiles
-        vers le fichier de configuration active GCPadNew.ini.
+        vers le fichier de configuration active GCPadNew.ini, en convertissant la section en [GCPadNew1].
         """
         appdata_path = os.environ.get('APPDATA')
         if not appdata_path:
@@ -151,14 +151,38 @@ class ConfigExporter:
         
         try:
             if os.path.exists(source):
-                shutil.copyfile(source, dest)
-                print(f"[ConfigExporter] Profil '{profile_name}' copié avec succès vers {dest}")
+                config = configparser.ConfigParser()
+                config.optionxform = str
+                config.read(source, encoding="utf-8")
+                
+                active_config = configparser.ConfigParser()
+                active_config.optionxform = str
+                new_section = "GCPadNew1"
+                active_config.add_section(new_section)
+                
+                if config.has_section("Profile"):
+                    for key, value in config.items("Profile"):
+                        active_config.set(new_section, key, value)
+                elif config.has_section("GCPadNew1"):
+                    for key, value in config.items("GCPadNew1"):
+                        active_config.set(new_section, key, value)
+                else:
+                    # Fallback sur la première section trouvée
+                    sections = config.sections()
+                    if sections:
+                        for key, value in config.items(sections[0]):
+                            active_config.set(new_section, key, value)
+                
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
+                with open(dest, 'w', encoding="utf-8") as f:
+                    active_config.write(f)
+                print(f"[ConfigExporter] Profil '{profile_name}' converti et copié avec succès vers {dest}")
                 return True
             else:
                 print(f"[ConfigExporter] Fichier source introuvable : {source}")
                 return False
         except Exception as e:
-            print(f"[ConfigExporter] Erreur lors de la copie shutil : {e}")
+            print(f"[ConfigExporter] Erreur lors de la copie et conversion : {e}")
             return False
 
     def export_dolphin_config(self, joy_name, mapping, profile_name="GCPadNew.ini", ctrl_type="Generic"):
@@ -351,8 +375,13 @@ class ConfigExporter:
             for key, value in config.items("Profile"):
                 active_config.set(new_section, key, value)
                 
-            os.makedirs(os.path.dirname(active_path), exist_ok=True)
-            print(f"[ConfigExporter] Configuration ACTIVE Dolphin mise à jour ([GCPadNew1]) : {active_path}")
+            try:
+                os.makedirs(os.path.dirname(active_path), exist_ok=True)
+                with open(active_path, 'w', encoding="utf-8") as f:
+                    active_config.write(f)
+                print(f"[ConfigExporter] Configuration ACTIVE Dolphin mise à jour ([GCPadNew1]) : {active_path}")
+            except Exception as e:
+                print(f"[ConfigExporter] Erreur lors de l'écriture de GCPadNew.ini : {e}")
 
 
     def get_dolphin_val_internal(self, phys_id, axis_dir=None, ctrl_type="Generic"):

@@ -1,0 +1,17 @@
+{
+    "server": "archipelago.gg:32443",
+    "slot": "TP",
+    "password": "",
+    "sync_mode": "all",
+    "win_w": 400,
+    "win_h": 600,
+    "win_x": 1500,
+    "win_y": 412,
+    "display_index": 1,
+    "last_game": "",
+    "multi_slots": "",
+    "enable_overlay": true,
+    "enable_obs": true,
+    "show_locations": true,
+    "disable_hw_accel": false
+}

@@ -17,11 +17,15 @@ except ImportError:
 datas = [
     (os.path.join(PYTHON_SRC, 'assets'), 'assets'), 
     (os.path.join(PYTHON_SRC, 'controller'), 'controller'), 
-    (os.path.join(PYTHON_SRC, 'profiles'), 'profiles'), 
     (os.path.join(PYTHON_SRC, 'clipboard_paste.ps1'), '.'), 
     (os.path.join(PYTHON_SRC, 'maximize_poptracker.ps1'), '.'), 
     (os.path.join(PYTHON_SRC, 'minimize_lua_console.ps1'), '.'), 
     (os.path.join(PYTHON_SRC, 'send_input.ps1'), '.'), 
+    (os.path.join(PYTHON_SRC, 'games_metadata.json'), '.'), 
+    (os.path.join(PYTHON_SRC, 'center_broadcast.ps1'), '.'), 
+    (os.path.join(PYTHON_SRC, 'web_tracker_host.py'), '.'), 
+    (os.path.join(PYTHON_SRC, 'ui_controller.py'), '.'), 
+    (os.path.join(PYTHON_SRC, 'ui_setup.py'), '.'), 
 ]
 
 if ctk_path:

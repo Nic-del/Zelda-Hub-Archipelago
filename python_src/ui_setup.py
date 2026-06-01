@@ -86,7 +86,7 @@ DEFAULT_CONFIG = {
     "poptracker_variants": {},
     "archipelago_settings": {
         "host": "archipelago.gg",
-        "port": "38281",
+        "port": "",
         "password": ""
     },
     "slot_names": {
@@ -110,6 +110,10 @@ DEFAULT_CONFIG = {
     "auto_controller_config": True,
     "poptracker_broadcast": False,
     "broadcast_mode": "obs",
+    "broadcast_enable_overlay": True,
+    "broadcast_enable_obs": False,
+    "broadcast_show_locations": True,
+    "broadcast_disable_hw_accel": False,
     "maximize_poptracker": True,
     "poptracker_display_index": 0,
     "obs_settings": {
@@ -343,6 +347,10 @@ class SetupUI(ctk.CTk):
         self.create_section_label(page, Loc.get("sec_broadcast"))
         self.create_check_row(page, Loc.get("opt_poptracker_broadcast"), "poptracker_broadcast")
         self.create_option_row(page, Loc.get("opt_broadcast_mode"), "broadcast_mode", ["all", "personal", "obs"])
+        self.create_check_row(page, Loc.get("opt_broadcast_overlay"), "broadcast_enable_overlay")
+        self.create_check_row(page, Loc.get("opt_broadcast_obs"), "broadcast_enable_obs")
+        self.create_check_row(page, Loc.get("opt_broadcast_show_locations"), "broadcast_show_locations")
+        self.create_check_row(page, Loc.get("opt_broadcast_disable_hw_accel"), "broadcast_disable_hw_accel")
         
         self.btn_test_obs = ctk.CTkButton(
             page, text=Loc.get("btn_test_obs"), 
@@ -807,11 +815,40 @@ class SetupUI(ctk.CTk):
         slot_names = self.config.get("slot_names", {})
         found_count = 0
         
-        # Si aucun dossier n'existe, on demande un dossier global
-        if not any(os.path.exists(d) for d in [emu_dir, rom_dir, patch_dir]):
-            global_dir = filedialog.askdirectory(title="Dossiers standards non trouvés. Choisir un dossier à scanner.")
-            if not global_dir: return
-            emu_dir = rom_dir = patch_dir = global_dir
+        # Vérifier et demander le dossier Rom s'il n'existe pas
+        if not os.path.exists(rom_dir):
+            selected_rom = filedialog.askdirectory(title="Dossier 'Rom' non trouvé. Choisir le dossier contenant vos ROMs à scanner.")
+            if selected_rom:
+                rom_dir = selected_rom
+            else:
+                rom_dir = project_root
+                
+        # Vérifier et demander le dossier Emulator s'il n'existe pas
+        if not os.path.exists(emu_dir):
+            selected_emu = filedialog.askdirectory(title="Dossier 'Emulator' non trouvé. Choisir le dossier contenant vos Émulateurs/Jeux à scanner.")
+            if selected_emu:
+                emu_dir = selected_emu
+            else:
+                emu_dir = project_root
+                
+        # Vérifier et demander le dossier PatchFile s'il n'existe pas
+        if not os.path.exists(patch_dir):
+            selected_patch = filedialog.askdirectory(title="Dossier 'PatchFile' non trouvé. Choisir le dossier contenant vos fichiers de Patch à scanner.")
+            if selected_patch:
+                patch_dir = selected_patch
+            else:
+                patch_dir = project_root
+
+        # Recréer le search_mapping avec les dossiers mis à jour
+        search_mapping = {
+            "OOT (SOH)": emu_dir,
+            "Majora's Mask": emu_dir,
+            "Twilight Princess": rom_dir,
+            "A Link Between Worlds": rom_dir,
+            "Phantom Hourglass": rom_dir,
+            "Spirit Tracks": rom_dir,
+            "Skyward Sword": patch_dir
+        }
 
         for game, valid_exts in rom_ext_map.items():
             # Déterminer le dossier où chercher

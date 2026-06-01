@@ -170,7 +170,7 @@ class EmulatorController(ABC):
             try:
                 if p.poll() is None:
                     print(f"[Launcher] Terminating extra process (PID: {p.pid})...")
-                    subprocess.run(["taskkill", "/F", "/T", "/PID", str(p.pid)], capture_output=True)
+                    subprocess.run(["taskkill", "/F", "/T", "/PID", str(p.pid)], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
                     self._wait_for_pid(p.pid)
             except Exception as e:
                 print(f"[Launcher] Error stopping extra process: {e}")
@@ -241,7 +241,7 @@ class EmulatorController(ABC):
             print(f"[Launcher] Force killing process tree for PID {pid}...")
             try:
                 # /T kills the entire process tree
-                subprocess.run(["taskkill", "/F", "/T", "/PID", str(pid)], capture_output=True)
+                subprocess.run(["taskkill", "/F", "/T", "/PID", str(pid)], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
                 self._wait_for_pid(pid)
             except: pass
         
@@ -599,8 +599,8 @@ print("Launcher: BizHawk Wrapper Active.")
                 cmd.extend(["-slotname", self.slot_name])
                 print(f"[BizHawk] Cible demandée : {self.slot_name}")
 
-            # On lance dans une NOUVELLE CONSOLE visible (COMME LE BOUTON)
-            subprocess.Popen(cmd, cwd=temp_dir, creationflags=subprocess.CREATE_NEW_CONSOLE)
+            # On lance de manière totalement invisible
+            subprocess.Popen(cmd, cwd=temp_dir, creationflags=subprocess.CREATE_NO_WINDOW)
         except Exception as e:
             print(f"[BizHawk] Erreur Hub (Appel Terminal Externe) : {e}")
 
@@ -827,7 +827,7 @@ Start-Sleep -m 400
                     pass
         else:
             # Fallback taskkill
-            subprocess.run(["taskkill", "/F", "/IM", "dolphin-emu.exe"], capture_output=True)
+            subprocess.run(["taskkill", "/F", "/IM", "dolphin-emu.exe"], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
 
 class AzaharController(EmulatorController):
     def __init__(self, emulator_path: str, rom_path: str):
@@ -1368,7 +1368,7 @@ dofile([[{lua_path}]])
         except Exception as e:
             print(f"[Archipelago] Erreur lors du lancement : {e}")
             msg = f'Erreur Lancement {self.game_name}: {str(e)}'
-            subprocess.Popen(["powershell", "-Command", f'Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show("{msg}")'])
+            subprocess.Popen(["powershell", "-Command", f'Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show("{msg}")'], creationflags=subprocess.CREATE_NO_WINDOW)
             return False
 
 
@@ -1469,7 +1469,7 @@ class GameManager:
         if not bc_path or not os.path.exists(bc_path):
             for app_dir in potential_app_dirs:
                 if not os.path.exists(app_dir): continue
-                bc_dir = os.path.join(app_dir, "UiBroadCast-Archipelago")
+                bc_dir = os.path.join(app_dir, "BroadCast-Archipelago")
                 if os.path.exists(os.path.join(bc_dir, "start_cli.py")):
                     config["emulators"]["broadcast"] = os.path.normpath(bc_dir)
                     print(f"[GameManager] Auto-fill Broadcast: {bc_dir}")

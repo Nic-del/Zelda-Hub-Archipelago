@@ -20,7 +20,7 @@ except ImportError:
     print("[Launcher] Erreur: Pillow (PIL) n'est pas installé. Utilisation du mode texte.")
 
 from launcher_core import (
-    GameManager, BizHawkController, DolphinController, CONFIG_PATH, BASE_DIR, get_exe_dir,
+    GameManager, BizHawkController, DolphinController, CONFIG_PATH, BASE_DIR, get_exe_dir, resolve_path,
     set_current_process_priority, PROCESS_PRIORITY_NORMAL, PROCESS_PRIORITY_BELOW_NORMAL
 )
 from obs_controller import obs_controller
@@ -108,6 +108,10 @@ class LauncherUI:
         self.multi_game_keep_alive_var = tk.BooleanVar(value=False)
         self.broadcast_enabled_var = tk.BooleanVar(value=True)
         self.broadcast_mode_var = tk.StringVar(value="obs")
+        self.broadcast_enable_overlay_var = tk.BooleanVar(value=True)
+        self.broadcast_enable_obs_var = tk.BooleanVar(value=False)
+        self.broadcast_show_locations_var = tk.BooleanVar(value=True)
+        self.broadcast_disable_hw_accel_var = tk.BooleanVar(value=False)
         self.poptracker_display_index = 0
         
         # Charger la config et les réglages
@@ -446,7 +450,7 @@ class LauncherUI:
         for ver in ["3.12", "3.13", "3.7"]:
             try:
                 cmd = ["py", f"-{ver}", "-c", "import webview"]
-                if subprocess.call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) == 0:
+                if subprocess.call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, creationflags=subprocess.CREATE_NO_WINDOW) == 0:
                     return f"py -{ver}"
             except:
                 pass
@@ -528,7 +532,8 @@ class LauncherUI:
             if os.path.exists(ps_script):
                 print(f"[Launcher] Lancement du maximiseur PopTracker sur l'écran {self.poptracker_display_index}...")
                 subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", ps_script, "-MonitorIndex", str(self.poptracker_display_index)], 
-                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                               creationflags=subprocess.CREATE_NO_WINDOW)
         
         threading.Thread(target=run_maximizer, daemon=True).start()
 
@@ -539,7 +544,8 @@ class LauncherUI:
             if os.path.exists(ps_script):
                 print("[Launcher] Centrage de la fenêtre de Broadcast via PowerShell...")
                 subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", ps_script], 
-                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                               creationflags=subprocess.CREATE_NO_WINDOW)
         
         threading.Thread(target=run_centerer, daemon=True).start()
 
@@ -677,27 +683,8 @@ class LauncherUI:
         self.status_var.set(Loc.get("status_launching", name=name))
         self.root.update()
         
-        # 1. AUTOMATION MANETTE (Thread Principal)
-        # On définit quel profil charger pour chaque jeu via metadata
-        meta = self.games_metadata.get(name, {})
-        profile = meta.get("profile")
-        is_global_auto = self.auto_config_var.get()
-        is_game_auto = self.auto_config_per_game.get(name, tk.BooleanVar(value=True)).get()
-
-        if self.controller_manager and is_global_auto and is_game_auto and profile:
-            print(f"[Launcher] Preparation manette pour {name} (Profil: {profile})...")
-            
-            # Charger et appliquer (Dolphin / BizHawk)
-            self.controller_manager.load_game_profile(profile)
-            self.controller_manager.apply_config_to_emulators()
-            
-            # Cas spécial Dolphin qui préfère parfois une copie directe si le INI est récalcitrant
-            if name == "Wind Waker":
-                self.controller_manager.exporter.force_copy_profile("ww.ini")
-        else:
-            print(f"[Launcher] Configuration automatique ignorée ou non définie pour {name}.")
-            if self.controller_manager and profile:
-                self.controller_manager.disable_config_for_emulators(profile)
+        # 1. AUTOMATION MANETTE DESACTIVEE (Selon la consigne utilisateur)
+        print(f"[Launcher] Configuration automatique des profils manettes pour épurateurs désactivée (manuel préféré) pour {name}.")
 
         # 2. RUN LOGIC IN THREAD WITH DELAY
         def _threaded_launch():
@@ -753,7 +740,7 @@ class LauncherUI:
                         pwd = self.manager.archipelago_settings.get("password", "None") or "None"
                         cmd.extend([str(host), str(port), str(slot), str(pwd)])
 
-                        self.poptracker_process = subprocess.Popen(cmd, cwd=os.path.dirname(__file__))
+                        self.poptracker_process = subprocess.Popen(cmd, cwd=os.path.dirname(__file__), creationflags=subprocess.CREATE_NO_WINDOW)
                         
                         # Maximisation si demandée dans le setup
                         do_maximize = True
@@ -903,6 +890,9 @@ class LauncherUI:
                 except:
                     pass
                 
+                if broadcast_dir:
+                    broadcast_dir = resolve_path(broadcast_dir)
+                
                 # Fallback pour le Broadcast App si le chemin est vide ou invalide
                 if not broadcast_dir or not os.path.exists(os.path.join(broadcast_dir, "start_cli.py")):
                     potential_app_dirs = [
@@ -911,7 +901,7 @@ class LauncherUI:
                     ]
                     for app_dir in potential_app_dirs:
                         # On teste plusieurs noms possibles
-                        broadcast_fallback = os.path.join(app_dir, "UiBroadCast-Archipelago")
+                        broadcast_fallback = os.path.join(app_dir, "BroadCast-Archipelago")
                         broadcast_fallback_alt = os.path.join(app_dir, "uibroadcast")
                         
                         if os.path.exists(os.path.join(broadcast_fallback, "start_cli.py")):
@@ -951,39 +941,83 @@ class LauncherUI:
                     
                     if not is_b_alive:
                         b_host = self.manager.archipelago_settings.get("host", "archipelago.gg")
-                        b_port = self.manager.archipelago_settings.get("port", "38281")
-                        b_slot = self.manager.slot_names.get(name, "Linkss")
+                        b_port = self.manager.archipelago_settings.get("port", "")
+                        b_slot = self.manager.slot_names.get(name, "")
                         b_pwd = self.manager.archipelago_settings.get("password", "")
                         
-                        b_cmd = [
-                            sys.executable, "start_cli.py",
-                            "--server", f"{b_host}:{b_port}",
-                            "--slot", b_slot,
-                            "--mode", self.broadcast_mode_var.get()
-                        ]
-                        if b_pwd:
-                            b_cmd.extend(["--password", b_pwd])
+                        if not b_port or not b_slot:
+                            print(f"[Launcher] [ATTENTION] Le Broadcast pour '{name}' n'est pas lancé car le 'Slot Name' ou le 'Port' Archipelago n'est pas configuré dans l'onglet Configuration du Hub.")
+                        else:
+                            # Trouver un interprète Python valide externe quand on est compilé (frozen)
+                            python_exe_list = ["py", "-3.12"]
+                            if getattr(sys, 'frozen', False):
+                                for interp in [["py", "-3.12"], ["py", "-3.14"], ["python"], ["py"]]:
+                                    try:
+                                        if subprocess.call(interp + ["-c", "pass"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, creationflags=subprocess.CREATE_NO_WINDOW) == 0:
+                                            python_exe_list = interp
+                                            break
+                                    except: pass
+                            else:
+                                python_exe_list = [sys.executable]
+
+                            mode = self.broadcast_mode_var.get()
                             
-                        print(f"[Launcher] Starting broadcast overlay: {' '.join(b_cmd)}")
-                        try:
-                            # Lancement en mode minimisé pour ne pas gêner l'utilisateur
-                            startupinfo = None
-                            if os.name == 'nt':
-                                startupinfo = subprocess.STARTUPINFO()
-                                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-                                # SW_SHOWMINNOACTIVE = 7 (minimisé sans prendre le focus)
-                                startupinfo.wShowWindow = 7 
+                            # Synchroniser les réglages du Hub avec le fichier de configuration du Broadcast
+                            try:
+                                b_settings_path = os.path.join(broadcast_dir, "broadcast_settings.json")
+                                b_settings = {}
+                                if os.path.exists(b_settings_path):
+                                    with open(b_settings_path, "r", encoding="utf-8") as bf:
+                                        b_settings = json.load(bf)
                                 
-                            broadcast_p = subprocess.Popen(
-                                b_cmd, 
-                                cwd=broadcast_dir, 
-                                creationflags=subprocess.CREATE_NEW_CONSOLE,
-                                startupinfo=startupinfo
-                            )
-                            if game_ctrl:
-                                game_ctrl.extra_processes.append(broadcast_p)
-                        except Exception as e:
-                            print(f"[Launcher] Error starting broadcast overlay: {e}")
+                                b_settings["server"] = f"{b_host}:{b_port}"
+                                b_settings["slot"] = b_slot
+                                b_settings["password"] = b_pwd
+                                b_settings["enable_overlay"] = self.broadcast_enable_overlay_var.get()
+                                b_settings["enable_obs"] = self.broadcast_enable_obs_var.get()
+                                b_settings["show_locations"] = self.broadcast_show_locations_var.get()
+                                b_settings["disable_hw_accel"] = self.broadcast_disable_hw_accel_var.get()
+                                b_settings["sync_mode"] = "all" if mode == "obs" else mode
+                                
+                                with open(b_settings_path, "w", encoding="utf-8") as bf:
+                                    json.dump(b_settings, bf, indent=4)
+                                print(f"[Launcher] Config du Broadcast synchronisée avec succès.")
+                            except Exception as e:
+                                print(f"[Launcher] Erreur de synchronisation du Broadcast : {e}")
+
+                            b_cmd = python_exe_list + [
+                                "start_cli.py",
+                                "--server", f"{b_host}:{b_port}",
+                                "--slot", b_slot
+                            ]
+                            
+                            if self.broadcast_enable_overlay_var.get():
+                                b_cmd.append("--overlay")
+                            else:
+                                b_cmd.append("--no-overlay")
+                                
+                            if self.broadcast_enable_obs_var.get():
+                                b_cmd.append("--obs")
+                            else:
+                                b_cmd.append("--no-obs")
+                                
+                            if mode != "obs":
+                                b_cmd.extend(["--mode", mode])
+                                
+                            if b_pwd:
+                                b_cmd.extend(["--password", b_pwd])
+                                
+                            print(f"[Launcher] Starting broadcast overlay: {' '.join(b_cmd)}")
+                            try:
+                                broadcast_p = subprocess.Popen(
+                                    b_cmd, 
+                                    cwd=broadcast_dir, 
+                                    creationflags=subprocess.CREATE_NO_WINDOW
+                                )
+                                if game_ctrl:
+                                    game_ctrl.extra_processes.append(broadcast_p)
+                            except Exception as e:
+                                print(f"[Launcher] Error starting broadcast overlay: {e}")
 
                 # --- 3. LANCEMENT CLIENT ARCHIPELAGO (Après démarrage jeu pour éviter cleanup) ---
                 meta = self.games_metadata.get(name, {})
@@ -1086,7 +1120,7 @@ class LauncherUI:
         def run_controller():
             # Ouvre `ui_controller.py` (chemin absolu) et attend
             ui_path = os.path.join(self.base_dir, "ui_controller.py")
-            subprocess.run([sys.executable, ui_path])
+            subprocess.run([sys.executable, ui_path], creationflags=subprocess.CREATE_NO_WINDOW)
             
             # Une fois fermé, on débloque
             print("[Launcher] Retour de la gestion des manettes. Reloading config...")
@@ -1104,7 +1138,7 @@ class LauncherUI:
         def run_setup():
             # Ouvre `ui_setup.py` (chemin absolu) avec la page demandée et attend
             setup_path = os.path.join(self.base_dir, "ui_setup.py")
-            subprocess.run([sys.executable, setup_path, "--page", page])
+            subprocess.run([sys.executable, setup_path, "--page", page], creationflags=subprocess.CREATE_NO_WINDOW)
             
             # Une fois fermé, on débloque
             print(f"[Launcher] Retour du setup ({page}). Reloading config...")
@@ -1168,6 +1202,10 @@ class LauncherUI:
                 self.multi_game_keep_alive_var.set(config.get("multi_game_keep_alive", False))
                 self.broadcast_enabled_var.set(config.get("auto_broadcast_enabled", True))
                 self.broadcast_mode_var.set(config.get("broadcast_mode", "obs"))
+                self.broadcast_enable_overlay_var.set(config.get("broadcast_enable_overlay", True))
+                self.broadcast_enable_obs_var.set(config.get("broadcast_enable_obs", False))
+                self.broadcast_show_locations_var.set(config.get("broadcast_show_locations", True))
+                self.broadcast_disable_hw_accel_var.set(config.get("broadcast_disable_hw_accel", False))
                 self.poptracker_last_rect = config.get("poptracker_last_rect")
                 self.poptracker_display_index = int(config.get("poptracker_display_index", 0))
                 
@@ -1234,6 +1272,10 @@ class LauncherUI:
                 self.manager.multi_game_keep_alive = self.multi_game_keep_alive_var.get() # Sync memory
                 config["auto_broadcast_enabled"] = self.broadcast_enabled_var.get()
                 config["broadcast_mode"] = self.broadcast_mode_var.get()
+                config["broadcast_enable_overlay"] = self.broadcast_enable_overlay_var.get()
+                config["broadcast_enable_obs"] = self.broadcast_enable_obs_var.get()
+                config["broadcast_show_locations"] = self.broadcast_show_locations_var.get()
+                config["broadcast_disable_hw_accel"] = self.broadcast_disable_hw_accel_var.get()
                 config["poptracker_last_rect"] = self.poptracker_last_rect
                 config["poptracker_display_index"] = self.poptracker_display_index
                 
@@ -1422,7 +1464,7 @@ class LauncherUI:
             ]
             
             print(f"[Launcher] Connexion auto pour {game_name} : {' '.join(ps_cmd)}")
-            return subprocess.Popen(ps_cmd, shell=False)
+            return subprocess.Popen(ps_cmd, shell=False, creationflags=subprocess.CREATE_NO_WINDOW)
         except Exception as e:
             print(f"[Launcher] Erreur lors de la connexion automate pour {game_name} : {e}")
             return None
@@ -1450,6 +1492,36 @@ class LauncherUI:
         self.root.destroy()
 
 if __name__ == "__main__":
+    import sys
+    # Interception pour exécuter ui_controller ou ui_setup dans l'exécutable compilé
+    if len(sys.argv) > 1:
+        if sys.argv[1].endswith("ui_controller.py"):
+            import ui_controller
+            root = tk.Tk()
+            app = ui_controller.UIControllerApp(root)
+            root.protocol("WM_DELETE_WINDOW", app.on_closing)
+            root.mainloop()
+            sys.exit(0)
+        elif sys.argv[1].endswith("ui_setup.py"):
+            start_p = "emus"
+            if "--page" in sys.argv:
+                try:
+                    idx = sys.argv.index("--page")
+                    if idx + 1 < len(sys.argv):
+                        start_p = sys.argv[idx + 1]
+                except:
+                    pass
+            import ui_setup
+            app = ui_setup.SetupUI(start_page=start_p)
+            app.protocol("WM_DELETE_WINDOW", app.on_closing)
+            app.mainloop()
+            sys.exit(0)
+        elif sys.argv[1].endswith("web_tracker_host.py"):
+            import web_tracker_host
+            sys.argv = [sys.argv[0]] + sys.argv[2:]
+            web_tracker_host.main()
+            sys.exit(0)
+
     # Support argument pour forcer la langue (--lang en ou --lang fr)
     force_lang = None
     if "--lang" in sys.argv:

@@ -21,7 +21,8 @@ class ProcessManager:
         try:
             if sys.platform == "win32":
                 subprocess.run(["taskkill", "/F", "/T", "/PID", str(pid)], 
-                               capture_output=True, check=False)
+                               capture_output=True, check=False,
+                               creationflags=subprocess.CREATE_NO_WINDOW)
             else:
                 # Fallback for non-windows if needed
                 if psutil:
@@ -42,7 +43,8 @@ class ProcessManager:
         try:
             if sys.platform == "win32":
                 subprocess.run(["taskkill", "/F", "/IM", image_name], 
-                               capture_output=True, check=False)
+                               capture_output=True, check=False,
+                               creationflags=subprocess.CREATE_NO_WINDOW)
             elif psutil:
                 for proc in psutil.process_iter(['name']):
                     if proc.info['name'].lower() == image_name.lower():

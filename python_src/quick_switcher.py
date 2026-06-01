@@ -59,11 +59,15 @@ class QuickSwitcherUI:
         # Titre
         title_text = Loc.get("qs_busy") if is_busy else Loc.get("qs_title")
         title_color = "#ff9900" if is_busy else "#00ff99"
-        tk.Label(self.overlay, text=title_text, font=("Segoe UI", 12, "bold"), bg="#121212", fg=title_color).pack(pady=15)
+        tk.Label(self.overlay, text=title_text, font=("Segoe UI", 12, "bold"), bg="#121212", fg=title_color).pack(pady=(15, 5))
         
-        # Container avec Scrollbar (Canvas)
+        # Ligne de séparation verte esthétique sous le titre (pour séparer proprement le menu)
+        separator = tk.Frame(self.overlay, bg="#00ff99", height=2, width=220)
+        separator.pack(pady=(0, 15))
+        
+        # Container avec Scrollbar (Canvas) - Abaissé pour éviter tout chevauchement avec le titre
         container = tk.Frame(self.overlay, bg="#121212")
-        container.pack(fill="both", expand=True, padx=10, pady=5)
+        container.pack(fill="both", expand=True, padx=10, pady=(5, 5))
 
         self.canvas = tk.Canvas(container, bg="#121212", highlightthickness=0, bd=0)
         scrollbar = tk.Scrollbar(container, orient="vertical", command=self.canvas.yview)
@@ -74,7 +78,8 @@ class QuickSwitcherUI:
             lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all"))
         )
 
-        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw", width=260)
+        canvas_window = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.bind("<Configure>", lambda e: self.canvas.itemconfig(canvas_window, width=e.width))
         self.canvas.configure(yscrollcommand=scrollbar.set)
 
         self.canvas.pack(side="left", fill="both", expand=True)
@@ -162,14 +167,18 @@ class QuickSwitcherUI:
                 btn.configure(bg="#00ff99", fg="black") 
                 
                 if self.canvas:
-                    self.root.update_idletasks()
+                    # Force la mise à jour de l'affichage pour obtenir les dimensions réelles
+                    self.overlay.update_idletasks()
                     
                     btn_y = btn.winfo_y()
                     btn_h = btn.winfo_height()
                     canvas_h = self.canvas.winfo_height()
-                    
                     total_h = self.scrollable_frame.winfo_height()
-                    if total_h > canvas_h:
+                    
+                    if self.selected_index == 0:
+                        # Toujours scroller tout en haut pour le premier élément
+                        self.canvas.yview_moveto(0)
+                    elif canvas_h > 1 and total_h > 1 and total_h > canvas_h:
                         top, bottom = self.canvas.yview()
                         
                         btn_top_rel = btn_y / total_h

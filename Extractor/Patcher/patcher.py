@@ -336,14 +336,14 @@ class PatcherApp:
         # Traditional kill for known emulators
         targets = ["EmuHawk.exe", "retroarch.exe", "dolphin.exe", "sni.exe", "snes9x.exe", "fceux.exe", "project64.exe"]
         for target in targets:
-            try: subprocess.run(["taskkill", "/F", "/T", "/IM", target], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            try: subprocess.run(["taskkill", "/F", "/T", "/IM", target], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, creationflags=subprocess.CREATE_NO_WINDOW)
             except: pass
         
         # Radical kill via PowerShell for EVERYTHING containing "Archipelago"
         # This catches: ArchipelagoLauncher, ArchipelagoDXClient, ArchipelagoBizHawkClient, etc.
         try:
             ps_cmd = 'Get-Process | Where-Object { $_.Name -like "*Archipelago*" } | Stop-Process -Force'
-            subprocess.run(["powershell", "-Command", ps_cmd], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(["powershell", "-Command", ps_cmd], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, creationflags=subprocess.CREATE_NO_WINDOW)
         except: pass
 
     def refresh(self):
