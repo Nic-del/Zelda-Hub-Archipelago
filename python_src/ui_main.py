@@ -563,6 +563,17 @@ class LauncherUI:
 
     def _handle_controller_input(self, raw_event):
         """Intercepte les inputs manette pour les raccourcis du Hub (Support Combos)."""
+        # Filtrage par nom de manette préférée (hub_controller_name)
+        joy_id = raw_event.get("joy_id")
+        if joy_id is not None and self.controller_manager:
+            joy_info = self.controller_manager.detector.joysticks.get(joy_id)
+            if joy_info:
+                ctrl_name = joy_info.get("name")
+                preferred_ctrl = getattr(self.manager, 'hub_controller_name', "")
+                if preferred_ctrl and preferred_ctrl not in ["Toutes", "All", "All controllers", "Toutes les manettes"] and ctrl_name != preferred_ctrl:
+                    # Ignore les inputs de cette manette
+                    return False
+
         # Mise à jour de l'état des boutons pressés
         btn_id = raw_event.get("id")
         if not btn_id: return False
@@ -1291,10 +1302,14 @@ class LauncherUI:
                 for g_name, var in self.auto_config_per_game.items():
                     config["auto_controller_per_game"][g_name] = var.get()
                 
-                # S'assurer que le raccourci Hub est préservé même si on sauve depuis ici
+                 # S'assurer que le raccourci Hub est préservé même si on sauve depuis ici
                 if hasattr(self.manager, 'hub_controller_open_btn'):
                     config["hub_controller_open_btn"] = self.manager.hub_controller_open_btn
                     print(f"[Launcher] Syncing Hub button to config: {self.manager.hub_controller_open_btn}")
+                
+                if hasattr(self.manager, 'hub_controller_name'):
+                    config["hub_controller_name"] = self.manager.hub_controller_name
+                    print(f"[Launcher] Syncing Hub controller name to config: {self.manager.hub_controller_name}")
 
                 with open(self.config_path, "w", encoding="utf-8") as f:
                     json.dump(config, f, indent=4)

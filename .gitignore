@@ -21,7 +21,7 @@ python_src/temp/
 *.o
 *.exe
 !**/poptracker.exe
-!**/patcher.exe
+!**/ZeldaHubPatcher.exe
 !**/APWorldPatcherPro.exe
 
 # ROMs and Game files

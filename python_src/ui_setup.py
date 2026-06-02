@@ -438,6 +438,53 @@ class SetupUI(ctk.CTk):
         
         ctk.CTkLabel(inner_ctrl, text=Loc.get("hint_combo"), font=ctk.CTkFont(size=10), text_color="#555").pack(side="left", padx=5)
         
+        # Controller choice row (Selection de la manette pour la detection)
+        row_ctrl_name = ctk.CTkFrame(page, fg_color="#141414", corner_radius=12)
+        row_ctrl_name.pack(fill="x", pady=4, padx=10)
+        inner_ctrl_name = ctk.CTkFrame(row_ctrl_name, fg_color="transparent")
+        inner_ctrl_name.pack(fill="x", padx=15, pady=8)
+        
+        ctk.CTkLabel(inner_ctrl_name, text=Loc.get("lbl_hub_controller_name"), width=160, anchor="w", font=ctk.CTkFont(size=11, weight="bold")).pack(side="left", padx=(0, 10))
+        
+        connected_controllers = []
+        if HAS_PYGAME:
+            try:
+                if not pygame.get_init():
+                    pygame.init()
+                if not pygame.joystick.get_init():
+                    pygame.joystick.init()
+                for i in range(pygame.joystick.get_count()):
+                    try:
+                        joy = pygame.joystick.Joystick(i)
+                        joy.init()
+                        name = joy.get_name()
+                        if name not in connected_controllers:
+                            connected_controllers.append(name)
+                    except:
+                        pass
+            except:
+                pass
+                
+        all_option = Loc.get("all_controllers_option")
+        options = [all_option] + connected_controllers
+        
+        saved_ctrl = self.config.get("hub_controller_name", "")
+        if not saved_ctrl or saved_ctrl in ["Toutes", "All", "All controllers", "Toutes les manettes"]:
+            current_choice = all_option
+        else:
+            if saved_ctrl not in options:
+                options.append(saved_ctrl)
+            current_choice = saved_ctrl
+            
+        self.ctrl_name_var = tk.StringVar(value=current_choice)
+        self.path_vars[(None, "hub_controller_name")] = self.ctrl_name_var
+        
+        combo_ctrl_name = ctk.CTkOptionMenu(
+            inner_ctrl_name, variable=self.ctrl_name_var, values=options, 
+            height=35, fg_color="#0d0d0d", button_color="#222", button_hover_color="#333"
+        )
+        combo_ctrl_name.pack(side="left", fill="x", expand=True, padx=5)
+        
         return page
 
     def create_page_frame(self):
@@ -1105,6 +1152,10 @@ class SetupUI(ctk.CTk):
                         val = monitor_list.index(val)
                     except:
                         val = 0
+                elif key == "hub_controller_name":
+                    all_option = Loc.get("all_controllers_option")
+                    if val == all_option:
+                        val = ""
                 self.config[key] = val
             elif category == "obs_scenes":
                 if "obs_settings" not in self.config: self.config["obs_settings"] = {}

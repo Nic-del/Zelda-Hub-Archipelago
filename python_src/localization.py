@@ -114,6 +114,8 @@ TRANSLATIONS = {
         "sec_shortcuts": "RACCOURCIS GLOBAUX DU HUB",
         "lbl_hub_keyboard_shortcut": "Raccourci Clavier Global :",
         "lbl_hub_controller_shortcut": "Bouton(s) Manette (Max 2) :",
+        "lbl_hub_controller_name": "Manette pour détection :",
+        "all_controllers_option": "Toutes les manettes",
         "hint_combo": "(ex: L3+R3 ou CAPTURE)",
         "opt_multi_game_keep_alive": "Garder les jeux ouverts en arrière-plan (Hot-Swap)"
     },
@@ -231,6 +233,8 @@ TRANSLATIONS = {
         "sec_shortcuts": "GLOBAL HUB SHORTCUTS",
         "lbl_hub_keyboard_shortcut": "Global Keyboard Shortcut:",
         "lbl_hub_controller_shortcut": "Gamepad Button(s) (Max 2):",
+        "lbl_hub_controller_name": "Controller for detection:",
+        "all_controllers_option": "All controllers",
         "hint_combo": "(e.g.: L3+R3 or CAPTURE)",
         "opt_multi_game_keep_alive": "Keep games running in background (Hot-Swap)"
     }

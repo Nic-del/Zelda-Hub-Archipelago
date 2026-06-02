@@ -79,6 +79,7 @@ class UIControllerApp:
         tk.Label(hub_frame, text=Loc.get("hub_shortcut_label"), bg="#1e1e1e", fg="white", font=("Segoe UI", 9)).pack(pady=(5, 0))
         
         self.hub_btn_var = tk.StringVar(value="CAPTURE")
+        self.hub_name_var = tk.StringVar()
         # Charger depuis la config au démarrage
         self.config_path = CONFIG_PATH
         print(f"[ControllerUI] Utilisation de la config : {self.config_path}")
@@ -88,7 +89,13 @@ class UIControllerApp:
                     data = json.load(f)
                     val = data.get("hub_controller_open_btn", "CAPTURE")
                     self.hub_btn_var.set(val)
-                    print(f"[ControllerUI] Valeur Hub chargée : {val}")
+                    
+                    saved_ctrl = data.get("hub_controller_name", "")
+                    if not saved_ctrl or saved_ctrl in ["Toutes", "All", "All controllers", "Toutes les manettes"]:
+                        self.hub_name_var.set(Loc.get("all_controllers_option"))
+                    else:
+                        self.hub_name_var.set(saved_ctrl)
+                    print(f"[ControllerUI] Valeur Hub chargée : {val}, Manette chargée : {self.hub_name_var.get()}")
             except Exception as e:
                 print(f"[ControllerUI] Erreur lors du chargement : {e}")
                 pass
@@ -104,6 +111,12 @@ class UIControllerApp:
         self.btn_hub_map.pack(side="right")
         
         tk.Label(hub_frame, text=Loc.get("hub_shortcut_hint"), bg="#1e1e1e", fg="#666", font=("Segoe UI", 8)).pack(pady=(0, 5))
+
+        # NOUVEAU: Sélecteur de manette pour détection du raccourci Hub
+        tk.Label(hub_frame, text=Loc.get("lbl_hub_controller_name"), bg="#1e1e1e", fg="white", font=("Segoe UI", 9)).pack(pady=(5, 0))
+        
+        self.hub_name_combo = ttk.Combobox(hub_frame, textvariable=self.hub_name_var, state="readonly")
+        self.hub_name_combo.pack(fill="x", padx=10, pady=(2, 5))
 
         # Header (Gauche)
         tk.Label(self.left_panel, text=Loc.get("ctrl_header"), font=("Segoe UI", 16, "bold"), bg="#1e1e1e", fg="#3498db").pack(pady=10)
@@ -742,6 +755,21 @@ class UIControllerApp:
                 self.device_combo.current(0)
                 self.on_device_change(None)
 
+        # NOUVEAU: Mettre à jour dynamiquement la liste du sélecteur de détection du raccourci
+        if hasattr(self, 'hub_name_combo'):
+            connected_names = [info["name"] for info in joys.values()]
+            all_option = Loc.get("all_controllers_option")
+            combo_options = [all_option] + sorted(list(set(connected_names)))
+            
+            saved_name = self.hub_name_var.get()
+            if saved_name and saved_name != all_option and saved_name not in combo_options:
+                combo_options.append(saved_name)
+                
+            if list(self.hub_name_combo['values']) != combo_options:
+                self.hub_name_combo['values'] = combo_options
+                if not self.hub_name_var.get():
+                    self.hub_name_var.set(all_option)
+
     def on_device_change(self, event):
         """Met a jour la manette active dans le manager."""
         selected = self.device_var.get()
@@ -755,6 +783,10 @@ class UIControllerApp:
             self.log_list.yview(tk.END)
         except Exception:
             pass
+
+    def on_hub_controller_name_change(self, event):
+        """Appelé quand on sélectionne une manette spécifique pour les raccourcis dans Gérer les manettes."""
+        self._save_hub_shortcut()
 
     def poll_controllers(self):
         """Boucle non-bloquante pour lire les inputs via pygame."""
@@ -797,12 +829,20 @@ class UIControllerApp:
                 new_val = self.hub_btn_var.get()
                 config["hub_controller_open_btn"] = new_val
                 
+                # NOUVEAU: Sauvegarder aussi le nom de la manette pour la détection
+                selected_name = self.hub_name_var.get()
+                all_option = Loc.get("all_controllers_option")
+                if selected_name == all_option:
+                    config["hub_controller_name"] = ""
+                else:
+                    config["hub_controller_name"] = selected_name
+                
                 with open(self.config_path, "w", encoding="utf-8") as f:
                     json.dump(config, f, indent=4)
                 
                 print(f"!!! [ControllerUI] SAUVEGARDE RÉUSSIE !!!")
                 print(f"!!! Path: {self.config_path}")
-                print(f"!!! Valeur: {new_val}")
+                print(f"!!! Valeur: {new_val}, Manette: {config.get('hub_controller_name')}")
                 return True
             except Exception as e:
                 print(f"[ControllerUI] Erreur lors de la sauvegarde du raccourci Hub : {e}")

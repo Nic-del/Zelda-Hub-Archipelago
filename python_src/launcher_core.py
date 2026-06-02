@@ -1407,6 +1407,7 @@ class GameManager:
         self.poptracker_packs: Dict[str, str] = {}
         self.poptracker_variants: Dict[str, str] = {}
         self.hub_controller_open_btn: str = "CAPTURE"
+        self.hub_controller_name: str = ""
         self.archipelago_settings: dict = {}
         self.slot_names: dict = {}
         self.poptracker_broadcast: bool = False
@@ -1513,6 +1514,7 @@ class GameManager:
         self.archipelago_settings = config.get("archipelago_settings", {})
         self.poptracker_broadcast = config.get("poptracker_broadcast", False)
         self.hub_controller_open_btn = config.get("hub_controller_open_btn", "CAPTURE")
+        self.hub_controller_name = config.get("hub_controller_name", "")
         
         # Preserve running games
         running_games = {name: ctrl for name, ctrl in self.games.items() if ctrl.process and ctrl.process.poll() is None}
