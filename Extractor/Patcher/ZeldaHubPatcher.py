@@ -99,8 +99,8 @@ class ZeldaHubPatcherApp(ctk.CTk):
         super().__init__()
         
         self.title("Zelda Hub Patcher - Standing Alone")
-        self.geometry("850x650")
-        self.minsize(700, 550)
+        self.geometry("850x800")
+        self.minsize(700, 700)
         
         self.selected_patch_path = None
         self.selected_batch_dir = None
