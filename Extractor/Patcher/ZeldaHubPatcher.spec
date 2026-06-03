@@ -1,16 +1,16 @@
 # -*- mode: python ; coding: utf-8 -*-
 from PyInstaller.utils.hooks import collect_all
 
-datas = []
+datas = [('worlds', 'worlds'), ('data', 'data'), ('rule_builder', 'rule_builder'), ('lib', 'lib')]
 binaries = []
-hiddenimports = []
+hiddenimports = ['orjson', 'colorama', 'yaml', 'pathspec', 'schema', 'bsdiff4']
 tmp_ret = collect_all('customtkinter')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
 
 
 a = Analysis(
-    ['c:\\Users\\Linksweld\\Desktop\\Zelda-Hub-Release\\Zelda-Hub-Release\\PatchFile\\Nouveau dossier\\ZeldaHubPatcher.py'],
-    pathex=['C:\\Users\\Linksweld\\Downloads\\Archipelago-main\\Archipelago-main'],
+    ['ZeldaHubPatcher.py'],
+    pathex=[],
     binaries=binaries,
     datas=datas,
     hiddenimports=hiddenimports,

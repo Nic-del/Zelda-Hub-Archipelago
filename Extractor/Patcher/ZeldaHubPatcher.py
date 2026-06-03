@@ -67,6 +67,7 @@ def try_load_archipelago(path):
         return False
 
 # Initialize loading
+bundled_error = None
 if getattr(sys, 'frozen', False):
     try:
         import Utils
@@ -80,6 +81,7 @@ if getattr(sys, 'frozen', False):
         import Patch
         archipelago_loaded = True
     except Exception as e:
+        bundled_error = traceback.format_exc()
         print(f"Error loading bundled Archipelago: {e}")
 else:
     if not try_load_archipelago(archipelago_path):
@@ -111,8 +113,14 @@ class ZeldaHubPatcherApp(ctk.CTk):
         self.log("Zelda Hub Patcher initialized.")
         if archipelago_loaded and worlds:
             self.log(f"Custom worlds directory loaded: {worlds.user_folder}")
+            if getattr(worlds, "failed_world_loads", None):
+                self.log("WARNING: Failed to load some custom worlds:")
+                for game, reason in worlds.failed_world_loads.items():
+                    self.log(f"  - {game}: {reason}")
         else:
             self.log("WARNING: Archipelago not loaded. Please select your Archipelago folder below.")
+            if bundled_error:
+                self.log(f"Bundled load error:\n{bundled_error}")
         self.log(f"Available patch formats: " + ", ".join(self.supported_extensions))
         
     def create_widgets(self):
