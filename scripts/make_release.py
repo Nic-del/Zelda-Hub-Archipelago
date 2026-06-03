@@ -199,6 +199,19 @@ def make_release():
         
         if item_type == "dossier":
             shutil.copytree(src_path, dest_path, ignore=ignored_patterns)
+            if item_name == "Extractor":
+                patcher_release_dir = os.path.join(dest_path, "Patcher")
+                if os.path.exists(patcher_release_dir):
+                    for filename in os.listdir(patcher_release_dir):
+                        file_p = os.path.join(patcher_release_dir, filename)
+                        if filename != "ZeldaHubPatcher.exe":
+                            try:
+                                if os.path.isdir(file_p):
+                                    shutil.rmtree(file_p)
+                                else:
+                                    os.remove(file_p)
+                            except Exception as e:
+                                print_warning(f"Impossible de supprimer {filename}: {e}")
             size = get_dir_size(dest_path)
             copied_summary.append((item_name, size, "dossier"))
             print_success(f"Dossier '{item_name}' copié avec succès ! Taille : {format_size(size)}")
