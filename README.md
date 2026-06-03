@@ -91,7 +91,7 @@ Pour profiter du tracking automatique, voici les packs recommandés pour chaque 
 - **A Link to the Past** : [GitHub Releases](https://github.com/StripesOO7/alttp-ap-poptracker-pack/releases)
 - **Minish Cap** : [GitHub Releases](https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases)
 - **Phantom Hourglass** : [GitHub Repo](https://github.com/ZobeePlays/PH-AP-Item-Tracker/tree/main)
-- **Spirit Tracks** : _Non trouvé pour le moment_
+- **Spirit Tracks** : [GitHub Repo](https://github.com/carrotinator/spirit-tracks-poptracker-ap)
 
 #### 📖 Guides de Configuration (Setup)
 Voici les guides officiels pour configurer chaque jeu avec Archipelago :
@@ -279,7 +279,7 @@ To enjoy automatic tracking, here are the recommended packs for each game. **Not
 - **A Link to the Past** : [GitHub Releases](https://github.com/StripesOO7/alttp-ap-poptracker-pack/releases)
 - **Minish Cap** : [GitHub Releases](https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases)
 - **Phantom Hourglass** : [GitHub Repo](https://github.com/ZobeePlays/PH-AP-Item-Tracker/tree/main)
-- **Spirit Tracks** : _Not found yet_
+- **Spirit Tracks** : [GitHub Repo](https://github.com/carrotinator/spirit-tracks-poptracker-ap)
 
 #### 📖 Setup Guides
 Official guides to configure each game with Archipelago:
