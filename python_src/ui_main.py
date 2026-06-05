@@ -102,6 +102,7 @@ class LauncherUI:
         self.is_optimizing_for_game = False
         self.controller_polling_interval = 30 # Augmenté de 200ms à 30ms pour plus de fluidité
         self.poptracker_vars = {}
+        self.broadcast_vars = {}
         self.status_var = tk.StringVar()
         self.auto_config_var = tk.BooleanVar(value=True)
         self.auto_save_var = tk.BooleanVar(value=False)
@@ -114,13 +115,13 @@ class LauncherUI:
         self.broadcast_disable_hw_accel_var = tk.BooleanVar(value=False)
         self.poptracker_display_index = 0
         
-        # Charger la config et les réglages
-        self.manager.load_config()
-        self.load_settings()
-        
         # Activer l'écoute des manettes pour le Hub
         self.hub_btn = self.manager.hub_controller_open_btn # Initial value
         self.hub_keyboard_shortcut = "ctrl+shift+s"
+
+        # Charger la config et les réglages
+        self.manager.load_config()
+        self.load_settings()
         self.controller_pressed_buttons = set()
         if self.controller_manager:
             self.controller_manager.raw_input_callback = self._handle_controller_input
@@ -318,7 +319,7 @@ class LauncherUI:
         self.auto_save_cb.pack(side="left", padx=10)
         self.action_widgets.append(self.auto_save_cb)
 
-        self.broadcast_enabled_cb = tk.Checkbutton(self.toggles_frame, text=f"📡 {Loc.get('toggle_broadcast')}", variable=self.broadcast_enabled_var, **checkbox_style, command=self.save_settings)
+        self.broadcast_enabled_cb = tk.Checkbutton(self.toggles_frame, text=f"📡 {Loc.get('toggle_broadcast')}", variable=self.broadcast_enabled_var, **checkbox_style, command=self._on_global_broadcast_change)
         self.broadcast_enabled_cb.pack(side="left", padx=10)
         self.action_widgets.append(self.broadcast_enabled_cb)
 
@@ -355,6 +356,22 @@ class LauncherUI:
         """Si on active l'Auto-Save, on désactive le Hot-Swap."""
         if self.auto_save_var.get():
             self.multi_game_keep_alive_var.set(False)
+        self.save_settings()
+
+    def _on_global_broadcast_change(self):
+        """Met à jour tous les jeux individuels pour correspondre au toggle global."""
+        val = self.broadcast_enabled_var.get()
+        for var in self.broadcast_vars.values():
+            var.set(val)
+        self.save_settings()
+        self.load_games()
+
+    def update_global_broadcast_state(self):
+        """Met à jour le toggle global en fonction de l'état des toggles individuels."""
+        if not self.broadcast_vars:
+            return
+        any_checked = any(var.get() for var in self.broadcast_vars.values())
+        self.broadcast_enabled_var.set(any_checked)
         self.save_settings()
 
     def _update_nav_styles(self, active_btn):
@@ -531,7 +548,7 @@ class LauncherUI:
             ps_script = os.path.join(self.base_dir, "maximize_poptracker.ps1")
             if os.path.exists(ps_script):
                 print(f"[Launcher] Lancement du maximiseur PopTracker sur l'écran {self.poptracker_display_index}...")
-                subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", ps_script, "-MonitorIndex", str(self.poptracker_display_index)], 
+                subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-Command", f"& '{ps_script}' -MonitorIndex {self.poptracker_display_index}"], 
                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                                creationflags=subprocess.CREATE_NO_WINDOW)
         
@@ -543,7 +560,7 @@ class LauncherUI:
             ps_script = os.path.join(self.base_dir, "center_broadcast.ps1")
             if os.path.exists(ps_script):
                 print("[Launcher] Centrage de la fenêtre de Broadcast via PowerShell...")
-                subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", ps_script], 
+                subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-Command", f"& '{ps_script}'"], 
                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                                creationflags=subprocess.CREATE_NO_WINDOW)
         
@@ -553,7 +570,10 @@ class LauncherUI:
         """Met à jour les raccourcis clavier globaux."""
         if not keyboard: return
         try:
-            keyboard.unhook_all_hotkeys()
+            try:
+                keyboard.unhook_all_hotkeys()
+            except Exception as e:
+                print(f"[Launcher] Warning unhooking hotkeys: {e}")
             keyboard.add_hotkey(self.hub_keyboard_shortcut, self.root.after, args=(0, self.quick_switcher.toggle))
             # Backup
             keyboard.add_hotkey('ctrl+f2', self.root.after, args=(0, self.quick_switcher.toggle))
@@ -922,7 +942,8 @@ class LauncherUI:
                             broadcast_dir = broadcast_fallback_alt
                             break
                 
-                if self.broadcast_enabled_var.get() and broadcast_dir and os.path.exists(os.path.join(broadcast_dir, "start_cli.py")):
+                is_broad = self.broadcast_vars.get(name).get() if (name in self.broadcast_vars) else True
+                if self.broadcast_enabled_var.get() and is_broad and broadcast_dir and os.path.exists(os.path.join(broadcast_dir, "start_cli.py")):
                     # --- NOUVEAU: Verifier si un broadcast tourne déjà (Support Mode Multi-Jeu / Hot Swap) ---
                     is_b_alive = False
                     
@@ -1072,6 +1093,7 @@ class LauncherUI:
                     game_ctrl.process.wait()
                     print(f"[Launcher] {name} s'est ferme. Nettoyage des processus associés...")
                     game_ctrl.stop() # Ferme automatiquement le broadcast et les clients AP
+                    obs_controller.switch_to_loading_scene()
                     
                     # --- RESTORE PERFORMANCE ---
                     print("[Optimization] Restoring Hub priority and polling rate...")
@@ -1112,6 +1134,7 @@ class LauncherUI:
                     time.sleep(0.5) # Réduit car DolphinController attend déjà la fin de l'écriture
                 
                 game_ctrl.stop()
+                obs_controller.switch_to_loading_scene()
             
             self.manager.active_game_name = None
             self.status_var.set("Ready")
@@ -1226,6 +1249,12 @@ class LauncherUI:
                     if g_name in enabled_map:
                         var.set(enabled_map[g_name])
 
+                # Charger l'état Broadcast pour chaque jeu
+                broadcast_map = config.get("broadcast_enabled_games", {})
+                for g_name, var in self.broadcast_vars.items():
+                    if g_name in broadcast_map:
+                        var.set(broadcast_map[g_name])
+
                 # Charger l'état Auto-Pad pour chaque jeu
                 auto_pad_map = config.get("auto_controller_per_game", {})
                 for g_name, var in self.auto_config_per_game.items():
@@ -1247,7 +1276,8 @@ class LauncherUI:
                 new_lang = config.get("language", "fr")
                 Loc.set_lang(new_lang)
                 self.root.title(Loc.get("title"))
-                self.label.configure(text=Loc.get("header_title"))
+                if getattr(self, 'label', None):
+                    self.label.configure(text=Loc.get("header_title"))
                 if getattr(self, 'sub_label', None):
                     self.sub_label.configure(text=Loc.get("header_subtitle"))
                 
@@ -1296,6 +1326,12 @@ class LauncherUI:
                 for g_name, var in self.poptracker_vars.items():
                     config["poptracker_enabled"][g_name] = var.get()
 
+                # Sauvegarder l'état Broadcast par jeu
+                if "broadcast_enabled_games" not in config:
+                    config["broadcast_enabled_games"] = {}
+                for g_name, var in self.broadcast_vars.items():
+                    config["broadcast_enabled_games"][g_name] = var.get()
+
                 # Sauvegarder l'état Auto-Pad par jeu
                 if "auto_controller_per_game" not in config:
                     config["auto_controller_per_game"] = {}
@@ -1329,6 +1365,7 @@ class LauncherUI:
         # Charger la config via le manager (Core)
         self.manager.load_config()
         self.poptracker_vars.clear()
+        self.broadcast_vars.clear()
         self.gamepad_widgets.clear()
         
         # Mettre à jour la variable du port dans l'UI depuis la config
@@ -1474,8 +1511,8 @@ class LauncherUI:
             ps_script = os.path.join(current_dir, "send_input.ps1")
             
             ps_cmd = [
-                "powershell", "-ExecutionPolicy", "Bypass", "-File", ps_script,
-                "-Name", slot, "-Password", pwd, "-Port", port, "-Server", host, "-Title", client_title
+                "powershell", "-ExecutionPolicy", "Bypass",
+                "-Command", f"& '{ps_script}' -Name '{slot}' -Password '{pwd}' -Port '{port}' -Server '{host}' -Title '{client_title}'"
             ]
             
             print(f"[Launcher] Connexion auto pour {game_name} : {' '.join(ps_cmd)}")

@@ -113,6 +113,18 @@ class GameCard:
         
         if has_tracker:
             self.create_icon_toggle(self.ctrl_container, "🗺️", v_pop, "#00ff99", is_registered)
+
+        v_broad = tk.BooleanVar(value=True)
+        self.ui.broadcast_vars[self.name] = v_broad
+        
+        if os.path.exists(self.ui.config_path):
+            try:
+                with open(self.ui.config_path, "r", encoding="utf-8") as f:
+                    config_data = json.load(f)
+                    v_broad.set(config_data.get("broadcast_enabled_games", {}).get(self.name, True))
+            except: pass
+            
+        self.create_icon_toggle(self.ctrl_container, "📡", v_broad, "#e67e22", is_registered)
         
         # v_pad = tk.BooleanVar()
         # self.ui.auto_config_per_game[self.name] = v_pad
@@ -140,7 +152,10 @@ class GameCard:
         )
         def update_color():
             cb.configure(fg=color if var.get() else "#444")
-            self.ui.save_settings()
+            if text == "📡":
+                self.ui.update_global_broadcast_state()
+            else:
+                self.ui.save_settings()
         
         cb.configure(command=update_color)
         if var.get(): cb.configure(fg=color)

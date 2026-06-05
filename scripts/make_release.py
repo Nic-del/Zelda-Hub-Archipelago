@@ -164,7 +164,7 @@ def make_release():
         '__pycache__', '*.pyc', '*.pyo', '*.pyd',
         '.vscode', '.idea', '.pytest_cache',
         '.electron_data', 'logs', 'node_modules',
-        'package-lock.json'
+        'package-lock.json', 'packs'
     )
     
     items_to_copy = [
@@ -199,6 +199,10 @@ def make_release():
         
         if item_type == "dossier":
             shutil.copytree(src_path, dest_path, ignore=ignored_patterns)
+            if item_name == "App":
+                # Recréer le dossier 'packs' de Poptracker vide dans la release
+                poptracker_packs_dir = os.path.join(dest_path, "Poptracker", "packs")
+                os.makedirs(poptracker_packs_dir, exist_ok=True)
             if item_name == "Extractor":
                 patcher_release_dir = os.path.join(dest_path, "Patcher")
                 if os.path.exists(patcher_release_dir):

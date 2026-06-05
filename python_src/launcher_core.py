@@ -594,9 +594,9 @@ print("Launcher: BizHawk Wrapper Active.")
         
         try:
             # On passe le slot_name en paramètre pour une recherche précise
-            cmd = ["powershell", "-ExecutionPolicy", "Bypass", "-File", ps_script_path]
+            slot_arg = f" -slotname '{self.slot_name}'" if (hasattr(self, "slot_name") and self.slot_name) else ""
+            cmd = ["powershell", "-ExecutionPolicy", "Bypass", "-Command", f"& '{ps_script_path}'{slot_arg}"]
             if hasattr(self, "slot_name") and self.slot_name:
-                cmd.extend(["-slotname", self.slot_name])
                 print(f"[BizHawk] Cible demandée : {self.slot_name}")
 
             # On lance de manière totalement invisible
@@ -611,7 +611,7 @@ print("Launcher: BizHawk Wrapper Active.")
             ps_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "minimize_lua_console.ps1")
             if os.path.exists(ps_script):
                 print(f"[BizHawk] Minimizing Lua Console for {self.game_name}...")
-                subprocess.Popen(["powershell", "-ExecutionPolicy", "Bypass", "-File", ps_script], creationflags=subprocess.CREATE_NO_WINDOW)
+                subprocess.Popen(["powershell", "-ExecutionPolicy", "Bypass", "-Command", f"& '{ps_script}'"], creationflags=subprocess.CREATE_NO_WINDOW)
         
         threading.Thread(target=minimize_lua_thread, daemon=True).start()
 
@@ -1670,7 +1670,7 @@ class GameManager:
                         ps_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "minimize_lua_console.ps1")
                         if os.path.exists(ps_script):
                             print(f"[GameManager] Minimizing Lua Console for {game_name}...")
-                            subprocess.Popen(["powershell", "-ExecutionPolicy", "Bypass", "-File", ps_script], creationflags=subprocess.CREATE_NO_WINDOW)
+                            subprocess.Popen(["powershell", "-ExecutionPolicy", "Bypass", "-Command", f"& '{ps_script}'"], creationflags=subprocess.CREATE_NO_WINDOW)
                     
                     threading.Thread(target=minimize_lua_on_pause, args=(game_to_pause,), daemon=True).start()
                 

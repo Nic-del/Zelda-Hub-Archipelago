@@ -21,7 +21,7 @@ try:
 except ImportError:
     HAS_PYWIN32 = False
 
-from launcher_core import CONFIG_PATH, BASE_DIR, get_exe_dir
+from launcher_core import CONFIG_PATH, BASE_DIR, get_exe_dir, resolve_path
 
 def make_relative(path):
     """
@@ -121,7 +121,10 @@ DEFAULT_CONFIG = {
         "host": "localhost",
         "port": 4455,
         "password": "",
-        "scenes": {}
+        "scenes": {},
+        "loading_screen_enabled": False,
+        "loading_scene": "",
+        "transition_time": 3.0
     },
     "active_games": {
         "Ocarina of Time": True,
@@ -343,6 +346,9 @@ class SetupUI(ctk.CTk):
         self.create_simple_row(page, Loc.get("lbl_obs_host"), "obs_settings", "host")
         self.create_simple_row(page, Loc.get("lbl_obs_port"), "obs_settings", "port")
         self.create_simple_row(page, Loc.get("lbl_obs_password"), "obs_settings", "password", is_pass=True)
+        self.create_check_row(page, Loc.get("opt_enable_loading_screen"), "obs_settings", subkey="loading_screen_enabled")
+        self.create_simple_row(page, Loc.get("lbl_loading_scene"), "obs_settings", "loading_scene")
+        self.create_simple_row(page, Loc.get("lbl_transition_time"), "obs_settings", "transition_time")
         
         self.create_section_label(page, Loc.get("sec_broadcast"))
         self.create_check_row(page, Loc.get("opt_poptracker_broadcast"), "poptracker_broadcast")
@@ -723,16 +729,35 @@ class SetupUI(ctk.CTk):
         btn_clear.pack(side="left", padx=(2, 0))
 
     def browse_path(self, category, key, is_folder=False):
-        initial_dir = "/"
-        current_value = self.path_vars[(category, key)].get()
-        if current_value and os.path.exists(os.path.dirname(current_value) if not is_folder else current_value):
-            initial_dir = os.path.dirname(current_value) if not is_folder else current_value
+        import sys
+        if getattr(sys, 'frozen', False):
+            project_root = get_exe_dir()
         else:
-            base_project = BASE_DIR
-            root_project = os.path.dirname(base_project)
-            if category == "roms":
-                patch_file_dir = os.path.join(root_project, "PatchFile")
-                if os.path.exists(patch_file_dir): initial_dir = patch_file_dir
+            project_root = os.path.dirname(get_exe_dir())
+            
+        initial_dir = project_root
+        
+        # Specific subfolders based on category to make browsing easier
+        if category == "roms":
+            rom_dir = os.path.join(project_root, "Rom")
+            if os.path.exists(rom_dir):
+                initial_dir = rom_dir
+        elif category == "emulators":
+            emu_dir = os.path.join(project_root, "Emulator")
+            if os.path.exists(emu_dir):
+                initial_dir = emu_dir
+        elif category == "poptracker_packs":
+            packs_dir = os.path.join(project_root, "App", "Poptracker", "packs")
+            if not os.path.exists(packs_dir):
+                packs_dir = os.path.join(project_root, "Patcher", "Poptracker", "packs")
+            if os.path.exists(packs_dir):
+                initial_dir = packs_dir
+
+        current_value = self.path_vars[(category, key)].get()
+        if current_value:
+            resolved_value = resolve_path(current_value)
+            if os.path.exists(os.path.dirname(resolved_value) if not is_folder else resolved_value):
+                initial_dir = os.path.dirname(resolved_value) if not is_folder else resolved_value
 
         if is_folder or category == "poptracker_packs":
             path = filedialog.askdirectory(initialdir=initial_dir, title=f"Sélectionner dossier pour {key}")
@@ -808,7 +833,11 @@ class SetupUI(ctk.CTk):
             self.show_page(self.last_page_id)
 
     def autodetect_roms(self):
-        project_root = os.path.dirname(BASE_DIR)
+        import sys
+        if getattr(sys, 'frozen', False):
+            project_root = get_exe_dir()
+        else:
+            project_root = os.path.dirname(get_exe_dir())
         
         # Chemins ciblés selon ta structure
         emu_dir = os.path.join(project_root, "Emulator")
@@ -944,7 +973,11 @@ class SetupUI(ctk.CTk):
         messagebox.showinfo(Loc.get("msg_auto_detect_title"), Loc.get("msg_auto_rom_result", found=found_count))
 
     def autodetect_trackers(self):
-        project_root = os.path.dirname(BASE_DIR)
+        import sys
+        if getattr(sys, 'frozen', False):
+            project_root = get_exe_dir()
+        else:
+            project_root = os.path.dirname(get_exe_dir())
         # Primary location is App/Poptracker/packs, fallback to Patcher/Poptracker/packs
         packs_dir = os.path.join(project_root, "App", "Poptracker", "packs")
         if not os.path.exists(packs_dir):

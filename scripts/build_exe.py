@@ -72,6 +72,8 @@ def build():
         "--hidden-import=config_exporter",
         "--collect-all=customtkinter",
         "--collect-all=pygame",
+        "--collect-all=obswebsocket",
+        "--collect-all=websocket",
     ]
     
     for src, dest in datas:
