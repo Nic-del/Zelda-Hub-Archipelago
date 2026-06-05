@@ -130,12 +130,11 @@ Lancez Zelda-Hub.exe et configurez les onglets suivants via le bouton **⚙️ C
 _Les ROMs ne sont pas fournies avec le Hub. Vous devez posséder les versions originales des jeux._
 
 1.  **Préparation** : Décompressez le dossier du monde (Zip) que vous avez généré sur Archipelago.
-2.  **Extracteur** : Ouvrez l'outil d'extraction dans `Extractor/patcher.exe`.
+2.  **Extracteur** : Ouvrez l'outil d'extraction dans `Extractor/ZeldaHubPatcher.exe`.
 3.  **Chemins** : Dans l'extracteur, configurez :
-    - Le chemin vers `ArchipelagoLauncher.exe`.
+    - Le chemin vers le dossier PatchFile.
     - Le dossier contenant vos fichiers de patch (`.apml`, `.apzs`, etc.).
-4.  **Extraction** : Actualisez la liste et vérifiez si les patchs sont trouvés (sinon, lancez vos patchs manuellement un par un). Lancez ensuite l'**Extraction Totale**.
-5.  **Finalisation** : Une fois les ROMs générées, déplacez-les (le fichier ROM, pas le patch) dans le dossier **PatchFile** de votre Hub.
+4.  **Extraction** : Lancez ensuite le **Run Patch Process**.
 
 #### 5️⃣ PopTracker (Base)
 
@@ -157,15 +156,6 @@ Le Hub peut piloter OBS pour vous simplifier la vie en plein stream :
 2.  **Connexion** : Renseignez le **Port WebSocket** (généralement `4455`) et le **mot de passe** configurés dans OBS (Menu Outils > Paramètres de serveur WebSocket).
 3.  **Test** : Utilisez le bouton de test pour vérifier que le Hub arrive bien à communiquer avec votre OBS.
 4.  **Configuration des Scènes** : Pour chaque jeu, vous pouvez définir le nom de la scène à laquelle OBS doit passer automatiquement. Vous pouvez personnaliser ces noms directement dans la liste de l'onglet Streaming.
-
-#### 8️⃣ Tracker Spécial Skyward Sword (Web)
-
-Ce tracker fonctionne différemment car il nécessite un hébergement web local (automatisé par le Hub via Vite).
-
-- **Mode Streamer** : Si vous utilisez OBS, vous pouvez intégrer différentes pages du tracker en tant que "Source Navigateur" pour vos scènes :
-  - URL type : `http://localhost:5173/#/items?ip=ADRESSE_IP&port=PORT_AP&slot=NOM_SLOT&autolaunch=true`
-  - **Vues disponibles** : Vous pouvez remplacer `/items` dans l'URL par l'une des vues suivantes selon vos besoins : `items`, `map`, `locations`, `chat`, `dungeons`, ou `counters`.
-- **Installation** : Assurez-vous que le dossier du tracker est bien sélectionné dans l'onglet **Trackers** du Setup. Le Hub s'occupera de lancer le serveur `npm start` et d'installer les dépendances au premier lancement.
 
 ---
 
@@ -317,12 +307,11 @@ Run `python python_src/ui_main_v2.py` and configure the following tabs via the *
 _ROMs are not provided with the Hub. You must own the original versions of the games._
 
 1.  **Preparation**: Unzip the world folder (Zip) generated on Archipelago.
-2.  **Extractor**: Open the extraction tool in `Extractor/patcher.exe`.
+2.  **Extractor**: Open the extraction tool in `Extractor/ZeldaHubPatcher.exe`.
 3.  **Paths**: In the extractor, configure:
-    - The path to `ArchipelagoLauncher.exe`.
+    - The path to your PatchFile folder.
     - The folder containing your patch files (`.apml`, `.apzs`, etc.).
-4.  **Extraction**: Refresh the list and check if patches are found (if not, apply your patches manually one by one). Then run the **Full Extraction**.
-5.  **Finalization**: Once the ROMs are generated, move them (the ROM file, not the patch) into your Hub's **PatchFile** folder.
+4.  **Extraction**: Run the **Run Patch Process**.
 
 #### 5️⃣ PopTracker (Base)
 
@@ -344,15 +333,6 @@ The Hub can control OBS to simplify your streaming workflow:
 2.  **Connection**: Enter the **WebSocket Port** (usually `4455`) and the **password** configured in OBS (Tools Menu > WebSocket Server Settings).
 3.  **Test**: Use the test button to check if the Hub can communicate with your OBS instance.
 4.  **Scene Configuration**: For each game, you can define the name of the scene OBS should automatically switch to. You can customize these names directly in the Streaming tab list.
-
-#### 8️⃣ Special Skyward Sword Tracker (Web)
-
-This tracker operates differently as it requires local web hosting (automated by the Hub via Vite).
-
-- **Streamer Mode**: For OBS users, you can integrate various tracker pages as a "Browser Source" in your scenes:
-  - Sample URL: `http://localhost:5173/#/items?ip=IP_ADDRESS&port=AP_PORT&slot=SLOT_NAME&autolaunch=true`
-  - **Available Views**: You can replace `/items` in the URL with any of the following views: `items`, `map`, `locations`, `chat`, `dungeons`, or `counters`.
-- **Setup**: Ensure the tracker's folder is selected in the **Trackers** tab of the Setup. The Hub will automatically run `npm start` and install dependencies on the first launch.
 
 ---
 
