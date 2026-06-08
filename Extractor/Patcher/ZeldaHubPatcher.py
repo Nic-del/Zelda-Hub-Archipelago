@@ -107,7 +107,7 @@ class ZeldaHubPatcherApp(ctk.CTk):
         self.selected_output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "patched_roms")
         os.makedirs(self.selected_output_dir, exist_ok=True)
         
-        self.supported_extensions = {".apz5", ".aplttp", ".apladx", ".apooa", ".apoos", ".aptloz", ".apz2", ".aptmc", ".apalbw"}
+        self.supported_extensions = {".apz5", ".aplttp", ".apladx", ".apooa", ".apoos", ".aptloz", ".apz2", ".aptmc", ".apalbw", ".apalttpr", ".apladxb"}
         
         self.create_widgets()
         self.log("Zelda Hub Patcher initialized.")
@@ -433,10 +433,12 @@ class ZeldaHubPatcherApp(ctk.CTk):
         
     def browse_patch_file(self):
         filetypes = [
-            ("All Supported Patches", "*.apz5;*.aplttp;*.apladx;*.apooa;*.apoos;*.aptloz;*.apz2;*.aptmc;*.apalbw"),
+            ("All Supported Patches", "*.apz5;*.aplttp;*.apladx;*.apooa;*.apoos;*.aptloz;*.apz2;*.aptmc;*.apalbw;*.apalttpr;*.apladxb"),
             ("Ocarina of Time (.apz5)", "*.apz5"),
             ("A Link to the Past (.aplttp)", "*.aplttp"),
+            ("A Link to the Past Alternative (.apalttpr)", "*.apalttpr"),
             ("Link's Awakening DX (.apladx)", "*.apladx"),
+            ("Link's Awakening DX Alternative (.apladxb)", "*.apladxb"),
             ("Oracle of Ages (.apooa)", "*.apooa"),
             ("Oracle of Seasons (.apoos)", "*.apoos"),
             ("Zelda 1 (.aptloz)", "*.aptloz"),
@@ -454,7 +456,9 @@ class ZeldaHubPatcherApp(ctk.CTk):
             ext = os.path.splitext(filename)[1].lower()
             game_names = {
                 ".aplttp": "A Link to the Past",
+                ".apalttpr": "A Link to the Past (Alternative)",
                 ".apladx": "Link's Awakening DX",
+                ".apladxb": "Link's Awakening DX (Alternative)",
                 ".apz5": "Ocarina of Time",
                 ".apooa": "Oracle of Ages",
                 ".apoos": "Oracle of Seasons",

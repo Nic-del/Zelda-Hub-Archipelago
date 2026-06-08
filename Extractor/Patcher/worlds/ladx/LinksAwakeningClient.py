@@ -621,11 +621,17 @@ class LinksAwakeningContext(CommonContext):
             generated_version = Utils.tuplize_version(self.slot_data.get("world_version", "2.0.0"))
             client_version = LinksAwakeningWorld.world_version
             if generated_version.major != client_version.major:
-                self.disconnected_intentionally = True
-                raise VersionError(
-                    f"The installed world ({client_version.as_simple_string()}) is incompatible with "
-                    f"the world this game was generated on ({generated_version.as_simple_string()})"
-                )
+                if getattr(self, "patch_file_extension", None) == ".apladxb":
+                    logger.warning(
+                        f"Bypassing client version mismatch for .apladxb: installed world is {client_version.as_simple_string()}, "
+                        f"server world is {generated_version.as_simple_string()}"
+                    )
+                else:
+                    self.disconnected_intentionally = True
+                    raise VersionError(
+                        f"The installed world ({client_version.as_simple_string()}) is incompatible with "
+                        f"the world this game was generated on ({generated_version.as_simple_string()})"
+                    )
             # This is sent to magpie over local websocket to make its own connection
             self.slot_data.update({
                 "server_address": self.server_address,
@@ -774,7 +780,7 @@ def launch(*launch_args):
         parser.add_argument("--url", help="Archipelago connection url")
         parser.add_argument("--no-magpie", dest='magpie', default=True, action='store_false', help="Disable magpie bridge")
         parser.add_argument('diff_file', default="", type=str, nargs="?",
-                            help='Path to a .apladx Archipelago Binary Patch file')
+                            help='Path to a .apladx or .apladxb Archipelago Binary Patch file')
 
         args = parser.parse_args(launch_args)
 
@@ -788,6 +794,8 @@ def launch(*launch_args):
 
 
         ctx = LinksAwakeningContext(args.connect, args.password, args.magpie)
+        if args.diff_file:
+            ctx.patch_file_extension = os.path.splitext(args.diff_file)[1].lower()
 
         ctx.server_task = asyncio.create_task(server_loop(ctx), name="server loop")
 

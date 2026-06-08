@@ -28,6 +28,7 @@ class LADXPatchExtensions(worlds.Files.APPatchExtension):
         out_name = f"{patch_data['out_base']}{caller.result_file_ending}"
         parser = get_parser()
         args = parser.parse_args([rom_name, "-o", out_name, "--dump"])
+        patch_data["patch_file_ending"] = getattr(caller, "patch_file_ending", "")
         return generator.generateRom(rom, args, patch_data)
 
     @staticmethod
@@ -51,6 +52,7 @@ class LADXProcedurePatch(worlds.Files.APProcedurePatch):
     @classmethod
     def get_source_data(cls) -> bytes:
         return get_base_rom_bytes()
+
 
 
 def write_patch_data(world: "LinksAwakeningWorld", patch: LADXProcedurePatch):

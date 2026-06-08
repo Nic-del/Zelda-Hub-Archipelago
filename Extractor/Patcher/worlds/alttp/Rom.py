@@ -2917,6 +2917,7 @@ class LttPDeltaPatch(worlds.Files.APDeltaPatch):
         return get_base_rom_bytes()
 
 
+
 def get_base_rom_bytes(file_name: str = "") -> bytes:
     base_rom_bytes = getattr(get_base_rom_bytes, "base_rom_bytes", None)
     if not base_rom_bytes:
