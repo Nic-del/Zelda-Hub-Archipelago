@@ -1056,7 +1056,7 @@ class LauncherUI:
                 client_name = meta.get("client_name")
                 is_native = meta.get("is_native", False)
                 # On ne lance pas le client AP pour les jeux natifs (SoH, MM native) car ils gèrent souvent leur propre connexion
-                if not is_native and (is_ap_mode or client_name) and (not is_bizhawk_ap or name == "Link's Awakening DX"):
+                if not is_native and (is_ap_mode or client_name) and (not is_bizhawk_ap or name in ["Link's Awakening DX", "Link's Awakening DX Beta"]):
                     target_client = client_name or f"{name} Client"
                     client_p = self._launch_archipelago_client(name, target_client)
                     if client_p:

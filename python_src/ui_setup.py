@@ -70,6 +70,7 @@ DEFAULT_CONFIG = {
         "Twilight Princess": "",
         "Skyward Sword": "",
         "A Link to the Past": "",
+        "A Link to the Past OWR": "",
         "Minish Cap": "",
         "OOT (SOH)": "",
         "A Link Between Worlds": "",
@@ -78,6 +79,7 @@ DEFAULT_CONFIG = {
         "Oracle of Ages": "",
         "Oracle of Seasons": "",
         "Link's Awakening DX": "",
+        "Link's Awakening DX Beta": "",
         "Phantom Hourglass": "",
         "Spirit Tracks": ""
     },
@@ -93,6 +95,7 @@ DEFAULT_CONFIG = {
         "Ocarina of Time": "",
         "Wind Waker": "",
         "A Link to the Past": "",
+        "A Link to the Past OWR": "",
         "Minish Cap": "",
         "Majora's Mask": "",
         "Skyward Sword": "",
@@ -103,6 +106,7 @@ DEFAULT_CONFIG = {
         "Oracle of Ages": "",
         "Oracle of Seasons": "",
         "Link's Awakening DX": "",
+        "Link's Awakening DX Beta": "",
         "Phantom Hourglass": "",
         "Spirit Tracks": "",
         "OOT (SOH)": ""
@@ -133,6 +137,7 @@ DEFAULT_CONFIG = {
         "Twilight Princess": True,
         "Skyward Sword": True,
         "A Link to the Past": True,
+        "A Link to the Past OWR": True,
         "Minish Cap": True,
         "OOT (SOH)": True,
         "A Link Between Worlds": True,
@@ -141,6 +146,7 @@ DEFAULT_CONFIG = {
         "Oracle of Ages": True,
         "Oracle of Seasons": True,
         "Link's Awakening DX": True,
+        "Link's Awakening DX Beta": True,
         "Phantom Hourglass": True,
         "Spirit Tracks": True
     },
@@ -149,11 +155,20 @@ DEFAULT_CONFIG = {
     "hub_controller_open_btn": "CAPTURE"
 }
 
+def merge_defaults(target, defaults):
+    for key, value in defaults.items():
+        if key not in target:
+            target[key] = value
+        elif isinstance(value, dict) and isinstance(target[key], dict):
+            merge_defaults(target[key], value)
+
 def load_config():
     if os.path.exists(CONFIG_PATH):
         try:
             with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-                return json.load(f)
+                config = json.load(f)
+                merge_defaults(config, DEFAULT_CONFIG)
+                return config
         except Exception as e:
             print(f"Error loading config: {e}")
     return DEFAULT_CONFIG
@@ -778,6 +793,7 @@ class SetupUI(ctk.CTk):
                     "Twilight Princess": [("GameCube/Wii Image", "*.iso *.gcm *.wbfs")],
                     "Skyward Sword": [("Wii Image", "*.iso *.wbfs")],
                     "A Link to the Past": [("SNES ROM", "*.sfc *.smc")],
+                    "A Link to the Past OWR": [("SNES ROM", "*.sfc *.smc")],
                     "Minish Cap": [("GBA ROM", "*.gba")],
                     "OOT (SOH)": [("Ship of Harkinian", "*.exe")],
                     "A Link Between Worlds": [("3DS ROM", "*.cci *.3ds")],
@@ -786,6 +802,7 @@ class SetupUI(ctk.CTk):
                     "Oracle of Ages": [("GameBoy Color", "*.gbc *.gb")],
                     "Oracle of Seasons": [("GameBoy Color", "*.gbc *.gb")],
                     "Link's Awakening DX": [("GameBoy Color", "*.gbc *.gb")],
+                    "Link's Awakening DX Beta": [("GameBoy Color", "*.gbc *.gb")],
                     "Phantom Hourglass": [("DS ROM", "*.nds")],
                     "Spirit Tracks": [("DS ROM", "*.nds")]
                 }
@@ -876,6 +893,7 @@ class SetupUI(ctk.CTk):
             "Twilight Princess": [".iso", ".gcm", ".wbfs"],
             "Skyward Sword": [".iso", ".wbfs"],
             "A Link to the Past": [".sfc", ".smc"],
+            "A Link to the Past OWR": [".sfc", ".smc"],
             "Minish Cap": [".gba"],
             "OOT (SOH)": [".exe"],
             "A Link Between Worlds": [".cci", ".3ds"],
@@ -884,6 +902,7 @@ class SetupUI(ctk.CTk):
             "Oracle of Ages": [".gbc", ".gb"],
             "Oracle of Seasons": [".gbc", ".gb"],
             "Link's Awakening DX": [".gbc", ".gb"],
+            "Link's Awakening DX Beta": [".gbc", ".gb"],
             "Phantom Hourglass": [".nds"],
             "Spirit Tracks": [".nds"]
         }

@@ -11,10 +11,10 @@ TRANSLATIONS = {
         "manage_controllers_btn": "🎮 Gérer les Manettes",
         "quit_game_btn": "⏹️ Quitter le Jeu (Propre)",
         "auto_config_label": "Configuration automatique des manettes",
-        "auto_save_label": "Auto-Save State au changement de jeu",
-        "toggle_auto_save": "AUTO-SAVE",
+        "auto_save_label": "Auto-Save State au changement de jeu (BETA)",
+        "toggle_auto_save": "AUTO-SAVE (BETA)",
         "toggle_broadcast": "BROADCAST",
-        "toggle_hot_swap": "HOT-SWAP",
+        "toggle_hot_swap": "HOT-SWAP (BETA)",
         "opt_enable_broadcast_main": "Lancement auto du Broadcast",
         "status_ready": "Ready",
         "status_launching": "Lancement de {name}...",
@@ -120,7 +120,7 @@ TRANSLATIONS = {
         "lbl_hub_controller_name": "Manette pour détection :",
         "all_controllers_option": "Toutes les manettes",
         "hint_combo": "(ex: L3+R3 ou CAPTURE)",
-        "opt_multi_game_keep_alive": "Garder les jeux ouverts en arrière-plan (Hot-Swap)"
+        "opt_multi_game_keep_alive": "Garder les jeux ouverts en arrière-plan (Hot-Swap) (BETA)"
     },
     "en": {
         "title": "Zelda Multi-Launcher",
@@ -133,10 +133,10 @@ TRANSLATIONS = {
         "manage_controllers_btn": "🎮 Manage Controllers",
         "quit_game_btn": "⏹️ Quit Game (Clean)",
         "auto_config_label": "Automatic controller configuration",
-        "auto_save_label": "Auto-Save State when switching games",
-        "toggle_auto_save": "AUTO-SAVE",
+        "auto_save_label": "Auto-Save State when switching games (BETA)",
+        "toggle_auto_save": "AUTO-SAVE (BETA)",
         "toggle_broadcast": "BROADCAST",
-        "toggle_hot_swap": "HOT-SWAP",
+        "toggle_hot_swap": "HOT-SWAP (BETA)",
         "opt_enable_broadcast_main": "Auto-launch Broadcast overlay",
         "status_ready": "Ready",
         "status_launching": "Launching {name}...",
@@ -242,7 +242,7 @@ TRANSLATIONS = {
         "lbl_hub_controller_name": "Controller for detection:",
         "all_controllers_option": "All controllers",
         "hint_combo": "(e.g.: L3+R3 or CAPTURE)",
-        "opt_multi_game_keep_alive": "Keep games running in background (Hot-Swap)"
+        "opt_multi_game_keep_alive": "Keep games running in background (Hot-Swap) (BETA)"
     }
 }
 

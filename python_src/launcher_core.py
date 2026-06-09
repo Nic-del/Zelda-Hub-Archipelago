@@ -1108,7 +1108,7 @@ class ArchipelagoBizHawkController(BizHawkController):
             env = self.get_clean_env()
             
             # --- LANCEMENT CLIENT ARCHIPELAGO (Si applicable) ---
-            if self.client_exe and self.game_name != "Link's Awakening DX":
+            if self.client_exe and self.game_name not in ["Link's Awakening DX", "Link's Awakening DX Beta"]:
                 host = self.settings.get("host", "archipelago.gg")
                 port = self.settings.get("port", "38281")
                 password = self.settings.get("password", "") or "None"
@@ -1120,7 +1120,7 @@ class ArchipelagoBizHawkController(BizHawkController):
                 
                 # Construction arguments de connexion (Sauf pour LA DX qui utilise le script de connexion "WW style")
                 client_args = []
-                if self.game_name != "Link's Awakening DX":
+                if self.game_name not in ["Link's Awakening DX", "Link's Awakening DX Beta"]:
                     if host and port and self.slot_name:
                         conn_str = f"{self.slot_name}:{password}@{host}:{port}"
                         client_args.extend(["--connect", conn_str])
@@ -1139,6 +1139,7 @@ class ArchipelagoBizHawkController(BizHawkController):
                             friendly_name = self.client_exe.replace("Archipelago", "").replace("Client.exe", "").strip()
                             if friendly_name == "Launcher": friendly_name = self.game_name
                             if self.game_name == "Link's Awakening DX": friendly_name = "Links Awakening DX Client"
+                            if self.game_name == "Link's Awakening DX Beta": friendly_name = "Links Awakening DX Beta Client"
                             if friendly_name == "OoT": friendly_name = "OoT Client"
                             cmd_base.append(friendly_name)
                             
@@ -1154,6 +1155,7 @@ class ArchipelagoBizHawkController(BizHawkController):
                             friendly_name = self.client_exe.replace("Archipelago", "").replace("Client.exe", "").strip()
                             if friendly_name == "Launcher": friendly_name = self.game_name
                             if self.game_name == "Link's Awakening DX": friendly_name = "Links Awakening DX Client"
+                            if self.game_name == "Link's Awakening DX Beta": friendly_name = "Links Awakening DX Beta Client"
                             if friendly_name == "OoT": friendly_name = "OoT Client"
                             
                             cmd = [launcher_exe, friendly_name] + client_args
@@ -1526,6 +1528,7 @@ class GameManager:
             ("Ocarina of Time", ArchipelagoBizHawkController, archipelago_path),
             ("Wind Waker", DolphinController, dolphin_path),
             ("A Link to the Past", ArchipelagoBizHawkController, archipelago_path),
+            ("A Link to the Past OWR", ArchipelagoBizHawkController, archipelago_path),
             ("Majora's Mask", NativeController, ""),
             ("Twilight Princess", DolphinController, dolphin_path),
             ("Skyward Sword", DolphinController, dolphin_path),
@@ -1538,6 +1541,7 @@ class GameManager:
             ("Spirit Tracks", ArchipelagoBizHawkController, archipelago_path),
             ("A Link Between Worlds", AzaharController, self.azahar_path),
             ("Link's Awakening DX", ArchipelagoBizHawkController, archipelago_path),
+            ("Link's Awakening DX Beta", ArchipelagoBizHawkController, archipelago_path),
             ("OOT (SOH)", NativeController, "")
         ]
 
@@ -1569,12 +1573,12 @@ class GameManager:
                             archipelago_path, rom_path, bizhawk_path, self.archipelago_settings, slot, 
                             game_name=name, client_exe="ArchipelagoZelda1Client.exe", lua_script="connector_tloz.lua"
                         ))
-                    elif name == "A Link to the Past":
+                    elif name in ["A Link to the Past", "A Link to the Past OWR"]:
                         self.register_game(name, ArchipelagoBizHawkController(
                             archipelago_path, rom_path, bizhawk_path, self.archipelago_settings, slot, 
                             game_name=name, client_exe="ArchipelagoSNIClient.exe", lua_script=r"SNI\lua\Connector.lua"
                         ))
-                    elif name == "Link's Awakening DX":
+                    elif name in ["Link's Awakening DX", "Link's Awakening DX Beta"]:
                          self.register_game(name, ArchipelagoBizHawkController(
                             archipelago_path, rom_path, bizhawk_path, self.archipelago_settings, slot, 
                             game_name=name, client_exe="", lua_script="connector_ladx_bizhawk.lua"

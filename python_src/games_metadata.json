@@ -69,6 +69,13 @@
             "profile": "alttp"
         },
         {
+            "id": "A Link to the Past OWR",
+            "display_name": "A Link to the Past OWR",
+            "image": "alttp.png",
+            "color": "#27ae60",
+            "profile": "alttp_owr"
+        },
+        {
             "id": "Minish Cap",
             "display_name": "Minish Cap",
             "image": "mc.png",
@@ -83,6 +90,15 @@
             "profile": "ladx",
             "client_name": "Links Awakening DX Client",
             "client_title": "*Links Awakening DX Client*"
+        },
+        {
+            "id": "Link's Awakening DX Beta",
+            "display_name": "Link's Awakening DX Beta",
+            "image": "ladx.png",
+            "color": "#1abc9c",
+            "profile": "ladx_beta",
+            "client_name": "Links Awakening DX Beta Client",
+            "client_title": "*Links Awakening DX Beta Client*"
         },
         {
             "id": "The Legend of Zelda",

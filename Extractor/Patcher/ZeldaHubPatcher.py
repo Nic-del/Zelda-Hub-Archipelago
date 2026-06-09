@@ -436,9 +436,9 @@ class ZeldaHubPatcherApp(ctk.CTk):
             ("All Supported Patches", "*.apz5;*.aplttp;*.apladx;*.apooa;*.apoos;*.aptloz;*.apz2;*.aptmc;*.apalbw;*.apalttpr;*.apladxb"),
             ("Ocarina of Time (.apz5)", "*.apz5"),
             ("A Link to the Past (.aplttp)", "*.aplttp"),
-            ("A Link to the Past Alternative (.apalttpr)", "*.apalttpr"),
+            ("A Link to the Past OWR (.apalttpr)", "*.apalttpr"),
             ("Link's Awakening DX (.apladx)", "*.apladx"),
-            ("Link's Awakening DX Alternative (.apladxb)", "*.apladxb"),
+            ("Link's Awakening DX Beta (.apladxb)", "*.apladxb"),
             ("Oracle of Ages (.apooa)", "*.apooa"),
             ("Oracle of Seasons (.apoos)", "*.apoos"),
             ("Zelda 1 (.aptloz)", "*.aptloz"),
@@ -456,9 +456,9 @@ class ZeldaHubPatcherApp(ctk.CTk):
             ext = os.path.splitext(filename)[1].lower()
             game_names = {
                 ".aplttp": "A Link to the Past",
-                ".apalttpr": "A Link to the Past (Alternative)",
+                ".apalttpr": "A Link to the Past OWR",
                 ".apladx": "Link's Awakening DX",
-                ".apladxb": "Link's Awakening DX (Alternative)",
+                ".apladxb": "Link's Awakening DX Beta",
                 ".apz5": "Ocarina of Time",
                 ".apooa": "Oracle of Ages",
                 ".apoos": "Oracle of Seasons",
