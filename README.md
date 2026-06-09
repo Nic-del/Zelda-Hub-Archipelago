@@ -68,8 +68,10 @@ Si vous n'avez pas encore les fichiers `.apworld`, voici où les trouver :
 - **Oracle of Ages** : [Dernière Release](https://github.com/SenPierre/ArchipelagoOoA/releases/latest)
 - **Oracle of Seasons** : [Dernière Release](https://github.com/Dinopony/ArchipelagoOoS/releases/latest)
 - **Link's Awakening DX** : Déjà inclus par défaut
+- **Link's Awakening DX Beta** : [GitHub Releases](https://github.com/threeandthreee/Archipelago/releases)
 - **A Link Between Worlds** : [GitHub Releases](https://github.com/randomsalience/albw-archipelago/releases)
 - **A Link to the Past** : Déjà inclus par défaut
+- **A Link to the Past OWR** : [GitHub Releases](https://github.com/aurabot24/Archipelago-ALttPR/releases/)
 - **Minish Cap** : [GitHub Releases](https://github.com/eternalcode0/Archipelago/releases)
 - **Phantom Hourglass** : [GitHub Releases](https://github.com/carrotinator/Archipelago/releases)
 - **Spirit Tracks** : [GitHub Releases](https://github.com/DayKat/spirit-tracks/releases)
@@ -88,6 +90,7 @@ Pour profiter du tracking automatique, voici les packs recommandés pour chaque 
 - **Oracle of Ages** : [GitHub Releases](https://github.com/Dranzior/ooa_brooty/releases)
 - **Oracle of Seasons** : [GitHub Releases](https://github.com/OmegaZeron/Oracle-of-Seasons-AP-Poptracker-Pack/releases/latest)
 - **Link's Awakening DX** : [Magpie Tracker](https://magpietracker.us/)
+- **Link's Awakening DX Beta** : [Magpie Tracker](https://magpietracker.us/)
 - **A Link Between Worlds** : [GitHub Releases](https://github.com/Legendgreat/albw-ap-poptracker/releases)
 - **A Link to the Past** : [GitHub Releases](https://github.com/StripesOO7/alttp-ap-poptracker-pack/releases)
 - **Minish Cap** : [GitHub Releases](https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases)
@@ -248,8 +251,10 @@ If you don't have the `.apworld` files yet, here is where to find them:
 - **Oracle of Ages**: [Latest Release](https://github.com/SenPierre/ArchipelagoOoA/releases/latest)
 - **Oracle of Seasons**: [Latest Release](https://github.com/Dinopony/ArchipelagoOoS/releases/latest)
 - **Link's Awakening DX**: Already included by default
+- **Link's Awakening DX Beta**: [GitHub Releases](https://github.com/threeandthreee/Archipelago/releases)
 - **A Link Between Worlds**: [GitHub Releases](https://github.com/randomsalience/albw-archipelago/releases)
 - **A Link to the Past**: Already included by default
+- **A Link to the Past OWR**: [GitHub Releases](https://github.com/aurabot24/Archipelago-ALttPR/releases/)
 - **Minish Cap**: [GitHub Releases](https://github.com/eternalcode0/Archipelago/releases)
 - **Phantom Hourglass**: [GitHub Releases](https://github.com/carrotinator/Archipelago/releases)
 - **Spirit Tracks**: [GitHub Releases](https://github.com/DayKat/spirit-tracks/releases)
@@ -267,6 +272,7 @@ To enjoy automatic tracking, here are the recommended packs for each game. **Not
 - **Oracle of Ages** : [GitHub Releases](https://github.com/Dranzior/ooa_brooty/releases)
 - **Oracle of Seasons** : [GitHub Releases](https://github.com/OmegaZeron/Oracle-of-Seasons-AP-Poptracker-Pack/releases/latest)
 - **Link's Awakening DX** : [Magpie Tracker](https://magpietracker.us/)
+- **Link's Awakening DX Beta** : [Magpie Tracker](https://magpietracker.us/)
 - **A Link Between Worlds** : [GitHub Releases](https://github.com/Legendgreat/albw-ap-poptracker/releases)
 - **A Link to the Past** : [GitHub Releases](https://github.com/StripesOO7/alttp-ap-poptracker-pack/releases)
 - **Minish Cap** : [GitHub Releases](https://github.com/deoxis9001/tmcrando_maptracker_deoxis/releases)
