@@ -126,6 +126,18 @@ class GameCard:
             
         self.create_icon_toggle(self.ctrl_container, "📡", v_broad, "#e67e22", is_registered)
         
+        v_rem = tk.BooleanVar(value=True)
+        self.ui.remaining_tracker_vars[self.name] = v_rem
+        
+        if os.path.exists(self.ui.config_path):
+            try:
+                with open(self.ui.config_path, "r", encoding="utf-8") as f:
+                    config_data = json.load(f)
+                    v_rem.set(config_data.get("remaining_tracker_enabled_games", {}).get(self.name, True))
+            except: pass
+            
+        self.create_icon_toggle(self.ctrl_container, "🎒", v_rem, "#9b59b6", is_registered)
+        
         # v_pad = tk.BooleanVar()
         # self.ui.auto_config_per_game[self.name] = v_pad
         # if os.path.exists(self.ui.config_path):

@@ -61,7 +61,8 @@ DEFAULT_CONFIG = {
         "archipelago": "",
         "azahar": "",
         "poptracker": "",
-        "broadcast": ""
+        "broadcast": "",
+        "remaining_tracker": ""
     },
     "roms": {
         "Ocarina of Time": "",
@@ -113,6 +114,7 @@ DEFAULT_CONFIG = {
     },
     "auto_controller_config": True,
     "poptracker_broadcast": False,
+    "remaining_tracker_enabled": False,
     "broadcast_mode": "obs",
     "broadcast_enable_overlay": True,
     "broadcast_enable_obs": False,
@@ -289,6 +291,7 @@ class SetupUI(ctk.CTk):
         self.create_path_row(page, Loc.get("lbl_emu_azahar"), "emulators", "azahar")
         self.create_path_row(page, Loc.get("lbl_emu_poptracker"), "emulators", "poptracker")
         self.create_path_row(page, Loc.get("lbl_emu_broadcast"), "emulators", "broadcast", is_folder=True)
+        self.create_path_row(page, Loc.get("lbl_emu_remaining_tracker"), "emulators", "remaining_tracker")
         return page
 
     def _create_games_page(self):
@@ -372,6 +375,7 @@ class SetupUI(ctk.CTk):
         self.create_check_row(page, Loc.get("opt_broadcast_obs"), "broadcast_enable_obs")
         self.create_check_row(page, Loc.get("opt_broadcast_show_locations"), "broadcast_show_locations")
         self.create_check_row(page, Loc.get("opt_broadcast_disable_hw_accel"), "broadcast_disable_hw_accel")
+        self.create_check_row(page, Loc.get("opt_enable_remaining_tracker"), "remaining_tracker_enabled")
         
         self.btn_test_obs = ctk.CTkButton(
             page, text=Loc.get("btn_test_obs"), 

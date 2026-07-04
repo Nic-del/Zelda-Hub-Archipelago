@@ -1415,6 +1415,9 @@ class GameManager:
         self.poptracker_broadcast: bool = False
         self.auto_savestate_enabled: bool = False # Global toggle for the feature
         self.multi_game_keep_alive: bool = False # Nouveau mode Multi-Jeu
+        self.remaining_tracker_path: str = ""
+        self.remaining_tracker_enabled: bool = False
+        self.archipelago_path: str = ""
 
     def register_game(self, name: str, controller: EmulatorController):
         self.games[name] = controller
@@ -1485,6 +1488,42 @@ class GameManager:
                     dirty = True
                     break
 
+        # 3. Remaining Items Tracker
+        rt_path = config.get("emulators", {}).get("remaining_tracker")
+        if not rt_path or not os.path.exists(rt_path):
+            found_rt = False
+            for app_dir in potential_app_dirs:
+                if not os.path.exists(app_dir): continue
+                for subpath in [
+                    os.path.join("Remaining Item", "AP_Mini_Tracker_CLI.exe"),
+                    os.path.join("AP_Mini_Tracker", "AP_Mini_Tracker.exe"),
+                    os.path.join("AP_Mini_Tracker", "dist", "AP_Mini_Tracker.exe"),
+                    "AP_Mini_Tracker.exe"
+                ]:
+                    test_path = os.path.join(app_dir, subpath)
+                    if os.path.exists(test_path):
+                        if "emulators" not in config:
+                            config["emulators"] = {}
+                        config["emulators"]["remaining_tracker"] = os.path.normpath(test_path)
+                        print(f"[GameManager] Auto-fill Remaining Tracker: {test_path}")
+                        dirty = True
+                        found_rt = True
+                        break
+                if found_rt:
+                    break
+            
+            if not found_rt:
+                # Fallback to dev path
+                potential_exe = r"C:\Users\Linksweld\Documents\Folder Git\RemainingItem\dist\AP_Mini_Tracker.exe"
+                if not os.path.exists(potential_exe):
+                    potential_exe = r"C:\Users\Linksweld\Documents\Folder Git\RemainingItem\AP_Mini_Tracker.exe"
+                if os.path.exists(potential_exe):
+                    if "emulators" not in config:
+                        config["emulators"] = {}
+                    config["emulators"]["remaining_tracker"] = os.path.normpath(potential_exe)
+                    print(f"[GameManager] Auto-fill Remaining Tracker (Dev Fallback): {potential_exe}")
+                    dirty = True
+
         if dirty:
             try:
                 with open(CONFIG_PATH, "w", encoding="utf-8") as f:
@@ -1511,10 +1550,13 @@ class GameManager:
         # Resolve other emulators if present
         self.azahar_path = resolve_path(config.get("emulators", {}).get("azahar", ""))
         self.broadcast_path = resolve_path(config.get("emulators", {}).get("broadcast", ""))
+        self.remaining_tracker_path = resolve_path(config.get("emulators", {}).get("remaining_tracker", ""))
+        self.archipelago_path = archipelago_path
 
         self.slot_names = config.get("slot_names", {})
         self.archipelago_settings = config.get("archipelago_settings", {})
         self.poptracker_broadcast = config.get("poptracker_broadcast", False)
+        self.remaining_tracker_enabled = config.get("remaining_tracker_enabled", False)
         self.hub_controller_open_btn = config.get("hub_controller_open_btn", "CAPTURE")
         self.hub_controller_name = config.get("hub_controller_name", "")
         

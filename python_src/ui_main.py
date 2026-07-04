@@ -103,6 +103,8 @@ class LauncherUI:
         self.controller_polling_interval = 30 # Augmenté de 200ms à 30ms pour plus de fluidité
         self.poptracker_vars = {}
         self.broadcast_vars = {}
+        self.remaining_tracker_vars = {}
+        self.remaining_tracker_enabled_var = tk.BooleanVar(value=False)
         self.status_var = tk.StringVar()
         self.auto_config_var = tk.BooleanVar(value=True)
         self.auto_save_var = tk.BooleanVar(value=False)
@@ -1051,6 +1053,45 @@ class LauncherUI:
                             except Exception as e:
                                 print(f"[Launcher] Error starting broadcast overlay: {e}")
 
+                # --- 2.75 LANCEMENT REMAINING ITEMS TRACKER (AP Mini Tracker) ---
+                has_rem_enabled = name in self.remaining_tracker_vars and self.remaining_tracker_vars[name].get()
+                if self.remaining_tracker_enabled_var.get() and has_rem_enabled and self.manager.remaining_tracker_path:
+                    rt_path = self.manager.remaining_tracker_path
+                    if os.path.exists(rt_path):
+                        rt_host = self.manager.archipelago_settings.get("host", "archipelago.gg")
+                        rt_port = self.manager.archipelago_settings.get("port", "38281")
+                        rt_slot = self.manager.slot_names.get(name, "")
+                        rt_pwd = self.manager.archipelago_settings.get("password", "")
+                        
+                        if rt_slot and rt_port:
+                            rt_cmd = [
+                                rt_path,
+                                "--gui",
+                                "--server", f"{rt_host}:{rt_port}",
+                                "--slot", rt_slot,
+                                "--game", name
+                            ]
+                            if rt_pwd:
+                                rt_cmd.extend(["--password", rt_pwd])
+                                
+                            print(f"[Launcher] Starting remaining items tracker: {' '.join(rt_cmd)}")
+                            try:
+                                env = os.environ.copy()
+                                env["KIVY_NO_ARGS"] = "1"
+                                env["KIVY_GRAPHICS_WINDOW_STATE"] = "hidden"
+                                env["KIVY_GRAPHICS_HIDDEN"] = "1"
+                                
+                                rt_proc = subprocess.Popen(
+                                    rt_cmd,
+                                    cwd=os.path.dirname(rt_path),
+                                    env=env,
+                                    creationflags=subprocess.CREATE_NO_WINDOW
+                                )
+                                if game_ctrl:
+                                    game_ctrl.extra_processes.append(rt_proc)
+                            except Exception as e:
+                                print(f"[Launcher] Error starting remaining items tracker: {e}")
+
                 # --- 3. LANCEMENT CLIENT ARCHIPELAGO (Après démarrage jeu pour éviter cleanup) ---
                 meta = self.games_metadata.get(name, {})
                 client_name = meta.get("client_name")
@@ -1242,6 +1283,13 @@ class LauncherUI:
                 self.broadcast_disable_hw_accel_var.set(config.get("broadcast_disable_hw_accel", False))
                 self.poptracker_last_rect = config.get("poptracker_last_rect")
                 self.poptracker_display_index = int(config.get("poptracker_display_index", 0))
+                self.remaining_tracker_enabled_var.set(config.get("remaining_tracker_enabled", False))
+                
+                # Charger l'état Remaining Tracker pour chaque jeu
+                rem_map = config.get("remaining_tracker_enabled_games", {})
+                for g_name, var in self.remaining_tracker_vars.items():
+                    if g_name in rem_map:
+                        var.set(rem_map[g_name])
                 
                 # Charger l'état PopTracker pour chaque jeu
                 enabled_map = config.get("poptracker_enabled", {})
@@ -1319,6 +1367,14 @@ class LauncherUI:
                 config["broadcast_disable_hw_accel"] = self.broadcast_disable_hw_accel_var.get()
                 config["poptracker_last_rect"] = self.poptracker_last_rect
                 config["poptracker_display_index"] = self.poptracker_display_index
+                config["remaining_tracker_enabled"] = self.remaining_tracker_enabled_var.get()
+                self.manager.remaining_tracker_enabled = self.remaining_tracker_enabled_var.get()
+                
+                # Sauvegarder l'état Remaining Tracker par jeu
+                if "remaining_tracker_enabled_games" not in config:
+                    config["remaining_tracker_enabled_games"] = {}
+                for g_name, var in self.remaining_tracker_vars.items():
+                    config["remaining_tracker_enabled_games"][g_name] = var.get()
                 
                 # Sauvegarder l'état PopTracker
                 if "poptracker_enabled" not in config:
@@ -1366,6 +1422,7 @@ class LauncherUI:
         self.manager.load_config()
         self.poptracker_vars.clear()
         self.broadcast_vars.clear()
+        self.remaining_tracker_vars.clear()
         self.gamepad_widgets.clear()
         
         # Mettre à jour la variable du port dans l'UI depuis la config
