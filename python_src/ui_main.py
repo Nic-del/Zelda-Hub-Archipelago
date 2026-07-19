@@ -753,38 +753,7 @@ class LauncherUI:
 
                     print(f"[Launcher] Pack detection for {name}: is_web={is_web}, is_web_folder={is_web_folder}, is_python={is_python_tracker}")
 
-                    if is_web or is_web_folder:
-                        print(f"[Launcher] Lancement du tracker WEB : {pack_path}")
-                        python_exe = self._find_python_with_webview()
-                        host_script = os.path.join(self.base_dir, "web_tracker_host.py")
-                        
-                        # Commande de base
-                        cmd = (python_exe.split() if "py -" in python_exe else [python_exe]) + [host_script, pack_path]
-
-                        # 1. Géométrie (x, y, w, h)
-                        x, y = self._get_monitor_coords(self.poptracker_display_index)
-                        print(f"[Launcher] Coordonnées moniteur {self.poptracker_display_index} : {x}, {y}")
-                        cmd.extend([str(x), str(y), "1280", "720"])
-                        
-                        # 2. Paramètres Archipelago
-                        host = self.manager.archipelago_settings.get("host", "archipelago.gg")
-                        port = self.manager.archipelago_settings.get("port", "38281")
-                        slot = self.manager.slot_names.get(name, "Link")
-                        pwd = self.manager.archipelago_settings.get("password", "None") or "None"
-                        cmd.extend([str(host), str(port), str(slot), str(pwd)])
-
-                        self.poptracker_process = subprocess.Popen(cmd, cwd=os.path.dirname(__file__), creationflags=subprocess.CREATE_NO_WINDOW)
-                        
-                        # Maximisation si demandée dans le setup
-                        do_maximize = True
-                        try:
-                            with open(self.config_path, "r", encoding="utf-8") as f:
-                                do_maximize = json.load(f).get("maximize_poptracker", True)
-                        except: pass
-
-                        if do_maximize:
-                            self._restore_poptracker_window(self.poptracker_process, self.poptracker_last_rect)
-                    elif is_python_tracker:
+                    if is_python_tracker:
                         print(f"[Launcher] Lancement du tracker PYTHON (LADX) : {pack_path}")
                         bat_path = os.path.join(pack_path, "scripts", "startLocal.bat")
                         scripts_dir = os.path.join(pack_path, "scripts")
@@ -808,6 +777,37 @@ class LauncherUI:
                             creationflags=subprocess.CREATE_NO_WINDOW
                         )
 
+                        # Maximisation si demandée dans le setup
+                        do_maximize = True
+                        try:
+                            with open(self.config_path, "r", encoding="utf-8") as f:
+                                do_maximize = json.load(f).get("maximize_poptracker", True)
+                        except: pass
+
+                        if do_maximize:
+                            self._restore_poptracker_window(self.poptracker_process, self.poptracker_last_rect)
+                    elif is_web or is_web_folder:
+                        print(f"[Launcher] Lancement du tracker WEB : {pack_path}")
+                        python_exe = self._find_python_with_webview()
+                        host_script = os.path.join(self.base_dir, "web_tracker_host.py")
+                        
+                        # Commande de base
+                        cmd = (python_exe.split() if "py -" in python_exe else [python_exe]) + [host_script, pack_path]
+
+                        # 1. Géométrie (x, y, w, h)
+                        x, y = self._get_monitor_coords(self.poptracker_display_index)
+                        print(f"[Launcher] Coordonnées moniteur {self.poptracker_display_index} : {x}, {y}")
+                        cmd.extend([str(x), str(y), "1280", "720"])
+                        
+                        # 2. Paramètres Archipelago
+                        host = self.manager.archipelago_settings.get("host", "archipelago.gg")
+                        port = self.manager.archipelago_settings.get("port", "38281")
+                        slot = self.manager.slot_names.get(name, "Link")
+                        pwd = self.manager.archipelago_settings.get("password", "None") or "None"
+                        cmd.extend([str(host), str(port), str(slot), str(pwd)])
+
+                        self.poptracker_process = subprocess.Popen(cmd, cwd=os.path.dirname(__file__), creationflags=subprocess.CREATE_NO_WINDOW)
+                        
                         # Maximisation si demandée dans le setup
                         do_maximize = True
                         try:

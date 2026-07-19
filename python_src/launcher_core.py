@@ -829,6 +829,47 @@ Start-Sleep -m 400
             # Fallback taskkill
             subprocess.run(["taskkill", "/F", "/IM", "dolphin-emu.exe"], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
 
+class CemuController(EmulatorController):
+    def __init__(self, emulator_path: str, rom_path: str):
+        super().__init__(emulator_path, rom_path)
+        self.window_keyword = ["Cemu", "cking.rpx"]
+
+    def launch(self):
+        print(f"[Cemu] Launching {self.rom_path}...")
+        # Cemu CLI args: -g (game path)
+        cmd = [self.emulator_path, '-g', self.rom_path]
+        emu_dir = os.path.dirname(self.emulator_path)
+        
+        try:
+            env = self.get_clean_env()
+            self.process = subprocess.Popen(cmd, cwd=emu_dir, env=env)
+            print(f"[Cemu] Debug: Process PID={self.process.pid}")
+            
+            time.sleep(0.5)
+            poll = self.process.poll()
+            if poll is not None:
+                print(f"[Cemu] Erreur: Le processus s'est arrete prematurement (Code: {poll}).")
+                return False
+                
+            time.sleep(0.5)
+            self.find_window(self.window_keyword)
+            return True
+        except Exception as e:
+            print(f"[Cemu] Erreur lors du lancement : {e}")
+            return False
+
+    def load_save_state(self, slot: int):
+        pass
+
+    def save_state(self, slot: int):
+        pass
+
+    def pause(self):
+        pass
+
+    def resume(self):
+        pass
+
 class AzaharController(EmulatorController):
     def __init__(self, emulator_path: str, rom_path: str):
         super().__init__(emulator_path, rom_path)
@@ -1534,6 +1575,7 @@ class GameManager:
 
         bizhawk_path = resolve_path(config.get("emulators", {}).get("bizhawk", ""))
         dolphin_path = resolve_path(config.get("emulators", {}).get("dolphin", ""))
+        cemu_path = resolve_path(config.get("emulators", {}).get("cemu", ""))
         archipelago_path = resolve_path(config.get("emulators", {}).get("archipelago", ""))
         self.poptracker_path = resolve_path(config.get("emulators", {}).get("poptracker", ""))
         
@@ -1569,6 +1611,7 @@ class GameManager:
         defs = [
             ("Ocarina of Time", ArchipelagoBizHawkController, archipelago_path),
             ("Wind Waker", DolphinController, dolphin_path),
+            ("Wind Waker HD", CemuController, cemu_path),
             ("A Link to the Past", ArchipelagoBizHawkController, archipelago_path),
             ("A Link to the Past OWR", ArchipelagoBizHawkController, archipelago_path),
             ("Majora's Mask", NativeController, ""),

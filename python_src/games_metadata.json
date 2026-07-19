@@ -35,6 +35,15 @@
             "client_title": "Archipelago The Wind Waker Client*"
         },
         {
+            "id": "Wind Waker HD",
+            "display_name": "Wind Waker HD",
+            "image": "wwHD.jpg",
+            "color": "#3498db",
+            "profile": "wwhd",
+            "client_name": "The Wind Waker HD Client",
+            "client_title": "Archipelago The Wind Waker HD Client*"
+        },
+        {
             "id": "Twilight Princess",
             "display_name": "Twilight Princess",
             "image": "tp.png",

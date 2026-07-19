@@ -58,6 +58,7 @@ DEFAULT_CONFIG = {
     "emulators": {
         "bizhawk": "",
         "dolphin": "",
+        "cemu": "",
         "archipelago": "",
         "azahar": "",
         "poptracker": "",
@@ -68,6 +69,7 @@ DEFAULT_CONFIG = {
         "Ocarina of Time": "",
         "Majora's Mask": "",
         "Wind Waker": "",
+        "Wind Waker HD": "",
         "Twilight Princess": "",
         "Skyward Sword": "",
         "A Link to the Past": "",
@@ -95,6 +97,7 @@ DEFAULT_CONFIG = {
     "slot_names": {
         "Ocarina of Time": "",
         "Wind Waker": "",
+        "Wind Waker HD": "",
         "A Link to the Past": "",
         "A Link to the Past OWR": "",
         "Minish Cap": "",
@@ -136,6 +139,7 @@ DEFAULT_CONFIG = {
         "Ocarina of Time": True,
         "Majora's Mask": True,
         "Wind Waker": True,
+        "Wind Waker HD": True,
         "Twilight Princess": True,
         "Skyward Sword": True,
         "A Link to the Past": True,
@@ -288,6 +292,7 @@ class SetupUI(ctk.CTk):
         self.create_path_row(page, Loc.get("lbl_emu_archipelago"), "emulators", "archipelago", is_folder=True)
         self.create_path_row(page, Loc.get("lbl_emu_bizhawk"), "emulators", "bizhawk")
         self.create_path_row(page, Loc.get("lbl_emu_dolphin"), "emulators", "dolphin")
+        self.create_path_row(page, Loc.get("lbl_emu_cemu"), "emulators", "cemu")
         self.create_path_row(page, Loc.get("lbl_emu_azahar"), "emulators", "azahar")
         self.create_path_row(page, Loc.get("lbl_emu_poptracker"), "emulators", "poptracker")
         self.create_path_row(page, Loc.get("lbl_emu_broadcast"), "emulators", "broadcast", is_folder=True)
@@ -794,6 +799,7 @@ class SetupUI(ctk.CTk):
                     "Ocarina of Time": [("Nintendo 64 ROM", "*.z64 *.n64 *.v64")],
                     "Majora's Mask": [("N64/Native", "*.z64 *.n64 *.v64 *.exe")],
                     "Wind Waker": [("GameCube Image", "*.iso *.gcm")],
+                    "Wind Waker HD": [("Wii U Image/Executable", "*.wux *.wua *.rpx")],
                     "Twilight Princess": [("GameCube/Wii Image", "*.iso *.gcm *.wbfs")],
                     "Skyward Sword": [("Wii Image", "*.iso *.wbfs")],
                     "A Link to the Past": [("SNES ROM", "*.sfc *.smc")],
@@ -883,6 +889,7 @@ class SetupUI(ctk.CTk):
             "Skyward Sword": ["Skyward Sword", "SOUE01"],
             "OOT (SOH)": ["soh.exe"],
             "Twilight Princess": ["Twilight Princess"],
+            "Wind Waker HD": ["cking"],
             "Majora's Mask": ["Zelda64Recompiled.exe", "Majora"],
             "Phantom Hourglass": ["Phantom Hourglass"],
             "Spirit Tracks": ["Spirit Tracks"],
@@ -894,6 +901,7 @@ class SetupUI(ctk.CTk):
             "Ocarina of Time": [".z64", ".n64", ".v64"],
             "Majora's Mask": [".z64", ".n64", ".v64", ".exe"],
             "Wind Waker": [".iso", ".gcm"],
+            "Wind Waker HD": [".wux", ".wua", ".rpx"],
             "Twilight Princess": [".iso", ".gcm", ".wbfs"],
             "Skyward Sword": [".iso", ".wbfs"],
             "A Link to the Past": [".sfc", ".smc"],
