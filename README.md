@@ -62,6 +62,8 @@ Si vous n'avez pas encore les fichiers `.apworld`, voici où les trouver :
 - **Majora's Mask** : [GitHub Releases](https://github.com/RecompRando/MMRecompRando/releases)
 - **Twilight Princess** : [GitHub Releases](https://github.com/WritingHusky/Twilight_Princess_apworld/releases)
 - **Wind Waker** : Déjà inclus par défaut
+- **Wind Waker HD** : [GitHub Releases](https://github.com/Teotia444/twwhd-apworld/releases)
+
 - **Skyward Sword** : [GitHub Releases](https://github.com/Battlecats59/SS_APWorld/releases)
 - **Zelda 1** : Déjà inclus par défaut
 - **Zelda 2** : [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases?q=zelda&expanded=true)
@@ -261,6 +263,8 @@ If you don't have the `.apworld` files yet, here is where to find them:
 - **Majora's Mask**: [GitHub Releases](https://github.com/RecompRando/MMRecompRando/releases)
 - **Twilight Princess**: [GitHub Releases](https://github.com/WritingHusky/Twilight_Princess_apworld/releases)
 - **Wind Waker**: Already included by default
+- **Wind Waker HD**: [GitHub Releases](https://github.com/Teotia444/twwhd-apworld/releases)
+
 - **Skyward Sword**: [GitHub Releases](https://github.com/Battlecats59/SS_APWorld/releases)
 - **Zelda 1**: Already included by default
 - **Zelda 2**: [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases?q=zelda&expanded=true)
