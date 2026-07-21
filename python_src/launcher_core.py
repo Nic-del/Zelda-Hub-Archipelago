@@ -170,7 +170,18 @@ class EmulatorController(ABC):
             try:
                 if p.poll() is None:
                     print(f"[Launcher] Terminating extra process (PID: {p.pid})...")
-                    subprocess.run(["taskkill", "/F", "/T", "/PID", str(p.pid)], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
+                    if psutil:
+                        try:
+                            parent = psutil.Process(p.pid)
+                            for child in parent.children(recursive=True):
+                                try: child.kill()
+                                except: pass
+                            try: parent.kill()
+                            except: pass
+                        except psutil.NoSuchProcess:
+                            pass
+                    else:
+                        subprocess.run(["taskkill", "/F", "/T", "/PID", str(p.pid)], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
                     self._wait_for_pid(p.pid)
             except Exception as e:
                 print(f"[Launcher] Error stopping extra process: {e}")
@@ -240,8 +251,19 @@ class EmulatorController(ABC):
             # STRATE 3: Force Kill (Dernier recours)
             print(f"[Launcher] Force killing process tree for PID {pid}...")
             try:
-                # /T kills the entire process tree
-                subprocess.run(["taskkill", "/F", "/T", "/PID", str(pid)], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
+                if psutil:
+                    try:
+                        parent = psutil.Process(pid)
+                        for child in parent.children(recursive=True):
+                            try: child.kill()
+                            except: pass
+                        try: parent.kill()
+                        except: pass
+                    except psutil.NoSuchProcess:
+                        pass
+                else:
+                    # /T kills the entire process tree
+                    subprocess.run(["taskkill", "/F", "/T", "/PID", str(pid)], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
                 self._wait_for_pid(pid)
             except: pass
         
@@ -361,6 +383,18 @@ class EmulatorController(ABC):
         def _enum_cb(hwnd, _):
             if win32gui.IsWindowVisible(hwnd):
                 title = win32gui.GetWindowText(hwnd).lower()
+                
+                # Ignorer les fenêtres du Zelda Hub / Multi-Launcher lui-même ou de OBS Studio
+                is_excluded = (
+                    "zelda hub" in title or 
+                    "zelda multi-launcher" in title or 
+                    "obs studio" in title or 
+                    "obs " in title
+                )
+                if is_excluded and not any(kw.lower() in ["zelda hub", "zelda multi-launcher", "obs studio", "obs"] for kw in keywords):
+                    return True
+
+                
                 matches = 0
                 
                 # Vérifier les mots-clés
@@ -1088,6 +1122,156 @@ class NativeController(EmulatorController):
             except Exception as e:
                 print(f"[Native] Resume error: {e}")
 
+class ZeldasAdventureController(EmulatorController):
+    """
+    Controller for Zelda's Adventure GDX (running via powershell with gradlew).
+    """
+    def __init__(self, working_dir: str, arch_settings: dict = None, slot_name: str = ""):
+        super().__init__("", "")
+        self.working_dir = working_dir
+        self.game_name = "Zelda's Adventure"
+        self.window_keyword = ["Zelda", "Adventure", "Core", "openjdk"]
+        self.arch_settings = arch_settings or {}
+        self.slot_name = slot_name
+
+    def launch(self):
+        print(f"[Zelda's Adventure] Launching from {self.working_dir}...")
+        
+        # Write archipelago connection settings to game config.json
+        if self.working_dir:
+            try:
+                game_config_path = os.path.join(self.working_dir, "assets", "archipelago", "config.json")
+                os.makedirs(os.path.dirname(game_config_path), exist_ok=True)
+                
+                # Default configuration structure
+                game_config = {
+                    "server": "archipelago.gg:38281",
+                    "slotName": "",
+                    "password": "",
+                    "tags": []
+                }
+                
+                # If file exists, load it first to preserve other keys (like tags)
+                if os.path.exists(game_config_path):
+                    with open(game_config_path, "r", encoding="utf-8") as f:
+                        try:
+                            loaded = json.load(f)
+                            if isinstance(loaded, dict):
+                                game_config.update(loaded)
+                        except Exception as e:
+                            print(f"[Zelda's Adventure] Error parsing existing config: {e}")
+                
+                # Update with our settings
+                host = self.arch_settings.get("host", "archipelago.gg")
+                port = self.arch_settings.get("port", "")
+                slot = self.slot_name or ""
+                password = self.arch_settings.get("password", "") or ""
+                
+                # Combine host and port for the server key
+                if port:
+                    game_config["server"] = f"{host}:{port}"
+                else:
+                    game_config["server"] = host
+                    
+                game_config["slotName"] = slot
+                game_config["password"] = password
+                
+                with open(game_config_path, "w", encoding="utf-8") as f:
+                    json.dump(game_config, f, indent=4)
+                print(f"[Zelda's Adventure] Wrote connection settings to {game_config_path}")
+            except Exception as e:
+                print(f"[Zelda's Adventure] Error writing config: {e}")
+
+        cmd = ["powershell.exe", "-Command", "./gradlew.bat lwjgl3:run"]
+        try:
+            env = self.get_clean_env()
+            self.process = subprocess.Popen(
+                cmd,
+                cwd=self.working_dir,
+                env=env,
+                creationflags=subprocess.CREATE_NEW_CONSOLE
+            )
+            return True
+        except Exception as e:
+            print(f"[Zelda's Adventure] Erreur lors du lancement : {e}")
+            return False
+
+    def load_save_state(self, slot: int): pass
+    def save_state(self, slot: int): pass
+    
+    def pause(self):
+        """Met en pause le jeu en suspendant le processus principal et ses enfants."""
+        if self.process and self.process.poll() is None:
+            print(f"[Zelda's Adventure] Suspending process tree for PID {self.process.pid}...")
+            if psutil:
+                try:
+                    parent = psutil.Process(self.process.pid)
+                    for child in parent.children(recursive=True):
+                        child.suspend()
+                    parent.suspend()
+                except Exception as e:
+                    print(f"[Zelda's Adventure] Pause error: {e}")
+
+    def resume(self):
+        """Réactive le jeu en reprenant le processus principal et ses enfants."""
+        if self.process and self.process.poll() is None:
+            print(f"[Zelda's Adventure] Resuming process tree for PID {self.process.pid}...")
+            if psutil:
+                try:
+                    parent = psutil.Process(self.process.pid)
+                    parent.resume()
+                    for child in parent.children(recursive=True):
+                        child.resume()
+                    self.focus()
+                except Exception as e:
+                    print(f"[Zelda's Adventure] Resume error: {e}")
+
+    def stop(self):
+        """Termine le jeu Zelda's Adventure et tous ses processus enfants."""
+        game_pid = None
+        if self.window_handle and win32gui and win32process:
+            try:
+                _, game_pid = win32process.GetWindowThreadProcessId(self.window_handle)
+            except:
+                pass
+
+        # 1. Envoyer WM_CLOSE à la fenêtre du jeu
+        if self.window_handle and win32gui:
+            try:
+                if win32gui.IsWindow(self.window_handle):
+                    print(f"[Zelda's Adventure] Sending WM_CLOSE to game window handle {self.window_handle}...")
+                    win32gui.PostMessage(self.window_handle, win32con.WM_CLOSE, 0, 0)
+            except:
+                pass
+
+        # 2. Appeler le stop standard (tue powershell et la console)
+        super().stop()
+
+        # 3. Tuer le processus de jeu s'il tourne encore
+        if game_pid:
+            print(f"[Zelda's Adventure] Force killing game PID {game_pid}...")
+            try:
+                subprocess.run(["taskkill", "/F", "/PID", str(game_pid)], capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
+            except:
+                pass
+                
+        # 4. Nettoyage de sécurité des processus java lancés depuis le dossier du jeu
+        if psutil and self.working_dir:
+            try:
+                for proc in psutil.process_iter(['pid', 'name', 'cwd', 'cmdline']):
+                    if proc.info['name'] and proc.info['name'].lower() in ["java.exe", "javaw.exe"]:
+                        is_our_game = False
+                        if proc.info['cwd'] and os.path.abspath(proc.info['cwd']) == os.path.abspath(self.working_dir):
+                            is_our_game = True
+                        elif proc.info['cmdline'] and any("za-gdx" in str(arg).lower() for arg in proc.info['cmdline']):
+                            is_our_game = True
+                            
+                        if is_our_game:
+                            print(f"[Zelda's Adventure] Terminating java process PID {proc.info['pid']}...")
+                            proc.kill()
+            except Exception as e:
+                print(f"[Zelda's Adventure] Error cleaning up java processes: {e}")
+
 class ArchipelagoBizHawkController(BizHawkController):
     """
     Controller for games via Archipelago and BizHawk (Minish Cap, Oracle of Ages, Zelda 1, etc.).
@@ -1565,6 +1749,55 @@ class GameManager:
                     print(f"[GameManager] Auto-fill Remaining Tracker (Dev Fallback): {potential_exe}")
                     dirty = True
 
+        # 4. Auto-detect Zelda's Adventure in Emulator directory
+        roms_config_raw = config.get("roms", {})
+        za_path = roms_config_raw.get("Zelda's Adventure", "")
+        if not za_path or not os.path.exists(resolve_path(za_path)):
+            potential_emu_dirs = [
+                os.path.join(get_exe_dir(), "..", "Emulator"),
+                os.path.join(get_exe_dir(), "Emulator")
+            ]
+            found_dir = None
+            for emu_dir in potential_emu_dirs:
+                if not os.path.exists(emu_dir):
+                    continue
+                # Search for a sub-folder that has gradlew.bat
+                likely_paths = [
+                    os.path.join(emu_dir, "za-gdx-0.1.3", "za-gdx-0.1.3"),
+                    os.path.join(emu_dir, "za-gdx-0.1.3"),
+                    os.path.join(emu_dir, "za-gdx")
+                ]
+                for lp in likely_paths:
+                    if os.path.exists(os.path.join(lp, "gradlew.bat")):
+                        found_dir = lp
+                        break
+                if found_dir:
+                    break
+                    
+                # Scan subdirectories recursively up to 3 levels
+                for root_dir, dirs, files in os.walk(emu_dir):
+                    depth = root_dir[len(emu_dir):].count(os.sep)
+                    if depth > 3:
+                        del dirs[:]
+                        continue
+                    if "gradlew.bat" in files and ("za-gdx" in root_dir.lower() or "zelda" in root_dir.lower()):
+                        found_dir = root_dir
+                        break
+                if found_dir:
+                    break
+
+            if found_dir:
+                rel_path = os.path.relpath(found_dir, get_exe_dir())
+                rel_path = rel_path.replace("\\", "/")
+                if not rel_path.startswith("..") and not os.path.isabs(rel_path):
+                    rel_path = "./" + rel_path
+                
+                if "roms" not in config:
+                    config["roms"] = {}
+                config["roms"]["Zelda's Adventure"] = rel_path
+                print(f"[GameManager] Auto-fill Zelda's Adventure: {rel_path}")
+                dirty = True
+
         if dirty:
             try:
                 with open(CONFIG_PATH, "w", encoding="utf-8") as f:
@@ -1627,7 +1860,8 @@ class GameManager:
             ("A Link Between Worlds", AzaharController, self.azahar_path),
             ("Link's Awakening DX", ArchipelagoBizHawkController, archipelago_path),
             ("Link's Awakening DX Beta", ArchipelagoBizHawkController, archipelago_path),
-            ("OOT (SOH)", NativeController, "")
+            ("OOT (SOH)", NativeController, ""),
+            ("Zelda's Adventure", ZeldasAdventureController, "")
         ]
 
         for name, ctrl_class, emu_path in defs:
@@ -1647,6 +1881,13 @@ class GameManager:
                 if rom_path and os.path.exists(rom_path):
                     slot = self.slot_names.get(name, "")
                     self.register_game(name, NativeController(rom_path, game_name=name, arch_settings=self.archipelago_settings, slot_name=slot))
+                continue
+
+            # Cas spécial Zelda's Adventure
+            if ctrl_class == ZeldasAdventureController:
+                if rom_path and os.path.exists(rom_path):
+                    slot = self.slot_names.get(name, "")
+                    self.register_game(name, ZeldasAdventureController(rom_path, arch_settings=self.archipelago_settings, slot_name=slot))
                 continue
 
             # Cas spécial Archipelago BizHawk (Minish Cap, Oracle of Ages, Zelda 1, etc.)
@@ -1786,9 +2027,8 @@ class GameManager:
         if new_game.process is None or new_game.process.poll() is not None:
             success = new_game.launch()
             if success:
-                # Lancement asynchrone du focus pour ne pas bloquer l'UI
-                # Délai étendu à 20s pour BizHawk/Archipelago qui met du temps à changer de titre
-                threading.Thread(target=new_game.wait_and_focus, args=(20,), daemon=True).start()
+                timeout = 45 if name == "Zelda's Adventure" else 20
+                threading.Thread(target=new_game.wait_and_focus, args=(timeout,), daemon=True).start()
                 
                 if self.auto_savestate_enabled:
                     def delayed_load():

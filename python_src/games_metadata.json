@@ -150,6 +150,14 @@
             "image": "st.png",
             "color": "#16a085",
             "profile": "st"
+        },
+        {
+            "id": "Zelda's Adventure",
+            "display_name": "Zelda's Adventure",
+            "image": "ZA.jpg",
+            "color": "#d35400",
+            "profile": "za",
+            "is_native": true
         }
     ]
 }

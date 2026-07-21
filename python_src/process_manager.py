@@ -15,23 +15,33 @@ class ProcessManager:
     
     @staticmethod
     def kill_process_tree(pid):
-        """Kills a process and all its children using taskkill /T on Windows."""
+        """Kills a process and all its children using psutil if available, or taskkill /T on Windows."""
         if not pid: return
         print(f"[ProcessManager] Force killing process tree for PID {pid}...")
         try:
+            if psutil:
+                try:
+                    parent = psutil.Process(pid)
+                    for child in parent.children(recursive=True):
+                        try:
+                            child.kill()
+                        except:
+                            pass
+                    try:
+                        parent.kill()
+                    except:
+                        pass
+                    return
+                except psutil.NoSuchProcess:
+                    return
+            
+            # Fallback when psutil is not available
             if sys.platform == "win32":
                 subprocess.run(["taskkill", "/F", "/T", "/PID", str(pid)], 
                                capture_output=True, check=False,
                                creationflags=subprocess.CREATE_NO_WINDOW)
             else:
-                # Fallback for non-windows if needed
-                if psutil:
-                    parent = psutil.Process(pid)
-                    for child in parent.children(recursive=True):
-                        child.kill()
-                    parent.kill()
-                else:
-                    os.kill(pid, 9)
+                os.kill(pid, 9)
         except Exception as e:
             print(f"[ProcessManager] Error killing process {pid}: {e}")
 
@@ -41,14 +51,19 @@ class ProcessManager:
         if not image_name: return
         print(f"[ProcessManager] Killing processes by name: {image_name}")
         try:
+            if psutil:
+                for proc in psutil.process_iter(['name']):
+                    try:
+                        if proc.info['name'] and proc.info['name'].lower() == image_name.lower():
+                            proc.kill()
+                    except:
+                        pass
+                return
+                
             if sys.platform == "win32":
                 subprocess.run(["taskkill", "/F", "/IM", image_name], 
                                capture_output=True, check=False,
                                creationflags=subprocess.CREATE_NO_WINDOW)
-            elif psutil:
-                for proc in psutil.process_iter(['name']):
-                    if proc.info['name'].lower() == image_name.lower():
-                        proc.kill()
         except Exception as e:
             print(f"[ProcessManager] Error killing {image_name}: {e}")
 
