@@ -75,6 +75,8 @@ Si vous n'avez pas encore les fichiers `.apworld`, voici où les trouver :
 - **Minish Cap** : [GitHub Releases](https://github.com/eternalcode0/Archipelago/releases)
 - **Phantom Hourglass** : [GitHub Releases](https://github.com/carrotinator/Archipelago/releases)
 - **Spirit Tracks** : [GitHub Releases](https://github.com/DayKat/spirit-tracks/releases)
+- **Zelda's Adventure** : [GitHub Releases](https://github.com/nebbii/za-gdx/releases)
+
 
 
 #### 📦 Liens PopTracker
@@ -272,6 +274,8 @@ If you don't have the `.apworld` files yet, here is where to find them:
 - **Minish Cap**: [GitHub Releases](https://github.com/eternalcode0/Archipelago/releases)
 - **Phantom Hourglass**: [GitHub Releases](https://github.com/carrotinator/Archipelago/releases)
 - **Spirit Tracks**: [GitHub Releases](https://github.com/DayKat/spirit-tracks/releases)
+- **Zelda's Adventure**: [GitHub Releases](https://github.com/nebbii/za-gdx/releases)
+
 
 #### 📦 PopTracker Links
 To enjoy automatic tracking, here are the recommended packs for each game. **Note: It is strongly recommended to join the various community Discord servers to get the latest versions.**
