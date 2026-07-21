@@ -112,9 +112,12 @@ Voici les guides officiels pour configurer chaque jeu avec Archipelago :
 - **Oracle of Ages** : [Guide Setup](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
 - **Oracle of Seasons** : [Guide Setup](https://github.com/Dinopony/ArchipelagoOoS/blob/oos/worlds/tloz_oos/docs/oos_setup_en.md)
 - **Link's Awakening DX** : [Archipelago Tutorial](https://archipelago.gg/tutorial/#Links%20Awakening%20DX)
+- **Link's Awakening DX Beta** : [GitHub Releases](https://github.com/threeandthreee/Archipelago/releases)
 - **A Link Between Worlds** : [Guide Setup](https://github.com/randomsalience/albw-archipelago/blob/main/docs/setup_en.md)
   - _Important (Azahar) : Allez dans `File > Open Azahar Folder`. Créez un dossier `load`, et à l'intérieur un dossier `mods`. Ensuite, dans `Emulation > Configure > General > Debug`, assurez-vous que `Enable RPC Server` est coché._
 - **A Link to the Past** : [Archipelago Tutorial](https://archipelago.gg/tutorial/#A%20Link%20to%20the%20Past)
+- **A Link to the Past OWR** : [GitHub Repo](https://github.com/aurabot24/Archipelago-ALttPR)
+
 - **Minish Cap** : [Guide Setup](https://github.com/eternalcode0/Archipelago/blob/feat/new-game-minish-cap/worlds/tmc/docs/setup_en.md)
 - **Phantom Hourglass** : [Guide Setup](https://github.com/carrotinator/Archipelago/blob/main/worlds/tloz_ph/docs/setup.md)
 - **Spirit Tracks** : [Guide Setup](https://github.com/DayKat/spirit-tracks/blob/main/worlds/tloz_st/docs/setup.md)
@@ -305,9 +308,12 @@ Official guides to configure each game with Archipelago:
 - **Oracle of Ages**: [Setup Guide](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
 - **Oracle of Seasons**: [Setup Guide](https://github.com/Dinopony/ArchipelagoOoS/blob/oos/worlds/tloz_oos/docs/oos_setup_en.md)
 - **Link's Awakening DX**: [Archipelago Tutorial](https://archipelago.gg/tutorial/#Links%20Awakening%20DX)
+- **Link's Awakening DX Beta**: [GitHub Releases](https://github.com/threeandthreee/Archipelago/releases)
 - **A Link Between Worlds**: [Setup Guide](https://github.com/randomsalience/albw-archipelago/blob/main/docs/setup_en.md)
   - _Important (Azahar): Select `File > Open Azahar Folder`. Create a `load` folder inside, and a `mods` folder inside that. Also, in `Emulation > Configure > General > Debug`, ensure `Enable RPC Server` is enabled._
 - **A Link to the Past**: [Archipelago Tutorial](https://archipelago.gg/tutorial/#A%20Link%20to%20the%20Past)
+- **A Link to the Past OWR**: [GitHub Repo](https://github.com/aurabot24/Archipelago-ALttPR)
+
 - **Minish Cap**: [Setup Guide](https://github.com/eternalcode0/Archipelago/blob/feat/new-game-minish-cap/worlds/tmc/docs/setup_en.md)
 - **Phantom Hourglass**: [Setup Guide](https://github.com/carrotinator/Archipelago/blob/main/worlds/tloz_ph/docs/setup.md)
 - **Spirit Tracks**: [Setup Guide](https://github.com/DayKat/spirit-tracks/blob/main/worlds/tloz_st/docs/setup.md)
