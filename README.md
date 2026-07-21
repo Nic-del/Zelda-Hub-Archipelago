@@ -118,7 +118,7 @@ Voici les guides officiels pour configurer chaque jeu avec Archipelago :
 - **Minish Cap** : [Guide Setup](https://github.com/eternalcode0/Archipelago/blob/feat/new-game-minish-cap/worlds/tmc/docs/setup_en.md)
 - **Phantom Hourglass** : [Guide Setup](https://github.com/carrotinator/Archipelago/blob/main/worlds/tloz_ph/docs/setup.md)
 - **Spirit Tracks** : [Guide Setup](https://github.com/DayKat/spirit-tracks/blob/main/worlds/tloz_st/docs/setup.md)
-- **Zelda's Adventure (za-gdx)** :
+- **Zelda's Adventure (za-gdx)** : [GitHub Repo](https://github.com/nebbii/za-gdx)
   - **Premier Lancement Obligatoire** : Avant de pouvoir lancer le jeu via le Hub, vous devez effectuer le premier lancement manuellement dans le dossier du jeu pour extraire et convertir les ressources en utilisant la commande suivante (en spécifiant le chemin vers votre `chdman.exe` de MAME/RetroArch) :
     ```bash
     ./gradlew.bat lwjgl3:run -Pchdman=/chemin/vers/votre/chdman.exe
@@ -127,6 +127,7 @@ Voici les guides officiels pour configurer chaque jeu avec Archipelago :
     ```bash
     ./gradlew.bat lwjgl3:run
     ```
+
 
 #### 3️⃣ Configuration du Zelda Hub
 
@@ -310,7 +311,7 @@ Official guides to configure each game with Archipelago:
 - **Minish Cap**: [Setup Guide](https://github.com/eternalcode0/Archipelago/blob/feat/new-game-minish-cap/worlds/tmc/docs/setup_en.md)
 - **Phantom Hourglass**: [Setup Guide](https://github.com/carrotinator/Archipelago/blob/main/worlds/tloz_ph/docs/setup.md)
 - **Spirit Tracks**: [Setup Guide](https://github.com/DayKat/spirit-tracks/blob/main/worlds/tloz_st/docs/setup.md)
-- **Zelda's Adventure (za-gdx)**:
+- **Zelda's Adventure (za-gdx)**: [GitHub Repo](https://github.com/nebbii/za-gdx)
   - **Required First Launch**: Before launching it via the Hub, you must perform the initial launch manually in the game's folder to extract and convert the game assets using the following command (replace with the path to your MAME/RetroArch `chdman.exe`):
     ```bash
     ./gradlew.bat lwjgl3:run -Pchdman=/path/to/your/chdman.exe
@@ -319,6 +320,7 @@ Official guides to configure each game with Archipelago:
     ```bash
     ./gradlew.bat lwjgl3:run
     ```
+
 
 #### 3️⃣ Zelda Hub Configuration
 
