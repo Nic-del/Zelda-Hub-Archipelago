@@ -18,7 +18,7 @@ Le Zelda Hub repose sur une architecture en deux couches principales :
 
 C'est le "moteur" du Hub. Il gère l'interaction directe avec les processus Windows :
 
-- **Contrôleurs d'Émulateurs** : Des classes dédiées pour **BizHawk**, **Dolphin**, **MelonDS**, **Azahar**, **RetroArch** et les jeux **Natifs** (Ship of Harkinian, Majora's Mask).
+- **Contrôleurs d'Émulateurs** : Des classes dédiées pour **BizHawk**, **Dolphin**, **MelonDS**, **Azahar**, **RetroArch**, **Cemu** et les jeux **Natifs/PC** (Ship of Harkinian, Majora's Mask, Zelda's Adventure).
 - **Fermeture Robuste (Strate par Strate)** : Pour éviter que les émulateurs ne corrompent vos sauvegardes, le Hub utilise une fermeture intelligente :
   1.  **Signal Lua (BizHawk)** : Envoie une commande `client.exit()` via un script temporaire pour une fermeture parfaite.
   2.  **WM_CLOSE** : Tente une fermeture standard propre.
@@ -105,7 +105,8 @@ Voici les guides officiels pour configurer chaque jeu avec Archipelago :
 - **Majora's Mask** : [GitHub Repo](https://github.com/RecompRando/MMRecompRando)
 - **Twilight Princess** : [Guide Setup](https://github.com/WritingHusky/Twilight_Princess_apworld/blob/main/docs/setup_en.md)
   - _Note : Placez les 3 fichiers (`REL loader`, `custom seed`, `RandomizerAP.US.gci`) dans le dossier `SaveData` de Dolphin (GameCube)._
-- **Wind Waker** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Wind%20Waker/setup_en)
+- **Wind Waker (Dolphin)** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Wind%20Waker/setup_en)
+- **Wind Waker HD (Cemu)** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda:%20The%20Wind%20Waker%20HD/setup_en)
 - **Zelda 1** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda/multiworld_en)
 - **Zelda 2** : [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases/tag/Zelda2ap1.1)
 - **Oracle of Ages** : [Guide Setup](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
@@ -117,6 +118,15 @@ Voici les guides officiels pour configurer chaque jeu avec Archipelago :
 - **Minish Cap** : [Guide Setup](https://github.com/eternalcode0/Archipelago/blob/feat/new-game-minish-cap/worlds/tmc/docs/setup_en.md)
 - **Phantom Hourglass** : [Guide Setup](https://github.com/carrotinator/Archipelago/blob/main/worlds/tloz_ph/docs/setup.md)
 - **Spirit Tracks** : [Guide Setup](https://github.com/DayKat/spirit-tracks/blob/main/worlds/tloz_st/docs/setup.md)
+- **Zelda's Adventure (za-gdx)** :
+  - **Premier Lancement Obligatoire** : Avant de pouvoir lancer le jeu via le Hub, vous devez effectuer le premier lancement manuellement dans le dossier du jeu pour extraire et convertir les ressources en utilisant la commande suivante (en spécifiant le chemin vers votre `chdman.exe` de MAME/RetroArch) :
+    ```bash
+    ./gradlew.bat lwjgl3:run -Pchdman=/chemin/vers/votre/chdman.exe
+    ```
+  - **Lancement par le Hub** : Une fois cette conversion faite, le Hub se charge du lancement en exécutant simplement :
+    ```bash
+    ./gradlew.bat lwjgl3:run
+    ```
 
 #### 3️⃣ Configuration du Zelda Hub
 
@@ -124,7 +134,7 @@ Lancez Zelda-Hub.exe et configurez les onglets suivants via le bouton **⚙️ C
 
 - **Tab Slots** : Insérez les noms des slots (ceux définis dans vos YAML) pour chaque jeu.
 - **Tab Archipelago** : Renseignez l'adresse du serveur (ex: `archipelago.gg:12345`) et le mot de passe si nécessaire.
-- **Tab Émulateurs** : Renseignez les chemins vers vos émulateurs (`BizHawk.exe`, `Dolphin.exe`, etc.) ainsi que le chemin vers votre installation de **Archipelago**.
+- **Tab Émulateurs** : Renseignez les chemins vers vos émulateurs (`BizHawk.exe`, `Dolphin.exe`, `Cemu.exe`, etc.) ainsi que le chemin vers votre installation de **Archipelago**.
 
 
 
@@ -201,7 +211,7 @@ The Zelda Hub is built on a two-layer architecture:
 
 This is the "engine" of the Hub. It manages direct interactions with Windows processes:
 
-- **Emulator Controllers**: Dedicated classes for **BizHawk**, **Dolphin**, **MelonDS**, **Azahar**, **RetroArch**, and **Native** games (Ship of Harkinian, Majora's Mask).
+- **Emulator Controllers**: Dedicated classes for **BizHawk**, **Dolphin**, **MelonDS**, **Azahar**, **RetroArch**, **Cemu**, and **Native/PC** games (Ship of Harkinian, Majora's Mask, Zelda's Adventure).
 - **Robust Closing (Layer by Layer)**: To prevent emulators from corrupting your saves, the Hub uses an intelligent closing system:
   1.  **Lua Signal (BizHawk)**: Sends a `client.exit()` command via a temporary script for a perfect shutdown.
   2.  **WM_CLOSE**: Attempts a standard clean close.
@@ -287,7 +297,8 @@ Official guides to configure each game with Archipelago:
 - **Majora's Mask**: [GitHub Repo](https://github.com/RecompRando/MMRecompRando)
 - **Twilight Princess**: [Setup Guide](https://github.com/WritingHusky/Twilight_Princess_apworld/blob/main/docs/setup_en.md)
   - _Note: Place the 3 files (`REL loader`, `custom seed`, `RandomizerAP.US.gci`) in Dolphin's `SaveData` folder (GameCube)._
-- **Wind Waker** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Wind%20Waker/setup_en)
+- **Wind Waker (Dolphin)** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Wind%20Waker/setup_en)
+- **Wind Waker HD (Cemu)**: [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda:%20The%20Wind%20Waker%20HD/setup_en)
 - **Zelda 1**: [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda/multiworld_en)
 - **Zelda 2**: [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases/tag/Zelda2ap1.1)
 - **Oracle of Ages**: [Setup Guide](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
@@ -299,6 +310,15 @@ Official guides to configure each game with Archipelago:
 - **Minish Cap**: [Setup Guide](https://github.com/eternalcode0/Archipelago/blob/feat/new-game-minish-cap/worlds/tmc/docs/setup_en.md)
 - **Phantom Hourglass**: [Setup Guide](https://github.com/carrotinator/Archipelago/blob/main/worlds/tloz_ph/docs/setup.md)
 - **Spirit Tracks**: [Setup Guide](https://github.com/DayKat/spirit-tracks/blob/main/worlds/tloz_st/docs/setup.md)
+- **Zelda's Adventure (za-gdx)**:
+  - **Required First Launch**: Before launching it via the Hub, you must perform the initial launch manually in the game's folder to extract and convert the game assets using the following command (replace with the path to your MAME/RetroArch `chdman.exe`):
+    ```bash
+    ./gradlew.bat lwjgl3:run -Pchdman=/path/to/your/chdman.exe
+    ```
+  - **Hub Launching**: Once this conversion step is completed, the Hub will launch the game simply using:
+    ```bash
+    ./gradlew.bat lwjgl3:run
+    ```
 
 #### 3️⃣ Zelda Hub Configuration
 
@@ -306,7 +326,7 @@ Run `python python_src/ui_main_v2.py` and configure the following tabs via the *
 
 - **Slots Tab**: Enter the slot names (defined in your YAMLs) for each game.
 - **Archipelago Tab**: Enter the server address (e.g., `archipelago.gg:12345`) and password if necessary.
-- **Emulators Tab**: Enter the paths to your emulators (`BizHawk.exe`, `Dolphin.exe`, etc.) as well as the path to your **Archipelago** installation.
+- **Emulators Tab**: Enter the paths to your emulators (`BizHawk.exe`, `Dolphin.exe`, `Cemu.exe`, etc.) as well as the path to your **Archipelago** installation.
 
 #### 4️⃣ ROM Preparation (Extraction & Patch)
 
