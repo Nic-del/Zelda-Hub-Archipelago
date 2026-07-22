@@ -111,6 +111,7 @@ Voici les guides officiels pour configurer chaque jeu avec Archipelago :
   - _Note : Placez les 3 fichiers (`REL loader`, `custom seed`, `RandomizerAP.US.gci`) dans le dossier `SaveData` de Dolphin (GameCube)._
 - **Wind Waker (Dolphin)** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Wind%20Waker/setup_en)
 - **Wind Waker HD (Cemu)** : [Archipelago Tutorial](https://github.com/Teotia444/twwhd-apworld/blob/main/docs/setup_en.md)
+  - _Note : Lors de la configuration de la ROM, vous devez sélectionner le fichier `cking.rpx` du jeu patché situé dans le dossier `code` de votre jeu._
 - **Zelda 1** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda/multiworld_en)
 - **Zelda 2** : [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases/tag/Zelda2ap1.1)
 - **Oracle of Ages** : [Guide Setup](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
@@ -311,6 +312,7 @@ Official guides to configure each game with Archipelago:
   - _Note: Place the 3 files (`REL loader`, `custom seed`, `RandomizerAP.US.gci`) in Dolphin's `SaveData` folder (GameCube)._
 - **Wind Waker (Dolphin)** : [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Wind%20Waker/setup_en)
 - **Wind Waker HD (Cemu)**: [Archipelago Tutorial](https://github.com/Teotia444/twwhd-apworld/blob/main/docs/setup_en.md)
+  - _Note: When configuring the ROM, you must select the `cking.rpx` file of the patched game located in the `code` folder of your game._
 - **Zelda 1**: [Archipelago Tutorial](https://archipelago.gg/tutorial/The%20Legend%20of%20Zelda/multiworld_en)
 - **Zelda 2**: [GitHub Releases](https://github.com/PinkSwitch/Archipelago/releases/tag/Zelda2ap1.1)
 - **Oracle of Ages**: [Setup Guide](https://github.com/josephanimate2021/ArchipelagoOoA/blob/ooa_dev/worlds/tloz_ooa/docs/ooa_setup_en.md)
