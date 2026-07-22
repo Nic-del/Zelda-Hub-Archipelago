@@ -1,4 +1,4 @@
-# 🛡️ Zelda Multi-Launcher Hub v2.1 (Premium Edition)
+# 🛡️ Zelda Multi-Launcher Hub v1.2.0
 
 [Français](#-version-française) | [English](#-english-version)
 
